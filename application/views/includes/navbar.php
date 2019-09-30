@@ -22,7 +22,7 @@
 	<div>
 		<a href="#">FAQ</a>
 	</div>
-	
+
 </div>
 
 <script>

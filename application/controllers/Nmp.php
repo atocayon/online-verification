@@ -7,4 +7,9 @@ class Nmp extends CI_Controller {
 	{
 		$this->load->view('index');
 	}
+
+	public function page(){
+		$page['id'] =  $this->uri->segment(3);
+		$this->load->view('index', $page);
+	}
 }

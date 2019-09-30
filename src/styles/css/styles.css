@@ -1,0 +1,437 @@
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.flex-end {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.nav-container {
+  -webkit-box-shadow: 2px 2px 3px #f8f9fb;
+  box-shadow: 2px 2px 3px #f8f9fb;
+  background-color: #333;
+}
+
+.nav-container div {
+  padding: 20px;
+  -webkit-transition: font-size 1s;
+  -o-transition: font-size 1s;
+  transition: font-size 1s;
+}
+
+.nav-container div:hover {
+  font-size: 2rem;
+}
+
+.nav-container div:hover a {
+  color: #f8f9fb;
+}
+
+.nav-container a {
+  text-decoration: none;
+  color: #f8f9fb;
+}
+
+.nav-container img {
+  width: 30px;
+}
+
+.nav-container .brand {
+  font-weight: bold;
+  color: #f8f9fb;
+  font-size: 2rem;
+}
+
+.nav-container .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-container .dropdown span {
+  color: #333;
+}
+
+.nav-container .filler {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.nav-container #mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1050px) {
+  .nav-container #mobile {
+    display: block;
+  }
+  .nav-container #web {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .nav-container img {
+    width: 28px;
+  }
+  .nav-container .brand {
+    font-weight: bold;
+    color: #f8f9fb;
+    font-size: 1.5rem;
+  }
+  .nav-container div {
+    padding: 15px;
+    -webkit-transition: font-size 1s;
+    -o-transition: font-size 1s;
+    transition: font-size 1s;
+  }
+  .nav-container div:hover {
+    font-size: 1.5rem;
+  }
+  .nav-container div:hover a {
+    color: #f8f9fb;
+  }
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  float: right;
+}
+
+.dropdown-content a {
+  color: #333;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.header-container img {
+  width: 900px;
+}
+
+.header-container #webBanner {
+  font-size: 10rem;
+  color: #333;
+  margin-top: 150px;
+  text-shadow: 1px 3px 2px #333;
+}
+
+.header-container #mobileBanner {
+  display: none;
+  font-size: 3rem;
+  font-weight: bolder;
+  text-shadow: 1px 1px 2px #455A64;
+  margin-top: 100px;
+  color: #263238;
+}
+
+@media screen and (max-width: 1366px) {
+  .header-container #webBanner {
+    font-size: 7rem;
+    color: #333;
+    margin-top: 120px;
+    text-shadow: 1px 3px 2px #333;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .header-container #webBanner {
+    font-size: 6rem;
+    color: #333;
+    margin-top: 120px;
+    text-shadow: 1px 3px 2px #333;
+  }
+}
+
+.options {
+  margin-top: 5px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.options #web-name, .options #web-cert, .options #web-pdc {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 20px;
+}
+
+.options #web-name a, .options #web-cert a, .options #web-pdc a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.8rem;
+  -webkit-transition: font-size 1s;
+  -o-transition: font-size 1s;
+  transition: font-size 1s;
+}
+
+.options #web-name i, .options #web-cert i, .options #web-pdc i {
+  font-size: 1.8rem;
+  -webkit-transition: font-size 1s;
+  -o-transition: font-size 1s;
+  transition: font-size 1s;
+}
+
+.options #web-name:hover a, .options #web-cert:hover a, .options #web-pdc:hover a {
+  font-size: 2.5rem;
+}
+
+.options #web-name:hover i, .options #web-cert:hover i, .options #web-pdc:hover i {
+  font-size: 2.5rem;
+}
+
+.options #mobile-name, .options #mobile-cert, .options #mobile-pdc {
+  display: none;
+}
+
+@media screen and (max-width: 1366px) {
+  .options #web-name, .options #web-cert, .options #web-pdc {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 50px;
+  }
+  .options #web-name a, .options #web-cert a, .options #web-pdc a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5rem;
+    -webkit-transition: font-size 1s;
+    -o-transition: font-size 1s;
+    transition: font-size 1s;
+  }
+  .options #web-name i, .options #web-cert i, .options #web-pdc i {
+    font-size: 1.5rem;
+    -webkit-transition: font-size 1s;
+    -o-transition: font-size 1s;
+    transition: font-size 1s;
+  }
+  .options #web-name:hover a, .options #web-cert:hover a, .options #web-pdc:hover a {
+    font-size: 2rem;
+  }
+  .options #web-name:hover i, .options #web-cert:hover i, .options #web-pdc:hover i {
+    font-size: 2rem;
+  }
+  .options #mobile-name, .options #mobile-cert, .options #mobile-pdc {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .options #web-name, .options #web-cert, .options #web-pdc {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 50px;
+  }
+  .options #web-name a, .options #web-cert a, .options #web-pdc a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    -webkit-transition: font-size 1s;
+    -o-transition: font-size 1s;
+    transition: font-size 1s;
+  }
+  .options #web-name i, .options #web-cert i, .options #web-pdc i {
+    font-size: 1rem;
+    -webkit-transition: font-size 1s;
+    -o-transition: font-size 1s;
+    transition: font-size 1s;
+  }
+  .options #web-name:hover a, .options #web-cert:hover a, .options #web-pdc:hover a {
+    font-size: 1.5rem;
+  }
+  .options #web-name:hover i, .options #web-cert:hover i, .options #web-pdc:hover i {
+    font-size: 1.5rem;
+  }
+  .options #mobile-name, .options #mobile-cert, .options #mobile-pdc {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .options #web-name, .options #web-cert, .options #web-pdc {
+    display: none;
+  }
+  .options #mobile-name, .options #mobile-cert, .options #mobile-pdc {
+    display: block;
+    width: 350px;
+    padding: 20px;
+    font-size: 1.3rem;
+    border: 1px solid #f8f9fb;
+    margin-top: 20px;
+    border-radius: 100px;
+    -webkit-box-shadow: 1px 2px 2px #f8f9fb;
+    box-shadow: 1px 2px 2px #f8f9fb;
+    background-color: #FFC107;
+  }
+  .options #mobile-name a, .options #mobile-cert a, .options #mobile-pdc a {
+    text-decoration: none;
+    color: #333;
+  }
+}
+
+.verify {
+  font-weight: bold;
+  color: #455A64;
+  margin-top: 30px;
+}
+
+.web-footer {
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  background-color: #333;
+  margin-top: 100px;
+}
+
+.web-footer div {
+  margin: auto;
+}
+
+.web-footer h3 {
+  color: #f8f9fb;
+}
+
+.web-footer p {
+  color: #f8f9fb;
+}
+
+.web-footer #web-nmp {
+  margin-top: 50px;
+}
+
+.web-footer #web-nmp img {
+  width: 80px;
+  height: 70px;
+}
+
+.web-footer #web-nmp h3 {
+  font-size: 1.5rem;
+}
+
+.mobile-footer {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 150px;
+  height: auto;
+}
+
+.mobile-footer div {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.mobile-footer h3 {
+  color: #333;
+}
+
+.mobile-footer #mobile-nmp {
+  margin-top: 50px;
+}
+
+.mobile-footer #mobile-nmp img {
+  width: 80px;
+  height: 70px;
+}
+
+.mobile-footer #mobile-nmp h3 {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1050px) {
+  .mobile-footer {
+    display: block;
+  }
+  .web-footer {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

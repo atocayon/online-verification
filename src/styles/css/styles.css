@@ -275,7 +275,7 @@ body {
 .options #web-name a, .options #web-cert a, .options #web-pdc a {
   text-decoration: none;
   color: #333;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 .options #web-name i, .options #web-cert i, .options #web-pdc i {
@@ -318,7 +318,7 @@ body {
   .options #web-name a, .options #web-cert a, .options #web-pdc a {
     text-decoration: none;
     color: #333;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   .options #web-name i, .options #web-cert i, .options #web-pdc i {
     font-size: 1rem;

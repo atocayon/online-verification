@@ -185,42 +185,57 @@ body {
 }
 
 .header-container #webBanner {
-  font-size: 10rem;
+  font-size: 12rem;
   color: #333;
-  margin-top: 120px;
+  margin-top: 100px;
   text-shadow: 1px 2px 2px #333;
+}
+
+@media screen and (max-width: 1690px) {
+  .header-container #webBanner {
+    font-size: 11rem;
+    color: #333;
+    margin-top: 120px;
+    text-shadow: 1px 2px 2px #333;
+  }
 }
 
 @media screen and (max-width: 1380px) {
   .header-container #webBanner {
-    font-size: 7rem;
+    font-size: 8rem;
     color: #333;
     margin-top: 100px;
     text-shadow: 1px 2px 2px #333;
   }
 }
 
+@media screen and (max-width: 1050px) {
+  .header-container {
+    margin-top: 0px;
+  }
+}
+
 @media screen and (max-width: 780px) {
   .header-container #webBanner {
-    font-size: 6rem;
+    font-size: 7rem;
     color: #333;
-    margin-top: 100px;
+    margin-top: 50px;
     text-shadow: 1px 2px 2px #333;
   }
 }
 
 @media screen and (max-width: 650px) {
   .header-container #webBanner {
-    font-size: 5rem;
+    font-size: 6rem;
     color: #333;
-    margin-top: 100px;
+    margin-top: 50px;
     text-shadow: 1px 2px 2px #333;
   }
 }
 
 @media screen and (max-width: 510px) {
   .header-container #webBanner {
-    font-size: 4rem;
+    font-size: 5rem;
     color: #333;
     margin-top: 50px;
     text-shadow: 1px 1px 2px #333;
@@ -242,11 +257,12 @@ body {
   margin-right: 100px;
   margin-bottom: 20px;
   border: 1px solid #f8f9fb;
-  padding-top: 20px;
-  padding-bottom: 10px;
+  padding-top: 25px;
+  padding-bottom: 5px;
   padding-left: 10px;
   padding-right: 10px;
   width: 300px;
+  height: 50px;
   border-radius: 50px;
   -webkit-box-shadow: 2px 2px 2px #ECEFF1;
   box-shadow: 2px 2px 2px #ECEFF1;
@@ -259,17 +275,11 @@ body {
 .options #web-name a, .options #web-cert a, .options #web-pdc a {
   text-decoration: none;
   color: #333;
-  font-size: 1.3rem;
-  -webkit-transition: font-weight 1s;
-  -o-transition: font-weight 1s;
-  transition: font-weight 1s;
+  font-size: 1rem;
 }
 
 .options #web-name i, .options #web-cert i, .options #web-pdc i {
-  font-size: 1.3rem;
-  -webkit-transition: font-size 1s;
-  -o-transition: font-size 1s;
-  transition: font-size 1s;
+  font-size: 1rem;
 }
 
 .options #web-name:hover, .options #web-cert:hover, .options #web-pdc:hover {
@@ -278,12 +288,49 @@ body {
   padding-right: 12px;
 }
 
-.options #web-name:hover a, .options #web-cert:hover a, .options #web-pdc:hover a {
-  font-weight: bold;
-}
-
 .options #mobile-name, .options #mobile-cert, .options #mobile-pdc {
   display: none;
+}
+
+@media screen and (max-width: 1690px) {
+  .options #web-name, .options #web-cert, .options #web-pdc {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+    border: 1px solid #f8f9fb;
+    padding-top: 25px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 240px;
+    height: 50px;
+    border-radius: 50px;
+    -webkit-box-shadow: 2px 2px 2px #ECEFF1;
+    box-shadow: 2px 2px 2px #ECEFF1;
+    -webkit-transition: width 1s;
+    -o-transition: width 1s;
+    transition: width 1s;
+    background-color: #FFC107;
+  }
+  .options #web-name a, .options #web-cert a, .options #web-pdc a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+  }
+  .options #web-name i, .options #web-cert i, .options #web-pdc i {
+    font-size: 1rem;
+  }
+  .options #web-name:hover, .options #web-cert:hover, .options #web-pdc:hover {
+    width: 260px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .options #mobile-name, .options #mobile-cert, .options #mobile-pdc {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1380px) {
@@ -294,8 +341,8 @@ body {
     margin-left: 80px;
     margin-right: 80px;
     margin-bottom: 50px;
-    padding-top: 20px;
-    padding-bottom: 10px;
+    padding-top: 25px;
+    padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
     width: 200px;
@@ -306,20 +353,14 @@ body {
     text-decoration: none;
     color: #333;
     font-size: 1rem;
-    -webkit-transition: font-weight 1s;
-    -o-transition: font-weight 1s;
-    transition: font-weight 1s;
   }
   .options #web-name i, .options #web-cert i, .options #web-pdc i {
     font-size: 1rem;
   }
   .options #web-name:hover, .options #web-cert:hover, .options #web-pdc:hover {
-    width: 220px;
+    width: 210px;
     padding-left: 12px;
     padding-right: 12px;
-  }
-  .options #web-name:hover a, .options #web-cert:hover a, .options #web-pdc:hover a {
-    font-weight: bold;
   }
   .options #mobile-name, .options #mobile-cert, .options #mobile-pdc {
     display: none;
@@ -333,12 +374,12 @@ body {
     justify-content: center;
     margin-left: 40px;
     margin-right: 40px;
-    margin-bottom: 50px;
     padding-top: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     padding-left: 8px;
     padding-right: 8px;
     width: 200px;
+    height: 40px;
     -webkit-box-shadow: 2px 2px 2px #ECEFF1;
     box-shadow: 2px 2px 2px #ECEFF1;
   }
@@ -346,24 +387,14 @@ body {
     text-decoration: none;
     color: #333;
     font-size: 1rem;
-    -webkit-transition: font-size 1s;
-    -o-transition: font-size 1s;
-    transition: font-size 1s;
   }
   .options #web-name i, .options #web-cert i, .options #web-pdc i {
     font-size: 1rem;
-    -webkit-transition: font-size 1s;
-    -o-transition: font-size 1s;
-    transition: font-size 1s;
   }
   .options #web-name:hover, .options #web-cert:hover, .options #web-pdc:hover {
-    width: 220px;
-  }
-  .options #web-name:hover a, .options #web-cert:hover a, .options #web-pdc:hover a {
-    font-size: 1.2rem;
-  }
-  .options #web-name:hover i, .options #web-cert:hover i, .options #web-pdc:hover i {
-    font-size: 1.2rem;
+    width: 210px;
+    padding-left: 12px;
+    padding-right: 12px;
   }
   .options #mobile-name, .options #mobile-cert, .options #mobile-pdc {
     display: none;
@@ -457,6 +488,25 @@ body {
   font-size: 1.5rem;
 }
 
+@media screen and (max-width: 1400px) {
+  .web-footer {
+    margin-top: 150px;
+  }
+  .web-footer h3 {
+    font-size: 1rem;
+  }
+  .web-footer #web-nmp {
+    margin-top: 50px;
+  }
+  .web-footer #web-nmp img {
+    width: 70px;
+    height: 60px;
+  }
+  .web-footer #web-nmp h3 {
+    font-size: 1rem;
+  }
+}
+
 .mobile-footer {
   display: none;
   -webkit-box-orient: vertical;
@@ -465,31 +515,17 @@ body {
   flex-direction: column;
   margin-top: 150px;
   height: auto;
+  background-color: #333;
 }
 
 .mobile-footer div {
   padding-top: 5px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   text-align: center;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
 }
 
 .mobile-footer h3 {
-  color: #333;
-}
-
-.mobile-footer #mobile-nmp {
-  margin-top: 50px;
-}
-
-.mobile-footer #mobile-nmp img {
-  width: 80px;
-  height: 70px;
-}
-
-.mobile-footer #mobile-nmp h3 {
-  font-size: 1.5rem;
+  color: #f8f9fb;
 }
 
 @media screen and (max-width: 1050px) {

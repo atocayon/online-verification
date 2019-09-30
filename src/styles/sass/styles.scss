@@ -154,41 +154,49 @@ body{
 		}
 
 		#webBanner{
-			font-size: 10rem;
+			font-size: 12rem;
 			color: $darkGrey;
-			margin-top: 120px;
+			margin-top: 100px;
 			text-shadow: 1px 2px 2px $darkGrey;
 		}
 
-
+		@media screen and (max-width: 1690px){
+			#webBanner{
+				font-size: 11rem;
+				color: $darkGrey;
+				margin-top: 120px;
+				text-shadow: 1px 2px 2px $darkGrey;
+			}
+		}
 
 		@media screen and (max-width: 1380px){
 
 			#webBanner{
-				font-size: 7rem;
+				font-size: 8rem;
 				color: $darkGrey;
 				margin-top: 100px;
 				text-shadow: 1px 2px 2px $darkGrey;
 			}
+		}
+
+		@media screen and (max-width: 1050px){
+			margin-top: 0px;
 		}
 
 		@media screen and (max-width: 780px){
 			#webBanner{
-				font-size: 6rem;
+				font-size: 7rem;
 				color: $darkGrey;
-				margin-top: 100px;
+				margin-top: 50px;
 				text-shadow: 1px 2px 2px $darkGrey;
-
 			}
-
-
 		}
 
 		@media screen and (max-width: 650px){
 			#webBanner{
-				font-size: 5rem;
+				font-size: 6rem;
 				color: $darkGrey;
-				margin-top: 100px;
+				margin-top: 50px;
 				text-shadow: 1px 2px 2px $darkGrey;
 			}
 
@@ -196,7 +204,7 @@ body{
 
 		@media screen and (max-width: 510px){
 			#webBanner{
-				font-size: 4rem;
+				font-size: 5rem;
 				color: $darkGrey;
 				margin-top: 50px;
 				text-shadow: 1px 1px 2px $darkGrey;
@@ -216,11 +224,12 @@ body{
 		margin-right: 100px;
 		margin-bottom: 20px;
 		border: 1px solid $offWhite;
-		padding-top: 20px;
-		padding-bottom: 10px;
+		padding-top: 25px;
+		padding-bottom: 5px;
 		padding-left: 10px;
 		padding-right: 10px;
 		width: 300px;
+		height: 50px;
 		border-radius: 50px;
 		box-shadow: 2px 2px 2px $lightGrey;
 		transition: width 1s;
@@ -228,25 +237,58 @@ body{
 		a{
 			text-decoration: none;
 			color: $darkGrey;
-			font-size: 1.3rem;
-			transition: font-weight 1s;
+			font-size: 1rem;
 		}
 		i{
-			font-size: 1.3rem;
-			transition: font-size 1s;
+			font-size: 1rem;
 		}
 	}
 	#web-name:hover, #web-cert:hover, #web-pdc:hover{
 		width: 320px;
 		padding-left: 12px;
 		padding-right: 12px;
-		a{
-			font-weight: bold;
-		}
 	}
 
 	#mobile-name, #mobile-cert, #mobile-pdc{
 		display: none;
+	}
+
+	@media screen and (max-width: 1690px){
+		#web-name, #web-cert, #web-pdc{
+			justify-content: center;
+			margin-left: 100px;
+			margin-right: 100px;
+			margin-bottom: 20px;
+			border: 1px solid $offWhite;
+			padding-top: 25px;
+			padding-bottom: 5px;
+			padding-left: 10px;
+			padding-right: 10px;
+			width: 240px;
+			height: 50px;
+			border-radius: 50px;
+			box-shadow: 2px 2px 2px $lightGrey;
+			transition: width 1s;
+			background-color: $goldenYellow;
+			a{
+				text-decoration: none;
+				color: $darkGrey;
+				font-size: 1rem;
+			}
+			i{
+				font-size: 1rem;
+			}
+		}
+
+		#web-name:hover, #web-cert:hover, #web-pdc:hover{
+			width: 260px;
+			padding-left: 12px;
+			padding-right: 12px;
+		}
+
+		#mobile-name, #mobile-cert, #mobile-pdc{
+			display: none;
+		}
 	}
 
 	@media screen and (max-width: 1380px){
@@ -256,8 +298,8 @@ body{
 			margin-left: 80px;
 			margin-right: 80px;
 			margin-bottom: 50px;
-			padding-top: 20px;
-			padding-bottom: 10px;
+			padding-top: 25px;
+			padding-bottom: 5px;
 			padding-left: 10px;
 			padding-right: 10px;
 			width: 200px;
@@ -266,19 +308,16 @@ body{
 				text-decoration: none;
 				color: $darkGrey;
 				font-size: 1rem;
-				transition: font-weight 1s;
+
 			}
 			i{
 				font-size: 1rem;
 			}
 		}
 		#web-name:hover, #web-cert:hover, #web-pdc:hover{
-			width: 220px;
+			width: 210px;
 			padding-left: 12px;
 			padding-right: 12px;
-			a{
-				font-weight: bold;
-			}
 
 		}
 
@@ -293,32 +332,27 @@ body{
 			justify-content: center;
 			margin-left: 40px;
 			margin-right: 40px;
-			margin-bottom: 50px;
 			padding-top: 20px;
-			padding-bottom: 10px;
+			padding-bottom: 20px;
 			padding-left: 8px;
 			padding-right: 8px;
 			width: 200px;
+			height: 40px;
 			box-shadow: 2px 2px 2px $lightGrey;
 			a{
 				text-decoration: none;
 				color: $darkGrey;
 				font-size: 1rem;
-				transition: font-size 1s;
 			}
 			i{
 				font-size: 1rem;
-				transition: font-size 1s;
 			}
 		}
 		#web-name:hover, #web-cert:hover, #web-pdc:hover{
-			width: 220px;
-			a{
-				font-size: 1.2rem;
-			}
-			i{
-				font-size: 1.2rem;
-			}
+			width: 210px;
+			padding-left: 12px;
+			padding-right: 12px;
+
 		}
 
 		#mobile-name, #mobile-cert, #mobile-pdc{
@@ -410,6 +444,23 @@ body{
 			}
 		}
 
+		@media screen and (max-width: 1400px){
+			margin-top: 150px;
+			h3{
+				font-size: 1rem;
+			}
+			#web-nmp{
+				margin-top: 50px;
+				img{
+					width: 70px;
+					height: 60px;
+				}
+				h3{
+					font-size: 1rem;
+				}
+			}
+		}
+
 
 	}
 
@@ -418,28 +469,17 @@ body{
 		flex-direction: column;
 		margin-top: 150px;
 		height: auto;
-
+		background-color: $darkGrey;
 		div{
 			padding-top:5px;
-			padding-bottom: 5px;
+			padding-bottom: 10px;
 			text-align: center;
-			justify-content: space-around;
+
 		}
 		h3{
-			color: $darkGrey;
+			color: $offWhite;
 		}
 
-		#mobile-nmp{
-			margin-top: 50px;
-			img{
-				width: 80px;
-				height: 70px;
-
-			}
-			h3{
-				font-size: 1.5rem;
-			}
-		}
 	}
 
 	@media screen and (max-width: 1050px){

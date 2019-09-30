@@ -187,25 +187,16 @@ body {
 .header-container #webBanner {
   font-size: 10rem;
   color: #333;
-  margin-top: 150px;
-  text-shadow: 1px 3px 2px #333;
+  margin-top: 120px;
+  text-shadow: 1px 2px 2px #333;
 }
 
-.header-container #mobileBanner {
-  display: none;
-  font-size: 3rem;
-  font-weight: bolder;
-  text-shadow: 1px 1px 2px #455A64;
-  margin-top: 100px;
-  color: #263238;
-}
-
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1380px) {
   .header-container #webBanner {
     font-size: 7rem;
     color: #333;
-    margin-top: 120px;
-    text-shadow: 1px 3px 2px #333;
+    margin-top: 100px;
+    text-shadow: 1px 2px 2px #333;
   }
 }
 
@@ -213,8 +204,26 @@ body {
   .header-container #webBanner {
     font-size: 6rem;
     color: #333;
-    margin-top: 120px;
-    text-shadow: 1px 3px 2px #333;
+    margin-top: 100px;
+    text-shadow: 1px 2px 2px #333;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .header-container #webBanner {
+    font-size: 5rem;
+    color: #333;
+    margin-top: 100px;
+    text-shadow: 1px 2px 2px #333;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .header-container #webBanner {
+    font-size: 4rem;
+    color: #333;
+    margin-top: 50px;
+    text-shadow: 1px 1px 2px #333;
   }
 }
 
@@ -232,37 +241,52 @@ body {
   margin-left: 100px;
   margin-right: 100px;
   margin-bottom: 20px;
+  border: 1px solid #f8f9fb;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 300px;
+  border-radius: 50px;
+  -webkit-box-shadow: 2px 2px 2px #ECEFF1;
+  box-shadow: 2px 2px 2px #ECEFF1;
+  -webkit-transition: width 1s;
+  -o-transition: width 1s;
+  transition: width 1s;
+  background-color: #FFC107;
 }
 
 .options #web-name a, .options #web-cert a, .options #web-pdc a {
   text-decoration: none;
   color: #333;
-  font-size: 1.8rem;
-  -webkit-transition: font-size 1s;
-  -o-transition: font-size 1s;
-  transition: font-size 1s;
+  font-size: 1.3rem;
+  -webkit-transition: font-weight 1s;
+  -o-transition: font-weight 1s;
+  transition: font-weight 1s;
 }
 
 .options #web-name i, .options #web-cert i, .options #web-pdc i {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   -webkit-transition: font-size 1s;
   -o-transition: font-size 1s;
   transition: font-size 1s;
 }
 
-.options #web-name:hover a, .options #web-cert:hover a, .options #web-pdc:hover a {
-  font-size: 2.5rem;
+.options #web-name:hover, .options #web-cert:hover, .options #web-pdc:hover {
+  width: 320px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
-.options #web-name:hover i, .options #web-cert:hover i, .options #web-pdc:hover i {
-  font-size: 2.5rem;
+.options #web-name:hover a, .options #web-cert:hover a, .options #web-pdc:hover a {
+  font-weight: bold;
 }
 
 .options #mobile-name, .options #mobile-cert, .options #mobile-pdc {
   display: none;
 }
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1380px) {
   .options #web-name, .options #web-cert, .options #web-pdc {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -270,26 +294,32 @@ body {
     margin-left: 80px;
     margin-right: 80px;
     margin-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 200px;
+    -webkit-box-shadow: 2px 2px 2px #ECEFF1;
+    box-shadow: 2px 2px 2px #ECEFF1;
   }
   .options #web-name a, .options #web-cert a, .options #web-pdc a {
     text-decoration: none;
     color: #333;
-    font-size: 1.5rem;
-    -webkit-transition: font-size 1s;
-    -o-transition: font-size 1s;
-    transition: font-size 1s;
+    font-size: 1rem;
+    -webkit-transition: font-weight 1s;
+    -o-transition: font-weight 1s;
+    transition: font-weight 1s;
   }
   .options #web-name i, .options #web-cert i, .options #web-pdc i {
-    font-size: 1.5rem;
-    -webkit-transition: font-size 1s;
-    -o-transition: font-size 1s;
-    transition: font-size 1s;
+    font-size: 1rem;
+  }
+  .options #web-name:hover, .options #web-cert:hover, .options #web-pdc:hover {
+    width: 220px;
+    padding-left: 12px;
+    padding-right: 12px;
   }
   .options #web-name:hover a, .options #web-cert:hover a, .options #web-pdc:hover a {
-    font-size: 2rem;
-  }
-  .options #web-name:hover i, .options #web-cert:hover i, .options #web-pdc:hover i {
-    font-size: 2rem;
+    font-weight: bold;
   }
   .options #mobile-name, .options #mobile-cert, .options #mobile-pdc {
     display: none;
@@ -304,6 +334,13 @@ body {
     margin-left: 40px;
     margin-right: 40px;
     margin-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 200px;
+    -webkit-box-shadow: 2px 2px 2px #ECEFF1;
+    box-shadow: 2px 2px 2px #ECEFF1;
   }
   .options #web-name a, .options #web-cert a, .options #web-pdc a {
     text-decoration: none;
@@ -319,11 +356,14 @@ body {
     -o-transition: font-size 1s;
     transition: font-size 1s;
   }
+  .options #web-name:hover, .options #web-cert:hover, .options #web-pdc:hover {
+    width: 220px;
+  }
   .options #web-name:hover a, .options #web-cert:hover a, .options #web-pdc:hover a {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .options #web-name:hover i, .options #web-cert:hover i, .options #web-pdc:hover i {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .options #mobile-name, .options #mobile-cert, .options #mobile-pdc {
     display: none;
@@ -337,13 +377,40 @@ body {
   .options #mobile-name, .options #mobile-cert, .options #mobile-pdc {
     display: block;
     width: 350px;
-    padding: 20px;
+    height: 60px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 1.3rem;
     border: 1px solid #f8f9fb;
-    margin-top: 20px;
+    margin-top: 40px;
+    border-radius: 50px;
+    -webkit-box-shadow: 2px 2px 2px #ECEFF1;
+    box-shadow: 2px 2px 2px #ECEFF1;
+    background-color: #FFC107;
+  }
+  .options #mobile-name a, .options #mobile-cert a, .options #mobile-pdc a {
+    text-decoration: none;
+    color: #333;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .options #web-name, .options #web-cert, .options #web-pdc {
+    display: none;
+  }
+  .options #mobile-name, .options #mobile-cert, .options #mobile-pdc {
+    display: block;
+    width: 330px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1.2rem;
+    border: 1px solid #f8f9fb;
+    margin-top: 40px;
     border-radius: 100px;
-    -webkit-box-shadow: 1px 2px 2px #f8f9fb;
-    box-shadow: 1px 2px 2px #f8f9fb;
+    -webkit-box-shadow: 2px 2px 2px #ECEFF1;
+    box-shadow: 2px 2px 2px #ECEFF1;
     background-color: #FFC107;
   }
   .options #mobile-name a, .options #mobile-cert a, .options #mobile-pdc a {

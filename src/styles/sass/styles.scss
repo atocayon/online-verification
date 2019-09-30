@@ -156,26 +156,19 @@ body{
 		#webBanner{
 			font-size: 10rem;
 			color: $darkGrey;
-			margin-top: 150px;
-			text-shadow: 1px 3px 2px $darkGrey;
+			margin-top: 120px;
+			text-shadow: 1px 2px 2px $darkGrey;
 		}
 
-		#mobileBanner{
-			display: none;
-			font-size: 3rem;
-			font-weight: bolder;
-			text-shadow: 1px 1px 2px $semiDarkGrey;
-			margin-top: 100px;
-			color: #263238;
-		}
 
-		@media screen and (max-width: 1366px){
+
+		@media screen and (max-width: 1380px){
 
 			#webBanner{
 				font-size: 7rem;
 				color: $darkGrey;
-				margin-top: 120px;
-				text-shadow: 1px 3px 2px $darkGrey;
+				margin-top: 100px;
+				text-shadow: 1px 2px 2px $darkGrey;
 			}
 		}
 
@@ -183,9 +176,32 @@ body{
 			#webBanner{
 				font-size: 6rem;
 				color: $darkGrey;
-				margin-top: 120px;
-				text-shadow: 1px 3px 2px $darkGrey;
+				margin-top: 100px;
+				text-shadow: 1px 2px 2px $darkGrey;
+
 			}
+
+
+		}
+
+		@media screen and (max-width: 650px){
+			#webBanner{
+				font-size: 5rem;
+				color: $darkGrey;
+				margin-top: 100px;
+				text-shadow: 1px 2px 2px $darkGrey;
+			}
+
+		}
+
+		@media screen and (max-width: 510px){
+			#webBanner{
+				font-size: 4rem;
+				color: $darkGrey;
+				margin-top: 50px;
+				text-shadow: 1px 1px 2px $darkGrey;
+			}
+
 		}
 
 
@@ -199,23 +215,33 @@ body{
 		margin-left: 100px;
 		margin-right: 100px;
 		margin-bottom: 20px;
+		border: 1px solid $offWhite;
+		padding-top: 20px;
+		padding-bottom: 10px;
+		padding-left: 10px;
+		padding-right: 10px;
+		width: 300px;
+		border-radius: 50px;
+		box-shadow: 2px 2px 2px $lightGrey;
+		transition: width 1s;
+		background-color: $goldenYellow;
 		a{
 			text-decoration: none;
 			color: $darkGrey;
-			font-size: 1.8rem;
-			transition: font-size 1s;
+			font-size: 1.3rem;
+			transition: font-weight 1s;
 		}
 		i{
-			font-size: 1.8rem;
+			font-size: 1.3rem;
 			transition: font-size 1s;
 		}
 	}
 	#web-name:hover, #web-cert:hover, #web-pdc:hover{
+		width: 320px;
+		padding-left: 12px;
+		padding-right: 12px;
 		a{
-			font-size: 2.5rem;
-		}
-		i{
-			font-size: 2.5rem;
+			font-weight: bold;
 		}
 	}
 
@@ -223,31 +249,37 @@ body{
 		display: none;
 	}
 
-	@media screen and (max-width: 1366px){
+	@media screen and (max-width: 1380px){
 
 		#web-name, #web-cert, #web-pdc{
 			justify-content: center;
 			margin-left: 80px;
 			margin-right: 80px;
 			margin-bottom: 50px;
+			padding-top: 20px;
+			padding-bottom: 10px;
+			padding-left: 10px;
+			padding-right: 10px;
+			width: 200px;
+			box-shadow: 2px 2px 2px $lightGrey;
 			a{
 				text-decoration: none;
 				color: $darkGrey;
-				font-size: 1.5rem;
-				transition: font-size 1s;
+				font-size: 1rem;
+				transition: font-weight 1s;
 			}
 			i{
-				font-size: 1.5rem;
-				transition: font-size 1s;
+				font-size: 1rem;
 			}
 		}
 		#web-name:hover, #web-cert:hover, #web-pdc:hover{
+			width: 220px;
+			padding-left: 12px;
+			padding-right: 12px;
 			a{
-				font-size: 2rem;
+				font-weight: bold;
 			}
-			i{
-				font-size: 2rem;
-			}
+
 		}
 
 		#mobile-name, #mobile-cert, #mobile-pdc{
@@ -262,6 +294,12 @@ body{
 			margin-left: 40px;
 			margin-right: 40px;
 			margin-bottom: 50px;
+			padding-top: 20px;
+			padding-bottom: 10px;
+			padding-left: 8px;
+			padding-right: 8px;
+			width: 200px;
+			box-shadow: 2px 2px 2px $lightGrey;
 			a{
 				text-decoration: none;
 				color: $darkGrey;
@@ -274,11 +312,12 @@ body{
 			}
 		}
 		#web-name:hover, #web-cert:hover, #web-pdc:hover{
+			width: 220px;
 			a{
-				font-size: 1.5rem;
+				font-size: 1.2rem;
 			}
 			i{
-				font-size: 1.5rem;
+				font-size: 1.2rem;
 			}
 		}
 
@@ -295,13 +334,42 @@ body{
 		#mobile-name, #mobile-cert, #mobile-pdc{
 			display: block;
 			width: 350px;
-			padding: 20px;
+			height: 60px;
+			padding-top: 20px;
+			padding-left: 10px;
+			padding-right: 10px;
 			font-size: 1.3rem;
 			border: 1px solid $offWhite;
-			margin-top: 20px;
-			border-radius: 100px;
-			box-shadow: 1px 2px 2px $offWhite;
+			margin-top: 40px;
+			border-radius: 50px;
+			box-shadow: 2px 2px 2px $lightGrey;
 			background-color: $goldenYellow;
+
+			a{
+				text-decoration: none;
+				color: $darkGrey;
+			}
+		}
+	}
+
+	@media screen and (max-width: 510px){
+		#web-name, #web-cert, #web-pdc{
+			display: none;
+		}
+
+		#mobile-name, #mobile-cert, #mobile-pdc{
+			display: block;
+			width: 330px;
+			padding-top: 20px;
+			padding-left: 10px;
+			padding-right: 10px;
+			font-size: 1.2rem;
+			border: 1px solid $offWhite;
+			margin-top: 40px;
+			border-radius: 100px;
+			box-shadow: 2px 2px 2px $lightGrey;
+			background-color: $goldenYellow;
+
 			a{
 				text-decoration: none;
 				color: $darkGrey;

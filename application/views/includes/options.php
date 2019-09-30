@@ -30,7 +30,7 @@
     </div>
     <div id="mobile-pdc">
       <center>
-        <a href="#"><i class="fas fa-id-card"></i> Enrolless on PDC Courses</a>
+        <a href="#"><i class="fas fa-id-card"></i> Enrollees on PDC Courses</a>
       </center>
     </div>
   </div>

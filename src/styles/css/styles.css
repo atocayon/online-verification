@@ -553,4 +553,48 @@ body {
   margin-left: 10px;
 }
 
+.verifyByName-form-container {
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.verifyByName-form-container .form {
+  border: 1px solid #ECEFF1;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 1px #ECEFF1;
+  box-shadow: 1px 1px 1px #ECEFF1;
+}
+
+.verifyByName-form-container .form .form-input-name {
+  width: 500px;
+}
+
+.verifyByName-form-container .form input {
+  height: 50px;
+  font-size: 1.5rem;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ECEFF1;
+  color: #001B4B;
+}
+
+.verifyByName-form-container .form label {
+  color: #001B4B;
+}
+
+.submit-button {
+  color: #001B4B;
+  padding: 10px;
+  font-size: 1.5rem;
+  width: 150px;
+  background-color: #D6E8EE;
+  border: 1px solid #D6E8EE;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
 /*# sourceMappingURL=styles.css.map */

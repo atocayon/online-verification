@@ -25,16 +25,8 @@ if (isset($id)) {
 	 <?php include 'includes/options.php'; ?>
  </div>
 
- <div id="name-page">
-	 <?php include 'includes/name.php'; ?>
- </div>
-
- <div id="cert-page">
-	 <?php include 'includes/cert.php'; ?>
- </div>
-
- <div id="enrollees-page">
-	 <?php include 'includes/enrollees.php'; ?>
+ <div id="forms-page">
+	 <?php include 'includes/forms.php'; ?>
  </div>
 
 <div>
@@ -45,38 +37,19 @@ if (isset($id)) {
 <script>
 
 	var page = <?= $page_id ?>;
-
-	if (page === 0) {
-		document.getElementById('cert-page').style.display = "none";
+	console.log(page);
+	if (page === 0 || page === undefined) {
 		document.getElementById('options').style.display = "block";
-		document.getElementById('name-page').style.display = "none";
-		document.getElementById('enrollees-page').style.display = "none";
+		document.getElementById('forms-page').style.display = "none";
 		document.getElementById('home').style.display = "block";
 	}
 
-	if (page === 1) {
+	if (page === 1 || page === 2 || page === 3) {
 		document.getElementById('home').style.display = "none";
 		document.getElementById('options').style.display = "none";
-		document.getElementById('cert-page').style.display = "none";
-		document.getElementById('enrollees-page').style.display = "none";
-		document.getElementById('name-page').style.display = "block";
+		document.getElementById('forms-page').style.display = "block";
 	}
 
-	if (page === 2) {
-		document.getElementById('home').style.display = "none";
-		document.getElementById('options').style.display = "none";
-		document.getElementById('name-page').style.display = "none";
-		document.getElementById('enrollees-page').style.display = "none";
-		document.getElementById('cert-page').style.display = "block";
-	}
-
-	if (page === 3) {
-		document.getElementById('home').style.display = "none";
-		document.getElementById('options').style.display = "none";
-		document.getElementById('name-page').style.display = "none";
-		document.getElementById('cert-page').style.display = "none";
-		document.getElementById('enrollees-page').style.display = "block";
-	}
 </script>
 </body>
 </html>

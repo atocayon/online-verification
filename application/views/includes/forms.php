@@ -3,27 +3,21 @@
     <?php include 'formTitle.php' ?>
   </div>
 </div>
-<div class="row verifyByName-form-container">
-  <div class="form">
-    <form>
-      <label>First Name</label><br>
-      <input type="text" name="fname" class="form-input-name" placeholder="Type here..." required >
-      <br>
-      <br>
-      <label>Last Name</label><br>
-      <input type="text" name="lname" class="form-input-name" placeholder="Type here..." required >
-      <br>
-      <br>
-      <label>Birthday</label><br>
-      <input type="date" name="bday" class="form-input-date" required >
-      <br>
-      <br>
-      <center>
-        <button type="submit" class="submit-button">Verify</button>
-      </center>
 
-    </form>
+<div class="row verifyByName-form-container">
+  <div class="form-name" id="form-name">
+    <?php include 'verifyByName.php'; ?>
   </div>
+
+  <div class="form-cert" id="form-cert">
+    <?php include 'verifyByCert.php'; ?>
+  </div>
+
+  <div class="form-enrollees" id="form-enrollees">
+    <?php include 'verifyByEnrollees.php'; ?>
+  </div>
+
+
   <div class="row table-container">
     <table>
       <thead>
@@ -85,3 +79,26 @@
     </table>
   </div>
 </div>
+
+<script type="text/javascript">
+  var page = <?= $this->uri->segment(3); ?>
+
+  if (page === 1) {
+    document.getElementById('form-name').style.display = "block";
+    document.getElementById('form-cert').style.display = "none";
+    document.getElementById('form-enrollees').style.display = "none";
+  }
+
+  if(page === 2){
+    document.getElementById('form-cert').style.display = "block";
+    document.getElementById('form-enrollees').style.display = "none";
+    document.getElementById('form-name').style.display = "none";
+  }
+
+  if(page === 3){
+    document.getElementById('form-enrollees').style.display = "block";
+    document.getElementById('form-name').style.display = "none";
+    document.getElementById('form-cert').style.display = "none";
+  }
+
+</script>

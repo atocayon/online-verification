@@ -56,7 +56,6 @@ body{
 	font-size: 1rem;
 	div{
 		padding: 20px;
-		transition: font-size 1s;
 	}
 
 	div:hover{
@@ -235,6 +234,11 @@ body{
 .options{
 	margin-top: 5px;
 	justify-content: center;
+	a{
+		text-decoration: none;
+		color: $darkerBlue;
+		font-size: 1.3rem;
+	}
 	#web-name, #web-cert, #web-pdc{
 		justify-content: center;
 		margin-left: 100px;
@@ -249,13 +253,9 @@ body{
 		height: 50px;
 		border-radius: 50px;
 		box-shadow: 2px 2px 2px $lightGrey;
-		transition: width 1s;
+		transition: width 0.2s;
 		background-color: $lightBlue2;
-		a{
-			text-decoration: none;
-			color: $darkerBlue;
-			font-size: 1.3rem;
-		}
+
 		i{
 			font-size: 1rem;
 		}
@@ -492,14 +492,10 @@ body{
 		}
 	}
 
-	#name-page, #cert-page, #enrollees-page{
+	#forms-page{
 	  display: none;
 	}
 
-.alert-container{
-	justify-content: center;
-	margin-top: 20px;
-}
 
 .formTitle{
 	color: $darkerBlue;
@@ -513,7 +509,7 @@ body{
 	margin-top: 20px;
 	border: 1px solid $offWhite;
 	box-shadow: 1px 1px 1px $offWhite;
-	.form{
+	.form-name, .form-cert, .form-enrollees{
 		padding-top: 30px;
 		padding-left: 20px;
 		padding-right: 20px;
@@ -566,6 +562,9 @@ body{
 		 }
 
 		 tfoot{
+			 th{
+				 border-bottom: 1px solid $offWhite;
+			 }
 			 ul{
 				 list-style-type: none;
 				 margin: 0;
@@ -575,6 +574,17 @@ body{
 				 display: inline;
 				 padding-left: 10px;
 				 padding-right: 10px;
+			 }
+
+			 a{
+				 text-decoration: none;
+				 color: $darkerBlue;
+				 transition: font-size 0.2s;
+			 }
+
+			 a:hover{
+				 font-size: 1.5rem;
+				 color: $lightBlue;
 			 }
 		 }
 	}

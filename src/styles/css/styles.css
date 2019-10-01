@@ -86,9 +86,6 @@ body {
 
 .nav-container div {
   padding: 20px;
-  -webkit-transition: font-size 1s;
-  -o-transition: font-size 1s;
-  transition: font-size 1s;
 }
 
 .nav-container div:hover a {
@@ -264,6 +261,12 @@ body {
   justify-content: center;
 }
 
+.options a {
+  text-decoration: none;
+  color: #001B4B;
+  font-size: 1.3rem;
+}
+
 .options #web-name, .options #web-cert, .options #web-pdc {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -281,16 +284,10 @@ body {
   border-radius: 50px;
   -webkit-box-shadow: 2px 2px 2px #ECEFF1;
   box-shadow: 2px 2px 2px #ECEFF1;
-  -webkit-transition: width 1s;
-  -o-transition: width 1s;
-  transition: width 1s;
+  -webkit-transition: width 0.2s;
+  -o-transition: width 0.2s;
+  transition: width 0.2s;
   background-color: #D6E8EE;
-}
-
-.options #web-name a, .options #web-cert a, .options #web-pdc a {
-  text-decoration: none;
-  color: #001B4B;
-  font-size: 1.3rem;
 }
 
 .options #web-name i, .options #web-cert i, .options #web-pdc i {
@@ -536,15 +533,8 @@ body {
   }
 }
 
-#name-page, #cert-page, #enrollees-page {
+#forms-page {
   display: none;
-}
-
-.alert-container {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin-top: 20px;
 }
 
 .formTitle {
@@ -562,7 +552,7 @@ body {
   box-shadow: 1px 1px 1px #f8f9fb;
 }
 
-.verifyByName-form-container .form {
+.verifyByName-form-container .form-name, .verifyByName-form-container .form-cert, .verifyByName-form-container .form-enrollees {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
@@ -570,11 +560,11 @@ body {
   border-radius: 5px;
 }
 
-.verifyByName-form-container .form .form-input-name {
+.verifyByName-form-container .form-name .form-input-name, .verifyByName-form-container .form-cert .form-input-name, .verifyByName-form-container .form-enrollees .form-input-name {
   width: 500px;
 }
 
-.verifyByName-form-container .form input {
+.verifyByName-form-container .form-name input, .verifyByName-form-container .form-cert input, .verifyByName-form-container .form-enrollees input {
   height: 50px;
   font-size: 1.5rem;
   padding: 5px;
@@ -585,7 +575,7 @@ body {
   box-shadow: 1px 1px 1px #f8f9fb;
 }
 
-.verifyByName-form-container .form label {
+.verifyByName-form-container .form-name label, .verifyByName-form-container .form-cert label, .verifyByName-form-container .form-enrollees label {
   color: #001B4B;
 }
 
@@ -616,6 +606,10 @@ body {
   border-top: 1px solid #D6E8EE;
 }
 
+.table-container table tfoot th {
+  border-bottom: 1px solid #f8f9fb;
+}
+
 .table-container table tfoot ul {
   list-style-type: none;
   margin: 0;
@@ -626,6 +620,19 @@ body {
   display: inline;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.table-container table tfoot a {
+  text-decoration: none;
+  color: #001B4B;
+  -webkit-transition: font-size 0.2s;
+  -o-transition: font-size 0.2s;
+  transition: font-size 0.2s;
+}
+
+.table-container table tfoot a:hover {
+  font-size: 1.5rem;
+  color: #97CADB;
 }
 
 .submit-button {

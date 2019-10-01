@@ -4,10 +4,10 @@
 	</div>
 		<div class="filler"></div>
 		<div id="web">
-			<a href="#">About</a>
+			<a href="#" class="info"><i class="fas fa-info"></i></a>
 		</div>
 		<div id="web">
-			<a href="#">FAQ</a>
+			<a href="#" class="access"><i class="fas fa-universal-access"></i></a>
 		</div>
 
 		<div id="mobile" onclick="funcDropdown()">

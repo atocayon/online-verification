@@ -3,5 +3,3 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" type="text/css" href="<?= base_url() ?>src/styles/css/styles.css">
-<link rel="stylesheet" type="text/css" href="<?= base_url() ?>src/styles/css/forms.css">
-<script src="<?= base_url() ?>src/styles/js/navbar.js"></script>

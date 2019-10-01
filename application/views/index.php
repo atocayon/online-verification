@@ -25,15 +25,15 @@ if (isset($id)) {
 	 <?php include 'includes/options.php'; ?>
  </div>
 
- <div id="name">
+ <div id="name-page">
 	 <?php include 'includes/name.php'; ?>
  </div>
 
- <div id="cert">
+ <div id="cert-page">
 	 <?php include 'includes/cert.php'; ?>
  </div>
 
- <div id="enrollees">
+ <div id="enrollees-page">
 	 <?php include 'includes/enrollees.php'; ?>
  </div>
 
@@ -41,40 +41,41 @@ if (isset($id)) {
 	<?php include 'includes/footer.php'; ?>
 </div>
 
+
 <script>
 
 	var page = <?= $page_id ?>;
 
 	if (page === 0) {
-		document.getElementById('cert').style.display = "none";
+		document.getElementById('cert-page').style.display = "none";
 		document.getElementById('options').style.display = "block";
-		document.getElementById('name').style.display = "none";
-		document.getElementById('enrollees').style.display = "none";
+		document.getElementById('name-page').style.display = "none";
+		document.getElementById('enrollees-page').style.display = "none";
 		document.getElementById('home').style.display = "block";
 	}
 
 	if (page === 1) {
 		document.getElementById('home').style.display = "none";
 		document.getElementById('options').style.display = "none";
-		document.getElementById('cert').style.display = "none";
-		document.getElementById('enrollees').style.display = "none";
-		document.getElementById('name').style.display = "block";
+		document.getElementById('cert-page').style.display = "none";
+		document.getElementById('enrollees-page').style.display = "none";
+		document.getElementById('name-page').style.display = "block";
 	}
 
 	if (page === 2) {
 		document.getElementById('home').style.display = "none";
 		document.getElementById('options').style.display = "none";
-		document.getElementById('name').style.display = "none";
-		document.getElementById('enrollees').style.display = "none";
-		document.getElementById('cert').style.display = "block";
+		document.getElementById('name-page').style.display = "none";
+		document.getElementById('enrollees-page').style.display = "none";
+		document.getElementById('cert-page').style.display = "block";
 	}
 
 	if (page === 3) {
 		document.getElementById('home').style.display = "none";
 		document.getElementById('options').style.display = "none";
-		document.getElementById('name').style.display = "none";
-		document.getElementById('cert').style.display = "none";
-		document.getElementById('enrollees').style.display = "block";
+		document.getElementById('name-page').style.display = "none";
+		document.getElementById('cert-page').style.display = "none";
+		document.getElementById('enrollees-page').style.display = "block";
 	}
 </script>
 </body>

@@ -79,9 +79,9 @@ body {
 }
 
 .nav-container {
-  -webkit-box-shadow: 2px 2px 3px #f8f9fb;
-  box-shadow: 2px 2px 3px #f8f9fb;
-  background-color: #333;
+  -webkit-box-shadow: 1px 2px 3px #f8f9fb;
+  box-shadow: 1px 2px 3px #f8f9fb;
+  font-size: 1rem;
 }
 
 .nav-container div {
@@ -91,17 +91,31 @@ body {
   transition: font-size 1s;
 }
 
-.nav-container div:hover {
-  font-size: 2rem;
-}
-
 .nav-container div:hover a {
   color: #f8f9fb;
 }
 
 .nav-container a {
   text-decoration: none;
-  color: #f8f9fb;
+  color: #001B4B;
+}
+
+.nav-container .info {
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 50px;
+  background-color: #D6E8EE;
+}
+
+.nav-container .access {
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 50px;
+  background-color: #D6E8EE;
 }
 
 .nav-container img {
@@ -110,7 +124,7 @@ body {
 
 .nav-container .brand {
   font-weight: bold;
-  color: #f8f9fb;
+  color: #001B4B;
   font-size: 2rem;
 }
 
@@ -148,20 +162,10 @@ body {
   }
   .nav-container .brand {
     font-weight: bold;
-    color: #f8f9fb;
     font-size: 1.5rem;
   }
   .nav-container div {
     padding: 15px;
-    -webkit-transition: font-size 1s;
-    -o-transition: font-size 1s;
-    transition: font-size 1s;
-  }
-  .nav-container div:hover {
-    font-size: 1.5rem;
-  }
-  .nav-container div:hover a {
-    color: #f8f9fb;
   }
 }
 
@@ -189,6 +193,17 @@ body {
   color: #333;
   margin-top: 100px;
   text-shadow: 1px 2px 2px #333;
+}
+
+.header-container #webBanner .title-1 {
+  color: #f8f9fb;
+  background-color: #02457A;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.header-container #webBanner .title-2 {
+  color: #02457A;
 }
 
 @media screen and (max-width: 1690px) {
@@ -269,12 +284,12 @@ body {
   -webkit-transition: width 1s;
   -o-transition: width 1s;
   transition: width 1s;
-  background-color: #FFC107;
+  background-color: #D6E8EE;
 }
 
 .options #web-name a, .options #web-cert a, .options #web-pdc a {
   text-decoration: none;
-  color: #333;
+  color: #001B4B;
   font-size: 1.3rem;
 }
 
@@ -313,11 +328,9 @@ body {
     -webkit-transition: width 1s;
     -o-transition: width 1s;
     transition: width 1s;
-    background-color: #FFC107;
   }
   .options #web-name a, .options #web-cert a, .options #web-pdc a {
     text-decoration: none;
-    color: #333;
     font-size: 1.1rem;
   }
   .options #web-name i, .options #web-cert i, .options #web-pdc i {
@@ -351,7 +364,6 @@ body {
   }
   .options #web-name a, .options #web-cert a, .options #web-pdc a {
     text-decoration: none;
-    color: #333;
     font-size: 1rem;
   }
   .options #web-name i, .options #web-cert i, .options #web-pdc i {
@@ -385,7 +397,6 @@ body {
   }
   .options #web-name a, .options #web-cert a, .options #web-pdc a {
     text-decoration: none;
-    color: #333;
     font-size: 1rem;
   }
   .options #web-name i, .options #web-cert i, .options #web-pdc i {
@@ -418,11 +429,11 @@ body {
     border-radius: 50px;
     -webkit-box-shadow: 2px 2px 2px #ECEFF1;
     box-shadow: 2px 2px 2px #ECEFF1;
-    background-color: #FFC107;
+    background-color: #D6E8EE;
   }
   .options #mobile-name a, .options #mobile-cert a, .options #mobile-pdc a {
     text-decoration: none;
-    color: #333;
+    color: #001B4B;
   }
 }
 
@@ -431,22 +442,8 @@ body {
     display: none;
   }
   .options #mobile-name, .options #mobile-cert, .options #mobile-pdc {
-    display: block;
     width: 330px;
-    padding-top: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
     font-size: 1.2rem;
-    border: 1px solid #f8f9fb;
-    margin-top: 40px;
-    border-radius: 100px;
-    -webkit-box-shadow: 2px 2px 2px #ECEFF1;
-    box-shadow: 2px 2px 2px #ECEFF1;
-    background-color: #FFC107;
-  }
-  .options #mobile-name a, .options #mobile-cert a, .options #mobile-pdc a {
-    text-decoration: none;
-    color: #333;
   }
 }
 
@@ -459,8 +456,9 @@ body {
 .web-footer {
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  background-color: #333;
+  background-color: #02457A;
   margin-top: 100px;
+  bottom: 0;
 }
 
 .web-footer div {
@@ -515,7 +513,8 @@ body {
   flex-direction: column;
   margin-top: 150px;
   height: auto;
-  background-color: #333;
+  background-color: #02457A;
+  bottom: 0;
 }
 
 .mobile-footer div {
@@ -535,6 +534,23 @@ body {
   .web-footer {
     display: none;
   }
+}
+
+#name-page, #cert-page, #enrollees-page {
+  display: none;
+}
+
+.alert-container {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.formTitle {
+  color: #001B4B;
+  line-height: 0.3;
+  margin-left: 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */

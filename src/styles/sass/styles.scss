@@ -535,8 +535,89 @@ body{
 		}
 	}
 
+	@media screen and (max-width: 1690px){
+		.form-name, .form-cert, .form-enrollees{
+			padding-top: 30px;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-bottom: 20px;
+			border-radius: 5px;
 
+			.form-input-name{
+				width: 300px;
+			}
 
+			input{
+				height: 40px;
+				font-size: 1.5rem;
+				padding: 5px;
+				border-radius: 4px;
+				border: 1px solid $lightGrey;
+				color: $darkerBlue;
+				box-shadow: 1px 1px 1px $offWhite;
+			}
+
+			label{
+				color: $darkerBlue
+			}
+		}
+	}
+
+	@media screen and (max-width: 1300px){
+		.form-name, .form-cert, .form-enrollees{
+			padding-top: 30px;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-bottom: 20px;
+			border-radius: 5px;
+
+			.form-input-name{
+				width: 200px;
+			}
+
+			input{
+				height: 30px;
+				font-size: 1.2rem;
+				padding: 5px;
+				border-radius: 4px;
+				border: 1px solid $lightGrey;
+				color: $darkerBlue;
+				box-shadow: 1px 1px 1px $offWhite;
+			}
+
+			label{
+				color: $darkerBlue
+			}
+		}
+	}
+
+	@media screen and (max-width: 1380px){
+		.form-name, .form-cert, .form-enrollees{
+			padding-top: 30px;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-bottom: 20px;
+			border-radius: 5px;
+
+			.form-input-name{
+				width: 190px;
+			}
+
+			input{
+				height: 30px;
+				font-size: 1.2rem;
+				padding: 5px;
+				border-radius: 4px;
+				border: 1px solid $lightGrey;
+				color: $darkerBlue;
+				box-shadow: 1px 1px 1px $offWhite;
+			}
+
+			label{
+				color: $darkerBlue
+			}
+		}
+	}
 }
 
 .table-container{
@@ -588,6 +669,113 @@ body{
 			 }
 		 }
 	}
+
+	@media screen and (max-width: 1690px){
+		margin-left: 30px;
+	}
+	@media screen and (max-width: 1300px){
+		margin-left: 30px;
+
+		table{
+			padding: 5px;
+			border-left: 1px solid $lightBlue2;
+			th{
+				color: $darkerBlue;
+				border-bottom: 1px solid $lightBlue2;
+				padding-left: 50px;
+				padding-right: 50px;
+				padding-top: 20px;
+				padding-bottom: 20px;
+			}
+			 td{
+				 color: $darkerBlue;
+				 padding-left: 50px;
+				padding-right: 50px;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				border-top: 1px solid $lightBlue2;
+			 }
+
+			 tfoot{
+				 th{
+					 border-bottom: 1px solid $offWhite;
+				 }
+				 ul{
+					 list-style-type: none;
+					 margin: 0;
+					 padding: 0
+				 }
+				 li{
+					 display: inline;
+					 padding-left: 10px;
+					 padding-right: 10px;
+				 }
+
+				 a{
+					 text-decoration: none;
+					 color: $darkerBlue;
+					 transition: font-size 0.2s;
+				 }
+
+				 a:hover{
+					 font-size: 1.5rem;
+					 color: $lightBlue;
+				 }
+			 }
+		}
+	}
+
+	@media screen and (max-width: 1380px){
+		margin-left: 50px;
+
+		table{
+			padding: 5px;
+			border-left: 1px solid $lightBlue2;
+			th{
+				color: $darkerBlue;
+				border-bottom: 1px solid $lightBlue2;
+				padding-left: 70px;
+				padding-right: 70px;
+				padding-top: 20px;
+				padding-bottom: 20px;
+			}
+			 td{
+				 color: $darkerBlue;
+				 padding-left: 70px;
+				padding-right: 70px;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				border-top: 1px solid $lightBlue2;
+			 }
+
+			 tfoot{
+				 th{
+					 border-bottom: 1px solid $offWhite;
+				 }
+				 ul{
+					 list-style-type: none;
+					 margin: 0;
+					 padding: 0
+				 }
+				 li{
+					 display: inline;
+					 padding-left: 10px;
+					 padding-right: 10px;
+				 }
+
+				 a{
+					 text-decoration: none;
+					 color: $darkerBlue;
+					 transition: font-size 0.2s;
+				 }
+
+				 a:hover{
+					 font-size: 1.5rem;
+					 color: $lightBlue;
+				 }
+			 }
+		}
+	}
 }
 
 .submit-button{
@@ -600,4 +788,16 @@ body{
 	border-radius: 50px;
 	margin-top: 20px;
 	box-shadow: 1px 1px 1px $offWhite;
+
+	@media screen and (max-width: 1300px){
+		width: 120px;
+		padding: 5px;
+		font-size: 1.2rem;
+	}
+
+	@media screen and (max-width: 1380px){
+		width: 110px;
+		padding: 10px;
+		font-size: 1rem;
+	}
 }

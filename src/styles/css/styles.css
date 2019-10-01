@@ -555,18 +555,19 @@ body {
 
 .verifyByName-form-container {
   margin-left: 10px;
+  margin-right: 10px;
   margin-top: 20px;
+  border: 1px solid #f8f9fb;
+  -webkit-box-shadow: 1px 1px 1px #f8f9fb;
+  box-shadow: 1px 1px 1px #f8f9fb;
 }
 
 .verifyByName-form-container .form {
-  border: 1px solid #ECEFF1;
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
   border-radius: 5px;
-  -webkit-box-shadow: 1px 1px 1px #ECEFF1;
-  box-shadow: 1px 1px 1px #ECEFF1;
 }
 
 .verifyByName-form-container .form .form-input-name {
@@ -580,10 +581,51 @@ body {
   border-radius: 4px;
   border: 1px solid #ECEFF1;
   color: #001B4B;
+  -webkit-box-shadow: 1px 1px 1px #f8f9fb;
+  box-shadow: 1px 1px 1px #f8f9fb;
 }
 
 .verifyByName-form-container .form label {
   color: #001B4B;
+}
+
+.table-container {
+  margin-left: 100px;
+}
+
+.table-container table {
+  padding: 10px;
+  border-left: 1px solid #D6E8EE;
+}
+
+.table-container table th {
+  color: #001B4B;
+  border-bottom: 1px solid #D6E8EE;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.table-container table td {
+  color: #001B4B;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid #D6E8EE;
+}
+
+.table-container table tfoot ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.table-container table tfoot li {
+  display: inline;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .submit-button {
@@ -595,6 +637,8 @@ body {
   border: 1px solid #D6E8EE;
   border-radius: 50px;
   margin-top: 20px;
+  -webkit-box-shadow: 1px 1px 1px #f8f9fb;
+  box-shadow: 1px 1px 1px #f8f9fb;
 }
 
 /*# sourceMappingURL=styles.css.map */

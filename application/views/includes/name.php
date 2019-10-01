@@ -24,5 +24,64 @@
 
     </form>
   </div>
-  <div class="result"></div>
+  <div class="row table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Cetificate Number</th>
+          <th>Full name</th>
+          <th>Date of Birth</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Sample Data</td>
+          <td>Sample Data</td>
+          <td>Sample Data</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Sample Data</td>
+          <td>Sample Data</td>
+          <td>Sample Data</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Sample Data</td>
+          <td>Sample Data</td>
+          <td>Sample Data</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Sample Data</td>
+          <td>Sample Data</td>
+          <td>Sample Data</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Sample Data</td>
+          <td>Sample Data</td>
+          <td>Sample Data</td>
+        </tr>
+
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="4">
+            <ul>
+              <li><a href="#"><<</a></li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">>></a></li>
+            </ul>
+          </th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
 </div>

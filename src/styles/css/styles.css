@@ -524,6 +524,12 @@ body {
   color: #f8f9fb;
 }
 
+@media screen and (max-width: 780px) {
+  .mobile-footer {
+    margin-top: 220px;
+  }
+}
+
 @media screen and (max-width: 1050px) {
   .mobile-footer {
     display: block;
@@ -541,6 +547,27 @@ body {
   color: #001B4B;
   line-height: 0.3;
   margin-left: 10px;
+}
+
+@media screen and (max-width: 780px) {
+  .formTitle p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .formTitle p {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .formTitle h1 {
+    font-size: 1.7rem;
+  }
+  .formTitle p {
+    font-size: 0.6rem;
+  }
 }
 
 .verifyByName-form-container {
@@ -644,6 +671,72 @@ body {
   }
   .verifyByName-form-container .form-name input, .verifyByName-form-container .form-cert input, .verifyByName-form-container .form-enrollees input {
     height: 30px;
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ECEFF1;
+    color: #001B4B;
+    -webkit-box-shadow: 1px 1px 1px #f8f9fb;
+    box-shadow: 1px 1px 1px #f8f9fb;
+  }
+  .verifyByName-form-container .form-name label, .verifyByName-form-container .form-cert label, .verifyByName-form-container .form-enrollees label {
+    color: #001B4B;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .verifyByName-form-container {
+    margin-left: 20px;
+    margin-right: 250px;
+  }
+  .verifyByName-form-container .form-name, .verifyByName-form-container .form-cert, .verifyByName-form-container .form-enrollees {
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+  }
+  .verifyByName-form-container .form-name .form-input-name, .verifyByName-form-container .form-cert .form-input-name, .verifyByName-form-container .form-enrollees .form-input-name {
+    width: 350px;
+  }
+  .verifyByName-form-container .form-name input, .verifyByName-form-container .form-cert input, .verifyByName-form-container .form-enrollees input {
+    height: 50px;
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ECEFF1;
+    color: #001B4B;
+    -webkit-box-shadow: 1px 1px 1px #f8f9fb;
+    box-shadow: 1px 1px 1px #f8f9fb;
+  }
+  .verifyByName-form-container .form-name label, .verifyByName-form-container .form-cert label, .verifyByName-form-container .form-enrollees label {
+    color: #001B4B;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .verifyByName-form-container {
+    margin-right: 100px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .verifyByName-form-container {
+    margin-left: 10px;
+    margin-right: 50px;
+  }
+  .verifyByName-form-container .form-name, .verifyByName-form-container .form-cert, .verifyByName-form-container .form-enrollees {
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+    border-radius: 5px;
+  }
+  .verifyByName-form-container .form-name .form-input-name, .verifyByName-form-container .form-cert .form-input-name, .verifyByName-form-container .form-enrollees .form-input-name {
+    width: 320px;
+  }
+  .verifyByName-form-container .form-name input, .verifyByName-form-container .form-cert input, .verifyByName-form-container .form-enrollees input {
+    height: 50px;
     font-size: 1.2rem;
     padding: 5px;
     border-radius: 4px;
@@ -819,6 +912,12 @@ body {
   }
 }
 
+@media screen and (max-width: 1050px) {
+  .table-container {
+    display: none;
+  }
+}
+
 .submit-button {
   color: #001B4B;
   padding: 10px;
@@ -845,6 +944,14 @@ body {
     width: 110px;
     padding: 10px;
     font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .submit-button {
+    width: 155px;
+    padding: 20px;
+    font-size: 1.2rem;
   }
 }
 

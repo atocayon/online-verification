@@ -481,6 +481,10 @@ body{
 			color: $offWhite;
 		}
 
+		@media screen and (max-width: 780px){
+			margin-top: 220px;
+		}
+
 	}
 
 	@media screen and (max-width: 1050px){
@@ -501,6 +505,26 @@ body{
 	color: $darkerBlue;
 	line-height: 0.3;
 	margin-left: 10px;
+
+	@media screen and (max-width: 780px){
+		p{
+			font-size: 0.9rem;
+		}
+	}
+	@media screen and (max-width: 650px){
+		p{
+			font-size: 0.7rem;
+		}
+	}
+
+	@media screen and (max-width: 510px){
+		h1{
+			font-size: 1.7rem;
+		}
+		p{
+			font-size: 0.6rem;
+		}
+	}
 }
 
 .verifyByName-form-container{
@@ -618,6 +642,70 @@ body{
 			}
 		}
 	}
+
+	@media screen and (max-width: 1050px){
+		margin-left: 20px;
+		margin-right: 250px;
+		.form-name, .form-cert, .form-enrollees{
+			padding-top: 30px;
+			padding-left: 50px;
+			padding-right: 50px;
+			padding-bottom: 20px;
+			border-radius: 5px;
+			.form-input-name{
+				width: 350px;
+			}
+
+			input{
+				height: 50px;
+				font-size: 1.2rem;
+				padding: 5px;
+				border-radius: 4px;
+				border: 1px solid $lightGrey;
+				color: $darkerBlue;
+				box-shadow: 1px 1px 1px $offWhite;
+			}
+
+			label{
+				color: $darkerBlue
+			}
+		}
+	}
+
+	@media screen and (max-width: 650px){
+		margin-right: 100px;
+	}
+
+	@media screen and (max-width: 510px){
+		margin-left: 10px;
+		margin-right: 50px;
+
+		.form-name, .form-cert, .form-enrollees{
+			padding-top: 30px;
+			padding-left: 50px;
+			padding-right: 50px;
+			padding-bottom: 30px;
+			border-radius: 5px;
+			.form-input-name{
+				width: 320px;
+			}
+
+			input{
+				height: 50px;
+				font-size: 1.2rem;
+				padding: 5px;
+				border-radius: 4px;
+				border: 1px solid $lightGrey;
+				color: $darkerBlue;
+				box-shadow: 1px 1px 1px $offWhite;
+			}
+
+			label{
+				color: $darkerBlue
+			}
+		}
+	}
+
 }
 
 .table-container{
@@ -776,6 +864,10 @@ body{
 			 }
 		}
 	}
+
+	@media screen and (max-width: 1050px){
+		display: none;
+	}
 }
 
 .submit-button{
@@ -799,5 +891,11 @@ body{
 		width: 110px;
 		padding: 10px;
 		font-size: 1rem;
+	}
+
+	@media screen and (max-width: 1050px){
+		width: 155px;
+		padding: 20px;
+		font-size: 1.2rem;
 	}
 }

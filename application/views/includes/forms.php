@@ -1,3 +1,6 @@
+
+<script src="<?= base_url() ?>src/js/ajax_request.js"></script>
+
 <div class="row formTitle-container">
   <div>
     <?php include 'formTitle.php' ?>
@@ -19,7 +22,7 @@
 
 
   <div class="row table-container">
-    <table>
+    <table id="records_tbl">
       <thead>
         <tr>
           <th>#</th>
@@ -61,7 +64,7 @@
         </tr>
 
       </tbody>
-      <tfoot>
+      <!-- <tfoot>
         <tr>
           <th colspan="4">
             <ul>
@@ -75,7 +78,7 @@
             </ul>
           </th>
         </tr>
-      </tfoot>
+      </tfoot> -->
     </table>
   </div>
 </div>

@@ -10,5 +10,5 @@ class Queries extends CI_Model
 
   }
 
-  
+
 }

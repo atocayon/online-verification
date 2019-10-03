@@ -1,6 +1,6 @@
 
 <div class="row options ">
-  <a href="<?= base_url() ?>index.php/nmp/page/1">
+  <a id="name_option">
     <div id="web-name" class="row">
       <center>
         <i class="fas fa-user-alt"></i> Name
@@ -8,7 +8,7 @@
     </div>
   </a>
 
-  <a href="<?= base_url() ?>index.php/nmp/page/2">
+  <a id="cert_option">
     <div id="web-cert" class="row">
       <center>
         <i class="fas fa-certificate"></i> Certificate Number
@@ -16,7 +16,7 @@
     </div>
   </a>
 
-  <a href="<?= base_url() ?>index.php/nmp/page/3">
+  <a id="pdc_option">
     <div id="web-pdc" class="row">
       <center>
         <i class="fas fa-id-card"></i> Enrolless on PDC Courses

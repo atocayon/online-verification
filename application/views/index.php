@@ -1,9 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-$page_id = "";
-if (isset($id)) {
-		$page_id = $id;
-}
+$page_id = $this->input->get('p');;
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,7 +35,7 @@ if (isset($id)) {
 
 <script>
 
-	var page = <?= $page_id ?>;
+	var page = <?php echo $page_id ?>;
 	console.log(page);
 	if (page === 0 || page === undefined) {
 		document.getElementById('options').style.display = "block";

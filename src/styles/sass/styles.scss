@@ -422,8 +422,9 @@ body{
 	.web-footer{
 		justify-content: space-around;
 		background-color: $darkBlue;
-		margin-top: 100px;
+		width: 100%;
 		bottom: 0;
+		position: fixed;
 		div{
 			margin: auto;
 		}
@@ -467,7 +468,9 @@ body{
 	.mobile-footer{
 		display: none;
 		flex-direction: column;
-		margin-top: 150px;
+		width: 100%;
+		bottom: 0;
+		position: fixed;
 		height: auto;
 		background-color: $darkBlue;
 		bottom: 0;
@@ -712,7 +715,7 @@ body{
 	margin-left: 100px;
 	table{
 		padding: 10px;
-		border-left: 1px solid $lightBlue2;
+
 		th{
 			color: $darkerBlue;
 			border-bottom: 1px solid $lightBlue2;

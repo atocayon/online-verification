@@ -1,6 +1,3 @@
-
-<script src="<?= base_url() ?>src/js/ajax_request.js"></script>
-
 <div class="row formTitle-container">
   <div>
     <?php include 'formTitle.php' ?>
@@ -31,37 +28,17 @@
           <th>Date of Birth</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Sample Data</td>
-          <td>Sample Data</td>
-          <td>Sample Data</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Sample Data</td>
-          <td>Sample Data</td>
-          <td>Sample Data</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Sample Data</td>
-          <td>Sample Data</td>
-          <td>Sample Data</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Sample Data</td>
-          <td>Sample Data</td>
-          <td>Sample Data</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Sample Data</td>
-          <td>Sample Data</td>
-          <td>Sample Data</td>
-        </tr>
+      <tbody id="tbl_data">
+
+          <tr>
+            <td colspan="4">
+              <center>Result will show up here</center>
+            </td>
+          </tr>
+
+
+
+
 
       </tbody>
       <!-- <tfoot>
@@ -84,24 +61,25 @@
 </div>
 
 <script type="text/javascript">
-  var page = <?= $this->uri->segment(3); ?>
+var page = <?php echo $page_id ?>;
+console.log(page);
+if (page === 1) {
+  document.getElementById('form-name').style.display = "block";
+  document.getElementById('form-cert').style.display = "none";
+  document.getElementById('form-enrollees').style.display = "none";
+}
 
-  if (page === 1) {
-    document.getElementById('form-name').style.display = "block";
-    document.getElementById('form-cert').style.display = "none";
-    document.getElementById('form-enrollees').style.display = "none";
-  }
+if(page === 2){
+  document.getElementById('form-cert').style.display = "block";
+  document.getElementById('form-enrollees').style.display = "none";
+  document.getElementById('form-name').style.display = "none";
+}
 
-  if(page === 2){
-    document.getElementById('form-cert').style.display = "block";
-    document.getElementById('form-enrollees').style.display = "none";
-    document.getElementById('form-name').style.display = "none";
-  }
+if(page === 3){
+  document.getElementById('form-enrollees').style.display = "block";
+  document.getElementById('form-name').style.display = "none";
+  document.getElementById('form-cert').style.display = "none";
+}
 
-  if(page === 3){
-    document.getElementById('form-enrollees').style.display = "block";
-    document.getElementById('form-name').style.display = "none";
-    document.getElementById('form-cert').style.display = "none";
-  }
-
+var baseURL= "<?= base_url();?>";
 </script>

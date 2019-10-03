@@ -12,12 +12,11 @@ class Nmp extends CI_Controller {
 		$this->load->view('index');
 	}
 
-	public function page(){
-		$page['id'] =  $this->uri->segment(3);
-		$this->load->view('index', $page);
-	}
-
-	public function insert_data(){
+	
+	public function search_byName(){
+			$this->input->post('fname');
+			$this->input->post('lname');
+			$this->input->post(bday);
 
 	}
 }

@@ -12,11 +12,35 @@ class Nmp extends CI_Controller {
 		$this->load->view('index');
 	}
 
-	
 	public function search_byName(){
-			$this->input->post('fname');
-			$this->input->post('lname');
-			$this->input->post(bday);
+			$data['record'] = $this->queries->search_byName()->result_array();
+			if($data['record'] == NULL){
+				$data['record'] = ['response' =>  'null'];
+				echo json_encode($data);
+			}else{
+				echo json_encode($data);
+			}
 
+	}
+
+	public function search_byCertNum(){
+		$data['record'] = $this->queries->search_byCertNum()->result_array();
+		if ($data['record'] == NULL) {
+			$data['record'] = ['response' => 'null'];
+			echo json_encode($data);
+		}else{
+			echo json_encode($data);
+		}
+	}
+
+
+	public function search_byPDC(){
+		$data['record'] = $this->queries->searh_byPDC()->result_array();
+		if ($data['record'] == NULL) {
+			$data['record'] = ['response' => 'null'];
+			echo json_encode($data);
+		}else{
+			echo json_encode($data);
+		}
 	}
 }

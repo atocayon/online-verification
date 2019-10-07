@@ -22,24 +22,32 @@
     <table id="records_tbl">
       <thead>
         <tr>
-          <th>#</th>
-          <th>Cetificate Number</th>
+          <th>Training Module</th>
           <th>Full name</th>
-          <th>Date of Birth</th>
+          <th>Date of Certification</th>
         </tr>
       </thead>
       <tbody id="tbl_data">
 
           <tr>
-            <td colspan="4">
-              <center>Result will show up here</center>
+            <td colspan="4" id="default">
+              <center>
+                <h2 style="color: #607D8B">Result will show up here</h2>
+              </center>
+            </td>
+
+            <td colspan="4" id="no_data" style="display: none">
+              <center>
+                <h2 style="color: #d50000">No Data Found</h2>
+              </center>
+            </td>
+
+            <td colspan="4" id="empty_field" style="display: none">
+              <center>
+                <h2 style="color: #FF6D00">Please don't leave input field empty</h2>
+              </center>
             </td>
           </tr>
-
-
-
-
-
       </tbody>
       <!-- <tfoot>
         <tr>
@@ -59,27 +67,3 @@
     </table>
   </div>
 </div>
-
-<script type="text/javascript">
-var page = <?php echo $page_id ?>;
-console.log(page);
-if (page === 1) {
-  document.getElementById('form-name').style.display = "block";
-  document.getElementById('form-cert').style.display = "none";
-  document.getElementById('form-enrollees').style.display = "none";
-}
-
-if(page === 2){
-  document.getElementById('form-cert').style.display = "block";
-  document.getElementById('form-enrollees').style.display = "none";
-  document.getElementById('form-name').style.display = "none";
-}
-
-if(page === 3){
-  document.getElementById('form-enrollees').style.display = "block";
-  document.getElementById('form-name').style.display = "none";
-  document.getElementById('form-cert').style.display = "none";
-}
-
-var baseURL= "<?= base_url();?>";
-</script>

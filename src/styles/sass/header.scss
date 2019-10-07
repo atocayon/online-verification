@@ -1,0 +1,75 @@
+.header-container{
+		img{
+			width: 900px;
+		}
+
+		#webBanner{
+			font-size: 12rem;
+			color: $darkGrey;
+			margin-top: 100px;
+			text-shadow: 1px 2px 2px $darkGrey;
+			.title-1{
+				color: $offWhite;
+				background-color: $darkBlue;
+				padding: 10px;
+				border-radius: 5px;
+			}
+			.title-2{
+				color: $darkBlue;
+			}
+		}
+
+		@media screen and (max-width: 1690px){
+			#webBanner{
+				font-size: 11rem;
+				color: $darkGrey;
+				margin-top: 120px;
+				text-shadow: 1px 2px 2px $darkGrey;
+			}
+		}
+
+		@media screen and (max-width: 1380px){
+
+			#webBanner{
+				font-size: 8rem;
+				color: $darkGrey;
+				margin-top: 100px;
+				text-shadow: 1px 2px 2px $darkGrey;
+			}
+		}
+
+		@media screen and (max-width: 1050px){
+			margin-top: 0px;
+		}
+
+		@media screen and (max-width: 780px){
+			#webBanner{
+				font-size: 7rem;
+				color: $darkGrey;
+				margin-top: 50px;
+				text-shadow: 1px 2px 2px $darkGrey;
+			}
+		}
+
+		@media screen and (max-width: 650px){
+			#webBanner{
+				font-size: 6rem;
+				color: $darkGrey;
+				margin-top: 50px;
+				text-shadow: 1px 2px 2px $darkGrey;
+			}
+
+		}
+
+		@media screen and (max-width: 510px){
+			#webBanner{
+				font-size: 5rem;
+				color: $darkGrey;
+				margin-top: 50px;
+				text-shadow: 1px 1px 2px $darkGrey;
+			}
+
+		}
+
+
+}

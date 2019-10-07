@@ -1,8 +1,5 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-$page_id = $this->input->get('p');;
-
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,21 +29,33 @@ $page_id = $this->input->get('p');;
 	<?php include 'includes/footer.php'; ?>
 </div>
 
-
-<script>
-
-	var page = <?php echo $page_id ?>;
+<script type="text/javascript">
+	var baseURL= "<?= base_url() ?>";
+	var page = "<?= $this->uri->segment(3) ?>";
 	console.log(page);
-	if (page === 0 || page === undefined) {
-		document.getElementById('options').style.display = "block";
-		document.getElementById('forms-page').style.display = "none";
-		document.getElementById('home').style.display = "block";
-	}
 
-	if (page === 1 || page === 2 || page === 3) {
+	if (page == 1) {
+		document.getElementById('forms-page').style.display = "block";
 		document.getElementById('home').style.display = "none";
 		document.getElementById('options').style.display = "none";
+		document.getElementById('form-cert').style.display ="none";
+		document.getElementById('form-enrollees').style.display ="none";
+	}
+
+	if (page == 2) {
 		document.getElementById('forms-page').style.display = "block";
+		document.getElementById('home').style.display = "none";
+		document.getElementById('options').style.display = "none";
+		document.getElementById('form-name').style.display ="none";
+		document.getElementById('form-enrollees').style.display ="none";
+	}
+
+	if (page == 3) {
+		document.getElementById('forms-page').style.display = "block";
+		document.getElementById('home').style.display = "none";
+		document.getElementById('options').style.display = "none";
+		document.getElementById('form-name').style.display ="none";
+		document.getElementById('form-cert').style.display ="none";
 	}
 
 </script>

@@ -1,0 +1,87 @@
+// NavBar Style
+.nav-container {
+	box-shadow: 1px 2px 3px $offWhite;
+	font-size: 1rem;
+	div{
+		padding: 20px;
+	}
+
+	div:hover{
+		a{
+			color: $offWhite;
+		}
+	}
+
+	a{
+		text-decoration: none;
+		color: $darkerBlue;
+	}
+
+	.info{
+		padding-left: 18px;
+		padding-right: 18px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-radius: 50px;
+			background-color: $lightBlue2;
+	}
+	.access{
+		padding-left: 12px;
+		padding-right: 12px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-radius: 50px;
+			background-color: $lightBlue2;
+	}
+
+
+	img{
+		width: 30px;
+	}
+
+	.brand{
+		font-weight: bold;
+		color: $darkerBlue;
+		font-size: 2rem;
+	}
+
+	.dropdown {
+	  position: relative;
+	  display: inline-block;
+		span{
+			color: $darkGrey;
+		}
+	}
+
+	.filler{
+	    flex-grow: 1;
+	}
+
+	#mobile{
+		display: none;
+	}
+
+	@media screen and (max-width: 1050px){
+		#mobile{
+			display: block;
+		}
+		#web{
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 780px){
+		img{
+			width: 28px;
+		}
+		.brand{
+			font-weight: bold;
+			font-size: 1.5rem;
+		}
+
+		div{
+			padding: 15px;
+		}
+	}
+}
+// End Navbar

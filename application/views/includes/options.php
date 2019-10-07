@@ -1,6 +1,6 @@
 
 <div class="row options ">
-  <a id="name_option">
+  <a href="<?= base_url() ?>index.php/nmp/index/1" type="submit">
     <div id="web-name" class="row">
       <center>
         <i class="fas fa-user-alt"></i> Name
@@ -8,7 +8,7 @@
     </div>
   </a>
 
-  <a id="cert_option">
+  <a href="<?= base_url() ?>index.php/nmp/index/2" type="submit">
     <div id="web-cert" class="row">
       <center>
         <i class="fas fa-certificate"></i> Certificate Number
@@ -16,7 +16,7 @@
     </div>
   </a>
 
-  <a id="pdc_option">
+  <a href="<?= base_url() ?>index.php/nmp/index/3" type="submit">
     <div id="web-pdc" class="row">
       <center>
         <i class="fas fa-id-card"></i> Enrolless on PDC Courses
@@ -27,17 +27,17 @@
   <div class="column">
     <div id="mobile-name">
       <center>
-        <a href="#"><i class="fas fa-user-alt"></i> Name</a>
+        <a href="<?= base_url() ?>index.php/nmp/index/1"><i class="fas fa-user-alt"></i> Name</a>
       </center>
     </div>
     <div id="mobile-cert">
       <center>
-        <a href="#"><i class="fas fa-certificate"></i> Certificate Number</a>
+        <a href="<?= base_url() ?>index.php/nmp/index/2"><i class="fas fa-certificate"></i> Certificate Number</a>
       </center>
     </div>
     <div id="mobile-pdc">
       <center>
-        <a href="#"><i class="fas fa-id-card"></i> Enrollees on PDC Courses</a>
+        <a href="<?= base_url() ?>index.php/nmp/index/3"><i class="fas fa-id-card"></i> Enrollees on PDC Courses</a>
       </center>
     </div>
   </div>

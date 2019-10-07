@@ -1,32 +1,13 @@
-//Color
-$offWhite: #f8f9fb;
-$lightGrey: #ECEFF1;
-$semiDarkGrey: #455A64;
-$darkGrey: #333;
-
-$goldenYellow: #FFC107;
-$fontFamily: Helvetica, sans-serif;
-$darkerBlue: #001B4B;
-$darkBlue: #02457A;
-$blue: #018ABE;
-$lightBlue: #97CADB;
-$lightBlue2: #D6E8EE;
-//Button Style
-
-//Grid View
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
+@import 'grid';
+@import 'variable';
+@import 'navbar';
+@import 'navbarDropDown';
+@import 'header';
+@import 'options';
+@import 'formTitle';
+@import 'forms';
+@import 'button';
+@import 'table';
 
 body{
 	margin: 0px;
@@ -49,369 +30,6 @@ body{
 	justify-content: flex-end;
 }
 
-
-// NavBar Style
-.nav-container {
-	box-shadow: 1px 2px 3px $offWhite;
-	font-size: 1rem;
-	div{
-		padding: 20px;
-	}
-
-	div:hover{
-		a{
-			color: $offWhite;
-		}
-	}
-
-	a{
-		text-decoration: none;
-		color: $darkerBlue;
-	}
-
-	.info{
-		padding-left: 18px;
-		padding-right: 18px;
-		padding-top: 10px;
-		padding-bottom: 10px;
-		border-radius: 50px;
-			background-color: $lightBlue2;
-	}
-	.access{
-		padding-left: 12px;
-		padding-right: 12px;
-		padding-top: 10px;
-		padding-bottom: 10px;
-		border-radius: 50px;
-			background-color: $lightBlue2;
-	}
-
-
-	img{
-		width: 30px;
-	}
-
-	.brand{
-		font-weight: bold;
-		color: $darkerBlue;
-		font-size: 2rem;
-	}
-
-	.dropdown {
-	  position: relative;
-	  display: inline-block;
-		span{
-			color: $darkGrey;
-		}
-	}
-
-	.filler{
-	    flex-grow: 1;
-	}
-
-	#mobile{
-		display: none;
-	}
-
-	@media screen and (max-width: 1050px){
-		#mobile{
-			display: block;
-		}
-		#web{
-			display: none;
-		}
-	}
-
-	@media screen and (max-width: 780px){
-		img{
-			width: 28px;
-		}
-		.brand{
-			font-weight: bold;
-			font-size: 1.5rem;
-		}
-
-		div{
-			padding: 15px;
-		}
-	}
-}
-// End Navbar
-
-// Drop Down
-.dropdown-content {
-	display: none;
-	position: absolute;
-	padding: 10px;
-	width: 100%;
-	height: auto;
-	float: right;
-	a {
-		color: $darkGrey;
-		text-decoration: none;
-		padding: 20px;
-	}
-}
-// Drop Down
-
-
-.header-container{
-		img{
-			width: 900px;
-		}
-
-		#webBanner{
-			font-size: 12rem;
-			color: $darkGrey;
-			margin-top: 100px;
-			text-shadow: 1px 2px 2px $darkGrey;
-			.title-1{
-				color: $offWhite;
-				background-color: $darkBlue;
-				padding: 10px;
-				border-radius: 5px;
-			}
-			.title-2{
-				color: $darkBlue;
-			}
-		}
-
-		@media screen and (max-width: 1690px){
-			#webBanner{
-				font-size: 11rem;
-				color: $darkGrey;
-				margin-top: 120px;
-				text-shadow: 1px 2px 2px $darkGrey;
-			}
-		}
-
-		@media screen and (max-width: 1380px){
-
-			#webBanner{
-				font-size: 8rem;
-				color: $darkGrey;
-				margin-top: 100px;
-				text-shadow: 1px 2px 2px $darkGrey;
-			}
-		}
-
-		@media screen and (max-width: 1050px){
-			margin-top: 0px;
-		}
-
-		@media screen and (max-width: 780px){
-			#webBanner{
-				font-size: 7rem;
-				color: $darkGrey;
-				margin-top: 50px;
-				text-shadow: 1px 2px 2px $darkGrey;
-			}
-		}
-
-		@media screen and (max-width: 650px){
-			#webBanner{
-				font-size: 6rem;
-				color: $darkGrey;
-				margin-top: 50px;
-				text-shadow: 1px 2px 2px $darkGrey;
-			}
-
-		}
-
-		@media screen and (max-width: 510px){
-			#webBanner{
-				font-size: 5rem;
-				color: $darkGrey;
-				margin-top: 50px;
-				text-shadow: 1px 1px 2px $darkGrey;
-			}
-
-		}
-
-
-}
-
-.options{
-	margin-top: 5px;
-	justify-content: center;
-	a{
-		text-decoration: none;
-		color: $darkerBlue;
-		font-size: 1.3rem;
-	}
-	#web-name, #web-cert, #web-pdc{
-		justify-content: center;
-		margin-left: 100px;
-		margin-right: 100px;
-		margin-bottom: 20px;
-		border: 1px solid $offWhite;
-		padding-top: 25px;
-		padding-bottom: 5px;
-		padding-left: 10px;
-		padding-right: 10px;
-		width: 300px;
-		height: 50px;
-		border-radius: 50px;
-		box-shadow: 2px 2px 2px $lightGrey;
-		transition: width 0.2s;
-		background-color: $lightBlue2;
-
-		i{
-			font-size: 1rem;
-		}
-	}
-	#web-name:hover, #web-cert:hover, #web-pdc:hover{
-		width: 320px;
-		padding-left: 12px;
-		padding-right: 12px;
-	}
-
-	#mobile-name, #mobile-cert, #mobile-pdc{
-		display: none;
-	}
-
-	@media screen and (max-width: 1690px){
-		#web-name, #web-cert, #web-pdc{
-			justify-content: center;
-			margin-left: 100px;
-			margin-right: 100px;
-			margin-bottom: 20px;
-			border: 1px solid $offWhite;
-			padding-top: 25px;
-			padding-bottom: 5px;
-			padding-left: 10px;
-			padding-right: 10px;
-			width: 240px;
-			height: 50px;
-			border-radius: 50px;
-			box-shadow: 2px 2px 2px $lightGrey;
-			transition: width 1s;
-			a{
-				text-decoration: none;
-				font-size: 1.1rem;
-			}
-			i{
-				font-size: 1rem;
-			}
-		}
-
-		#web-name:hover, #web-cert:hover, #web-pdc:hover{
-			width: 260px;
-			padding-left: 12px;
-			padding-right: 12px;
-		}
-
-		#mobile-name, #mobile-cert, #mobile-pdc{
-			display: none;
-		}
-	}
-
-	@media screen and (max-width: 1380px){
-
-		#web-name, #web-cert, #web-pdc{
-			justify-content: center;
-			margin-left: 80px;
-			margin-right: 80px;
-			margin-bottom: 50px;
-			padding-top: 25px;
-			padding-bottom: 5px;
-			padding-left: 10px;
-			padding-right: 10px;
-			width: 200px;
-			box-shadow: 2px 2px 2px $lightGrey;
-			a{
-				text-decoration: none;
-				font-size: 1rem;
-
-			}
-			i{
-				font-size: 1rem;
-			}
-		}
-		#web-name:hover, #web-cert:hover, #web-pdc:hover{
-			width: 210px;
-			padding-left: 12px;
-			padding-right: 12px;
-
-		}
-
-		#mobile-name, #mobile-cert, #mobile-pdc{
-			display: none;
-		}
-
-	}
-
-	@media screen and (max-width: 1050px){
-		#web-name, #web-cert, #web-pdc{
-			justify-content: center;
-			margin-left: 40px;
-			margin-right: 40px;
-			padding-top: 20px;
-			padding-bottom: 20px;
-			padding-left: 8px;
-			padding-right: 8px;
-			width: 200px;
-			height: 40px;
-			box-shadow: 2px 2px 2px $lightGrey;
-			a{
-				text-decoration: none;
-				font-size: 1rem;
-			}
-			i{
-				font-size: 1rem;
-			}
-		}
-		#web-name:hover, #web-cert:hover, #web-pdc:hover{
-			width: 210px;
-			padding-left: 12px;
-			padding-right: 12px;
-
-		}
-
-		#mobile-name, #mobile-cert, #mobile-pdc{
-			display: none;
-		}
-	}
-
-	@media screen and (max-width: 780px){
-		#web-name, #web-cert, #web-pdc{
-			display: none;
-		}
-
-		#mobile-name, #mobile-cert, #mobile-pdc{
-			display: block;
-			width: 350px;
-			height: 60px;
-			padding-top: 20px;
-			padding-left: 10px;
-			padding-right: 10px;
-			font-size: 1.3rem;
-			border: 1px solid $offWhite;
-			margin-top: 40px;
-			border-radius: 50px;
-			box-shadow: 2px 2px 2px $lightGrey;
-			background-color: $lightBlue2;
-
-			a{
-				text-decoration: none;
-				color: $darkerBlue;
-			}
-		}
-	}
-
-	@media screen and (max-width: 510px){
-		#web-name, #web-cert, #web-pdc{
-			display: none;
-		}
-
-		#mobile-name, #mobile-cert, #mobile-pdc{
-			width: 330px;
-			font-size: 1.2rem;
-		}
-	}
-
-}
-
 .verify{
 	font-weight: bold;
 	color: $semiDarkGrey;
@@ -419,486 +37,86 @@ body{
 }
 
 
-	.web-footer{
-		justify-content: space-around;
-		background-color: $darkBlue;
-		width: 100%;
-		bottom: 0;
-		position: fixed;
-		div{
-			margin: auto;
-		}
-		h3{
-			color: $offWhite;
-		}
-		p{
-			color: $offWhite;
-		}
-		#web-nmp{
-			margin-top: 50px;
-			img{
-				width: 80px;
-				height: 70px;
-			}
-			h3{
-				font-size: 1.5rem;
-			}
-		}
-
-		@media screen and (max-width: 1400px){
-			margin-top: 150px;
-			h3{
-				font-size: 1rem;
-			}
-			#web-nmp{
-				margin-top: 50px;
-				img{
-					width: 70px;
-					height: 60px;
-				}
-				h3{
-					font-size: 1rem;
-				}
-			}
-		}
-
-
-	}
-
-	.mobile-footer{
-		display: none;
-		flex-direction: column;
-		width: 100%;
-		bottom: 0;
-		position: fixed;
-		height: auto;
-		background-color: $darkBlue;
-		bottom: 0;
-		div{
-			padding-top:5px;
-			padding-bottom: 10px;
-			text-align: center;
-
-		}
-		h3{
-			color: $offWhite;
-		}
-
-		@media screen and (max-width: 780px){
-			margin-top: 220px;
-		}
-
-	}
-
-	@media screen and (max-width: 1050px){
-		.mobile-footer{
-			display: block;
-		}
-		.web-footer{
-			display: none;
-		}
-	}
 
 	#forms-page{
 	  display: none;
 	}
 
+	.web-footer{
+	  justify-content: space-around;
+	  background-color: $darkBlue;
+	  width: 100%;
+	  bottom: 0;
+	  position: fixed;
+	  div{
+	    margin: auto;
+	  }
+	  h3{
+	    color: $offWhite;
+	  }
+	  p{
+	    color: $offWhite;
+	  }
+	  #web-nmp{
+	    margin-top: 50px;
+	    img{
+	      width: 80px;
+	      height: 70px;
+	    }
+	    h3{
+	      font-size: 1.5rem;
+	    }
+	  }
 
-.formTitle{
-	color: $darkerBlue;
-	line-height: 0.3;
-	margin-left: 10px;
-
-	@media screen and (max-width: 780px){
-		p{
-			font-size: 0.9rem;
-		}
-	}
-	@media screen and (max-width: 650px){
-		p{
-			font-size: 0.7rem;
-		}
-	}
-
-	@media screen and (max-width: 510px){
-		h1{
-			font-size: 1.7rem;
-		}
-		p{
-			font-size: 0.6rem;
-		}
-	}
-}
-
-.verifyByName-form-container{
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-top: 20px;
-	border: 1px solid $offWhite;
-	box-shadow: 1px 1px 1px $offWhite;
-	.form-name, .form-cert, .form-enrollees{
-		padding-top: 30px;
-		padding-left: 20px;
-		padding-right: 20px;
-		padding-bottom: 20px;
-		border-radius: 5px;
-
-		.form-input-name{
-			width: 500px;
-		}
-
-		input{
-			height: 50px;
-			font-size: 1.5rem;
-			padding: 5px;
-			border-radius: 4px;
-			border: 1px solid $lightGrey;
-			color: $darkerBlue;
-			box-shadow: 1px 1px 1px $offWhite;
-		}
-
-		label{
-			color: $darkerBlue
-		}
+	  @media screen and (max-width: 1400px){
+	    margin-top: 150px;
+	    h3{
+	      font-size: 1rem;
+	    }
+	    #web-nmp{
+	      margin-top: 50px;
+	      img{
+	        width: 70px;
+	        height: 60px;
+	      }
+	      h3{
+	        font-size: 1rem;
+	      }
+	    }
+	  }
 	}
 
-	@media screen and (max-width: 1690px){
-		.form-name, .form-cert, .form-enrollees{
-			padding-top: 30px;
-			padding-left: 20px;
-			padding-right: 20px;
-			padding-bottom: 20px;
-			border-radius: 5px;
 
-			.form-input-name{
-				width: 300px;
-			}
+	.mobile-footer{
+	  display: none;
+	  flex-direction: column;
+	  width: 100%;
+	  bottom: 0;
+	  position: fixed;
+	  height: auto;
+	  background-color: $darkBlue;
+	  bottom: 0;
+	  div{
+	    padding-top:5px;
+	    padding-bottom: 10px;
+	    text-align: center;
 
-			input{
-				height: 40px;
-				font-size: 1.5rem;
-				padding: 5px;
-				border-radius: 4px;
-				border: 1px solid $lightGrey;
-				color: $darkerBlue;
-				box-shadow: 1px 1px 1px $offWhite;
-			}
+	  }
+	  h3{
+	    color: $offWhite;
+	  }
 
-			label{
-				color: $darkerBlue
-			}
-		}
-	}
+	  @media screen and (max-width: 780px){
+	    margin-top: 220px;
+	  }
 
-	@media screen and (max-width: 1300px){
-		.form-name, .form-cert, .form-enrollees{
-			padding-top: 30px;
-			padding-left: 20px;
-			padding-right: 20px;
-			padding-bottom: 20px;
-			border-radius: 5px;
-
-			.form-input-name{
-				width: 200px;
-			}
-
-			input{
-				height: 30px;
-				font-size: 1.2rem;
-				padding: 5px;
-				border-radius: 4px;
-				border: 1px solid $lightGrey;
-				color: $darkerBlue;
-				box-shadow: 1px 1px 1px $offWhite;
-			}
-
-			label{
-				color: $darkerBlue
-			}
-		}
-	}
-
-	@media screen and (max-width: 1380px){
-		.form-name, .form-cert, .form-enrollees{
-			padding-top: 30px;
-			padding-left: 20px;
-			padding-right: 20px;
-			padding-bottom: 20px;
-			border-radius: 5px;
-
-			.form-input-name{
-				width: 190px;
-			}
-
-			input{
-				height: 30px;
-				font-size: 1.2rem;
-				padding: 5px;
-				border-radius: 4px;
-				border: 1px solid $lightGrey;
-				color: $darkerBlue;
-				box-shadow: 1px 1px 1px $offWhite;
-			}
-
-			label{
-				color: $darkerBlue
-			}
-		}
 	}
 
 	@media screen and (max-width: 1050px){
-		margin-left: 20px;
-		margin-right: 250px;
-		.form-name, .form-cert, .form-enrollees{
-			padding-top: 30px;
-			padding-left: 50px;
-			padding-right: 50px;
-			padding-bottom: 20px;
-			border-radius: 5px;
-			.form-input-name{
-				width: 350px;
-			}
-
-			input{
-				height: 50px;
-				font-size: 1.2rem;
-				padding: 5px;
-				border-radius: 4px;
-				border: 1px solid $lightGrey;
-				color: $darkerBlue;
-				box-shadow: 1px 1px 1px $offWhite;
-			}
-
-			label{
-				color: $darkerBlue
-			}
-		}
+	  .mobile-footer{
+	    display: block;
+	  }
+	  .web-footer{
+	    display: none;
+	  }
 	}
-
-	@media screen and (max-width: 650px){
-		margin-right: 100px;
-	}
-
-	@media screen and (max-width: 510px){
-		margin-left: 10px;
-		margin-right: 50px;
-
-		.form-name, .form-cert, .form-enrollees{
-			padding-top: 30px;
-			padding-left: 50px;
-			padding-right: 50px;
-			padding-bottom: 30px;
-			border-radius: 5px;
-			.form-input-name{
-				width: 320px;
-			}
-
-			input{
-				height: 50px;
-				font-size: 1.2rem;
-				padding: 5px;
-				border-radius: 4px;
-				border: 1px solid $lightGrey;
-				color: $darkerBlue;
-				box-shadow: 1px 1px 1px $offWhite;
-			}
-
-			label{
-				color: $darkerBlue
-			}
-		}
-	}
-
-}
-
-.table-container{
-	margin-left: 100px;
-	table{
-		padding: 10px;
-
-		th{
-			color: $darkerBlue;
-			border-bottom: 1px solid $lightBlue2;
-			padding-left: 100px;
-			padding-right: 100px;
-			padding-top: 20px;
-			padding-bottom: 20px;
-		}
-		 td{
-			 color: $darkerBlue;
-			 padding-left: 100px;
-			padding-right: 100px;
-			padding-top: 20px;
-			padding-bottom: 20px;
-			border-top: 1px solid $lightBlue2;
-		 }
-
-		 tfoot{
-			 th{
-				 border-bottom: 1px solid $offWhite;
-			 }
-			 ul{
-				 list-style-type: none;
-				 margin: 0;
-				 padding: 0
-			 }
-			 li{
-				 display: inline;
-				 padding-left: 10px;
-				 padding-right: 10px;
-			 }
-
-			 a{
-				 text-decoration: none;
-				 color: $darkerBlue;
-				 transition: font-size 0.2s;
-			 }
-
-			 a:hover{
-				 font-size: 1.5rem;
-				 color: $lightBlue;
-			 }
-		 }
-	}
-
-	@media screen and (max-width: 1690px){
-		margin-left: 30px;
-	}
-	@media screen and (max-width: 1300px){
-		margin-left: 30px;
-
-		table{
-			padding: 5px;
-			border-left: 1px solid $lightBlue2;
-			th{
-				color: $darkerBlue;
-				border-bottom: 1px solid $lightBlue2;
-				padding-left: 50px;
-				padding-right: 50px;
-				padding-top: 20px;
-				padding-bottom: 20px;
-			}
-			 td{
-				 color: $darkerBlue;
-				 padding-left: 50px;
-				padding-right: 50px;
-				padding-top: 20px;
-				padding-bottom: 20px;
-				border-top: 1px solid $lightBlue2;
-			 }
-
-			 tfoot{
-				 th{
-					 border-bottom: 1px solid $offWhite;
-				 }
-				 ul{
-					 list-style-type: none;
-					 margin: 0;
-					 padding: 0
-				 }
-				 li{
-					 display: inline;
-					 padding-left: 10px;
-					 padding-right: 10px;
-				 }
-
-				 a{
-					 text-decoration: none;
-					 color: $darkerBlue;
-					 transition: font-size 0.2s;
-				 }
-
-				 a:hover{
-					 font-size: 1.5rem;
-					 color: $lightBlue;
-				 }
-			 }
-		}
-	}
-
-	@media screen and (max-width: 1380px){
-		margin-left: 50px;
-
-		table{
-			padding: 5px;
-			border-left: 1px solid $lightBlue2;
-			th{
-				color: $darkerBlue;
-				border-bottom: 1px solid $lightBlue2;
-				padding-left: 70px;
-				padding-right: 70px;
-				padding-top: 20px;
-				padding-bottom: 20px;
-			}
-			 td{
-				 color: $darkerBlue;
-				 padding-left: 70px;
-				padding-right: 70px;
-				padding-top: 20px;
-				padding-bottom: 20px;
-				border-top: 1px solid $lightBlue2;
-			 }
-
-			 tfoot{
-				 th{
-					 border-bottom: 1px solid $offWhite;
-				 }
-				 ul{
-					 list-style-type: none;
-					 margin: 0;
-					 padding: 0
-				 }
-				 li{
-					 display: inline;
-					 padding-left: 10px;
-					 padding-right: 10px;
-				 }
-
-				 a{
-					 text-decoration: none;
-					 color: $darkerBlue;
-					 transition: font-size 0.2s;
-				 }
-
-				 a:hover{
-					 font-size: 1.5rem;
-					 color: $lightBlue;
-				 }
-			 }
-		}
-	}
-
-	@media screen and (max-width: 1050px){
-		display: none;
-	}
-}
-
-.submit-button{
-	color: $darkerBlue;
-	padding: 10px;
-	font-size: 1.5rem;
-	width: 150px;
-	background-color: $lightBlue2;
-	border: 1px solid $lightBlue2;
-	border-radius: 50px;
-	margin-top: 20px;
-	box-shadow: 1px 1px 1px $offWhite;
-
-	@media screen and (max-width: 1300px){
-		width: 120px;
-		padding: 5px;
-		font-size: 1.2rem;
-	}
-
-	@media screen and (max-width: 1380px){
-		width: 110px;
-		padding: 10px;
-		font-size: 1rem;
-	}
-
-	@media screen and (max-width: 1050px){
-		width: 155px;
-		padding: 20px;
-		font-size: 1.2rem;
-	}
-}

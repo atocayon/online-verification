@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  // Verification By Name
   $("#byName_submit").click(function(event) {
     event.preventDefault();
     console.log(baseURL);
@@ -59,7 +60,9 @@ $(document).ready(function() {
       console.log("Error, Form is Empty");
     }
   });
+  // End Verification by name
 
+  // Verification by Certificate number
   $("#byCert_submit").click(function(event) {
     event.preventDefault();
     if ($("#byCert_certnum").val() !== "") {
@@ -111,7 +114,9 @@ $(document).ready(function() {
       console.log("Error, Form is Empty");
     }
   });
+  // End Verification by Certificate number
 
+  // Verification by PDC
   $("#byPDC_submit").click(function(event) {
     event.preventDefault();
 
@@ -173,6 +178,7 @@ $(document).ready(function() {
       console.log("Error, Form is Empty");
     }
   });
+  // End Verification by PDC
 
   $("#searhAgain").click(function(event) {
     window.location.reload(true);

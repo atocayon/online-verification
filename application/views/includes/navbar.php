@@ -1,6 +1,6 @@
 <div class="row flex-end nav-container">
 	<div>
-		<a href="" id="site_logo"><img src="<?= base_url() ?>src/img/logo.png" > <span class="brand">NMP</span></a> 
+		<a href="" id="site_logo"><img src="<?= base_url() ?>src/img/logo.png" > <span class="brand">NMP</span></a>
 	</div>
 		<div class="filler"></div>
 		<div id="web">

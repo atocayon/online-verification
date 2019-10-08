@@ -29,9 +29,9 @@
 
   <div class="mobile-footer row">
     <div id="contact">
-      <h3>
+      <h4>
         &copy;NMP 2019
-      </h3>
+      </h4>
     </div>
 
   </div>

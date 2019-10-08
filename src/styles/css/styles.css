@@ -232,6 +232,7 @@
 @media screen and (max-width: 1024px) and (max-height: 768px) {
   .header-container #webBanner {
     font-size: 6rem;
+    margin-top: 100px;
   }
 }
 
@@ -244,13 +245,13 @@
 @media screen and (max-width: 640px) and (max-height: 960px) {
   .header-container #webBanner {
     font-size: 4rem;
-    margin-top: 100px;
   }
 }
 
 @media screen and (max-width: 500px) and (max-height: 800px) {
   .header-container #webBanner {
     font-size: 3rem;
+    margin-top: 80px;
   }
 }
 
@@ -394,13 +395,13 @@
     background-color: #d6e8ee;
     border: 1px solid #d6e8ee;
     margin-top: 25px;
-    padding: 15px;
-    width: 400px;
-    height: 30px;
+    padding-top: 20px;
+    width: 450px;
+    height: 50px;
     border-radius: 20px;
     -webkit-box-shadow: 1px 1px 2px #455a64;
     box-shadow: 1px 1px 2px #455a64;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 

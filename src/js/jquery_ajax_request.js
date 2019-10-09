@@ -70,7 +70,7 @@ $(document).ready(function() {
         url: baseURL + "index.php/nmp/search_byCertNum/",
         type: "POST",
         dataType: "json",
-        data: { certNum: $("#byCert_certnum").val() },
+        data: { certnum: $("#byCert_certnum").val() },
         success: function(data) {
           if (data.record["response"] == "null") {
             console.log("======================ERROR======================");

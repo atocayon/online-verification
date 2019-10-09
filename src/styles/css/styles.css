@@ -499,7 +499,9 @@
   box-shadow: 1px 1px 1px #f8f9fb;
 }
 
-.verifyByName-form-container .form-name, .verifyByName-form-container .form-cert, .verifyByName-form-container .form-enrollees {
+.verifyByName-form-container .form-name,
+.verifyByName-form-container .form-cert,
+.verifyByName-form-container .form-enrollees {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
@@ -507,11 +509,11 @@
   border-radius: 5px;
 }
 
-.verifyByName-form-container .form-name .form-input-name, .verifyByName-form-container .form-cert .form-input-name, .verifyByName-form-container .form-enrollees .form-input-name {
+.verifyByName-form-container .form-input-name {
   width: 500px;
 }
 
-.verifyByName-form-container .form-name input, .verifyByName-form-container .form-cert input, .verifyByName-form-container .form-enrollees input {
+.verifyByName-form-container input {
   height: 50px;
   font-size: 1.5rem;
   padding: 5px;
@@ -522,151 +524,33 @@
   box-shadow: 1px 1px 1px #f8f9fb;
 }
 
-.verifyByName-form-container .form-name label, .verifyByName-form-container .form-cert label, .verifyByName-form-container .form-enrollees label {
+.verifyByName-form-container label {
   color: #001b4b;
 }
 
-@media screen and (max-width: 1690px) {
-  .verifyByName-form-container .form-name, .verifyByName-form-container .form-cert, .verifyByName-form-container .form-enrollees {
-    padding-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    border-radius: 5px;
-  }
-  .verifyByName-form-container .form-name .form-input-name, .verifyByName-form-container .form-cert .form-input-name, .verifyByName-form-container .form-enrollees .form-input-name {
+@media screen and (max-width: 1680px) and (max-height: 1050px) {
+  .verifyByName-form-container .form-input-name {
     width: 300px;
   }
-  .verifyByName-form-container .form-name input, .verifyByName-form-container .form-cert input, .verifyByName-form-container .form-enrollees input {
-    height: 40px;
-    font-size: 1.5rem;
-    padding: 5px;
-    border-radius: 4px;
-    border: 1px solid #eceff1;
-    color: #001b4b;
-    -webkit-box-shadow: 1px 1px 1px #f8f9fb;
-    box-shadow: 1px 1px 1px #f8f9fb;
-  }
-  .verifyByName-form-container .form-name label, .verifyByName-form-container .form-cert label, .verifyByName-form-container .form-enrollees label {
-    color: #001b4b;
+  .verifyByName-form-container input {
+    height: 35px;
+    font-size: 1rem;
   }
 }
 
-@media screen and (max-width: 1300px) {
-  .verifyByName-form-container .form-name, .verifyByName-form-container .form-cert, .verifyByName-form-container .form-enrollees {
-    padding-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    border-radius: 5px;
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+  .verifyByName-form-container .form-input-name {
+    width: 250px;
   }
-  .verifyByName-form-container .form-name .form-input-name, .verifyByName-form-container .form-cert .form-input-name, .verifyByName-form-container .form-enrollees .form-input-name {
-    width: 200px;
-  }
-  .verifyByName-form-container .form-name input, .verifyByName-form-container .form-cert input, .verifyByName-form-container .form-enrollees input {
-    height: 30px;
-    font-size: 1.2rem;
-    padding: 5px;
-    border-radius: 4px;
-    border: 1px solid #eceff1;
-    color: #001b4b;
-    -webkit-box-shadow: 1px 1px 1px #f8f9fb;
-    box-shadow: 1px 1px 1px #f8f9fb;
-  }
-  .verifyByName-form-container .form-name label, .verifyByName-form-container .form-cert label, .verifyByName-form-container .form-enrollees label {
-    color: #001b4b;
+  .verifyByName-form-container input {
+    height: 35px;
+    font-size: 1rem;
   }
 }
 
-@media screen and (max-width: 1380px) {
-  .verifyByName-form-container .form-name, .verifyByName-form-container .form-cert, .verifyByName-form-container .form-enrollees {
-    padding-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    border-radius: 5px;
-  }
-  .verifyByName-form-container .form-name .form-input-name, .verifyByName-form-container .form-cert .form-input-name, .verifyByName-form-container .form-enrollees .form-input-name {
-    width: 190px;
-  }
-  .verifyByName-form-container .form-name input, .verifyByName-form-container .form-cert input, .verifyByName-form-container .form-enrollees input {
-    height: 30px;
-    font-size: 1.2rem;
-    padding: 5px;
-    border-radius: 4px;
-    border: 1px solid #eceff1;
-    color: #001b4b;
-    -webkit-box-shadow: 1px 1px 1px #f8f9fb;
-    box-shadow: 1px 1px 1px #f8f9fb;
-  }
-  .verifyByName-form-container .form-name label, .verifyByName-form-container .form-cert label, .verifyByName-form-container .form-enrollees label {
-    color: #001b4b;
-  }
-}
-
-@media screen and (max-width: 1050px) {
-  .verifyByName-form-container {
-    margin-left: 20px;
-    margin-right: 250px;
-  }
-  .verifyByName-form-container .form-name, .verifyByName-form-container .form-cert, .verifyByName-form-container .form-enrollees {
-    padding-top: 30px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 20px;
-    border-radius: 5px;
-  }
-  .verifyByName-form-container .form-name .form-input-name, .verifyByName-form-container .form-cert .form-input-name, .verifyByName-form-container .form-enrollees .form-input-name {
-    width: 350px;
-  }
-  .verifyByName-form-container .form-name input, .verifyByName-form-container .form-cert input, .verifyByName-form-container .form-enrollees input {
-    height: 50px;
-    font-size: 1.2rem;
-    padding: 5px;
-    border-radius: 4px;
-    border: 1px solid #eceff1;
-    color: #001b4b;
-    -webkit-box-shadow: 1px 1px 1px #f8f9fb;
-    box-shadow: 1px 1px 1px #f8f9fb;
-  }
-  .verifyByName-form-container .form-name label, .verifyByName-form-container .form-cert label, .verifyByName-form-container .form-enrollees label {
-    color: #001b4b;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .verifyByName-form-container {
-    margin-right: 100px;
-  }
-}
-
-@media screen and (max-width: 510px) {
-  .verifyByName-form-container {
-    margin-left: 10px;
-    margin-right: 50px;
-  }
-  .verifyByName-form-container .form-name, .verifyByName-form-container .form-cert, .verifyByName-form-container .form-enrollees {
-    padding-top: 30px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 30px;
-    border-radius: 5px;
-  }
-  .verifyByName-form-container .form-name .form-input-name, .verifyByName-form-container .form-cert .form-input-name, .verifyByName-form-container .form-enrollees .form-input-name {
-    width: 320px;
-  }
-  .verifyByName-form-container .form-name input, .verifyByName-form-container .form-cert input, .verifyByName-form-container .form-enrollees input {
-    height: 50px;
-    font-size: 1.2rem;
-    padding: 5px;
-    border-radius: 4px;
-    border: 1px solid #eceff1;
-    color: #001b4b;
-    -webkit-box-shadow: 1px 1px 1px #f8f9fb;
-    box-shadow: 1px 1px 1px #f8f9fb;
-  }
-  .verifyByName-form-container .form-name label, .verifyByName-form-container .form-cert label, .verifyByName-form-container .form-enrollees label {
-    color: #001b4b;
+@media screen and (max-width: 1280px) and (max-height: 1024px) {
+  .verifyByName-form-container .form-input-name {
+    width: 250px;
   }
 }
 
@@ -772,113 +656,49 @@
   border-top: 1px solid #d6e8ee;
 }
 
-@media screen and (max-width: 1690px) {
+@media screen and (max-width: 1680px) and (max-height: 1050px) {
   .table-container {
-    margin-left: 30px;
+    margin-left: 150px;
   }
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1366px) and (max-height: 768px) {
   .table-container {
-    margin-left: 30px;
+    margin-left: 100px;
+    height: 350px;
   }
   .table-container table {
-    padding: 5px;
-    border-left: 1px solid #d6e8ee;
+    padding: 20px;
   }
   .table-container table th {
-    color: #001b4b;
-    border-bottom: 1px solid #d6e8ee;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
   }
   .table-container table td {
-    color: #001b4b;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-top: 1px solid #d6e8ee;
-  }
-  .table-container table tfoot th {
-    border-bottom: 1px solid #f8f9fb;
-  }
-  .table-container table tfoot ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  .table-container table tfoot li {
-    display: inline;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .table-container table tfoot a {
-    text-decoration: none;
-    color: #001b4b;
-    -webkit-transition: font-size 0.2s;
-    -o-transition: font-size 0.2s;
-    transition: font-size 0.2s;
-  }
-  .table-container table tfoot a:hover {
-    font-size: 1.5rem;
-    color: #97cadb;
+    padding-left: 70px;
+    padding-right: 70px;
   }
 }
 
-@media screen and (max-width: 1380px) {
+@media screen and (max-width: 1280px) and (max-height: 1024px) {
   .table-container {
-    margin-left: 50px;
+    margin-left: 100px;
+    height: 300px;
   }
   .table-container table {
-    padding: 5px;
-    border-left: 1px solid #d6e8ee;
+    padding: 20px;
   }
   .table-container table th {
-    color: #001b4b;
-    border-bottom: 1px solid #d6e8ee;
-    padding-left: 70px;
-    padding-right: 70px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
   .table-container table td {
-    color: #001b4b;
-    padding-left: 70px;
-    padding-right: 70px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-top: 1px solid #d6e8ee;
-  }
-  .table-container table tfoot th {
-    border-bottom: 1px solid #f8f9fb;
-  }
-  .table-container table tfoot ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  .table-container table tfoot li {
-    display: inline;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .table-container table tfoot a {
-    text-decoration: none;
-    color: #001b4b;
-    -webkit-transition: font-size 0.2s;
-    -o-transition: font-size 0.2s;
-    transition: font-size 0.2s;
-  }
-  .table-container table tfoot a:hover {
-    font-size: 1.5rem;
-    color: #97cadb;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1024px) and (max-height: 768px) {
   .table-container {
     display: none;
   }
@@ -1045,6 +865,12 @@ body {
     display: block;
   }
   .web-footer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) and (max-height: 768px) {
+  .table-container {
     display: none;
   }
 }

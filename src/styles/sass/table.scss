@@ -1,134 +1,65 @@
-.table-container{
-	margin-left: 200px;
+.table-container {
+  margin-left: 200px;
   height: 500px;
   overflow: auto;
-	table{
-		padding: 20px;
-		th{
-			color: $darkerBlue;
-			border-bottom: 1px solid $lightBlue2;
-			padding-left: 100px;
-			padding-right: 100px;
+  table {
+    padding: 20px;
+    th {
+      color: $darkerBlue;
+      border-bottom: 1px solid $lightBlue2;
+      padding-left: 100px;
+      padding-right: 100px;
       padding-bottom: 20px;
-		}
-		 td{
-			 color: $darkerBlue;
-			 padding-left: 100px;
-			padding-right: 100px;
+    }
+    td {
+      color: $darkerBlue;
+      padding-left: 100px;
+      padding-right: 100px;
       padding-bottom: 20px;
       padding-top: 10px;
-			border-top: 1px solid $lightBlue2;
-		 }
-	}
+      border-top: 1px solid $lightBlue2;
+    }
+  }
 
-	@media screen and (max-width: 1690px){
-		margin-left: 30px;
-	}
-	@media screen and (max-width: 1300px){
-		margin-left: 30px;
+  @media screen and (max-width: 1680px) and (max-height: 1050px) {
+    margin-left: 150px;
+  }
 
-		table{
-			padding: 5px;
-			border-left: 1px solid $lightBlue2;
-			th{
-				color: $darkerBlue;
-				border-bottom: 1px solid $lightBlue2;
-				padding-left: 50px;
-				padding-right: 50px;
-				padding-top: 20px;
-				padding-bottom: 20px;
-			}
-			 td{
-				 color: $darkerBlue;
-				 padding-left: 50px;
-				padding-right: 50px;
-				padding-top: 20px;
-				padding-bottom: 20px;
-				border-top: 1px solid $lightBlue2;
-			 }
+  @media screen and (max-width: 1366px) and (max-height: 768px) {
+    margin-left: 100px;
+    height: 350px;
+    table {
+      padding: 20px;
+      th {
+        padding-left: 70px;
+        padding-right: 70px;
+      }
+      td {
+        padding-left: 70px;
+        padding-right: 70px;
+      }
+    }
+  }
 
-			 tfoot{
-				 th{
-					 border-bottom: 1px solid $offWhite;
-				 }
-				 ul{
-					 list-style-type: none;
-					 margin: 0;
-					 padding: 0
-				 }
-				 li{
-					 display: inline;
-					 padding-left: 10px;
-					 padding-right: 10px;
-				 }
+  @media screen and (max-width: 1280px) and (max-height: 1024px) {
+    margin-left: 100px;
+    height: 300px;
+    table {
+      padding: 20px;
+      th {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+      td {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+    }
+  }
+}
 
-				 a{
-					 text-decoration: none;
-					 color: $darkerBlue;
-					 transition: font-size 0.2s;
-				 }
-
-				 a:hover{
-					 font-size: 1.5rem;
-					 color: $lightBlue;
-				 }
-			 }
-		}
-	}
-
-	@media screen and (max-width: 1380px){
-		margin-left: 50px;
-
-		table{
-			padding: 5px;
-			border-left: 1px solid $lightBlue2;
-			th{
-				color: $darkerBlue;
-				border-bottom: 1px solid $lightBlue2;
-				padding-left: 70px;
-				padding-right: 70px;
-				padding-top: 20px;
-				padding-bottom: 20px;
-			}
-			 td{
-				 color: $darkerBlue;
-				 padding-left: 70px;
-				padding-right: 70px;
-				padding-top: 20px;
-				padding-bottom: 20px;
-				border-top: 1px solid $lightBlue2;
-			 }
-
-			 tfoot{
-				 th{
-					 border-bottom: 1px solid $offWhite;
-				 }
-				 ul{
-					 list-style-type: none;
-					 margin: 0;
-					 padding: 0
-				 }
-				 li{
-					 display: inline;
-					 padding-left: 10px;
-					 padding-right: 10px;
-				 }
-
-				 a{
-					 text-decoration: none;
-					 color: $darkerBlue;
-					 transition: font-size 0.2s;
-				 }
-
-				 a:hover{
-					 font-size: 1.5rem;
-					 color: $lightBlue;
-				 }
-			 }
-		}
-	}
-
-	@media screen and (max-width: 1050px){
-		display: none;
-	}
+@media screen and (max-width: 1024px) and (max-height: 768px) {
+  .table-container {
+    display: none;
+  }
 }

@@ -8,6 +8,7 @@
 @import "forms";
 @import "button";
 @import "table";
+@import "modal";
 
 body {
   margin: 0px;
@@ -148,8 +149,22 @@ body {
   }
 }
 
-@media screen and (max-width: 1024px) and (max-height: 768px) {
+@media screen and (max-width: 768px) and (max-height: 1280px) {
   .table-container {
     display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .table-container {
+    display: none;
+  }
+
+  .submit-button {
+    display: none;
+  }
+
+  .mobile-button {
+    display: block;
   }
 }

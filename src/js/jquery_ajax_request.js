@@ -60,6 +60,68 @@ $(document).ready(function() {
       console.log("Error, Form is Empty");
     }
   });
+
+  // Mobile Function
+  $("#mobile-byName_submit").click(function(event) {
+    event.preventDefault();
+    if ($("#byName_fname").val() !== "" && $("#byName_lname").val() !== "") {
+      $.ajax({
+        url: baseURL + "index.php/nmp/search_byName/",
+        type: "POST",
+        dataType: "json",
+        data: {
+          fname: $("#byName_fname").val(),
+          lname: $("#byName_lname").val(),
+          bday: $("#byName_bday").val()
+        },
+        success: function(data) {
+          console.log("success");
+          console.log(JSON.stringify(data.record));
+          console.log("RESPONSE: " + JSON.stringify(data.record["response"]));
+          if (data.record["response"] == "null") {
+            console.log("======================ERROR======================");
+            $("#no_data").show();
+            $("#default").hide();
+            $("#empty_field").hide();
+            $("#modal").css("visibility", "visible");
+            $(".close").css("visibility", "visible");
+          } else {
+            $("#no_data").hide();
+            $("#default").hide();
+            $("#empty_field").hide();
+            $("#byName_submit").hide();
+            $("#byName_fname").val();
+            $("#byName_lname").val();
+            $("#byName_bday").val();
+            $("#table-container").show();
+            $("#searhAgain").show();
+            $("#modal").css("visibility", "visible");
+            $(".close").css("visibility", "visible");
+            var tbl = "";
+            for (var i = 0; i < data["record"].length; i++) {
+              tbl += "<tr>";
+              tbl +=
+                "<td><label>" + data["record"][i]["module"] + "</label></td>";
+              tbl +=
+                "<td><label>" + data["record"][i]["fname"] + "</label></td>";
+              tbl +=
+                "<td><label>" + data["record"][i]["cdate"] + "</label></td>";
+              tbl += "</tr>";
+            }
+
+            $("#mobile_res").prepend(tbl);
+          }
+        },
+        error: function(error) {
+          console.log("error");
+          console.log(JSON.stringify(error));
+          alert("INTERNAL ERROR!");
+        }
+      });
+    } else {
+      alert("Ops, Sorry you didn't input anything...");
+    }
+  });
   // End Verification by name
 
   // Verification by Certificate number

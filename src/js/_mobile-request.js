@@ -13,11 +13,7 @@ $(document).ready(function() {
           bday: $("#byName_bday").val()
         },
         success: function(data) {
-          console.log("success");
-          console.log(JSON.stringify(data.record));
-          console.log("RESPONSE: " + JSON.stringify(data.record["response"]));
           if (data.record["response"] == "null") {
-            console.log("======================ERROR======================");
             $("#no_data").show();
             $("#default").hide();
             $("#empty_field").hide();
@@ -47,8 +43,6 @@ $(document).ready(function() {
           }
         },
         error: function(error) {
-          console.log("error");
-          console.log(JSON.stringify(error));
           alert("INTERNAL ERROR!");
         }
       });

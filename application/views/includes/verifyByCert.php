@@ -9,4 +9,8 @@
   <center>
     <button id="searhAgain" class="tryAgain-button">Search Again</button>
   </center>
+
+  <center>
+    <button id="mobile-byCert_submit" class="mobile-button">Verify</button>
+  </center>
 </form>

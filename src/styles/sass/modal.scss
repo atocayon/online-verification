@@ -28,6 +28,71 @@
       border-top: 1px solid $lightBlue2;
     }
   }
+
+  @media screen and (max-width: 768px) and (max-height: 1280px) {
+    margin: 8px;
+    padding: 8px;
+    left: 6%;
+    table {
+      padding: 10px;
+      th {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 15px;
+      }
+      td {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 15px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 640px) and (max-height: 960px) {
+    left: 5%;
+    padding: 3px;
+    table {
+      padding: 5px;
+      th {
+        font-size: 0.8rem;
+      }
+      td {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 492px) and (max-height: 787px) {
+    padding: 3px;
+    table {
+      padding: 3px;
+      th {
+        font-size: 0.6rem;
+      }
+      td {
+        font-size: 0.6rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 492px) and (max-height: 467px) {
+    left: 5%;
+    top: 15%;
+    height: 300px;
+    table {
+      padding: 2px;
+      th {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 15px;
+      }
+      td {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 15px;
+      }
+    }
+  }
 }
 
 .close {
@@ -45,5 +110,26 @@
     color: $offWhite;
     text-decoration: none;
     padding: 5px;
+  }
+
+  @media screen and (max-width: 768px) and (max-height: 1280px) {
+    left: 89%;
+  }
+
+  @media screen and (max-width: 640px) and (max-height: 960px) {
+    left: 91.5%;
+    top: 13.2%;
+  }
+
+  @media screen and (max-width: 492px) and (max-height: 787px) {
+    left: 94%;
+    top: 13.2%;
+    font-size: 1rem;
+    width: 20px;
+    padding: 2px;
+  }
+
+  @media screen and (max-width: 492px) and (max-height: 467px) {
+    left: 92%;
   }
 }

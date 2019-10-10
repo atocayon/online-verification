@@ -763,6 +763,79 @@
   border-top: 1px solid #d6e8ee;
 }
 
+@media screen and (max-width: 768px) and (max-height: 1280px) {
+  #modal {
+    margin: 8px;
+    padding: 8px;
+    left: 6%;
+  }
+  #modal table {
+    padding: 10px;
+  }
+  #modal table th {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 15px;
+  }
+  #modal table td {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 640px) and (max-height: 960px) {
+  #modal {
+    left: 5%;
+    padding: 3px;
+  }
+  #modal table {
+    padding: 5px;
+  }
+  #modal table th {
+    font-size: 0.8rem;
+  }
+  #modal table td {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 492px) and (max-height: 787px) {
+  #modal {
+    padding: 3px;
+  }
+  #modal table {
+    padding: 3px;
+  }
+  #modal table th {
+    font-size: 0.6rem;
+  }
+  #modal table td {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 492px) and (max-height: 467px) {
+  #modal {
+    left: 5%;
+    top: 15%;
+    height: 300px;
+  }
+  #modal table {
+    padding: 2px;
+  }
+  #modal table th {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+  }
+  #modal table td {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+  }
+}
+
 .close {
   visibility: hidden;
   text-align: center;
@@ -780,6 +853,35 @@
   color: #f8f9fb;
   text-decoration: none;
   padding: 5px;
+}
+
+@media screen and (max-width: 768px) and (max-height: 1280px) {
+  .close {
+    left: 89%;
+  }
+}
+
+@media screen and (max-width: 640px) and (max-height: 960px) {
+  .close {
+    left: 91.5%;
+    top: 13.2%;
+  }
+}
+
+@media screen and (max-width: 492px) and (max-height: 787px) {
+  .close {
+    left: 94%;
+    top: 13.2%;
+    font-size: 1rem;
+    width: 20px;
+    padding: 2px;
+  }
+}
+
+@media screen and (max-width: 492px) and (max-height: 467px) {
+  .close {
+    left: 92%;
+  }
 }
 
 body {

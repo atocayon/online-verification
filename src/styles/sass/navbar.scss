@@ -122,5 +122,23 @@
       padding: 13px;
     }
   }
+
+  @media screen and (max-width: 480px) and (max-height: 854px) {
+    img {
+      width: 23px;
+    }
+    .brand {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media screen and (max-width: 384px) and (max-height: 640px) {
+    img {
+      width: 23px;
+    }
+    .brand {
+      font-size: 1.3rem;
+    }
+  }
 }
 // End Navbar

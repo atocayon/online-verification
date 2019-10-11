@@ -14,16 +14,16 @@ $(document).ready(function() {
         },
         success: function(data) {
           if (data.record["response"] == "null") {
-            $("#no_data").show();
-            $("#default").hide();
-            $("#empty_field").hide();
+            $("#mobile-no_data").show();
+            $("#mobile-default").hide();
+            $("#mobile-empty_field").hide();
             $("#modal").css("visibility", "visible");
             $(".close").css("visibility", "visible");
             $("body").css("background-color", "rgba(0,0,0,0.7)");
           } else {
-            $("#no_data").hide();
-            $("#default").hide();
-            $("#empty_field").hide();
+            $("#mobile-no_data").hide();
+            $("#mobile-default").hide();
+            $("#mobile-empty_field").hide();
             $("#modal").css("visibility", "visible");
             $(".close").css("visibility", "visible");
             $("body").css("background-color", "rgba(0,0,0,0.7)");
@@ -43,7 +43,7 @@ $(document).ready(function() {
           }
         },
         error: function(error) {
-          alert("INTERNAL ERROR!");
+          alert("INTERNAL ERROR!" + error);
         }
       });
     } else {
@@ -63,16 +63,16 @@ $(document).ready(function() {
         data: { certnum: $("#byCert_certnum").val() },
         success: function(data) {
           if (data.record["response"] == "null") {
-            $("#no_data").show();
-            $("#default").hide();
-            $("#empty_field").hide();
+            $("#mobile-no_data").show();
+            $("#mobile-default").hide();
+            $("#mobile-empty_field").hide();
             $("#modal").css("visibility", "visible");
             $(".close").css("visibility", "visible");
             $("body").css("background-color", "rgba(0,0,0,0.7)");
           } else {
-            $("#no_data").hide();
-            $("#default").hide();
-            $("#empty_field").hide();
+            $("#mobile-no_data").hide();
+            $("#mobile-default").hide();
+            $("#mobile-empty_field").hide();
             $("#modal").css("visibility", "visible");
             $(".close").css("visibility", "visible");
             $("body").css("background-color", "rgba(0,0,0,0.7)");
@@ -93,13 +93,10 @@ $(document).ready(function() {
           }
         },
         error: function(error) {
-          alert("INTERNAL ERROR!");
+          alert("INTERNAL ERROR!" + error);
         }
       });
     } else {
-      $("#empty_field").show();
-      $("#default").hide();
-      $("#no_data").hide();
       alert("Ops, Sorry you didn't input anything...");
     }
   });
@@ -124,16 +121,16 @@ $(document).ready(function() {
         },
         success: function(data) {
           if (data.record["response"] == "null") {
-            $("#no_data").show();
-            $("#default").hide();
-            $("#empty_field").hide();
+            $("#mobile-no_data").show();
+            $("#mobile-default").hide();
+            $("#mobile-empty_field").hide();
             $("#modal").css("visibility", "visible");
             $(".close").css("visibility", "visible");
             $("body").css("background-color", "rgba(0,0,0,0.7)");
           } else {
-            $("#no_data").hide();
-            $("#default").hide();
-            $("#empty_field").hide();
+            $("#mobile-no_data").hide();
+            $("#mobile-default").hide();
+            $("#mobile-empty_field").hide();
             $("#modal").css("visibility", "visible");
             $(".close").css("visibility", "visible");
             $("body").css("background-color", "rgba(0,0,0,0.7)");
@@ -154,13 +151,10 @@ $(document).ready(function() {
           }
         },
         error: function(error) {
-          alert("INTERNAL ERROR!");
+          alert("INTERNAL ERROR!" + error);
         }
       });
     } else {
-      $("#empty_field").show();
-      $("#default").hide();
-      $("#no_data").hide();
       alert("Ops, Sorry you didn't input anything...");
     }
   });

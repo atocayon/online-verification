@@ -28,10 +28,11 @@
   </div>
 
   <div class="mobile-footer row">
-    <div id="contact">
-      <h4>
-        &copy;NMP 2019
-      </h4>
+    <div>
+        <h4>
+          &copy; NMP 2019
+        </h4>
+
     </div>
 
   </div>

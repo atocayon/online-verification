@@ -1,6 +1,7 @@
 $(document).ready(function() {
   // Verification By Name
   $("#byName_submit").click(function(event) {
+    // console.log("By Name Button Click");
     event.preventDefault();
     if ($("#byName_fname").val() !== "" && $("#byName_lname").val() !== "") {
       $.ajax({
@@ -39,14 +40,14 @@ $(document).ready(function() {
           }
         },
         error: function(error) {
-          alert("INTERNAL ERROR!");
+          alert("INTERNAL ERROR!" + error);
         }
       });
     } else {
       $("#empty_field").show();
       $("#default").hide();
       $("#no_data").hide();
-      alert("Ops, Sorry you didn't input anything...");
+      console.log("Web interface - By Name");
     }
   });
 
@@ -54,6 +55,7 @@ $(document).ready(function() {
 
   // Verification by Certificate number
   $("#byCert_submit").click(function(event) {
+    // console.log("By cert num click");
     event.preventDefault();
     if ($("#byCert_certnum").val() !== "") {
       $.ajax({
@@ -89,20 +91,21 @@ $(document).ready(function() {
           }
         },
         error: function(error) {
-          alert("INTERNAL ERROR!");
+          alert("INTERNAL ERROR!" + error);
         }
       });
     } else {
       $("#empty_field").show();
       $("#default").hide();
       $("#no_data").hide();
-      alert("Ops, Sorry you didn't input anything...");
+      console.log("Web interface - By Cert num");
     }
   });
   // End Verification by Certificate number
 
   // Verification by PDC
   $("#byPDC_submit").click(function(event) {
+    // console.log("By PDC Enrollment click");
     event.preventDefault();
 
     if (
@@ -148,14 +151,14 @@ $(document).ready(function() {
           }
         },
         error: function(error) {
-          alert("INTERNAL ERROR!");
+          alert("INTERNAL ERROR!" + error);
         }
       });
     } else {
       $("#empty_field").show();
       $("#default").hide();
       $("#no_data").hide();
-      alert("Ops, Sorry you didn't input anything...");
+      console.log("Web interface - By PDC enrollment");
     }
   });
   // End Verification by PDC

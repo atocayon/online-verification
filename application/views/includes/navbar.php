@@ -1,4 +1,4 @@
-<div class="row flex-end nav-container">
+<div class="row nav-container">
 	<div>
 		<a href="" id="site_logo"><img src="<?= base_url() ?>src/img/logo.png" > <span class="brand">NMP</span></a>
 	</div>

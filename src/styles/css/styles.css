@@ -762,6 +762,10 @@
   }
 }
 
+.submit-button:hover {
+  font-weight: bold;
+}
+
 .tryAgain-button {
   display: none;
   color: #f8f9fb;
@@ -868,6 +872,23 @@
 @media screen and (max-width: 1680px) and (max-height: 1050px) {
   .table-container {
     margin-left: 150px;
+  }
+}
+
+@media screen and (max-width: 1440px) and (max-height: 900px) {
+  .table-container {
+    margin-left: 160px;
+  }
+  .table-container table {
+    padding: 20px;
+  }
+  .table-container table th {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  .table-container table td {
+    padding-left: 70px;
+    padding-right: 70px;
   }
 }
 

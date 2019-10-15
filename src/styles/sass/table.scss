@@ -25,6 +25,21 @@
     margin-left: 150px;
   }
 
+  @media screen and (max-width: 1440px) and (max-height: 900px) {
+    margin-left: 160px;
+    table {
+      padding: 20px;
+      th {
+        padding-left: 70px;
+        padding-right: 70px;
+      }
+      td {
+        padding-left: 70px;
+        padding-right: 70px;
+      }
+    }
+  }
+
   @media screen and (max-width: 1366px) and (max-height: 768px) {
     margin-left: 100px;
     height: 350px;

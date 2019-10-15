@@ -7,7 +7,7 @@
 			<a href="#" class="info"><i class="fas fa-info"></i></a>
 		</div>
 		<div id="web">
-			<a href="#" class="access"><i class="fas fa-universal-access"></i></a>
+			<a href="#" class="access" ><i class="fas fa-universal-access"></i></a>
 		</div>
 
 		<div id="mobile" onclick="funcDropdown()">

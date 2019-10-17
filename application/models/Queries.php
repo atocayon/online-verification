@@ -30,7 +30,7 @@ class Queries extends CI_Model
 
   public function search_byPDC(){
 
-    $param = ['%'.$this->input->post('fname').'%','%'.$this->input->post('lname').'%',date('Y-m-d',strtotime($this->input->post('bdate'))),$this->input->post('mod')];
+    $param = ['%'.$this->input->post('fname').'%','%'.$this->input->post('lname').'%',date('Y-m-d',strtotime($this->input->post('bday'))),$this->input->post('module')];
 			$sql = "SELECT concat(tbl_trainee.fname,' ',LEFT(tbl_trainee.mname,1),'. ',tbl_trainee.lname,' ',tbl_trainee.suffix) as fname,tbl_module.module,tbl_schedule.start,tbl_schedule.end,tbl_trainee.trid,tbl_training.code
 					from trainee as tbl_trainee
 					LEFT JOIN training as tbl_training on tbl_trainee.trid = tbl_training.trid

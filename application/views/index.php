@@ -4,11 +4,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!DOCTYPE html>
 <html>
 <head>
-	<?php include 'includes/head.php' ?>
+	<?php include 'includes/head.php'; ?>
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 </head>
 <body>
+
+<?php include 'includes/modal.php'; ?>
 
  <div>
  	<?php include 'includes/navbar.php'; ?>

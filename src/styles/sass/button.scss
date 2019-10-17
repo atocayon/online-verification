@@ -1,61 +1,89 @@
-.submit-button{
-	color: $darkerBlue;
-	padding: 10px;
-	font-size: 1.5rem;
-	width: 150px;
-	background-color: $lightBlue2;
-	border: 1px solid $lightBlue2;
-	border-radius: 50px;
-	margin-top: 20px;
-	box-shadow: 1px 1px 1px $offWhite;
+.submit-button {
+  color: $darkerBlue;
+  padding: 10px;
+  font-size: 1.5rem;
+  width: 150px;
+  background-color: $lightBlue2;
+  border: 1px solid $lightBlue2;
+  border-radius: 50px;
+  margin-top: 20px;
+  box-shadow: 1px 1px 1px $offWhite;
 
-	@media screen and (max-width: 1300px){
-		width: 120px;
-		padding: 5px;
-		font-size: 1.2rem;
-	}
+  @media screen and (max-width: 1300px) {
+    width: 120px;
+    padding: 5px;
+    font-size: 1.2rem;
+  }
 
-	@media screen and (max-width: 1380px){
-		width: 110px;
-		padding: 10px;
-		font-size: 1rem;
-	}
+  @media screen and (max-width: 1380px) {
+    width: 110px;
+    padding: 10px;
+    font-size: 1rem;
+  }
 
-	@media screen and (max-width: 1050px){
-		width: 155px;
-		padding: 20px;
-		font-size: 1.2rem;
-	}
+  &:hover {
+    font-weight: bold;
+  }
 }
 
-
-.tryAgain-button{
+.tryAgain-button {
   display: none;
   color: $offWhite;
-	padding: 10px;
-	font-size: 1.5rem;
-	width: 200px;
-	background-color: $green;
-	border: 1px solid $green;
-	border-radius: 50px;
-	margin-top: 20px;
-	box-shadow: 1px 1px 1px $green;
+  padding: 10px;
+  font-size: 1.5rem;
+  width: 200px;
+  background-color: $green;
+  border: 1px solid $green;
+  border-radius: 50px;
+  margin-top: 20px;
+  box-shadow: 1px 1px 1px $green;
 
-	@media screen and (max-width: 1300px){
-		width: 120px;
-		padding: 5px;
-		font-size: 1.2rem;
-	}
+  @media screen and (max-width: 1300px) {
+    width: 120px;
+    padding: 5px;
+    font-size: 1.2rem;
+  }
 
-	@media screen and (max-width: 1380px){
-		width: 110px;
-		padding: 10px;
-		font-size: 1rem;
-	}
+  @media screen and (max-width: 1380px) {
+    width: 110px;
+    padding: 10px;
+    font-size: 1rem;
+  }
 
-	@media screen and (max-width: 1050px){
-		width: 155px;
-		padding: 20px;
-		font-size: 1.2rem;
-	}
+  @media screen and (max-width: 1050px) {
+    width: 155px;
+    padding: 20px;
+    font-size: 1.2rem;
+  }
+}
+
+.mobile-button {
+  display: none;
+  color: $darkerBlue;
+  padding: 10px;
+  font-size: 1.5rem;
+  width: 200px;
+  background-color: $lightBlue2;
+  border: 1px solid $lightBlue2;
+  border-radius: 50px;
+  margin-top: 20px;
+  box-shadow: 1px 1px 1px $lightBlue2;
+
+  @media screen and (max-width: 1300px) {
+    width: 120px;
+    padding: 5px;
+    font-size: 1.2rem;
+  }
+
+  @media screen and (max-width: 1380px) {
+    width: 110px;
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  @media screen and (max-width: 1050px) {
+    width: 155px;
+    padding: 20px;
+    font-size: 1.2rem;
+  }
 }

@@ -1,87 +1,144 @@
 // NavBar Style
 .nav-container {
-	box-shadow: 1px 2px 3px $offWhite;
-	font-size: 1rem;
-	div{
-		padding: 20px;
-	}
+  box-shadow: 1px 2px 3px $offWhite;
+  font-size: 1rem;
+  div {
+    padding: 20px;
+  }
 
-	div:hover{
-		a{
-			color: $offWhite;
-		}
-	}
+  a {
+    text-decoration: none;
+    color: $darkerBlue;
+  }
 
-	a{
-		text-decoration: none;
-		color: $darkerBlue;
-	}
+  .info {
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 50px;
+    background-color: $lightBlue2;
+  }
+  .access {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 50px;
+    background-color: $lightBlue2;
+  }
 
-	.info{
-		padding-left: 18px;
-		padding-right: 18px;
-		padding-top: 10px;
-		padding-bottom: 10px;
-		border-radius: 50px;
-			background-color: $lightBlue2;
-	}
-	.access{
-		padding-left: 12px;
-		padding-right: 12px;
-		padding-top: 10px;
-		padding-bottom: 10px;
-		border-radius: 50px;
-			background-color: $lightBlue2;
-	}
+  img {
+    width: 30px;
+  }
 
+  .brand {
+    font-weight: bold;
+    color: $darkerBlue;
+    font-size: 2rem;
+  }
 
-	img{
-		width: 30px;
-	}
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    span {
+      color: $darkGrey;
+    }
+  }
 
-	.brand{
-		font-weight: bold;
-		color: $darkerBlue;
-		font-size: 2rem;
-	}
+  .filler {
+    flex-grow: 1;
+  }
 
-	.dropdown {
-	  position: relative;
-	  display: inline-block;
-		span{
-			color: $darkGrey;
-		}
-	}
+  #mobile {
+    display: none;
+  }
 
-	.filler{
-	    flex-grow: 1;
-	}
+  @media screen and (max-width: 1366px) and (max-height: 768px) {
+    font-size: 0.7rem;
+    div {
+      padding: 18px;
+    }
+    .info {
+      padding-left: 13px;
+      padding-right: 13px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+    .access {
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+    img {
+      width: 25px;
+    }
 
-	#mobile{
-		display: none;
-	}
+    .brand {
+      font-size: 1.5rem;
+    }
+  }
 
-	@media screen and (max-width: 1050px){
-		#mobile{
-			display: block;
-		}
-		#web{
-			display: none;
-		}
-	}
+  @media screen and (max-width: 1360px) and (max-height: 664px) {
+  }
 
-	@media screen and (max-width: 780px){
-		img{
-			width: 28px;
-		}
-		.brand{
-			font-weight: bold;
-			font-size: 1.5rem;
-		}
+  @media screen and (max-width: 1280px) and (max-height: 1024px) {
+    font-size: 0.7rem;
+    div {
+      padding: 17px;
+    }
+  }
 
-		div{
-			padding: 15px;
-		}
-	}
+  @media screen and (max-width: 1050px) {
+    #mobile {
+      display: block;
+    }
+    #web {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 768px) and (max-height: 1280px) {
+    img {
+      width: 28px;
+    }
+    .brand {
+      font-size: 1.8rem;
+    }
+    div {
+      padding: 15px;
+    }
+  }
+
+  @media screen and (max-width: 500px) and (max-height: 800px) {
+    img {
+      width: 25px;
+    }
+    .brand {
+      font-size: 1.5rem;
+    }
+    div {
+      padding: 13px;
+    }
+  }
+
+  @media screen and (max-width: 480px) and (max-height: 854px) {
+    img {
+      width: 23px;
+    }
+    .brand {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media screen and (max-width: 384px) and (max-height: 640px) {
+    img {
+      width: 23px;
+    }
+    .brand {
+      font-size: 1.3rem;
+    }
+  }
 }
 // End Navbar

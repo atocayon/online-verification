@@ -1,13 +1,13 @@
-<div class="row flex-end nav-container">
+<div class="row nav-container">
 	<div>
-		<a href="" id="site_logo"><img src="<?= base_url() ?>src/img/logo.png" > <span class="brand">NMP</span></a> 
+		<a href="" id="site_logo"><img src="<?= base_url() ?>src/img/logo.png" > <span class="brand">NMP</span></a>
 	</div>
 		<div class="filler"></div>
 		<div id="web">
 			<a href="#" class="info"><i class="fas fa-info"></i></a>
 		</div>
 		<div id="web">
-			<a href="#" class="access"><i class="fas fa-universal-access"></i></a>
+			<a href="#" class="access" ><i class="fas fa-universal-access"></i></a>
 		</div>
 
 		<div id="mobile" onclick="funcDropdown()">

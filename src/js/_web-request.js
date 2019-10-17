@@ -1,8 +1,8 @@
 $(document).ready(function() {
   // Verification By Name
   $("#byName_submit").click(function(event) {
+    // console.log("By Name Button Click");
     event.preventDefault();
-    console.log(baseURL);
     if ($("#byName_fname").val() !== "" && $("#byName_lname").val() !== "") {
       $.ajax({
         url: baseURL + "index.php/nmp/search_byName/",
@@ -14,11 +14,7 @@ $(document).ready(function() {
           bday: $("#byName_bday").val()
         },
         success: function(data) {
-          console.log("success");
-          console.log(JSON.stringify(data.record));
-          console.log("RESPONSE: " + JSON.stringify(data.record["response"]));
           if (data.record["response"] == "null") {
-            console.log("======================ERROR======================");
             $("#no_data").show();
             $("#default").hide();
             $("#empty_field").hide();
@@ -27,10 +23,6 @@ $(document).ready(function() {
             $("#default").hide();
             $("#empty_field").hide();
             $("#byName_submit").hide();
-            $("#byName_fname").val();
-            $("#byName_lname").val();
-            $("#byName_bday").val();
-            $("#table-container").show();
             $("#searhAgain").show();
             var tbl = "";
             for (var i = 0; i < data["record"].length; i++) {
@@ -48,32 +40,31 @@ $(document).ready(function() {
           }
         },
         error: function(error) {
-          console.log("error");
-          console.log(JSON.stringify(error));
-          alert("INTERNAL ERROR!");
+          alert("INTERNAL ERROR!" + error);
         }
       });
     } else {
       $("#empty_field").show();
       $("#default").hide();
       $("#no_data").hide();
-      console.log("Error, Form is Empty");
+      console.log("Web interface - By Name");
     }
   });
+
   // End Verification by name
 
   // Verification by Certificate number
   $("#byCert_submit").click(function(event) {
+    // console.log("By cert num click");
     event.preventDefault();
     if ($("#byCert_certnum").val() !== "") {
       $.ajax({
         url: baseURL + "index.php/nmp/search_byCertNum/",
         type: "POST",
         dataType: "json",
-        data: { certNum: $("#byCert_certnum").val() },
+        data: { certnum: $("#byCert_certnum").val() },
         success: function(data) {
           if (data.record["response"] == "null") {
-            console.log("======================ERROR======================");
             $("#no_data").show();
             $("#default").hide();
             $("#empty_field").hide();
@@ -82,8 +73,6 @@ $(document).ready(function() {
             $("#default").hide();
             $("#empty_field").hide();
             $("#byCert_submit").hide();
-            $("#byCert_certnum").val();
-            $("#table-container").show();
             $("#searhAgain").show();
 
             var tbl = "";
@@ -102,22 +91,21 @@ $(document).ready(function() {
           }
         },
         error: function(error) {
-          console.log("error");
-          console.log(JSON.stringify(error));
-          alert("INTERNAL ERROR!");
+          alert("INTERNAL ERROR!" + error);
         }
       });
     } else {
       $("#empty_field").show();
       $("#default").hide();
       $("#no_data").hide();
-      console.log("Error, Form is Empty");
+      console.log("Web interface - By Cert num");
     }
   });
   // End Verification by Certificate number
 
   // Verification by PDC
   $("#byPDC_submit").click(function(event) {
+    // console.log("By PDC Enrollment click");
     event.preventDefault();
 
     if (
@@ -137,7 +125,6 @@ $(document).ready(function() {
         },
         success: function(data) {
           if (data.record["response"] == "null") {
-            console.log("======================ERROR======================");
             $("#no_data").show();
             $("#default").hide();
             $("#empty_field").hide();
@@ -146,8 +133,6 @@ $(document).ready(function() {
             $("#default").hide();
             $("#empty_field").hide();
             $("#byPDC_submit").hide();
-            $("#byCert_certnum").val();
-            $("#table-container").show();
             $("#searhAgain").show();
 
             var tbl = "";
@@ -166,31 +151,16 @@ $(document).ready(function() {
           }
         },
         error: function(error) {
-          console.log("error");
-          console.log(JSON.stringify(error));
-          alert("INTERNAL ERROR!");
+          alert("INTERNAL ERROR!" + error);
         }
       });
     } else {
       $("#empty_field").show();
       $("#default").hide();
       $("#no_data").hide();
-      console.log("Error, Form is Empty");
+      console.log("Web interface - By PDC enrollment");
     }
   });
   // End Verification by PDC
-
-  $("#searhAgain").click(function(event) {
-    window.location.reload(true);
-  });
-
-  $("#site_logo").click(function(event) {
-    event.preventDefault();
-    $("#home").show();
-    $("#options").show();
-    $("#form-cert").hide();
-    $("#form-enrollees").hide();
-    $("#forms-page").hide();
-    $("#form-name").hide();
-  });
 });
+// End Document

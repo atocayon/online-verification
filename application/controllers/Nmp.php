@@ -35,7 +35,7 @@ class Nmp extends CI_Controller {
 
 
 	public function search_byPDC(){
-		$data['record'] = $this->queries->searh_byPDC()->result_array();
+		$data['record'] = $this->queries->search_byPDC()->result_array();
 		if ($data['record'] == NULL) {
 			$data['record'] = ['response' => 'null'];
 			echo json_encode($data);

@@ -2,6 +2,14 @@
   color: $darkerBlue;
   line-height: 0.3;
   margin-left: 20px;
+  margin-top: 20px;
+  h1{
+    font-size: 2rem;
+  }
+
+  p{
+    font-size: 1.2rem;
+  }
 
   @media screen and (max-width: 780px) {
     p {
@@ -60,7 +68,7 @@
 
   @media screen and (max-width: 360px) and (max-height: 640px) {
     h1 {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
     p {
       font-size: 0.4rem;

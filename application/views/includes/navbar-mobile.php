@@ -1,15 +1,10 @@
-<div class="row nav-container">
-	<div class="web-logo">
-		<a href="" id="site_logo"><img src="<?= base_url() ?>src/img/logo.png" > <span class="brand">NMP</span></a>
-	</div>
-		<div class="filler"></div>
-		<div id="web">
-			<a href="#" class="info"><i class="fas fa-info"></i></a>
-		</div>
-		<div id="web">
-			<a href="#" class="access" ><i class="fas fa-universal-access"></i></a>
-		</div>
-    <div id="mobile-home" onclick="funcDropdown()">
+<div class="row nav-mobile-container">
+    <div class="mobile-logo">
+        <a href="<?= base_url() ?>index.php/nmp/index" id="back-button"><i class="fas fa-arrow-left brand-mobile"></i></a>
+    </div>
+    <div class="filler-mobile"></div>
+
+    <div id="mobile" onclick="funcDropdown()">
         <a href="#" style="font-size: 1.5rem;"><i class="fas fa-ellipsis-v"></i></a>
     </div>
 </div>
@@ -21,7 +16,6 @@
     <div>
         <a href="#">FAQ</a>
     </div>
-
 </div>
 
 <script>
@@ -37,5 +31,3 @@
     }
 
 </script>
-
-

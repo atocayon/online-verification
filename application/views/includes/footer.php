@@ -27,12 +27,12 @@
     </div>
   </div>
 
-  <!-- <div class="mobile-footer row">
+<div class="mobile-footer row">
     <div>
-        <h4>
+        <h6>
           &copy; NMP 2019
-        </h4>
+        </h6>
 
     </div>
 
-  </div> -->
+  </div>

@@ -12,9 +12,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <?php include 'includes/modal.php'; ?>
 
- <div>
+ <div id="navbar-web">
  	<?php include 'includes/navbar.php'; ?>
  </div>
+<div id="navbar-mobile" style="display: none">
+    <?php include 'includes/navbar-mobile.php'; ?>
+</div>
  <div id="home">
 	 <?php include 'includes/header.php'; ?>
  </div>
@@ -42,6 +45,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		document.getElementById('options').style.display = "none";
 		document.getElementById('form-cert').style.display ="none";
 		document.getElementById('form-enrollees').style.display ="none";
+		document.getElementById('navbar-mobile').style.display = "block";
+		document.getElementById('navbar-web').style.display = "none";
+
 	}
 
 	if (page == 2) {
@@ -50,6 +56,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		document.getElementById('options').style.display = "none";
 		document.getElementById('form-name').style.display ="none";
 		document.getElementById('form-enrollees').style.display ="none";
+        document.getElementById('navbar-mobile').style.display = "block";
+        document.getElementById('navbar-web').style.display = "none";
 	}
 
 	if (page == 3) {
@@ -58,6 +66,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		document.getElementById('options').style.display = "none";
 		document.getElementById('form-name').style.display ="none";
 		document.getElementById('form-cert').style.display ="none";
+        document.getElementById('navbar-mobile').style.display = "block";
+        document.getElementById('navbar-web').style.display = "none";
 	}
 
 </script>

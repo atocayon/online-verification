@@ -3,9 +3,9 @@
   <a href="<?= base_url() ?>index.php/nmp/index/1" type="submit" title="Click to Verify by Name">
     <div id="web-name" class="row">
         <div>
-            <i class="fas fa-user-alt" style="font-size: 20px;"></i>&nbsp;&nbsp;
+            <i class="fas fa-user-alt" id="web-icon-name"></i>&nbsp;&nbsp;
         </div>
-        <div style="margin-top: -20px;">
+        <div class="web-icon-text">
             <p><b>Name</b></p>
         </div>
     </div>
@@ -14,9 +14,9 @@
   <a href="<?= base_url() ?>index.php/nmp/index/2" type="submit" title="Click to Verify by Certificate Number">
     <div id="web-cert" class="row">
         <div>
-            <i class="fas fa-certificate" style="font-size: 20px;"></i>
+            <i class="fas fa-certificate" id="web-icon-cert"></i>
         </div>
-        <div style="margin-top: -20px;">
+        <div class="web-icon-text">
             <p><b>&nbsp;Certificate Number</b></p>
         </div>
         &nbsp;&nbsp;
@@ -26,9 +26,9 @@
   <a href="<?= base_url() ?>index.php/nmp/index/3" type="submit" title="Click to Verify by Enrollees on PDC Courses">
     <div id="web-pdc" class="row">
       <div>
-          <i class="fas fa-id-card" style="font-size: 20px;"></i>&nbsp;
+          <i class="fas fa-id-card" id="web-icon-pdc"></i>&nbsp;
       </div>
-        <div style="margin-top: -20px;">
+        <div class="web-icon-text">
             <p><b>&nbsp;Enrollees on PDC Courses</b></p>
         </div>
 

@@ -1,4 +1,4 @@
-<div class="row nav-container">
+<div class="row nav-container" id="navbar-web">
 	<div class="web-logo">
 		<a href="" id="site_logo"><img src="<?= base_url() ?>src/img/logo.png" > <span class="brand">NMP</span></a>
 	</div>
@@ -7,7 +7,7 @@
 			<a href="#" class="info"><i class="fas fa-info"></i></a>
 		</div>
 		<div id="web">
-			<a href="#" class="access" ><i class="fas fa-universal-access"></i></a>
+			<a href="#" class="access" ><i class="fas fa-question"></i></a>
 		</div>
     <div id="mobile-home" onclick="funcDropdown()">
         <a href="#" style="font-size: 1.5rem;"><i class="fas fa-ellipsis-v"></i></a>

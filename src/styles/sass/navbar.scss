@@ -36,7 +36,7 @@
     flex-grow: 1;
   }
 
-  #mobile {
+  #mobile-home {
     display: none;
   }
 
@@ -73,7 +73,7 @@
   }
 
   @media screen and (max-width: 1050px) {
-    #mobile {
+    #mobile-home {
       display: block;
     }
     #web {

@@ -1,8 +1,9 @@
-<div class="row nav-mobile-container">
+<div class="row nav-mobile-container" id="navbar-mobile">
     <div class="mobile-logo">
         <a href="<?= base_url() ?>index.php/nmp/index" id="back-button"><i class="fas fa-arrow-left brand-mobile"></i></a>
     </div>
-    <div class="filler-mobile"></div>
+    <div class="filler-mobile">
+    </div>
 
     <div id="mobile" onclick="funcDropdown()">
         <a href="#" style="font-size: 1.5rem;"><i class="fas fa-ellipsis-v"></i></a>

@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  <div id="navbar-web">
  	<?php include 'includes/navbar.php'; ?>
  </div>
-<div id="navbar-mobile" style="display: none">
+<div id="navbar-mobile" >
     <?php include 'includes/navbar-mobile.php'; ?>
 </div>
  <div id="home">
@@ -39,36 +39,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	var page = "<?= $this->uri->segment(3) ?>";
 	console.log(page);
 
-	if (page == 1) {
+	if (page === '1') {
 		document.getElementById('forms-page').style.display = "block";
 		document.getElementById('home').style.display = "none";
 		document.getElementById('options').style.display = "none";
 		document.getElementById('form-cert').style.display ="none";
 		document.getElementById('form-enrollees').style.display ="none";
-		document.getElementById('navbar-mobile').style.display = "block";
-		document.getElementById('navbar-web').style.display = "none";
 
 	}
 
-	if (page == 2) {
+	if (page === '2') {
 		document.getElementById('forms-page').style.display = "block";
 		document.getElementById('home').style.display = "none";
 		document.getElementById('options').style.display = "none";
 		document.getElementById('form-name').style.display ="none";
 		document.getElementById('form-enrollees').style.display ="none";
-        document.getElementById('navbar-mobile').style.display = "block";
-        document.getElementById('navbar-web').style.display = "none";
 	}
 
-	if (page == 3) {
+	if (page === '3') {
 		document.getElementById('forms-page').style.display = "block";
 		document.getElementById('home').style.display = "none";
 		document.getElementById('options').style.display = "none";
 		document.getElementById('form-name').style.display ="none";
 		document.getElementById('form-cert').style.display ="none";
-        document.getElementById('navbar-mobile').style.display = "block";
-        document.getElementById('navbar-web').style.display = "none";
 	}
+
+	console.log(window.screen.width);
+
+	if ( window.screen.width <= 1050 &&  page === '1' || page === '2' || page === '3'){
+	    document.getElementById('navbar-mobile').style.display = "block";
+	    document.getElementById('navbar-web').style.display = "none";
+    }else{
+	    document.getElementById('navbar-mobile').style.display = "none";
+        document.getElementById('navbar-web').style.display = "block";
+    }
 
 </script>
 </body>

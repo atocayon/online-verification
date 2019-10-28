@@ -180,7 +180,7 @@
 
   @media screen and (max-width: 1280px) and (max-height: 950px){
     a {
-      font-size: 0.7rem;
+      font-size: 0.8rem;
     }
     #web-name,
     #web-cert,
@@ -214,7 +214,7 @@
 
   @media screen and (max-width: 1280px) and (max-height: 800px){
     a {
-      font-size: 0.6rem;
+      font-size: 0.8rem;
     }
     #web-name,
     #web-cert,
@@ -264,7 +264,6 @@
       width: 650px;
       height: 120px;
       border-radius: 50px;
-      box-shadow: 1px 1px 2px $semiDarkGrey;
       font-size: 2rem;
 
       .mobile-options-icon-container{
@@ -522,8 +521,8 @@
     #mobile-name,
     #mobile-cert,
     #mobile-pdc {
-      width: 330px;
-      height: 60px;
+      width: 310px;
+      height: 50px;
       font-size: 1rem;
       padding-top: 25px;
       margin-top: 40px;
@@ -619,7 +618,7 @@
       height: 60px;
       font-size: 1rem;
       padding-top: 20px;
-      margin-top: 50px;
+      margin-top: 40px;
       border-radius: 30px;
 
       .mobile-options-icon-container{
@@ -833,7 +832,7 @@
     #mobile-name,
     #mobile-cert,
     #mobile-pdc {
-      width: 220px;
+      width: 200px;
       height: 30px;
       font-size: 0.8rem;
       padding-top: 20px;

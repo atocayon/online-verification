@@ -5,10 +5,10 @@
       <h3>
         Contact
       </h3>
-      <p>Email address</p>
-      <p>Telphone Number</p>
-      <p>Mobile Number</p>
-      <p>Socials</p>
+      <p>info@nmp.gov.ph</p>
+      <p>(+63) 936 786 2196</p>
+        <p><a href="https://www.facebook.com/NMPTrainingCenter" style="color: #fafafa;text-decoration: none;">www.facebook.com/NMPTrainingCenter</a></p>
+        <p><a href="http://nmp.gov.ph/" style="color: #fafafa;text-decoration: none;">www.nmp.gov.ph</a></p>
     </div>
     <div id="address">
       <h3>

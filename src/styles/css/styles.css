@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Abel|Archivo+Black&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Abel|Archivo+Black|PT+Serif&display=swap");
 .col-1 {
   width: 8.33%;
 }
@@ -50,12 +50,11 @@
 .nav-container {
   -webkit-box-shadow: 1px 2px 3px #f8f9fb;
   box-shadow: 1px 2px 3px #f8f9fb;
-  font-size: 1rem;
-  font-family: "Archivo Black", sans-serif;
+  font-family: "PT Serif", sans-serif;
 }
 
 .nav-container div {
-  padding: 20px;
+  padding: 1vw;
 }
 
 .nav-container a {
@@ -76,13 +75,14 @@
 }
 
 .nav-container img {
-  width: 30px;
+  width: 2vw;
 }
 
 .nav-container .brand {
   font-weight: bold;
   color: #001b4b;
-  font-size: 2rem;
+  padding-top: 1vh;
+  font-size: 1.5vw;
 }
 
 .nav-container .filler {
@@ -95,36 +95,6 @@
   display: none;
 }
 
-@media screen and (max-width: 1366px) and (max-height: 768px) {
-  .nav-container {
-    font-size: 0.7rem;
-  }
-  .nav-container div {
-    padding: 18px;
-  }
-  .nav-container .info {
-    padding: 8px 13px;
-  }
-  .nav-container .access {
-    padding: 8px 10px;
-  }
-  .nav-container img {
-    width: 25px;
-  }
-  .nav-container .brand {
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 1280px) and (max-height: 1024px) {
-  .nav-container {
-    font-size: 0.7rem;
-  }
-  .nav-container div {
-    padding: 17px;
-  }
-}
-
 @media screen and (max-width: 1050px) {
   .nav-container #mobile-home {
     display: block;
@@ -132,47 +102,14 @@
   .nav-container #web {
     display: none;
   }
-}
-
-@media screen and (max-width: 768px) and (max-height: 1280px) {
   .nav-container img {
-    width: 28px;
+    padding-left: 1.5vw;
+    padding-top: 0.5vw;
+    width: 7vw;
   }
   .nav-container .brand {
-    font-size: 1.8rem;
-  }
-  .nav-container div {
-    padding: 15px;
-  }
-}
-
-@media screen and (max-width: 500px) and (max-height: 800px) {
-  .nav-container img {
-    width: 25px;
-  }
-  .nav-container .brand {
-    font-size: 1.5rem;
-  }
-  .nav-container div {
-    padding: 13px;
-  }
-}
-
-@media screen and (max-width: 480px) and (max-height: 854px) {
-  .nav-container img {
-    width: 23px;
-  }
-  .nav-container .brand {
-    font-size: 1.3rem;
-  }
-}
-
-@media screen and (max-width: 384px) and (max-height: 640px) {
-  .nav-container img {
-    width: 23px;
-  }
-  .nav-container .brand {
-    font-size: 1.3rem;
+    padding-top: 1vh;
+    font-size: 5vw;
   }
 }
 
@@ -251,6 +188,12 @@
   }
 }
 
+@media screen and (max-width: 320px) {
+  .header-container #webBanner {
+    margin-bottom: 1vh;
+  }
+}
+
 .options {
   margin-top: 2vh;
   -webkit-box-pack: center;
@@ -270,7 +213,7 @@
   margin-left: 7vw;
   margin-right: 7vw;
   border: 1px solid #f8f9fb;
-  padding: 25px 10px 5px;
+  padding: 1.5vw 1vw 0.5vw;
   width: 15vw;
   height: 5vh;
   border-radius: 50px;
@@ -292,7 +235,7 @@
   margin-left: 1vw;
   margin-right: 1vw;
   margin-top: -1vh;
-  padding-right: 10px;
+  padding-right: 0.8vw;
   font-size: 2vw;
   border-right: 1px solid #02457a;
   -webkit-transition: font-size 0.2s;
@@ -314,8 +257,8 @@
 .options #web-pdc:hover {
   height: 7vh;
   width: 17vw;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: 1vw;
+  padding-right: 1vw;
 }
 
 .options #web-name:hover #web-icon-name, .options #web-name:hover #web-icon-cert, .options #web-name:hover #web-icon-pdc,
@@ -333,7 +276,7 @@
 .options #web-cert:hover .web-icon-text,
 .options #web-pdc:hover .web-icon-text {
   margin-top: -2vh;
-  font-size: 1.1vw;
+  font-size: 1vw;
 }
 
 .options #mobile-name,
@@ -356,8 +299,9 @@
     border: 1px solid #d6e8ee;
     margin-top: 6vh;
     padding-top: 2vh;
+    padding-bottom: 1vh;
     width: 80vw;
-    height: 9vh;
+    height: 8.5vh;
     border-radius: 100px;
   }
   .options #mobile-name .mobile-options-icon-container,
@@ -369,17 +313,39 @@
   .options #mobile-name .mobile-icon,
   .options #mobile-cert .mobile-icon,
   .options #mobile-pdc .mobile-icon {
-    font-size: 10vw;
+    font-size: 8vw;
     border-right: 1px solid #333;
     padding-right: 5vw;
   }
   .options #mobile-name .mobile-options-text-container,
   .options #mobile-cert .mobile-options-text-container,
   .options #mobile-pdc .mobile-options-text-container {
-    margin-top: -2vh;
+    margin-top: -3vh;
     padding-left: 3vw;
     margin-left: 3vw;
     font-size: 4vw;
+  }
+}
+
+@media screen and (max-width: 1024px) and (max-width: 800px) {
+  .options #mobile-name,
+  .options #mobile-cert,
+  .options #mobile-pdc {
+    padding-bottom: 0.02vh;
+  }
+  .options #mobile-name .mobile-options-text-container,
+  .options #mobile-cert .mobile-options-text-container,
+  .options #mobile-pdc .mobile-options-text-container {
+    margin-top: -1.5vh;
+    padding-left: 3vw;
+    margin-left: 3vw;
+    font-size: 4vw;
+  }
+  .options #mobile-name .mobile-options-icon-container,
+  .options #mobile-cert .mobile-options-icon-container,
+  .options #mobile-pdc .mobile-options-icon-container {
+    margin-top: 0.8vh;
+    margin-left: 5vw;
   }
 }
 
@@ -1650,86 +1616,25 @@ body {
 
 .web-footer h3 {
   color: #f8f9fb;
+  font-size: 1vw;
 }
 
 .web-footer p {
   color: #f8f9fb;
+  font-size: 0.7vw;
 }
 
 .web-footer #web-nmp {
-  margin-top: 50px;
+  margin-top: 3vw;
 }
 
 .web-footer #web-nmp img {
-  width: 80px;
-  height: 70px;
+  width: 3.5vw;
+  height: 6vh;
 }
 
 .web-footer #web-nmp h3 {
-  font-size: 1.5rem;
-}
-
-@media screen and (max-width: 1680px) and (max-height: 1050px) {
-  .web-footer {
-    margin-top: 150px;
-  }
-}
-
-.web-footer #web-nmp {
-  margin-top: 50px;
-}
-
-.web-footer #web-nmp img {
-  width: 70px;
-  height: 60px;
-}
-
-.web-footer #web-nmp h3 {
-  font-size: 1.3rem;
-}
-
-@media screen and (max-width: 1366px) and (max-height: 768px) {
-  .web-footer {
-    margin-top: 170px;
-  }
-  .web-footer h3 {
-    font-size: 0.8rem;
-  }
-  .web-footer p {
-    font-size: 0.8rem;
-  }
-  .web-footer #web-nmp {
-    margin-top: 50px;
-  }
-  .web-footer #web-nmp img {
-    width: 50px;
-    height: 40px;
-  }
-  .web-footer #web-nmp h3 {
-    font-size: 0.8rem;
-  }
-}
-
-@media screen and (max-width: 1280px) and (max-height: 1024px) {
-  .web-footer {
-    margin-top: 220px;
-  }
-  .web-footer h3 {
-    font-size: 0.8rem;
-  }
-  .web-footer p {
-    font-size: 0.8rem;
-  }
-  .web-footer #web-nmp {
-    margin-top: 50px;
-  }
-  .web-footer #web-nmp img {
-    width: 50px;
-    height: 40px;
-  }
-  .web-footer #web-nmp h3 {
-    font-size: 1rem;
-  }
+  font-size: 1vw;
 }
 
 .mobile-footer {

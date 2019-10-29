@@ -1,10 +1,9 @@
 // NavBar Style
 .nav-container {
   box-shadow: 1px 2px 3px $offWhite;
-  font-size: 1rem;
-  font-family: "Archivo Black", sans-serif;
+  font-family: "PT Serif", sans-serif;
   div {
-    padding: 20px;
+    padding: 1vw;
   }
 
   a {
@@ -24,13 +23,14 @@
   }
 
   img {
-    width: 30px;
+    width: 2vw;
   }
 
   .brand {
     font-weight: bold;
     color: $darkerBlue;
-    font-size: 2rem;
+    padding-top: 1vh;
+    font-size: 1.5vw;
   }
 
   .filler {
@@ -41,38 +41,6 @@
     display: none;
   }
 
-
-  @media screen and (max-width: 1366px) and (max-height: 768px) {
-    font-size: 0.7rem;
-    div {
-      padding: 18px;
-    }
-    .info {
-      padding: 8px 13px;
-    }
-    .access {
-      padding: 8px 10px;
-    }
-    img {
-      width: 25px;
-    }
-
-    .brand {
-      font-size: 1.5rem;
-    }
-
-  }
-
-  @media screen and (max-width: 1360px) and (max-height: 664px) {
-  }
-
-  @media screen and (max-width: 1280px) and (max-height: 1024px) {
-    font-size: 0.7rem;
-    div {
-      padding: 17px;
-    }
-  }
-
   @media screen and (max-width: 1050px) {
     #mobile-home {
       display: block;
@@ -80,48 +48,18 @@
     #web {
       display: none;
     }
-  }
 
-  @media screen and (max-width: 768px) and (max-height: 1280px) {
     img {
-      width: 28px;
+      padding-left: 1.5vw;
+      padding-top: 0.5vw;
+      width: 7vw;
     }
-    .brand {
-      font-size: 1.8rem;
-    }
-    div {
-      padding: 15px;
-    }
-  }
 
-  @media screen and (max-width: 500px) and (max-height: 800px) {
-    img {
-      width: 25px;
-    }
     .brand {
-      font-size: 1.5rem;
+      padding-top: 1vh;
+      font-size: 5vw;
     }
-    div {
-      padding: 13px;
-    }
-  }
 
-  @media screen and (max-width: 480px) and (max-height: 854px) {
-    img {
-      width: 23px;
-    }
-    .brand {
-      font-size: 1.3rem;
-    }
-  }
-
-  @media screen and (max-width: 384px) and (max-height: 640px) {
-    img {
-      width: 23px;
-    }
-    .brand {
-      font-size: 1.3rem;
-    }
   }
 }
 // End Navbar

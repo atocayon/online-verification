@@ -10,7 +10,7 @@
 			<a href="#" class="access" ><i class="fas fa-question"></i></a>
 		</div>
     <div id="mobile-home" onclick="funcDropdown()">
-        <a href="#" style="font-size: 1.5rem;"><i class="fas fa-ellipsis-v"></i></a>
+        <a href="#" style="font-size: 5vw;margin-right: 1.5vw"><i class="fas fa-ellipsis-v"></i></a>
     </div>
 </div>
 

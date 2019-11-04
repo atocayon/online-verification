@@ -1,4 +1,4 @@
-<div class="close"><a href=""  id="close-modal">X</a></div>
+<div class="close" ><a href=""  id="close-modal">X</a></div>
 <div class="row modal" id="modal">
   <table id="mobile-table">
     <thead>

@@ -27,7 +27,7 @@
     </div>
   </div>
 
-<div class="mobile-footer row">
+<!-- <div class="mobile-footer row" id="mobile-footer">
     <div>
         <h6>
           &copy; NMP 2019
@@ -35,4 +35,4 @@
 
     </div>
 
-  </div>
+  </div> -->

@@ -34,4 +34,85 @@
     color: $darkerBlue;
   }
 
+
+  @media screen and (max-width: 1024px){
+
+    .form-name,
+    .form-cert,
+    .form-enrollees {
+      padding-top: 2vw;
+      padding-left: 2vw;
+      padding-right: 7vw;
+      padding-bottom: 2vw;
+      border-radius: 5px;
+    }
+
+    .form-input-name {
+      width: 40vw;
+    }
+    input {
+      height: 4vw;
+      font-size: 1.5vw;
+      padding: 0.5vw;
+      border-radius: 4px;
+      border: 1px solid $lightGrey;
+      color: $darkerBlue;
+      box-shadow: 1px 1px 1px $offWhite;
+    }
+
+    label {
+      margin-top: 3vw;
+      color: $darkerBlue;
+    }
+
+  }
+
+  @media screen and (max-width: 800px) {
+    input {
+      height: 6vw;
+      font-size: 2vw;
+      padding: 0.5vw;
+      border-radius: 4px;
+      border: 1px solid $lightGrey;
+      color: $darkerBlue;
+      box-shadow: 1px 1px 1px $offWhite;
+    }
+
+    label {
+      margin-top: 5vw;
+      color: $darkerBlue;
+    }
+  }
+
+  @media screen and (max-width: 412px){
+    .form-name,
+    .form-cert,
+    .form-enrollees {
+      padding-top: 3vw;
+      padding-left: 3vw;
+      padding-right: 7vw;
+      padding-bottom: 3vw;
+      border-radius: 5px;
+    }
+    margin-top: 2vw;
+    .form-input-name {
+      width: 55vw;
+    }
+    input {
+      height: 10vw;
+      font-size: 3vw;
+      padding: 0.5vw;
+      border-radius: 4px;
+      border: 1px solid $lightGrey;
+      color: $darkerBlue;
+      box-shadow: 1px 1px 1px $offWhite;
+    }
+
+    label {
+      font-size: 3vw;
+      margin-top: 5vw;
+      color: $darkerBlue;
+    }
+  }
+
 }

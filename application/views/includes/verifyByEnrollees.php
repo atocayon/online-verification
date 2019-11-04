@@ -1,6 +1,6 @@
 <form>
   <label>Module/Courses</label><br>
-  <select id="byPDC_module" class="form-input-name" name="module" title="Click to Select Module/Course" required>
+  <select id="byPDC_module" class="form-input-name" name="module" title="Click to Select Module/Course" required style="height: 5vw">
     <option value="">Select Module/Course Here</option>
     <option value="20030814">IMO 3.12</option>
     <option value="20030808">IMO 6.09</option>

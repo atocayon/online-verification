@@ -70,6 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	if ( window.screen.width <= 1050 &&  page === '1' || page === '2' || page === '3'){
 	    document.getElementById('navbar-mobile').style.display = "block";
 	    document.getElementById('navbar-web').style.display = "none";
+			// document.getElementById('mobile-footer').style.display = "none";
     }else{
 	    document.getElementById('navbar-mobile').style.display = "none";
         document.getElementById('navbar-web').style.display = "block";

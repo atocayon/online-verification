@@ -11,16 +11,41 @@
     font-size: 1vw;
   }
 
-  @media screen and (max-width: 800px) {
-    margin-left: 2vw;
-    margin-top: 2.5vw;
-
+  @media screen and (max-width: 1024px) {
+    margin-left: 1.5vw;
+    margin-top: 3vw;
     h1{
-      font-size: 5vw;
+      font-size: 3vw;
     }
 
     p{
-      font-size: 2vw;
+      font-size: 1.5vw;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    margin-left: 1.5vw;
+    margin-top: 2.5vw;
+
+    h1{
+      font-size: 4vw;
+    }
+
+    p{
+      font-size: 1.5vw;
+    }
+  }
+
+  @media screen and (max-width: 412px) {
+    margin-left: 2vw;
+    margin-top: 4vw;
+
+    h1{
+      font-size: 5.3vw;
+    }
+
+    p{
+      font-size: 2.3vw;
     }
   }
 

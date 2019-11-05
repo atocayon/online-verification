@@ -714,6 +714,12 @@
   }
 }
 
+@media screen and (max-width: 360px) {
+  #modal {
+    height: 100vw;
+  }
+}
+
 .close {
   display: none;
   text-align: center;

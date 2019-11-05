@@ -56,7 +56,7 @@
   }
 
   @media screen and (max-width: 412px){
-      top: 20vw;
+    top: 20vw;
     left: 3vw;
     height: 80vw;
     overflow: auto;
@@ -80,6 +80,10 @@
         border-top: 1px solid $lightBlue2;
       }
     }
+  }
+
+  @media screen and (max-width: 360px){
+    height: 100vw;
   }
 
 }

@@ -57,6 +57,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	}
 
 	if (page === '3') {
+
 		document.getElementById('forms-page').style.display = "block";
 		document.getElementById('home').style.display = "none";
 		document.getElementById('options').style.display = "none";
@@ -67,13 +68,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	console.log(window.screen.width);
 	console.log(window.screen.height);
 
-	if ( window.screen.width <= 1050 &&  page === '1' || page === '2' || page === '3'){
+	if ( window.screen.width <= 1050 &&  page === '1' || window.screen.width <= 1050 && page === '2' || window.screen.width <= 1050 && page === '3'){
 	    document.getElementById('navbar-mobile').style.display = "block";
 	    document.getElementById('navbar-web').style.display = "none";
 			// document.getElementById('mobile-footer').style.display = "none";
     }else{
 	    document.getElementById('navbar-mobile').style.display = "none";
-        document.getElementById('navbar-web').style.display = "block";
+      document.getElementById('navbar-web').style.display = "block";
     }
 
 </script>

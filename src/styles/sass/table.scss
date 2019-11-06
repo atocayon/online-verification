@@ -1,5 +1,5 @@
 .table-container {
-  margin-left: 10vw;
+  margin-left: 15vw;
   height: 25vw;
   overflow: auto;
   table {
@@ -10,6 +10,7 @@
       padding-left: 5vw;
       padding-right: 5vw;
       padding-bottom: 1vw;
+      font-size: 1vw;
     }
     td {
       color: $darkerBlue;

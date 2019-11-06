@@ -138,12 +138,27 @@ body {
   box-shadow: 1px 1px 1px $lightGrey;
   color: $semiDarkGrey;
   height: 2.5vw;
+  width: 21vw;
+
 
   @media screen and (max-width: 1024px) {
-      height: 5vw;
+      height: 6.5vw;
+      width: 90vw;
+      font-size: 2vw;
   }
 
   @media screen and (max-width: 360px) {
-      height: 10vw;
+      height: 90vw;
+  }
+}
+
+.form-input-spacing{
+  margin-bottom: 1vw;
+
+  @media screen and (max-width: 1024px){
+    margin-bottom: 4vw;
+  }
+  @media screen and (max-width: 414px){
+    margin-bottom: 7vw;
   }
 }

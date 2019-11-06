@@ -4,87 +4,82 @@
   margin: 2vw;
   padding: 0.5vw;
   position: absolute;
-  left: 15vw;
-  top: 15vw;
-  height: 50vw;
+  top: 8%;
+  left: 7%;
+  width: 80vw;
+  height: 70vw;
   border: 1px solid $lightBlue2;
   border-radius: 10px;
   background-color: $offWhite;
   table {
+    width: 80vw;
     padding: 1vw;
     th {
       color: $darkerBlue;
       border-bottom: 1px solid $lightBlue2;
-      padding-left: 5vw;
-      padding-right: 5vw;
       padding-bottom: 1vw;
+      text-align: center;
     }
     td {
+      text-align: center;
       color: $darkerBlue;
-      padding-left: 5vw;
-      padding-right: 5vw;
       padding-bottom: 1vw;
       padding-top: 1vw;
       border-top: 1px solid $lightBlue2;
     }
   }
 
-  @media screen and (max-width: 800px) {
-    left: 13vw;
-    height: 60vw;
-    overflow: auto;
+  @media screen and (max-width: 600px) {
+    left: 3%;
+    width: 90vw;
+    height: 90vw;
+
     table {
+      width: 90vw;
       padding: 1vw;
       th {
-        font-size: 1.8vw;
         color: $darkerBlue;
         border-bottom: 1px solid $lightBlue2;
-        padding-left: 5vw;
-        padding-right: 5vw;
         padding-bottom: 1vw;
-      }
-      td {
-          font-size: 1.8vw;
-        color: $darkerBlue;
-        padding-left: 5vw;
-        padding-right: 5vw;
-        padding-bottom: 1vw;
-        padding-top: 1vw;
-        border-top: 1px solid $lightBlue2;
-      }
-    }
-  }
-
-  @media screen and (max-width: 412px){
-    top: 20vw;
-    left: 3vw;
-    height: 80vw;
-    overflow: auto;
-    table {
-      padding: 1vw;
-      th {
+        text-align: center;
         font-size: 2.3vw;
-        color: $darkerBlue;
-        border-bottom: 1px solid $lightBlue2;
-        padding-left: 7vw;
-        padding-right: 7vw;
-        padding-bottom: 1vw;
       }
       td {
-          font-size: 2vw;
+        text-align: center;
         color: $darkerBlue;
-        padding-left: 7vw;
-        padding-right: 7vw;
         padding-bottom: 1vw;
         padding-top: 1vw;
         border-top: 1px solid $lightBlue2;
       }
     }
+
   }
 
-  @media screen and (max-width: 360px){
-    height: 100vw;
+  @media screen and (max-width: 414px) {
+      left: 2%;
+      top: 10%;
+
+      table {
+        width: 90vw;
+        padding: 1vw;
+        th {
+          color: $darkerBlue;
+          border-bottom: 1px solid $lightBlue2;
+          padding-bottom: 1vw;
+          text-align: center;
+          font-size: 2.3vw;
+        }
+        td {
+          font-size: 2.3vw;
+          text-align: center;
+          color: $darkerBlue;
+          padding-bottom: 1vw;
+          padding-top: 1vw;
+          border-top: 1px solid $lightBlue2;
+        }
+      }
   }
+
 
 }
 
@@ -92,10 +87,11 @@
   display: none;
   text-align: center;
   position: absolute;
-  left: 78.5vw;
-  top: 15vw;
+  top: 7%;
+  left: 89.5%;
   font-size: 2vw;
-  width: 2.8vw;
+  width: 4vw;
+  height: 4vw;
   background-color: #d50000;
   border-radius: 30px;
   a {
@@ -103,22 +99,26 @@
     color: $offWhite;
     text-decoration: none;
     padding: 0.5vw;
-  }
-
-  @media screen and (max-width: 800px){
-    left: 81vw;
-  }
-
-  @media screen and (max-width: 412px){
     font-size: 3vw;
-      top: 19.3vw;
-    left: 92.5vw;
-      width: 4vw;
-
-      a {
-
-        padding: 1vw;
-      }
   }
+
+  @media screen and (max-width: 600px) {
+    left: 95%;
+  }
+
+  @media screen and (max-width: 414px){
+      top: 9%;
+      left: 94%;
+     height: 5vw;
+      width: 5vw;
+      a {
+        font-weight: bold;
+        color: $offWhite;
+        text-decoration: none;
+        font-size: 3.5vw;
+      }
+
+  }
+
 
 }

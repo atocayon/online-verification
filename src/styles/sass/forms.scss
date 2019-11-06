@@ -1,8 +1,6 @@
 .verifyByName-form-container {
   margin-left: 1vw;
   margin-right: 1vw;
-  margin-top: 1vw;
-  margin-bottom: 1vw;
   padding-bottom: 1vw;
   border: 1px solid $offWhite;
   box-shadow: 1px 1px 1px $offWhite;
@@ -21,7 +19,7 @@
   }
 
   input {
-    height: 2vw;
+    height: 1.8vw;
     font-size: 1vw;
     padding: 0.5vw;
     border-radius: 4px;
@@ -48,11 +46,11 @@
     }
 
     .form-input-name {
-      width: 40vw;
+      width: 90vw;
     }
     input {
-      height: 4vw;
-      font-size: 1.5vw;
+      height: 8vw;
+      font-size: 2.3vw;
       padding: 0.5vw;
       border-radius: 4px;
       border: 1px solid $lightGrey;
@@ -61,30 +59,29 @@
     }
 
     label {
-      margin-top: 3vw;
+      font-size: 2.3vw;
       color: $darkerBlue;
     }
 
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 834px) {
+
+    .form-input-name {
+      width: 90vw;
+    }
     input {
-      height: 6vw;
-      font-size: 2vw;
+
+      font-size: 3vw;
       padding: 0.5vw;
       border-radius: 4px;
       border: 1px solid $lightGrey;
       color: $darkerBlue;
       box-shadow: 1px 1px 1px $offWhite;
     }
-
-    label {
-      margin-top: 5vw;
-      color: $darkerBlue;
-    }
   }
 
-  @media screen and (max-width: 412px){
+  @media screen and (max-width: 600px){
     .form-name,
     .form-cert,
     .form-enrollees {
@@ -96,7 +93,7 @@
     }
     margin-top: 2vw;
     .form-input-name {
-      width: 55vw;
+      width: 90vw;
     }
     input {
       height: 10vw;
@@ -111,6 +108,26 @@
     label {
       font-size: 3vw;
       margin-top: 5vw;
+      color: $darkerBlue;
+    }
+  }
+
+  @media screen and (max-width: 414px) {
+    .form-input-name {
+      width: 85vw;
+    }
+    input {
+      height: 12vw;
+      font-size: 4vw;
+      padding: 1vw;
+      border-radius: 4px;
+      border: 1px solid $lightGrey;
+      color: $darkerBlue;
+      box-shadow: 1px 1px 1px $offWhite;
+    }
+
+    label {
+      font-size: 3.5vw;
       color: $darkerBlue;
     }
   }

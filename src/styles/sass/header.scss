@@ -16,6 +16,7 @@
 
     @media screen and (max-width: 1024px){
       font-size: 8.8vw;
+      margin-top: 12vw;
       margin-bottom: 5vw;
     }
 
@@ -23,10 +24,11 @@
         margin-bottom: 5vw;
     }
 
-
-    @media screen and (max-width: 320px){
-      margin-bottom: 5vw;
+    @media screen and (max-width: 600px){
+      margin-top: 15vw;
+      margin-bottom: 10vw;
     }
+
   }
 
 

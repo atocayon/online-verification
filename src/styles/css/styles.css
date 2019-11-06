@@ -181,6 +181,7 @@
 @media screen and (max-width: 1024px) {
   .header-container #webBanner {
     font-size: 8.8vw;
+    margin-top: 12vw;
     margin-bottom: 5vw;
   }
 }
@@ -191,9 +192,10 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 600px) {
   .header-container #webBanner {
-    margin-bottom: 5vw;
+    margin-top: 15vw;
+    margin-bottom: 10vw;
   }
 }
 
@@ -629,7 +631,7 @@
 }
 
 .table-container {
-  margin-left: 15vw;
+  margin-left: 8vw;
   height: 25vw;
   overflow: auto;
 }

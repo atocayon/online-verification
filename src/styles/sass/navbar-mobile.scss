@@ -1,8 +1,11 @@
 .nav-mobile-container {
   box-shadow: 1px 2px 3px $offWhite;
-  font-size: 1rem;
+
+  #elippsis{
+    font-size: 5vw;
+  }
   div {
-    padding: 15px;
+    padding: 2vw;
   }
 
   a {
@@ -13,18 +16,12 @@
   .brand-mobile {
     font-weight: bold;
     color: $darkerBlue;
-    font-size: 1.5rem;
+    font-size: 5vw;
   }
 
   .filler-mobile {
     flex-grow: 1;
   }
 
-  @media screen and (max-width: 320px) and (max-height: 480px){
-    font-size: 0.8rem;
-    div {
-      padding: 10px;
-    }
-  }
 
 }

@@ -891,4 +891,24 @@ body {
   padding: 5px;
 }
 
+#byPDC_module {
+  border: 1px solid #eceff1;
+  -webkit-box-shadow: 1px 1px 1px #eceff1;
+  box-shadow: 1px 1px 1px #eceff1;
+  color: #455a64;
+  height: 2.5vw;
+}
+
+@media screen and (max-width: 1024px) {
+  #byPDC_module {
+    height: 5vw;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #byPDC_module {
+    height: 10vw;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */

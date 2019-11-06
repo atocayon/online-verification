@@ -37,7 +37,7 @@
   </a>
 
   <div class="column">
-    <a href="<?= base_url() ?>index.php/nmp/index/1">
+    <a href="<?= base_url() ?>index.php/nmp/index/1" style="-webkit-tap-highlight-color: white;">
       <div id="mobile-name">
           <div class="row">
               <div class="mobile-options-icon-container">
@@ -49,7 +49,7 @@
           </div>
       </div>
     </a>
-    <a href="<?= base_url() ?>index.php/nmp/index/2">
+    <a href="<?= base_url() ?>index.php/nmp/index/2" style="-webkit-tap-highlight-color: white;">
       <div id="mobile-cert">
           <div class="row">
               <div class="mobile-options-icon-container">
@@ -61,7 +61,7 @@
           </div>
       </div>
     </a>
-    <a href="<?= base_url() ?>index.php/nmp/index/3">
+    <a href="<?= base_url() ?>index.php/nmp/index/3" style="-webkit-tap-highlight-color: white;">
       <div id="mobile-pdc">
           <div class="row">
               <div class="mobile-options-icon-container">

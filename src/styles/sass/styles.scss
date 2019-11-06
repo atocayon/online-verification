@@ -50,7 +50,7 @@ body {
   bottom: 0;
   position: fixed;
   width: 100%;
-  
+
 
   h3 {
     color: $offWhite;
@@ -130,5 +130,20 @@ body {
   }
   a{
     padding: 5px;
+  }
+}
+
+#byPDC_module{
+  border: 1px solid $lightGrey;
+  box-shadow: 1px 1px 1px $lightGrey;
+  color: $semiDarkGrey;
+  height: 2.5vw;
+
+  @media screen and (max-width: 1024px) {
+      height: 5vw;
+  }
+
+  @media screen and (max-width: 360px) {
+      height: 10vw;
   }
 }

@@ -436,7 +436,7 @@
 .verifyByName-form-container .form-enrollees {
   padding-top: 1.5vw;
   padding-left: 1.5vw;
-  padding-right: 7vw;
+  padding-right: 1vw;
   padding-bottom: 1vw;
   border-radius: 5px;
 }
@@ -579,13 +579,13 @@
   color: #f8f9fb;
   padding: 1vw;
   font-size: 1vw;
-  width: 8vw;
-  background-color: #4caf50;
-  border: 1px solid #4caf50;
+  width: 10vw;
+  background-color: #d50000;
+  border: 1px solid #d50000;
   border-radius: 50px;
   margin-top: 1.5vw;
-  -webkit-box-shadow: 1px 1px 1px #4caf50;
-  box-shadow: 1px 1px 1px #4caf50;
+  -webkit-box-shadow: 1px 1px 1px #d50000;
+  box-shadow: 1px 1px 1px #d50000;
 }
 
 .tryAgain-button:hover {
@@ -632,34 +632,37 @@
 
 .table-container {
   margin-left: 8vw;
+  width: 60vw;
   height: 25vw;
   overflow: auto;
 }
 
 .table-container table {
+  width: 60vw;
   padding: 1vw;
 }
 
 .table-container table th {
   color: #001b4b;
   border-bottom: 1px solid #d6e8ee;
-  padding-left: 5vw;
-  padding-right: 5vw;
   padding-bottom: 1vw;
   font-size: 1vw;
+  text-align: left;
 }
 
 .table-container table td {
   color: #001b4b;
-  padding-left: 5vw;
-  padding-right: 5vw;
   padding-bottom: 1vw;
   padding-top: 1vw;
   border-top: 1px solid #d6e8ee;
+  text-align: left;
+}
+
+.table-container:-webkit-scrollbar {
+  display: none;
 }
 
 #modal {
-  display: none;
   overflow: auto;
   margin: 2vw;
   padding: 0.5vw;
@@ -746,7 +749,6 @@
 }
 
 .close {
-  display: none;
   text-align: center;
   position: absolute;
   top: 7%;

@@ -30,9 +30,9 @@ $(document).ready(function() {
               tbl +=
                 "<td><label>" + data["record"][i]["module"] + "</label></td>";
               tbl +=
-                "<td><label>" + data["record"][i]["fname"] + "</label></td>";
+                "<td><label>" + data["record"][i]["duration"] + "</label></td>";
               tbl +=
-                "<td><label>" + data["record"][i]["cdate"] + "</label></td>";
+                "<td><label>" + data["record"][i]["cert_num"] + "</label></td>";
               tbl += "</tr>";
             }
 

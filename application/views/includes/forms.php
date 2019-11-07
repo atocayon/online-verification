@@ -22,9 +22,9 @@
     <table id="records_tbl">
       <thead>
         <tr>
-          <th>Training Module</th>
-          <th>Full name</th>
-          <th>Date of Certification</th>
+          <th>Module</th>
+          <th>Duration</th>
+          <th>Certificate Number</th>
         </tr>
       </thead>
       <tbody id="tbl_data">

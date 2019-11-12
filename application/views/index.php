@@ -45,6 +45,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		document.getElementById('options').style.display = "none";
 		document.getElementById('form-cert').style.display ="none";
 		document.getElementById('form-enrollees').style.display ="none";
+		document.getElementById('byCert').style.display = "none";
 
 	}
 
@@ -54,6 +55,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		document.getElementById('options').style.display = "none";
 		document.getElementById('form-name').style.display ="none";
 		document.getElementById('form-enrollees').style.display ="none";
+		document.getElementById('byNameAndByEnrollees').style.display = "none";
+		document.getElementById('byCert').style.display = "block";
 	}
 
 	if (page === '3') {
@@ -63,6 +66,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		document.getElementById('options').style.display = "none";
 		document.getElementById('form-name').style.display ="none";
 		document.getElementById('form-cert').style.display ="none";
+			document.getElementById('byCert').style.display = "none";
 	}
 
 	console.log(window.screen.width);

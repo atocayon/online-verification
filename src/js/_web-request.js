@@ -23,7 +23,7 @@ $(document).ready(function() {
             $("#default").hide();
             $("#empty_field").hide();
             $("#byName_submit").hide();
-            $("#searhAgain").show();
+            $(".tryAgain-button").show();
             var tbl = "";
             for (var i = 0; i < data["record"].length; i++) {
               tbl += "<tr>";
@@ -65,29 +65,29 @@ $(document).ready(function() {
         data: { certnum: $("#byCert_certnum").val() },
         success: function(data) {
           if (data.record["response"] == "null") {
-            $("#no_data").show();
-            $("#default").hide();
-            $("#empty_field").hide();
+            $("#byCert_no_data").show();
+            $("#byCert_default").hide();
+            $("#byCert_empty_field").hide();
           } else {
-            $("#no_data").hide();
-            $("#default").hide();
-            $("#empty_field").hide();
+            $("#byCert_no_data").hide();
+            $("#byCert_default").hide();
+            $("#byCert_empty_field").hide();
             $("#byCert_submit").hide();
-            $("#searhAgain").show();
+            $(".tryAgain-button").show();
 
             var tbl = "";
             for (var i = 0; i < data["record"].length; i++) {
               tbl += "<tr>";
               tbl +=
-                "<td><label>" + data["record"][i]["module"] + "</label></td>";
+                "<td><label>" + data["record"][i]["name"] + "</label></td>";
               tbl +=
-                "<td><label>" + data["record"][i]["fname"] + "</label></td>";
+                "<td><label>" + data["record"][i]["module"] +" - "+ data["record"][i]["duration"]  + "</label></td>";
               tbl +=
-                "<td><label>" + data["record"][i]["cdate"] + "</label></td>";
+                "<td><label>" + data["record"][i]["cert_num"] + "</label></td>";
               tbl += "</tr>";
             }
 
-            $("#tbl_data").prepend(tbl);
+            $("#byCert_tbl_data").prepend(tbl);
           }
         },
         error: function(error) {
@@ -133,7 +133,7 @@ $(document).ready(function() {
             $("#default").hide();
             $("#empty_field").hide();
             $("#byPDC_submit").hide();
-            $("#searhAgain").show();
+            $(".tryAgain-button").show();
 
             var tbl = "";
             for (var i = 0; i < data["record"].length; i++) {
@@ -141,9 +141,9 @@ $(document).ready(function() {
               tbl +=
                 "<td><label>" + data["record"][i]["module"] + "</label></td>";
               tbl +=
-                "<td><label>" + data["record"][i]["fname"] + "</label></td>";
+                "<td><label>" + data["record"][i]["duration"] + "</label></td>";
               tbl +=
-                "<td><label>" + data["record"][i]["cdate"] + "</label></td>";
+                "<td><label>" + data["record"][i]["cert_num"] + "</label></td>";
               tbl += "</tr>";
             }
 

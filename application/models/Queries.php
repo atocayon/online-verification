@@ -10,7 +10,7 @@ class Queries extends CI_Model
 					from trainee as tbl_trainee
 					INNER JOIN training as tbl_training on tbl_trainee.trid = tbl_training.trid
 					INNER JOIN schedule as tbl_schedule on tbl_training.code = tbl_schedule.code
-					INNER join module as tbl_module on tbl_schedule.modcode = tbl_module.modcode
+					INNER JOIN module as tbl_module on tbl_schedule.modcode = tbl_module.modcode
 					where tbl_trainee.fname LIKE ? and tbl_trainee.lname LIKE ? and bdate = ? group by tbl_training.code order by tbl_training.code";
 			$query = $this->db->query($sql,$param);
 			// var_dump($this->db->last_query());die();
@@ -23,8 +23,8 @@ class Queries extends CI_Model
 					from trainee as tbl_trainee
           INNER JOIN training as tbl_training on tbl_trainee.trid = tbl_training.trid
 					INNER JOIN schedule as tbl_schedule on tbl_training.code = tbl_schedule.code
-					INNER join module as tbl_module on tbl_schedule.modcode = tbl_module.modcode
-					where tbl_training.certnumber = ? group by tbl_training.code order by tbl_training.code";
+					INNER JOIN module as tbl_module on tbl_schedule.modcode = tbl_module.modcode
+					where tbl_training.certnumber = ?";
 			$query = $this->db->query($sql,$param);
 			//var_dump($this->db->last_query());die();
 			return $query;
@@ -37,7 +37,7 @@ class Queries extends CI_Model
 					from trainee as tbl_trainee
 					LEFT JOIN training as tbl_training on tbl_trainee.trid = tbl_training.trid
 					LEFT JOIN schedule as tbl_schedule on tbl_training.code = tbl_schedule.code
-					LEFT join module as tbl_module on tbl_schedule.modcode = tbl_module.modcode
+					LEFT JOIN module as tbl_module on tbl_schedule.modcode = tbl_module.modcode
 					where tbl_trainee.fname LIKE ? and tbl_trainee.lname LIKE ? and bdate = ? and tbl_module.modcode = ? group by tbl_training.code order by tbl_training.code";
 			$query = $this->db->query($sql,$param);
 			//var_dump($this->db->last_query());die();

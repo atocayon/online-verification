@@ -630,19 +630,19 @@
   }
 }
 
-.table-container {
+#byNameAndByEnrollees {
   margin-left: 8vw;
   width: 60vw;
   height: 25vw;
   overflow: auto;
 }
 
-.table-container table {
+#byNameAndByEnrollees table {
   width: 60vw;
   padding: 1vw;
 }
 
-.table-container table th {
+#byNameAndByEnrollees table th {
   color: #001b4b;
   border-bottom: 1px solid #d6e8ee;
   padding-bottom: 1vw;
@@ -650,7 +650,7 @@
   text-align: left;
 }
 
-.table-container table td {
+#byNameAndByEnrollees table td {
   color: #001b4b;
   padding-bottom: 1vw;
   padding-top: 1vw;
@@ -658,26 +658,51 @@
   text-align: left;
 }
 
-.table-container:-webkit-scrollbar {
+#byCert {
   display: none;
+  margin-left: 8vw;
+  width: 60vw;
+  height: 25vw;
+  overflow: auto;
+}
+
+#byCert table {
+  width: 60vw;
+  padding: 1vw;
+}
+
+#byCert table th {
+  color: #001b4b;
+  border-bottom: 1px solid #d6e8ee;
+  padding-bottom: 1vw;
+  font-size: 1vw;
+  text-align: left;
+}
+
+#byCert table td {
+  color: #001b4b;
+  padding-bottom: 1vw;
+  padding-top: 1vw;
+  border-top: 1px solid #d6e8ee;
+  text-align: left;
 }
 
 #modal {
+  display: none;
   overflow: auto;
   margin: 2vw;
-  padding: 0.5vw;
+  padding: 2vw;
   position: absolute;
-  top: 8%;
-  left: 7%;
-  width: 80vw;
-  height: 70vw;
+  top: 15%;
+  width: 92vw;
+  height: 98vw;
   border: 1px solid #d6e8ee;
   border-radius: 10px;
   background-color: #f8f9fb;
 }
 
 #modal table {
-  width: 80vw;
+  width: 92vw;
   padding: 1vw;
 }
 
@@ -685,108 +710,35 @@
   color: #001b4b;
   border-bottom: 1px solid #d6e8ee;
   padding-bottom: 1vw;
-  text-align: center;
+  text-align: left;
+  font-size: 2.3vw;
 }
 
 #modal table td {
-  text-align: center;
+  text-align: left;
   color: #001b4b;
   padding-bottom: 1vw;
   padding-top: 1vw;
   border-top: 1px solid #d6e8ee;
+  font-size: 2vw;
 }
 
-@media screen and (max-width: 600px) {
-  #modal {
-    left: 3%;
-    width: 90vw;
-    height: 90vw;
-  }
-  #modal table {
-    width: 90vw;
-    padding: 1vw;
-  }
-  #modal table th {
-    color: #001b4b;
-    border-bottom: 1px solid #d6e8ee;
-    padding-bottom: 1vw;
-    text-align: center;
-    font-size: 2.3vw;
-  }
-  #modal table td {
-    text-align: center;
-    color: #001b4b;
-    padding-bottom: 1vw;
-    padding-top: 1vw;
-    border-top: 1px solid #d6e8ee;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  #modal {
-    left: 2%;
-    top: 10%;
-  }
-  #modal table {
-    width: 90vw;
-    padding: 1vw;
-  }
-  #modal table th {
-    color: #001b4b;
-    border-bottom: 1px solid #d6e8ee;
-    padding-bottom: 1vw;
-    text-align: center;
-    font-size: 2.3vw;
-  }
-  #modal table td {
-    font-size: 2.3vw;
-    text-align: center;
-    color: #001b4b;
-    padding-bottom: 1vw;
-    padding-top: 1vw;
-    border-top: 1px solid #d6e8ee;
-  }
+#modal #user-avatar {
+  width: 8vw;
 }
 
 .close {
-  text-align: center;
+  display: none;
   position: absolute;
-  top: 7%;
-  left: 89.5%;
-  font-size: 2vw;
-  width: 4vw;
-  height: 4vw;
-  background-color: #d50000;
-  border-radius: 30px;
+  top: 8%;
+  left: 92%;
 }
 
 .close a {
   font-weight: bold;
   color: #f8f9fb;
   text-decoration: none;
-  padding: 0.5vw;
-  font-size: 3vw;
-}
-
-@media screen and (max-width: 600px) {
-  .close {
-    left: 95%;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  .close {
-    top: 9%;
-    left: 94%;
-    height: 5vw;
-    width: 5vw;
-  }
-  .close a {
-    font-weight: bold;
-    color: #f8f9fb;
-    text-decoration: none;
-    font-size: 3.5vw;
-  }
+  font-size: 6vw;
 }
 
 body {

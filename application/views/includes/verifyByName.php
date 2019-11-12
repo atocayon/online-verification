@@ -32,7 +32,7 @@
 
     <div class="">
       <center>
-        <button id="searhAgain" class="tryAgain-button" title="Click to Clear Result">Clear Result</button>
+        <button class="tryAgain-button" title="Click to Clear Result">Clear Result</button>
       </center>
     </div>
 

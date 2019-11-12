@@ -18,7 +18,8 @@
   </div>
 
 
-  <div class="row table-container">
+  <div id="byNameAndByEnrollees">
+
     <table id="records_tbl">
       <thead>
         <tr>
@@ -49,21 +50,41 @@
             </td>
           </tr>
       </tbody>
-      <!-- <tfoot>
+    </table>
+
+  </div>
+
+  <div id="byCert">
+    <table id="byCerts_records_tbl" >
+      <thead>
         <tr>
-          <th colspan="4">
-            <ul>
-              <li><a href="#"><<</a></li>
-              <li><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">5</a></li>
-              <li><a href="#">>></a></li>
-            </ul>
-          </th>
+          <th>Name</th>
+          <th>Module and Duration</th>
+          <th>Certificate Number</th>
         </tr>
-      </tfoot> -->
+      </thead>
+      <tbody id="byCert_tbl_data">
+
+          <tr>
+            <td colspan="4" id="byCert_default">
+              <center>
+                <h2 style="color: #607D8B">Result will show up here</h2>
+              </center>
+            </td>
+
+            <td colspan="4" id="byCert_no_data" style="display: none">
+              <center>
+                <h2 style="color: #d50000">No Data Found</h2>
+              </center>
+            </td>
+
+            <td colspan="4" id="byCert_empty_field" style="display: none">
+              <center>
+                <h2 style="color: #FF6D00">Please don't leave input field empty</h2>
+              </center>
+            </td>
+          </tr>
+      </tbody>
     </table>
   </div>
 </div>

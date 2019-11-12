@@ -1,4 +1,4 @@
-.table-container {
+#byNameAndByEnrollees {
   margin-left: 8vw;
   width: 60vw;
   height: 25vw;
@@ -21,8 +21,32 @@
       text-align: left;
     }
   }
-  &:-webkit-scrollbar {
-    display: none;
+
+
 }
 
+#byCert{
+  display: none;
+  margin-left: 8vw;
+  width: 60vw;
+  height: 25vw;
+  overflow: auto;
+  table {
+    width: 60vw;
+    padding: 1vw;
+    th {
+      color: $darkerBlue;
+      border-bottom: 1px solid $lightBlue2;
+      padding-bottom: 1vw;
+      font-size: 1vw;
+      text-align: left;
+    }
+    td {
+      color: $darkerBlue;
+      padding-bottom: 1vw;
+      padding-top: 1vw;
+      border-top: 1px solid $lightBlue2;
+      text-align: left;
+    }
+  }
 }

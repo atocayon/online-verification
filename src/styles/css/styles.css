@@ -658,6 +658,12 @@
   text-align: left;
 }
 
+@media screen and (max-width: 1050px) {
+  #byNameAndByEnrollees {
+    display: none;
+  }
+}
+
 #byCert {
   display: none;
   margin-left: 8vw;

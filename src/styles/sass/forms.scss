@@ -91,7 +91,6 @@
       padding-bottom: 3vw;
       border-radius: 5px;
     }
-    margin-top: 2vw;
     .form-input-name {
       width: 90vw;
     }
@@ -129,6 +128,27 @@
     label {
       font-size: 3.5vw;
       color: $darkerBlue;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .form-input-name {
+      width: 85vw;
+    }
+    input {
+      height: 7vw;
+      font-size: 4vw;
+      padding: 1vw;
+      border-radius: 4px;
+      border: 1px solid $lightGrey;
+      color: $darkerBlue;
+      box-shadow: 1px 1px 1px $offWhite;
+    }
+
+    label {
+      font-size: 3vw;
+      color: $darkerBlue;
+        margin-top: 0.5vw;
     }
   }
 

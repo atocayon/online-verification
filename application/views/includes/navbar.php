@@ -3,11 +3,11 @@
 		<a href="" id="site_logo"><img src="<?= base_url() ?>src/img/logo.png" > <span class="brand">NMP</span></a>
 	</div>
 		<div class="filler"></div>
-		<div id="web">
-			<a href="#" class="info"><i class="fas fa-info"></i></a>
+		<div id="web" title="Click for more information">
+			<a href="#" class="info" title="Click for more information"><i class="fas fa-info"></i></a>
 		</div>
-		<div id="web">
-			<a href="#" class="access" ><i class="fas fa-question"></i></a>
+		<div id="web" title="FAQ">
+			<a href="#" class="access" title="FAQ" ><i class="fas fa-question"></i></a>
 		</div>
     <div id="mobile-home" onclick="funcDropdown()">
         <a href="#"><i class="fas fa-ellipsis-v"></i></a>

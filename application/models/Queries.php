@@ -45,5 +45,10 @@ class Queries extends CI_Model
 
   }
 
+  public function userActivity($remote_ip,$mac_address, $action){
+    $sql = $this->db->query("INSERT INTO everification_activity_logs (ipAddress, macAddress, action) VALUES ('$remote_ip', '$mac_address', '$action')");
+    return $sql;
+  }
+
 
 }

@@ -1,4 +1,12 @@
 $(document).ready(function() {
+  if ($(window).width() < 1050 && page === '1' || $(window).width() < 1050 && page === '2' || $(window).width() < 1050 && page === '3') {
+    $("#navbar-mobile").show();
+    $("#navbar-web").hide();
+  }else{
+    $("#navbar-web").show();
+    $("#navbar-mobile").hide();
+  }
+
   $("#searhAgain").click(function(event) {
     event.preventDefault();
     window.location.reload(true);
@@ -19,4 +27,8 @@ $(document).ready(function() {
     window.location.reload(true);
   });
 
+  $(".info").click(function(){
+    $(".home-page").hide();
+    $(".more-info-page").show();
+  });
 });

@@ -505,9 +505,6 @@
 }
 
 @media screen and (max-width: 600px) {
-  .verifyByName-form-container {
-    margin-top: 2vw;
-  }
   .verifyByName-form-container .form-name,
   .verifyByName-form-container .form-cert,
   .verifyByName-form-container .form-enrollees {
@@ -554,6 +551,27 @@
   .verifyByName-form-container label {
     font-size: 3.5vw;
     color: #001b4b;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .verifyByName-form-container .form-input-name {
+    width: 85vw;
+  }
+  .verifyByName-form-container input {
+    height: 7vw;
+    font-size: 4vw;
+    padding: 1vw;
+    border-radius: 4px;
+    border: 1px solid #eceff1;
+    color: #001b4b;
+    -webkit-box-shadow: 1px 1px 1px #f8f9fb;
+    box-shadow: 1px 1px 1px #f8f9fb;
+  }
+  .verifyByName-form-container label {
+    font-size: 3vw;
+    color: #001b4b;
+    margin-top: 0.5vw;
   }
 }
 
@@ -747,6 +765,46 @@
   font-size: 6vw;
 }
 
+.more-info-page {
+  display: none;
+  margin-bottom: 20vw;
+}
+
+.more-info-content {
+  margin-left: 7vw;
+  margin-top: 5vh;
+  border-left: 3px solid #CFD8DC;
+  -webkit-box-shadow: 2px 2px 2px #FAFAFA;
+  box-shadow: 2px 2px 2px #FAFAFA;
+  padding: 0.5vw;
+  width: 80vw;
+}
+
+.more-info-content h2 {
+  background: #d6e8ee;
+  padding: 0.5vw;
+  width: 20vw;
+  border: 1px solid #d6e8ee;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  -webkit-box-shadow: 2px 2px 2px #d6e8ee;
+  box-shadow: 2px 2px 2px #d6e8ee;
+}
+
+.more-info-content table {
+  width: 80vw;
+}
+
+.more-info-content table th {
+  text-align: left;
+  padding: 0.3vw;
+  background: #eceff1;
+}
+
+.more-info-content table td {
+  padding: 0.3vw;
+}
+
 body {
   margin: 0px;
   padding: 0px;
@@ -901,6 +959,13 @@ body {
 @media screen and (max-width: 360px) {
   #byPDC_module {
     height: 90vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #byPDC_module {
+    height: 10vw;
+    font-size: 3vw;
   }
 }
 

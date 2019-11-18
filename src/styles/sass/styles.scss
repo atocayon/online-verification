@@ -11,6 +11,7 @@
 @import "button";
 @import "table";
 @import "modal";
+@import "moreInfo";
 
 
 body {
@@ -149,6 +150,11 @@ body {
 
   @media screen and (max-width: 360px) {
       height: 90vw;
+  }
+
+  @media screen and (max-width: 320px){
+    height: 10vw;
+    font-size: 3vw;
   }
 }
 

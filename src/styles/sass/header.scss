@@ -1,7 +1,7 @@
 .header-container {
   #webBanner {
     font-size: 9vw;
-    margin-top: 5vw;
+    margin-top: 10vw;
     margin-bottom: 6vw;
     font-family: "Archivo Black", sans-serif;
     .title-1 {
@@ -14,20 +14,32 @@
       color: $darkBlue;
     }
 
+    @media screen and (max-width: 1440px){
+        margin-top: 12vw;
+        margin-bottom: 10vw;
+    }
+
+    @media screen and (max-width: 1280px){
+      margin-top: 15vw;
+    }
+
     @media screen and (max-width: 1024px){
       font-size: 8.8vw;
-      margin-top: 12vw;
+      margin-top: 23vw;
       margin-bottom: 5vw;
     }
 
     @media screen and (max-width: 800px){
+
         margin-bottom: 5vw;
     }
 
     @media screen and (max-width: 600px){
-      margin-top: 15vw;
+      font-size: 8.5vw;
+      margin-top: 16vh;
       margin-bottom: 10vw;
     }
+
 
   }
 

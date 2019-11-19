@@ -15,6 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  <div id="navbar-web">
  	<?php include 'includes/navbar.php'; ?>
  </div>
+
 <div id="navbar-mobile" >
     <?php include 'includes/navbar-mobile.php'; ?>
 </div>

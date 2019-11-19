@@ -7,28 +7,38 @@ $(document).ready(function() {
     $("#navbar-mobile").hide();
   }
 
-  $("#searhAgain").click(function(event) {
-    event.preventDefault();
+  $("#searhAgain").click(function() {
     window.location.reload(true);
   });
 
-  $("#site_logo").click(function(event) {
-    event.preventDefault();
-    $("#home").show();
-    $("#options").show();
-    $("#form-cert").hide();
-    $("#form-enrollees").hide();
+  $("#site_logo").click(function() {
     $("#forms-page").hide();
-    $("#form-name").hide();
+    $(".more-info-page").hide();
+    $("#dropdown-content").hide();
+    $(".home-page").show();
+
   });
 
-  $("#close-modal").click(function(event) {
-    event.preventDefault();
+  $("#close-modal").click(function() {
     window.location.reload(true);
   });
 
   $(".info").click(function(){
     $(".home-page").hide();
+    $("#form-cert").hide();
+    $("#form-enrollees").hide();
+    $("#forms-page").hide();
+    $("#form-name").hide();
+    $(".more-info-page").show();
+  });
+
+  $(".training_schedule").click(function(){
+    $(".home-page").hide();
+    $("#form-cert").hide();
+    $("#form-enrollees").hide();
+    $("#forms-page").hide();
+    $("#form-name").hide();
+    $("#dropdown-content").hide();
     $(".more-info-page").show();
   });
 });

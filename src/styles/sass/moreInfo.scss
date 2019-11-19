@@ -1,11 +1,9 @@
 .more-info-page{
   display: none;
-  margin-bottom: 20vw;
 }
 
 .more-info-content{
   margin-left: 7vw;
-  margin-top: 5vh;
   border-left: 3px solid #CFD8DC;
   box-shadow: 2px 2px 2px #FAFAFA;
   padding: 0.5vw;
@@ -18,6 +16,20 @@
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
     box-shadow: 2px 2px 2px $lightBlue2;
+    @media screen and (max-width: 1024px){
+        font-size: 2vw;
+        width: 30vw;
+    }
+
+    @media screen and (max-width: 800px){
+      font-size: 3vw;
+      width: 45vw;
+    }
+
+    @media screen and (max-width: 414px){
+      font-size: 4vw;
+      width: 55vw;
+    }
   }
 
   table{
@@ -31,6 +43,53 @@
     }
     td{
       padding: 0.3vw;
+      border-left: 1px solid $offWhite;
+      border-right: 1px solid $offWhite;
     }
+  }
+
+  @media screen and (max-width: 1024px){
+    margin-left: 1.5vw;
+    width: 95vw;
+    table{
+      width: 95vw;
+
+      th{
+        padding: 1vw;
+      }
+
+      td{
+        padding: 1vw;
+      }
+    }
+  }
+
+  @media screen and (max-width: 414px){
+    table{
+      th{
+        font-size: 3vw;
+      }
+
+      td{
+        font-size: 2.5vw;
+      }
+    }
+  }
+}
+.spacer{
+    height: 10vh;
+    @media screen and (max-width: 1024px){
+      height: 7vh;
+    }
+}
+
+.spacer-1{
+  height: 15vh;
+  @media screen and (max-width: 1024px){
+    height: 10vh;
+  }
+
+  @media screen and (max-width: 375px){
+      height: 8vh;
   }
 }

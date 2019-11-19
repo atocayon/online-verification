@@ -78,10 +78,10 @@
       background-color: $lightBlue2;
       border: 1px solid $lightBlue2;
       margin-top: 6vh;
-      padding-top: 2vh;
-      padding-bottom: 1vh;
+      padding-top: 3vh;
+      padding-bottom: 0.2vh;
       width: 80vw;
-      height: 8.5vh;
+      height: 10vh;
       border-radius: 100px;
 
       .mobile-options-icon-container{
@@ -103,7 +103,8 @@
       }
 
       @media screen and (max-width: 800px){
-        padding-bottom: 0.02vh;
+          padding-top: 2vh;
+        padding-bottom: 0.05vh;
 
         .mobile-options-text-container{
           margin-top: -1.5vh;

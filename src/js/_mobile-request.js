@@ -25,6 +25,8 @@ $(document).ready(function() {
             $(".header-container").css("border", "1px solid rgba(0,0,0,0.7)");
             $(".verifyByName-form-container").css("border", "1px solid rgba(0,0,0,0.7)");
             $(".mobile-button").css("background-color","#333");
+            $("#elippsis").hide();
+            $("#back-button").hide();
           } else {
             $("#mobile-no_data").hide();
             $("#mobile-default").hide();
@@ -93,6 +95,8 @@ $(document).ready(function() {
               $("#mobile-table").hide();
               $("#user-avatar").hide();
               $("#byCertResult").show();
+              $("#elippsis").hide();
+              $("#back-button").hide();
           } else {
             $("#byCert-mobile-no_data").hide();
             $("#byCert-mobile-default").hide();
@@ -108,6 +112,8 @@ $(document).ready(function() {
               $("#mobile-table").hide();
               $("#user-avatar").hide();
               $("#byCertResult").show();
+              $("#elippsis").hide();
+              $("#back-button").hide();
 
             var tbl = "";
             for (var i = 0; i < data["record"].length; i++) {
@@ -121,7 +127,7 @@ $(document).ready(function() {
               tbl += "</tr>";
             }
 
-            $("#byCertResult").prepend(tbl);
+            $("#byCert_mobile_res").prepend(tbl);
           }
         },
         error: function(error) {
@@ -164,6 +170,8 @@ $(document).ready(function() {
             $(".header-container").css("border", "1px solid rgba(0,0,0,0.7)");
             $(".verifyByName-form-container").css("border", "1px solid rgba(0,0,0,0.7)");
               $(".mobile-button").css("background-color","#333");
+              $("#elippsis").hide();
+              $("#back-button").hide();
           } else {
             $("#mobile-no_data").hide();
             $("#mobile-default").hide();
@@ -176,6 +184,8 @@ $(document).ready(function() {
             $(".header-container").css("border", "1px solid rgba(0,0,0,0.7)");
             $(".verifyByName-form-container").css("border", "1px solid rgba(0,0,0,0.7)");
               $(".mobile-button").css("background-color","#333");
+              $("#elippsis").hide();
+              $("#back-button").hide();
 
             var tbl = "";
             for (var i = 0; i < data["record"].length; i++) {

@@ -64,6 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		document.getElementById('form-name').style.display ="none";
 		document.getElementById('form-enrollees').style.display ="none";
 		document.getElementById('byNameAndByEnrollees').style.display = "none";
+		document.getElementById('byCerts_records_tbl').style.display = "none";
 		document.getElementById('byCert').style.display = "block";
 	}
 

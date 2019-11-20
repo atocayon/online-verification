@@ -737,22 +737,21 @@
 #modal {
   display: none;
   overflow: auto;
-  margin: 1vw;
+  margin: 0.2vw;
   padding: 2vw;
   position: absolute;
   top: 7%;
-  width: 95vw;
+  width: 95.3vw;
   height: 85vh;
   border: 1px solid #d6e8ee;
-  border-radius: 10px;
   background-color: #f8f9fb;
 }
 
-#modal table {
-  width: 95vw;
+#modal #mobile-table {
+  width: 95.3vw;
 }
 
-#modal table th {
+#modal #mobile-table th {
   color: #001b4b;
   padding: 1vw;
   text-align: left;
@@ -760,7 +759,7 @@
   background: #eceff1;
 }
 
-#modal table td {
+#modal #mobile-table td {
   text-align: left;
   color: #001b4b;
   padding: 1vw;
@@ -770,8 +769,29 @@
   border-right: 1px solid #d6e8ee;
 }
 
+#modal #byCertResult {
+  display: none;
+  width: 95.3vw;
+}
+
+#modal #byCertResult th {
+  text-align: left;
+  padding: 1vw;
+  color: #333;
+  font-size: 3vw;
+  background: #eceff1;
+}
+
+#modal #byCertResult td {
+  padding: 1vw;
+  border-bottom: 1px solid #d6e8ee;
+  font-size: 2.5vw;
+  border-left: 1px solid #d6e8ee;
+  border-right: 1px solid #d6e8ee;
+}
+
 #modal #user-avatar {
-  width: 10vw;
+  width: 12vw;
 }
 
 #modal #name {
@@ -790,13 +810,52 @@
   #modal {
     width: 96vw;
   }
-  #modal table {
+  #modal #mobile-table {
     width: 96vw;
   }
-  #modal table th {
+  #modal #mobile-table th {
     font-size: 3.2vw;
   }
-  #modal table td {
+  #modal #mobile-table td {
+    font-size: 2.8vw;
+  }
+  #modal #byCertResult {
+    width: 96vw;
+  }
+  #modal #byCertResult th {
+    font-size: 3.2vw;
+  }
+  #modal #byCertResult td {
+    font-size: 2.8vw;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #modal {
+    width: 95vw;
+  }
+  #modal #user-avatar {
+    width: 15vw;
+  }
+  #modal #name {
+    font-size: 3.5vw;
+  }
+  #modal #mobile-table {
+    width: 95vw;
+  }
+  #modal #mobile-table th {
+    font-size: 3.2vw;
+  }
+  #modal #mobile-table td {
+    font-size: 2.8vw;
+  }
+  #modal #byCertResult {
+    width: 95vw;
+  }
+  #modal #byCertResult th {
+    font-size: 3.2vw;
+  }
+  #modal #byCertResult td {
     font-size: 2.8vw;
   }
 }
@@ -805,7 +864,7 @@
   display: none;
   position: absolute;
   top: 2%;
-  left: 94%;
+  left: 93.3%;
 }
 
 .close a {
@@ -829,6 +888,12 @@
 @media screen and (max-width: 600px) {
   .close {
     left: 94%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .close {
+    left: 93%;
   }
 }
 

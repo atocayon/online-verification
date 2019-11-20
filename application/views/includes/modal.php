@@ -52,7 +52,7 @@
         </tbody>
       </table>
 
-      <table id="byCertResult" style="display: none">
+      <table id="byCertResult">
         <thead>
           <tr>
             <th>Name</th>
@@ -60,7 +60,7 @@
             <th>Certificate Number</th>
           </tr>
         </thead>
-        <tbody id="mobile_res">
+        <tbody id="byCert_mobile_res">
           <tr>
             <td colspan="4" id="byCert-mobile-default">
               <center>

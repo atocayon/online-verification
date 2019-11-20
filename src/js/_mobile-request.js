@@ -36,7 +36,9 @@ $(document).ready(function() {
             $(".verifyByName-form-container").css({'-webkit-box-shadow' : 'none', '-moz-box-shadow' : 'none', 'box-shadow' : 'none'});
             $(".header-container").css("border", "1px solid rgba(0,0,0,0.7)");
             $(".verifyByName-form-container").css("border", "1px solid rgba(0,0,0,0.7)");
-              $(".mobile-button").css("background-color","#333");
+            $(".mobile-button").css("background-color","#333");
+            $("#elippsis").hide();
+            $("#back-button").hide();
 
             var tbl = "";
             for (var i = 0; i < data["record"].length; i++) {
@@ -53,7 +55,7 @@ $(document).ready(function() {
 
             $("#mobile_res").prepend(tbl);
               console.log(data["record"][1]["name"]);
-            $("#name").html("<u>"+data["record"][1]["name"]+"</u>");
+            $("#name").html(data["record"][1]["name"]);
           }
         },
         error: function(error) {
@@ -188,6 +190,7 @@ $(document).ready(function() {
             }
 
             $("#mobile_res").prepend(tbl);
+              $("#name").html(data["record"][1]["name"]);
           }
         },
         error: function(error) {

@@ -737,55 +737,99 @@
 #modal {
   display: none;
   overflow: auto;
-  margin: 2vw;
+  margin: 1vw;
   padding: 2vw;
   position: absolute;
-  top: 15%;
-  width: 92vw;
-  height: 98vw;
+  top: 7%;
+  width: 95vw;
+  height: 85vh;
   border: 1px solid #d6e8ee;
   border-radius: 10px;
   background-color: #f8f9fb;
 }
 
 #modal table {
-  width: 92vw;
-  padding: 1vw;
+  width: 95vw;
 }
 
 #modal table th {
   color: #001b4b;
-  border-bottom: 1px solid #d6e8ee;
-  padding-bottom: 1vw;
+  padding: 1vw;
   text-align: left;
-  font-size: 2.3vw;
+  font-size: 3vw;
+  background: #eceff1;
 }
 
 #modal table td {
   text-align: left;
   color: #001b4b;
-  padding-bottom: 1vw;
-  padding-top: 1vw;
-  border-top: 1px solid #d6e8ee;
-  font-size: 2vw;
+  padding: 1vw;
+  border-bottom: 1px solid #d6e8ee;
+  font-size: 2.5vw;
+  border-left: 1px solid #d6e8ee;
+  border-right: 1px solid #d6e8ee;
 }
 
 #modal #user-avatar {
-  width: 8vw;
+  width: 10vw;
+}
+
+#modal #name {
+  font-size: 3vw;
+  margin-top: -1vw;
+}
+
+@media screen and (max-width: 800px) {
+  #modal {
+    margin: 0.2vw;
+    width: 95.2vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #modal {
+    width: 96vw;
+  }
+  #modal table {
+    width: 96vw;
+  }
+  #modal table th {
+    font-size: 3.2vw;
+  }
+  #modal table td {
+    font-size: 2.8vw;
+  }
 }
 
 .close {
   display: none;
   position: absolute;
-  top: 8%;
-  left: 92%;
+  top: 2%;
+  left: 94%;
 }
 
 .close a {
   font-weight: bold;
   color: #f8f9fb;
   text-decoration: none;
-  font-size: 6vw;
+  font-size: 5vw;
+  background-color: #d50000;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+@media screen and (max-width: 800px) {
+  .close {
+    left: 93.2%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .close {
+    left: 94%;
+  }
 }
 
 .more-info-page {
@@ -924,6 +968,12 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+.center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .flex-end {

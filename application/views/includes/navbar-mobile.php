@@ -12,7 +12,7 @@
 
 <div class="dropdown-content" id="dropdown-content">
     <div>
-        <a href="#">Training Schedule</a>
+        <a href="#" class="training_schedule">Training Schedule</a>
     </div>
     <div>
         <a href="#">FAQ</a>

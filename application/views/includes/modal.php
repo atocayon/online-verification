@@ -2,13 +2,22 @@
 <div class="modal" id="modal">
   <div class="row">
     <div class="">
-      <div class="row">
-        <div class="">
-          <img src="<?= base_url() ?>src/img/avatar.png" alt="user-avatar" id="user-avatar">
+      <div class="row center">
+        <div class="column">
+          <div class="row center">
+            <div class="">
+              <img src="<?= base_url() ?>src/img/avatar.png" alt="user-avatar" id="user-avatar">
+            </div>
+
+          </div>
+          <div class="row center">
+            <div class="">
+                <p id="name"></p>
+            </div>
+
+          </div>
         </div>
-        <div class="">
-            <p id="name" style="font-size: 2.5vw;"></p>
-        </div>
+
       </div>
 
 

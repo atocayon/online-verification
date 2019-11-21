@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php include 'includes/alert.php'; ?>
 </div>
 
-<div>
+<div id="webView-footer">
 	<?php include 'includes/footer.php'; ?>
 </div>
 

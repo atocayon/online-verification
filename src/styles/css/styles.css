@@ -1010,10 +1010,12 @@
 }
 
 .alert-container {
+  display: none;
   position: absolute;
-  background: #f8f9fb;
+  background: #d6e8ee;
+  top: 12%;
   bottom: 50%;
-  left: 25%;
+  left: 23%;
   width: 50vw;
   height: 35vh;
   border: 1px solid #f8f9fb;
@@ -1021,6 +1023,7 @@
   padding-left: 2vw;
   padding-right: 2vw;
   padding-bottom: 7vh;
+  border-radius: 10px;
 }
 
 .alert-container button {

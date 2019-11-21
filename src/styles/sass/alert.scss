@@ -1,8 +1,10 @@
 .alert-container{
+  display: none;
   position: absolute;
-  background: $offWhite;
+  background: $lightBlue2;
+  top: 12%;
   bottom: 50%;
-  left: 25%;
+  left: 23%;
   width: 50vw;
   height: 35vh;
   border: 1px solid $offWhite;
@@ -10,6 +12,7 @@
   padding-left: 2vw;
   padding-right: 2vw;
   padding-bottom: 7vh;
+  border-radius: 10px;
 
   button{
     background: $darkerBlue;

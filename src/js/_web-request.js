@@ -23,7 +23,12 @@ $(document).ready(function() {
             $("#default").hide();
             $("#empty_field").hide();
             $("#byName_submit").hide();
-            $(".tryAgain-button").show();
+            $("#forms-page").hide();
+            $(".tryAgain-button").hide();
+            $("#navbar-web").hide();
+            $("#webView-footer").hide();
+            $(".alert-container").show();
+            $("body").css("background","rgba(0,0,0,0.7)");
             var tbl = "";
             for (var i = 0; i < data["record"].length; i++) {
               tbl += "<tr>";

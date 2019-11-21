@@ -42,6 +42,16 @@ $(document).ready(function() {
     $(".more-info-page").show();
   });
 
+  $("#btn-alert-modal").click(function(){
+    $("#forms-page").show();
+    $(".tryAgain-button").show();
+    $("#navbar-web").show();
+    $("#webView-footer").show();
+    $("body").css("background","#fff");
+    $(".alert-container").hide();
+
+  });
+
   if (page === '1') {
     $("#home").hide();
     $("#options").hide();

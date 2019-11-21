@@ -1009,6 +1009,30 @@
   }
 }
 
+.alert-container {
+  position: absolute;
+  background: #f8f9fb;
+  bottom: 50%;
+  left: 25%;
+  width: 50vw;
+  height: 35vh;
+  border: 1px solid #f8f9fb;
+  padding-top: 1vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-bottom: 7vh;
+}
+
+.alert-container button {
+  background: #001b4b;
+  border: 1px solid #001b4b;
+  color: #f8f9fb;
+  padding: 0.5vw;
+  border-radius: 30px;
+  width: 10vw;
+  margin-top: 5vh;
+}
+
 body {
   margin: 0px;
   padding: 0px;
@@ -1184,7 +1208,7 @@ body {
 
 @media screen and (max-width: 360px) {
   #byPDC_module {
-    height: 90vw;
+    height: 10vw;
   }
 }
 

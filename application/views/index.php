@@ -5,8 +5,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html>
 <head>
 	<?php include 'includes/head.php'; ?>
-	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
 </head>
 <body>
 
@@ -38,58 +36,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	 <?php include 'includes/forms.php'; ?>
  </div>
 
+<div id="alert-modal">
+	<?php include 'includes/alert.php'; ?>
+</div>
+
 <div>
 	<?php include 'includes/footer.php'; ?>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="<?= base_url() ?>src/js/_web-request.js"></script>
+<script src="<?= base_url() ?>src/js/_mobile-request.js"></script>
+<script src="<?= base_url() ?>src/js/events.js"></script>
 <script type="text/javascript">
 	var baseURL= "<?= base_url() ?>";
 	var page = "<?= $this->uri->segment(3) ?>";
 	console.log(page);
-
-	if (page === '1') {
-		document.getElementById('forms-page').style.display = "block";
-		document.getElementById('home').style.display = "none";
-		document.getElementById('options').style.display = "none";
-		document.getElementById('form-cert').style.display ="none";
-		document.getElementById('form-enrollees').style.display ="none";
-		document.getElementById('byCert').style.display = "none";
-
-	}
-
-	if (page === '2') {
-		document.getElementById('forms-page').style.display = "block";
-		document.getElementById('home').style.display = "none";
-		document.getElementById('options').style.display = "none";
-		document.getElementById('form-name').style.display ="none";
-		document.getElementById('form-enrollees').style.display ="none";
-		document.getElementById('byNameAndByEnrollees').style.display = "none";
-		document.getElementById('byCerts_records_tbl').style.display = "none";
-		document.getElementById('byCert').style.display = "block";
-	}
-
-	if (page === '3') {
-
-		document.getElementById('forms-page').style.display = "block";
-		document.getElementById('home').style.display = "none";
-		document.getElementById('options').style.display = "none";
-		document.getElementById('form-name').style.display ="none";
-		document.getElementById('form-cert').style.display ="none";
-			document.getElementById('byCert').style.display = "none";
-	}
-
-	// console.log(window.screen.width);
-	// console.log(window.screen.height);
-
-	// if ( window.screen.width <= 1050 &&  page === '1' || window.screen.width <= 1050 && page === '2' || window.screen.width <= 1050 && page === '3'){
-	//     document.getElementById('navbar-mobile').style.display = "block";
-	//     document.getElementById('navbar-web').style.display = "none";
-	// 		// document.getElementById('mobile-footer').style.display = "none";
-  //   }else{
-	//     document.getElementById('navbar-mobile').style.display = "none";
-  //     document.getElementById('navbar-web').style.display = "block";
-  //   }
-
 </script>
 </body>
 </html>

@@ -41,4 +41,33 @@ $(document).ready(function() {
     $("#dropdown-content").hide();
     $(".more-info-page").show();
   });
+
+  if (page === '1') {
+    $("#home").hide();
+    $("#options").hide();
+    $("#form-cert").hide();
+    $("#form-enrollees").hide();
+    $("#byCert").hide();
+    $("#forms-page").show();
+  }
+
+  if (page === '2') {
+    $("#home").hide();
+    $("#options").hide();
+    $("#form-name").hide();
+    $("#form-enrollees").hide();
+    $("#byNameAndByEnrollees").hide();
+    $("#byCerts_records_tbl").hide();
+    $("#forms-page").show();
+    $("#byCert").show();
+  }
+
+  if (page === '3') {
+    $("#home").hide();
+    $("#options").hide();
+    $("#form-name").hide();
+    $("#form-cert").hide();
+    $("#byCert").hide();
+    $("#forms-page").show();
+  }
 });

@@ -1,0 +1,23 @@
+.alert-container{
+  position: absolute;
+  background: $offWhite;
+  bottom: 50%;
+  left: 25%;
+  width: 50vw;
+  height: 35vh;
+  border: 1px solid $offWhite;
+  padding-top: 1vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-bottom: 7vh;
+
+  button{
+    background: $darkerBlue;
+    border: 1px solid $darkerBlue;
+    color: $offWhite;
+    padding: 0.5vw;
+    border-radius: 30px;
+    width: 10vw;
+    margin-top: 5vh;
+  }
+}

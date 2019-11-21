@@ -12,6 +12,7 @@
 @import "table";
 @import "modal";
 @import "moreInfo";
+@import "alert";
 
 
 body {
@@ -166,7 +167,7 @@ body {
   }
 
   @media screen and (max-width: 360px) {
-      height: 90vw;
+      height: 10vw;
   }
 
   @media screen and (max-width: 320px){

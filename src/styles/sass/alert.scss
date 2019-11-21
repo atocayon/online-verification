@@ -23,4 +23,33 @@
     width: 10vw;
     margin-top: 5vh;
   }
+  h1{
+    color: red;
+  }
+
+  @media screen and (max-width: 1024px){
+    width: 60vw;
+    height: 20vh;
+    left: 18%;
+
+    h1{
+      font-size: 3vw;
+    }
+    h3{
+      font-size: 2vw;
+    }
+
+    button{
+      background: $darkerBlue;
+      border: 1px solid $darkerBlue;
+      color: $offWhite;
+      padding: 1vw;
+      border-radius: 30px;
+      width: 15vw;
+      margin-top: 2vh;
+      font-size: 2vw;
+    }
+  }
+
+
 }

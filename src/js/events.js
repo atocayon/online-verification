@@ -47,9 +47,8 @@ $(document).ready(function() {
     $(".tryAgain-button").show();
     $("#navbar-web").show();
     $("#webView-footer").show();
-    $("body").css("background","#fff");
     $(".alert-container").hide();
-
+    $("#backdrop").hide();
   });
 
   if (page === '1') {
@@ -67,7 +66,7 @@ $(document).ready(function() {
     $("#form-name").hide();
     $("#form-enrollees").hide();
     $("#byNameAndByEnrollees").hide();
-    $("#byCerts_records_tbl").hide();
+    $("#byCerts_records_tbl").show();
     $("#forms-page").show();
     $("#byCert").show();
   }

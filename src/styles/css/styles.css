@@ -123,8 +123,8 @@
 .nav-mobile-container {
   position: fixed;
   width: 100vw;
-  -webkit-box-shadow: 1px 2px 3px #f8f9fb;
-  box-shadow: 1px 2px 3px #f8f9fb;
+  -webkit-box-shadow: 2px 2px 3px #f8f9fb;
+  box-shadow: 2px 2px 3px #f8f9fb;
 }
 
 .nav-mobile-container #elippsis {
@@ -1036,6 +1036,34 @@
   margin-top: 5vh;
 }
 
+.alert-container h1 {
+  color: red;
+}
+
+@media screen and (max-width: 1024px) {
+  .alert-container {
+    width: 60vw;
+    height: 20vh;
+    left: 18%;
+  }
+  .alert-container h1 {
+    font-size: 3vw;
+  }
+  .alert-container h3 {
+    font-size: 2vw;
+  }
+  .alert-container button {
+    background: #001b4b;
+    border: 1px solid #001b4b;
+    color: #f8f9fb;
+    padding: 1vw;
+    border-radius: 30px;
+    width: 15vw;
+    margin-top: 2vh;
+    font-size: 2vw;
+  }
+}
+
 body {
   margin: 0px;
   padding: 0px;
@@ -1236,6 +1264,28 @@ body {
   .form-input-spacing {
     margin-bottom: 7vw;
   }
+}
+
+.loading {
+  display: none;
+  position: absolute;
+  bottom: 50%;
+  left: 40%;
+  text-align: center;
+}
+
+.loading h1 {
+  color: white;
+}
+
+.backdrop {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 /*# sourceMappingURL=styles.css.map */

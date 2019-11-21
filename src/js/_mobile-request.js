@@ -12,57 +12,28 @@ $(document).ready(function() {
           lname: $("#byName_lname").val(),
           bday: $("#byName_bday").val()
         },
+        beforeSend: function() {
+          $(".loading").show();
+          $(".backdrop").show();
+        },
         success: function(data) {
           if (data.record["response"] == "null") {
             $("#mobile-no_data").show();
             $("#mobile-default").hide();
             $("#mobile-empty_field").hide();
-            $("#modal").show();
-            $(".close").show();
-            $("body").css("background-color", "rgba(0,0,0,0.7)");
-            $(".nav-mobile-container ").css({
-              "-webkit-box-shadow": "none",
-              "-moz-box-shadow": "none",
-              "box-shadow": "none"
-            });
-            $(".verifyByName-form-container").css({
-              "-webkit-box-shadow": "none",
-              "-moz-box-shadow": "none",
-              "box-shadow": "none"
-            });
-            $(".header-container").css("border", "1px solid rgba(0,0,0,0.7)");
-            $(".verifyByName-form-container").css(
-              "border",
-              "1px solid rgba(0,0,0,0.7)"
-            );
-            $(".mobile-button").css("background-color", "#333");
-            $("#elippsis").hide();
-            $("#back-button").hide();
+            $(".loading").hide();
+            $(".alert-container").show();
+            // $("#modal").show();
+            // $(".close").show();
+
           } else {
             $("#mobile-no_data").hide();
             $("#mobile-default").hide();
             $("#mobile-empty_field").hide();
-            $("#modal").show();
-            $(".close").show();
-            $("body").css("background-color", "rgba(0,0,0,0.7)");
-            $(".nav-mobile-container ").css({
-              "-webkit-box-shadow": "none",
-              "-moz-box-shadow": "none",
-              "box-shadow": "none"
-            });
-            $(".verifyByName-form-container").css({
-              "-webkit-box-shadow": "none",
-              "-moz-box-shadow": "none",
-              "box-shadow": "none"
-            });
-            $(".header-container").css("border", "1px solid rgba(0,0,0,0.7)");
-            $(".verifyByName-form-container").css(
-              "border",
-              "1px solid rgba(0,0,0,0.7)"
-            );
-            $(".mobile-button").css("background-color", "#333");
-            $("#elippsis").hide();
-            $("#back-button").hide();
+            $(".loading").hide();
+            $(".alert-container").show();
+            // $("#modal").show();
+            // $(".close").show();
 
             var tbl = "";
             for (var i = 0; i < data["record"].length; i++) {
@@ -107,56 +78,18 @@ $(document).ready(function() {
             $("#byCert-mobile-empty_field").hide();
             $("#modal").show();
             $(".close").show();
-            $("body").css("background-color", "rgba(0,0,0,0.7)");
-            $(".nav-mobile-container ").css({
-              "-webkit-box-shadow": "none",
-              "-moz-box-shadow": "none",
-              "box-shadow": "none"
-            });
-            $(".verifyByName-form-container").css({
-              "-webkit-box-shadow": "none",
-              "-moz-box-shadow": "none",
-              "box-shadow": "none"
-            });
-            $(".header-container").css("border", "1px solid rgba(0,0,0,0.7)");
-            $(".verifyByName-form-container").css(
-              "border",
-              "1px solid rgba(0,0,0,0.7)"
-            );
-            $(".mobile-button").css("background-color", "#333");
             $("#mobile-table").hide();
             $("#user-avatar").hide();
             $("#byCertResult").show();
-            $("#elippsis").hide();
-            $("#back-button").hide();
           } else {
             $("#byCert-mobile-no_data").hide();
             $("#byCert-mobile-default").hide();
             $("#byCert-mobile-empty_field").hide();
             $("#modal").show();
             $(".close").show();
-            $("body").css("background-color", "rgba(0,0,0,0.7)");
-            $(".nav-mobile-container ").css({
-              "-webkit-box-shadow": "none",
-              "-moz-box-shadow": "none",
-              "box-shadow": "none"
-            });
-            $(".verifyByName-form-container").css({
-              "-webkit-box-shadow": "none",
-              "-moz-box-shadow": "none",
-              "box-shadow": "none"
-            });
-            $(".header-container").css("border", "1px solid rgba(0,0,0,0.7)");
-            $(".verifyByName-form-container").css(
-              "border",
-              "1px solid rgba(0,0,0,0.7)"
-            );
-            $(".mobile-button").css("background-color", "#333");
             $("#mobile-table").hide();
             $("#user-avatar").hide();
             $("#byCertResult").show();
-            $("#elippsis").hide();
-            $("#back-button").hide();
 
             var tbl = "";
             for (var i = 0; i < data["record"].length; i++) {
@@ -211,50 +144,12 @@ $(document).ready(function() {
             $("#mobile-empty_field").hide();
             $("#modal").show();
             $(".close").show();
-            $("body").css("background-color", "rgba(0,0,0,0.7)");
-            $(".nav-mobile-container ").css({
-              "-webkit-box-shadow": "none",
-              "-moz-box-shadow": "none",
-              "box-shadow": "none"
-            });
-            $(".verifyByName-form-container").css({
-              "-webkit-box-shadow": "none",
-              "-moz-box-shadow": "none",
-              "box-shadow": "none"
-            });
-            $(".header-container").css("border", "1px solid rgba(0,0,0,0.7)");
-            $(".verifyByName-form-container").css(
-              "border",
-              "1px solid rgba(0,0,0,0.7)"
-            );
-            $(".mobile-button").css("background-color", "#333");
-            $("#elippsis").hide();
-            $("#back-button").hide();
           } else {
             $("#mobile-no_data").hide();
             $("#mobile-default").hide();
             $("#mobile-empty_field").hide();
-            $("#modal").css("visibility", "visible");
-            $(".close").css("visibility", "visible");
-            $("body").css("background-color", "rgba(0,0,0,0.7)");
-            $(".nav-mobile-container ").css({
-              "-webkit-box-shadow": "none",
-              "-moz-box-shadow": "none",
-              "box-shadow": "none"
-            });
-            $(".verifyByName-form-container").css({
-              "-webkit-box-shadow": "none",
-              "-moz-box-shadow": "none",
-              "box-shadow": "none"
-            });
-            $(".header-container").css("border", "1px solid rgba(0,0,0,0.7)");
-            $(".verifyByName-form-container").css(
-              "border",
-              "1px solid rgba(0,0,0,0.7)"
-            );
-            $(".mobile-button").css("background-color", "#333");
-            $("#elippsis").hide();
-            $("#back-button").hide();
+            $("#modal").show();
+            $(".close").show();
 
             var tbl = "";
             for (var i = 0; i < data["record"].length; i++) {

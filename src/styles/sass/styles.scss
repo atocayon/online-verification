@@ -186,3 +186,25 @@ body {
     margin-bottom: 7vw;
   }
 }
+
+
+.loading{
+  display: none;
+  position: absolute;
+  bottom: 50%;
+  left: 40%;
+  text-align: center;
+  h1{
+    color: white;
+  }
+}
+
+.backdrop{
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+}

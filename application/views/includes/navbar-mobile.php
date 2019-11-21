@@ -6,13 +6,13 @@
     </div>
 
     <div id="mobile" onclick="funcDropdown()">
-        <a href="#" id="elippsis"><i class="fas fa-ellipsis-v"></i></a>
+        <a href="#" id="elippsis"><i class="fas fa-bars"></i></a>
     </div>
 </div>
 
 <div class="dropdown-content" id="dropdown-content">
     <div>
-        <a href="#" class="training_schedule">Training Schedule</a>
+        <a href="#" class="training_schedule">Courses Offer</a>
     </div>
     <div>
         <a href="#">FAQ</a>

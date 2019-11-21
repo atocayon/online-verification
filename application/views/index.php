@@ -8,8 +8,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
 
-<?php include 'includes/modal.php'; ?>
-
  <div id="navbar-web">
  	<?php include 'includes/navbar.php'; ?>
  </div>
@@ -36,12 +34,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	 <?php include 'includes/forms.php'; ?>
  </div>
 
+<div id="backdrop">
+	<?php include 'includes/backdrop.php'; ?>
+</div>
+
+ <div id="mobile-modal">
+ 	<?php include 'includes/modal.php'; ?>
+ </div>
+
 <div id="alert-modal">
 	<?php include 'includes/alert.php'; ?>
 </div>
 
 <div id="webView-footer">
 	<?php include 'includes/footer.php'; ?>
+</div>
+
+<div class="loading">
+	<?php include 'includes/loading.php'; ?>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>

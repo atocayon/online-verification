@@ -4,19 +4,19 @@
 	</div>
 		<div class="filler"></div>
 		<div id="web" title="Click for more information">
-			<a href="#" class="info" title="View Schedules"><i class="fas fa-user-clock"></i> Training Schedules</a>
+			<a href="#" class="info" title="View Schedules"><i class="fas fa-clipboard-list"></i> Courses Offered</a>
 		</div>
 		<div id="web" title="FAQ">
 			<a href="#" class="access" title="FAQ" ><i class="far fa-question-circle"></i> FAQ</a>
 		</div>
     <div id="mobile-home" onclick="funcDropdown()">
-        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+        <a href="#"><i class="fas fa-bars"></i></a>
     </div>
 </div>
 
 <div class="dropdown-content" id="dropdown-content">
     <div>
-        <a href="#" class="training_schedule">Training Schedule</a>
+        <a href="#" class="training_schedule">Courses Offer</a>
     </div>
     <div>
         <a href="#">FAQ</a>

@@ -4,8 +4,8 @@
   background: $lightBlue2;
   top: 12%;
   bottom: 50%;
-  left: 23%;
-  width: 50vw;
+  left: 25%;
+  width: 40vw;
   height: 35vh;
   border: 1px solid $offWhite;
   padding-top: 1vw;
@@ -21,10 +21,13 @@
     padding: 0.5vw;
     border-radius: 30px;
     width: 10vw;
-    margin-top: 5vh;
+    margin-top: 3vh;
   }
   h1{
     color: red;
+  }
+  h3{
+    text-align: center;
   }
 
   @media screen and (max-width: 1024px){

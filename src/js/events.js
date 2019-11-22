@@ -43,12 +43,25 @@ $(document).ready(function() {
   });
 
   $("#btn-alert-modal").click(function(){
-    $("#forms-page").show();
-    $(".tryAgain-button").show();
-    $("#navbar-web").show();
-    $("#webView-footer").show();
-    $(".alert-container").hide();
-    $("#backdrop").hide();
+
+    if ($(window).width() < 1050 && page === '1' || $(window).width() < 1050 && page === '3') {
+      $("#modal").show();
+      $(".close").show();
+      $(".alert-container").hide();
+    }else if ($(window).width() < 1050 && page === '2' ) {
+      $("#modal").show();
+      $(".close").show();
+      $("#byCertResult").show();
+      $(".alert-container").hide();
+      $("#mobile-table").hide();
+      $("#user-avatar").hide();
+
+    }else{
+      $("#webView-footer").show();
+      $(".alert-container").hide();
+      $("#backdrop").hide();
+    }
+
   });
 
   if (page === '1') {
@@ -68,7 +81,12 @@ $(document).ready(function() {
     $("#byNameAndByEnrollees").hide();
     $("#byCerts_records_tbl").show();
     $("#forms-page").show();
-    $("#byCert").show();
+
+    if ($(window).width() < 1050) {
+      $("#byCert").hide();
+    }else{
+      $("#byCert").show();
+    }
   }
 
   if (page === '3') {

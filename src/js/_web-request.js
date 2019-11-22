@@ -38,6 +38,7 @@ $(document).ready(function() {
             $("#byName_lname").css("border", "1px solid #eceff1");
             $("#byName_bday").css("border", "1px solid #eceff1");
             $(".loading").hide();
+            $(".tryAgain-button").show();
             $(".alert-container").show();
             var tbl = "";
             for (var i = 0; i < data["record"].length; i++) {

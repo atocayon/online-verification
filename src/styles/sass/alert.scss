@@ -43,15 +43,62 @@
     }
 
     button{
-      background: $darkerBlue;
-      border: 1px solid $darkerBlue;
-      color: $offWhite;
       padding: 1vw;
-      border-radius: 30px;
       width: 15vw;
       margin-top: 2vh;
       font-size: 2vw;
     }
+  }
+
+  @media screen and (max-width: 800px){
+    width: 70vw;
+    height: 25vh;
+    left: 13%;
+    h1{
+      font-size: 3.5vw;
+    }
+    h3{
+      font-size: 2.5vw;
+    }
+
+    button{
+        padding: 1.5vw;
+        font-size: 2.5vw;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    height: 28vh;
+  }
+
+  @media screen and (max-width: 600px){
+    height: 25vh;
+  }
+
+  @media screen and (max-width: 414px){
+    height: 20vh;
+  }
+
+  @media screen and (max-width: 412px){
+    width: 80vw;
+    left: 8%;
+    height: 25vh;
+    h1{
+      font-size: 4vw;
+    }
+    h3{
+      font-size: 3vw;
+    }
+
+    button{
+        padding: 2vw;
+        font-size: 3vw;
+        width: 20vw;
+    }
+  }
+
+  @media screen and (max-width: 320px){
+      height: 30vh;
   }
 
 

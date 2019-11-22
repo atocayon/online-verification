@@ -1057,14 +1057,71 @@
     font-size: 2vw;
   }
   .alert-container button {
-    background: #001b4b;
-    border: 1px solid #001b4b;
-    color: #f8f9fb;
     padding: 1vw;
-    border-radius: 30px;
     width: 15vw;
     margin-top: 2vh;
     font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .alert-container {
+    width: 70vw;
+    height: 25vh;
+    left: 13%;
+  }
+  .alert-container h1 {
+    font-size: 3.5vw;
+  }
+  .alert-container h3 {
+    font-size: 2.5vw;
+  }
+  .alert-container button {
+    padding: 1.5vw;
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .alert-container {
+    height: 28vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .alert-container {
+    height: 25vh;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .alert-container {
+    height: 20vh;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .alert-container {
+    width: 80vw;
+    left: 8%;
+    height: 25vh;
+  }
+  .alert-container h1 {
+    font-size: 4vw;
+  }
+  .alert-container h3 {
+    font-size: 3vw;
+  }
+  .alert-container button {
+    padding: 2vw;
+    font-size: 3vw;
+    width: 20vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .alert-container {
+    height: 30vh;
   }
 }
 
@@ -1280,6 +1337,33 @@ body {
 
 .loading h1 {
   color: white;
+}
+
+@media screen and (max-width: 1024px) {
+  .loading {
+    left: 35%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .loading {
+    left: 30%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .loading {
+    left: 28%;
+  }
+  .loading h1 {
+    font-size: 6vw;
+  }
+}
+
+@media screen and (max-width: 384px) {
+  .loading {
+    left: 25%;
+  }
 }
 
 .backdrop {

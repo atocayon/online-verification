@@ -20,7 +20,8 @@ class Nmp extends CI_Controller {
 				$data['record'] = ['response' =>  'null'];
 				echo json_encode($data);
 			}else{
-				$this->queries->userActivity($remote_ip,$mac_address,'by_name');
+				$name = $this->input->post("fname")." ".$this->input->post("lname");
+				$this->queries->userActivity($remote_ip, $mac_address, "search by name", $name);
 				echo json_encode($data);
 			}
 
@@ -34,7 +35,8 @@ class Nmp extends CI_Controller {
 			$data['record'] = ['response' => 'null'];
 			echo json_encode($data);
 		}else{
-			$this->queries->userActivity($remote_ip,$mac_address,'by_certNum');
+			$cert_num = $this->input->post('certnum');
+			$this->queries->userActivity($remote_ip, $mac_address, "search by certnumber", $cert_num);
 			echo json_encode($data);
 		}
 	}
@@ -48,7 +50,8 @@ class Nmp extends CI_Controller {
 			$data['record'] = ['response' => 'null'];
 			echo json_encode($data);
 		}else{
-			$this->queries->userActivity($remote_ip,$mac_address,'by_PDC');
+			$name = $this->input->post("fname")." ".$this->input->post("lname");
+			$this->queries->userActivity($remote_ip, $mac_address, "search by PDC", $name);
 			echo json_encode($data);
 		}
 	}

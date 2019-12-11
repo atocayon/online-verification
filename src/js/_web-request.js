@@ -17,9 +17,11 @@ $(document).ready(function() {
         beforeSend: function() {
           $(".loading").show();
           $(".backdrop").show();
+          $("body").css("overflow","hidden");
         },
         success: function(data) {
           if (data.record["response"] == "null") {
+            console.log(data.record["response"]);
             $("#no_data").show();
             $("#default").hide();
             $("#empty_field").hide();
@@ -28,7 +30,10 @@ $(document).ready(function() {
             $("#byName_fname").css("border", "1px solid #eceff1");
             $("#byName_lname").css("border", "1px solid #eceff1");
             $("#byName_bday").css("border", "1px solid #eceff1");
+            $("body").css("overflow","auto");
+
           } else {
+            console.log(data.record["response"]);
             $("#no_data").hide();
             $("#default").hide();
             $("#empty_field").hide();
@@ -40,6 +45,7 @@ $(document).ready(function() {
             $(".loading").hide();
             $(".tryAgain-button").show();
             $(".alert-container").show();
+            $("body").css("overflow","auto");
             var tbl = "";
             for (var i = 0; i < data["record"].length; i++) {
               tbl += "<tr>";
@@ -56,7 +62,7 @@ $(document).ready(function() {
           }
         },
         error: function(error) {
-          alert("INTERNAL ERROR!" + error);
+          alert("INTERNAL ERROR!" + JSON.stringify(error));
         }
       });
     } else {
@@ -86,6 +92,7 @@ $(document).ready(function() {
         beforeSend: function() {
           $(".loading").show();
           $(".backdrop").show();
+          $("body").css("overflow","hidden");
         },
         success: function(data) {
           if (data.record["response"] == "null") {
@@ -95,6 +102,7 @@ $(document).ready(function() {
             $(".loading").hide();
             $(".backdrop").hide();
             $("#byCert_certnum").css("border", "1px solid #eceff1");
+            $("body").css("overflow","auto");
           } else {
             $("#byCert_no_data").hide();
             $("#byCert_default").hide();
@@ -104,6 +112,7 @@ $(document).ready(function() {
             $(".loading").hide();
             $(".alert-container").show();
             $("#byCert_certnum").css("border", "1px solid #eceff1");
+            $("body").css("overflow","auto");
 
             var tbl = "";
             for (var i = 0; i < data["record"].length; i++) {
@@ -161,6 +170,7 @@ $(document).ready(function() {
         beforeSend: function() {
           $(".loading").show();
           $(".backdrop").show();
+          $("body").css("overflow","hidden");
         },
         success: function(data) {
           if (data.record["response"] == "null") {
@@ -173,6 +183,7 @@ $(document).ready(function() {
             $("#byPDC_fname").css("border", "1px solid #eceff1");
             $("#byPDC_lname").css("border", "1px solid #eceff1");
             $("#byPDC_bday").css("border", "1px solid #eceff1");
+            $("body").css("overflow","auto");
           } else {
             $("#no_data").hide();
             $("#default").hide();
@@ -185,6 +196,7 @@ $(document).ready(function() {
             $("#byPDC_fname").css("border", "1px solid #eceff1");
             $("#byPDC_lname").css("border", "1px solid #eceff1");
             $("#byPDC_bday").css("border", "1px solid #eceff1");
+            $("body").css("overflow","auto");
 
             var tbl = "";
             for (var i = 0; i < data["record"].length; i++) {

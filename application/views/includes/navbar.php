@@ -1,6 +1,6 @@
 <div class="row nav-container" id="navbar-web">
 	<div class="web-logo">
-		<a href="" id="site_logo"><img src="<?= base_url() ?>src/img/logo.png" > <span class="brand">NMP</span></a>
+		<a href="<?= base_url() ?>"><img src="<?= base_url() ?>src/img/logo.png" ></a>
 	</div>
 		<div class="filler"></div>
 		<div id="web" title="Click for more information">

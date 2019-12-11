@@ -11,13 +11,6 @@ $(document).ready(function() {
     window.location.reload(true);
   });
 
-  $("#site_logo").click(function() {
-    $("#forms-page").hide();
-    $(".more-info-page").hide();
-    $("#dropdown-content").hide();
-    $(".home-page").show();
-
-  });
 
   $("#close-modal").click(function() {
     window.location.reload(true);

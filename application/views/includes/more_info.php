@@ -36,43 +36,56 @@ $sql1 = $this->db->query("SELECT category,code FROM category WHERE active = '1' 
                         DATE(schedule.start) > '$date' AND module.catid = '$res->code'
                         ");
 
-                        foreach ($sql->result() as $row) {
+                        if ($sql->num_rows() > 0) {
+                          foreach ($sql->result() as $row) {
+                            ?>
+                              <tr>
+                                <td><?= $row->discription ?></td>
+                                <td><?= $row->dateStart." to ".$row->dateEnd ?></td>
+                                <td>
+                                  <?php
+                                    $query = $this->db->query("SELECT
+                                      trainee.trid as id,
+                                      AES_DECRYPT(trainee.lname, 'ilovenmp1230988') as name,
+                                      module.modcode as mode,
+                                      schedule.code as code,
+                                      count(trainee.idnum)
+                                      FROM
+                                      trainee
+                                      INNER JOIN
+                                      training ON trainee.trid = training.trid
+                                      INNER JOIN
+                                      schedule ON training.code = schedule.code
+                                      INNER JOIN
+                                      module ON schedule.modcode = module.modcode
+                                      WHERE schedule.modcode = '$row->moduleCode'
+                                      ");
+
+                                      echo $query->num_rows();
+
+
+                                  ?>
+                                </td>
+                                <td><?php if ($row->maxEnrollees - $query->num_rows() === 0) {
+                                echo "<span style='color: red'>none</span>";
+                              }else{
+                                echo $row->maxEnrollees-$query->num_rows();
+                              }  ?></td>
+                              </tr>
+                            <?php
+                          }
+                        }else{
                           ?>
-                            <tr>
-                              <td><?= $row->discription ?></td>
-                              <td><?= $row->dateStart." to ".$row->dateEnd ?></td>
-                              <td>
-                                <?php
-                                  $query = $this->db->query("SELECT
-                                    trainee.trid as id,
-                                    trainee.lname as name,
-                                    module.modcode as mode,
-                                    schedule.code as code,
-                                    count(trainee.idnum)
-                                    FROM
-                                    trainee
-                                    INNER JOIN
-                                    training ON trainee.trid = training.trid
-                                    INNER JOIN
-                                    schedule ON training.code = schedule.code
-                                    INNER JOIN
-                                    module ON schedule.modcode = module.modcode
-                                    WHERE schedule.modcode = '$row->moduleCode'
-                                    ");
-
-                                    echo $query->num_rows();
-
-
-                                ?>
-                              </td>
-                              <td><?php if ($row->maxEnrollees - $query->num_rows() === 0) {
-                              echo "<span style='color: red'>none</span>";
-                            }else{
-                              echo $row->maxEnrollees-$query->num_rows();
-                            }  ?></td>
-                            </tr>
+                          <tr>
+                            <td colspan="4">
+                              <center>
+                                No Available Schedule
+                              </center>
+                            </td>
+                          </tr>
                           <?php
                         }
+
                       ?>
 
                     </tbody>
@@ -86,4 +99,3 @@ $sql1 = $this->db->query("SELECT category,code FROM category WHERE active = '1' 
             }
           ?>
         </div>
-  

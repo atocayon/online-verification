@@ -38,12 +38,11 @@ $(document).ready(function() {
             $("#default").hide();
             $("#empty_field").hide();
             $("#byName_submit").hide();
-            $("#webView-footer").hide();
             $("#byName_fname").css("border", "1px solid #eceff1");
             $("#byName_lname").css("border", "1px solid #eceff1");
             $("#byName_bday").css("border", "1px solid #eceff1");
             $(".loading").hide();
-            $(".tryAgain-button").show();
+            $("#searchAgain_byName").show();
             $(".alert-container").show();
             $("body").css("overflow","auto");
             var tbl = "";
@@ -108,11 +107,11 @@ $(document).ready(function() {
             $("#byCert_default").hide();
             $("#byCert_empty_field").hide();
             $("#byCert_submit").hide();
-            $("#webView-footer").hide();
             $(".loading").hide();
             $(".alert-container").show();
             $("#byCert_certnum").css("border", "1px solid #eceff1");
             $("body").css("overflow","auto");
+          $("#searhAgain_byCert").show();
 
             var tbl = "";
             for (var i = 0; i < data["record"].length; i++) {
@@ -189,7 +188,6 @@ $(document).ready(function() {
             $("#default").hide();
             $("#empty_field").hide();
             $("#byPDC_submit").hide();
-            $("#webView-footer").hide();
             $(".loading").hide();
             $(".alert-container").show();
             $("#byPDC_module").css("border", "1px solid #eceff1");
@@ -197,6 +195,7 @@ $(document).ready(function() {
             $("#byPDC_lname").css("border", "1px solid #eceff1");
             $("#byPDC_bday").css("border", "1px solid #eceff1");
             $("body").css("overflow","auto");
+              $("#searhAgain_byPDC").show();
 
             var tbl = "";
             for (var i = 0; i < data["record"].length; i++) {

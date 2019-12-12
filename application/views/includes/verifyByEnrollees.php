@@ -45,7 +45,7 @@
 
     <div class="">
       <center>
-        <button id="searhAgain" class="tryAgain-button" title="Click to Clear your Search">Clear Search</button>
+        <button id="searhAgain_byPDC" class="tryAgain-button" title="Click to Clear your Search">Clear Search</button>
       </center>
     </div>
 

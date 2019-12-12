@@ -32,7 +32,7 @@
 
     <div class="">
       <center>
-        <button class="tryAgain-button" title="Click to Clear Result">Clear Result</button>
+        <button id="searchAgain_byName" class="tryAgain-button" title="Click to Clear Result">Clear Result</button>
       </center>
     </div>
 

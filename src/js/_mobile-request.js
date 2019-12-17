@@ -69,7 +69,7 @@ $(document).ready(function() {
   // Verification by Cert number
   $("#mobile-byCert_submit").click(function(event) {
     event.preventDefault();
-    if ($("#byCert_certnum").val() !== "") {
+    if ($("#byCert_certnum").val() !== "" && $("#byCert_fname").val() !== "" && $("#byCert_lname").val() !== "") {
       $.ajax({
         url: baseURL + "index.php/nmp/search_byCertNum/",
         type: "POST",
@@ -121,6 +121,8 @@ $(document).ready(function() {
       });
     } else {
       $("#byCert_certnum").css("border","1px solid red");
+      $("#byCert_fname").css("border", "1px solid red");
+      $("#byCert_lname").css("border", "1px solid red");
     }
   });
   // End Verification by Cert number

@@ -82,7 +82,7 @@ $(document).ready(function() {
   $("#byCert_submit").click(function(event) {
     // console.log("By cert num click");
     event.preventDefault();
-    if ($("#byCert_certnum").val() !== "") {
+    if ($("#byCert_certnum").val() !== "" && $("#byCert_fname").val() !== "" && $("#byCert_lname").val() !== "") {
       $.ajax({
         url: baseURL + "index.php/nmp/search_byCertNum/",
         type: "POST",
@@ -140,6 +140,8 @@ $(document).ready(function() {
       $("#byCert_default").hide();
       $("#byCert_no_data").hide();
       $("#byCert_certnum").css("border", "1px solid red");
+      $("#byCert_fname").css("border", "1px solid red");
+      $("#byCert_lname").css("border", "1px solid red");
       $("#byCert_empty_field").show();
       console.log("Web interface - By Cert num");
     }

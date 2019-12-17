@@ -98,11 +98,14 @@
 
 .nav-container #mobile-home {
   display: none;
-  font-size: 5vw;
+  font-size: 7vw;
   margin-right: 1vw;
 }
 
 @media screen and (max-width: 1050px) {
+  .nav-container {
+    height: 7vh;
+  }
   .nav-container #mobile-home {
     display: block;
   }
@@ -112,7 +115,7 @@
   .nav-container img {
     padding-left: 1.5vw;
     padding-top: 0.5vw;
-    width: 7vw;
+    width: 8vw;
   }
   .nav-container .brand {
     padding-top: 1vh;
@@ -123,6 +126,7 @@
 .nav-mobile-container {
   position: fixed;
   width: 100vw;
+  height: 7vh;
   -webkit-box-shadow: 2px 2px 3px #f8f9fb;
   box-shadow: 2px 2px 3px #f8f9fb;
 }
@@ -143,7 +147,7 @@
 .nav-mobile-container .brand-mobile {
   font-weight: bold;
   color: #001b4b;
-  font-size: 5vw;
+  font-size: 7vw;
 }
 
 .nav-mobile-container .filler-mobile {

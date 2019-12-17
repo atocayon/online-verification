@@ -90,4 +90,7 @@ $(document).ready(function() {
     $("#byCert").hide();
     $("#forms-page").show();
   }
+
+  $("#byName_bday").mask("9999/99/99", {placeholder: 'YYYY/MM/DD' });
+  $("#byPDC_bday").mask("9999/99/99", {placeholder: 'YYYY/MM/DD'});
 });

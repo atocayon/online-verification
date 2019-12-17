@@ -21,7 +21,7 @@
     </div>
 
     <div class="form-input-spacing">
-      <input type="date" name="bday" id="byName_bday" class="form-input-date" autocomplete="off" title="Put your Birthday here" autofocus required>
+      <input type="text" name="bday" id="byName_bday" class="form-input-date" autocomplete="off" title="Put your Birthday here" autofocus required>
     </div>
 
     <div class="">

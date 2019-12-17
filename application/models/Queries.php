@@ -5,7 +5,7 @@ class Queries extends CI_Model
 {
 
   public function search_byName(){
-    $param = ['%'.$this->input->post('fname').'%','%'.$this->input->post('lname').'%',date('Y-m-d',strtotime($this->input->post('bday')))];
+    $param = ['%'.$this->input->post('fname').'%','%'.$this->input->post('lname').'%', $this->input->post('bday')];
 		$sql = "SELECT concat(AES_DECRYPT(tbl_trainee.fname, 'ilovenmp1230988'), ' ', LEFT(AES_DECRYPT(tbl_trainee.mname, 'ilovenmp1230988'),1),'. ', AES_DECRYPT(tbl_trainee.lname, 'ilovenmp1230988'),' ',tbl_trainee.suffix) AS name, tbl_module.module AS module, concat(DATE_FORMAT(tbl_schedule.start, '%Y %b %d'),' to ', DATE_FORMAT(tbl_schedule.end, '%Y %b %d')) AS duration, tbl_training.certnumber AS cert_num
 					FROM trainee AS tbl_trainee
 					INNER JOIN training AS tbl_training on tbl_trainee.trid = tbl_training.trid
@@ -18,13 +18,13 @@ class Queries extends CI_Model
   }
 
   public function search_byCertNum(){
-      $param = [$this->input->post('certnum')];
+      $param = [$this->input->post('certnum'), $this->input->post('fname'), $this->input->post('lname')];
 			$sql = "SELECT concat(AES_DECRYPT(tbl_trainee.fname, 'ilovenmp1230988'),' ',LEFT(AES_DECRYPT(tbl_trainee.mname, 'ilovenmp1230988'),1),'. ',AES_DECRYPT(tbl_trainee.lname, 'ilovenmp1230988'),' ',tbl_trainee.suffix) AS name, tbl_module.module AS module, concat(DATE_FORMAT(tbl_schedule.start, '%Y %b %d'),' to ', DATE_FORMAT(tbl_schedule.end, '%Y %b %d')) AS duration, tbl_training.certnumber AS cert_num
 					FROM trainee AS tbl_trainee
           INNER JOIN training AS tbl_training on tbl_trainee.trid = tbl_training.trid
 					INNER JOIN schedule AS tbl_schedule on tbl_training.code = tbl_schedule.code
 					INNER JOIN module AS tbl_module on tbl_schedule.modcode = tbl_module.modcode
-					WHERE tbl_training.certnumber = ?";
+					WHERE tbl_training.certnumber = ? AND CONVERT(AES_DECRYPT(tbl_trainee.fname, 'ilovenmp1230988') USING latin1) = ? AND CONVERT(AES_DECRYPT(tbl_trainee.lname, 'ilovenmp1230988') USING latin1) = ?";
 			$query = $this->db->query($sql,$param);
 
 			//var_dump($this->db->last_query());die();
@@ -33,7 +33,7 @@ class Queries extends CI_Model
 
   public function search_byPDC(){
 
-    $param = ['%'.$this->input->post('fname').'%','%'.$this->input->post('lname').'%',date('Y-m-d',strtotime($this->input->post('bday'))),$this->input->post('module')];
+    $param = ['%'.$this->input->post('fname').'%','%'.$this->input->post('lname').'%',$this->input->post('bday'), $this->input->post('module')];
 			$sql = "SELECT concat(AES_DECRYPT(tbl_trainee.fname, 'ilovenmp1230988'),' ',LEFT(AES_DECRYPT(tbl_trainee.mname, 'ilovenmp1230988'),1),'. ', AES_DECRYPT(tbl_trainee.lname, 'ilovenmp1230988'),' ',tbl_trainee.suffix) AS name, tbl_module.module AS module, concat(DATE_FORMAT(tbl_schedule.start, '%Y %b %d'),' to ', DATE_FORMAT(tbl_schedule.end, '%Y %b %d')) AS duration, tbl_training.certnumber AS cert_num
 					FROM trainee AS tbl_trainee
 					INNER JOIN training AS tbl_training on tbl_trainee.trid = tbl_training.trid

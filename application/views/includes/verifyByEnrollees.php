@@ -7,9 +7,9 @@
     <div class="form-input-spacing">
       <select id="byPDC_module" name="module" title="Click to Select Module/Course" required>
         <option value="">Select Module/Course Here</option>
-        <option value="20030814">IMO 3.12</option>
-        <option value="20030808">IMO 6.09</option>
-        <option value="20160001">(TSTA) 6.10</option>
+        <option value="20030814">IMO MC 3.12</option>
+        <option value="20030808">IMO MC 6.09</option>
+        <option value="20160001">IMO MC 6.10</option>
       </select>
     </div>
 
@@ -34,7 +34,7 @@
     </div>
 
     <div class="form-input-spacing">
-      <input id="byPDC_bday" type="date" name="bday" class="form-input-date" title="Put your Birthday here" required>
+      <input id="byPDC_bday" type="text" name="bday" class="form-input-date" title="Put your Birthday here" required>
     </div>
 
     <div class="">

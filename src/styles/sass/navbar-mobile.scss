@@ -1,6 +1,7 @@
 .nav-mobile-container {
   position: fixed;
   width: 100vw;
+  height: 7vh;
   box-shadow: 2px 2px 3px $offWhite;
   #elippsis{
     font-size: 5vw;
@@ -17,7 +18,7 @@
   .brand-mobile {
     font-weight: bold;
     color: $darkerBlue;
-    font-size: 5vw;
+    font-size: 7vw;
   }
 
   .filler-mobile {

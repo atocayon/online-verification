@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <?php include 'includes/navbar-mobile.php'; ?>
 </div>
 
-<div class="home-page">
+<div class="home-page" id="home-page">
 	<div id="home">
  	 <?php include 'includes/header.php'; ?>
   </div>

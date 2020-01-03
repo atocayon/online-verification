@@ -1,6 +1,6 @@
-<div class="faq-container">
+<!-- <div class="faq-container">
   <div class="column faq-content">
-    <div class="spacer-1">
+    <!-- <div class="spacer-1">
 
     </div>
     <div class="row">
@@ -60,6 +60,14 @@
 
         </div>
       </div>
-    </div>
+    </div> -->
+
+
+  <!-- </div>
+</div> --> -->
+
+<div class="row center">
+  <div class="">
+    <img src="<?= base_url() ?>src/img/coming_soon.png" alt="" id="coming_soon">
   </div>
 </div>

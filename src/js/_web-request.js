@@ -44,7 +44,7 @@ $(document).ready(function() {
             $(".loading").hide();
             $("#searchAgain_byName").show();
             $(".alert-container").show();
-            $("body").css("overflow","auto");
+            $("body").css("overflow","hidden");
             var tbl = "";
             for (var i = 0; i < data["record"].length; i++) {
               tbl += "<tr>";
@@ -87,7 +87,7 @@ $(document).ready(function() {
         url: baseURL + "index.php/nmp/search_byCertNum/",
         type: "POST",
         dataType: "json",
-        data: { certnum: $("#byCert_certnum").val() },
+        data: { certnum: $("#byCert_certnum").val(), fname: $("#byCert_fname").val(), lname: $("#byCert_lname").val(), bday: $("#byCert_bday").val() },
         beforeSend: function() {
           $(".loading").show();
           $(".backdrop").show();
@@ -110,22 +110,16 @@ $(document).ready(function() {
             $(".loading").hide();
             $(".alert-container").show();
             $("#byCert_certnum").css("border", "1px solid #eceff1");
-            $("body").css("overflow","auto");
+            $("body").css("overflow","hidden");
           $("#searhAgain_byCert").show();
 
             var tbl = "";
             for (var i = 0; i < data["record"].length; i++) {
               tbl += "<tr>";
               tbl +=
-                "<td><label>" + data["record"][i]["name"] + "</label></td>";
+                "<td><label>" +data["record"][i]["module"]+ "</label></td>";
               tbl +=
-                "<td><label>" +
-                data["record"][i]["module"] +
-                " - " +
-                data["record"][i]["duration"] +
-                "</label></td>";
-              tbl +=
-                "<td><label>" + data["record"][i]["cert_num"] + "</label></td>";
+                "<td><label>" + data["record"][i]["duration"] + "</label></td>";
               tbl += "</tr>";
             }
 
@@ -196,7 +190,7 @@ $(document).ready(function() {
             $("#byPDC_fname").css("border", "1px solid #eceff1");
             $("#byPDC_lname").css("border", "1px solid #eceff1");
             $("#byPDC_bday").css("border", "1px solid #eceff1");
-            $("body").css("overflow","auto");
+            $("body").css("overflow","hidden");
               $("#searhAgain_byPDC").show();
 
             var tbl = "";

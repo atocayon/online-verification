@@ -24,8 +24,8 @@ $(document).ready(function() {
             $(".loading").hide();
             $("#modal").show();
             $(".close").show();
-            $("#byName_fname").css("border","1px solid #eceff1");
-            $("#byName_lname").css("border","1px solid #eceff1");
+            $("#byName_fname").css("border", "1px solid #eceff1");
+            $("#byName_lname").css("border", "1px solid #eceff1");
             $("#byName_bday").css("border", "1px solid #eceff1");
           } else {
             $("#mobile-no_data").hide();
@@ -33,8 +33,8 @@ $(document).ready(function() {
             $("#mobile-empty_field").hide();
             $(".loading").hide();
             $(".alert-container").show();
-            $("#byName_fname").css("border","1px solid #eceff1");
-            $("#byName_lname").css("border","1px solid #eceff1");
+            $("#byName_fname").css("border", "1px solid #eceff1");
+            $("#byName_lname").css("border", "1px solid #eceff1");
             $("#byName_bday").css("border", "1px solid #eceff1");
 
             var tbl = "";
@@ -59,8 +59,8 @@ $(document).ready(function() {
         }
       });
     } else {
-      $("#byName_fname").css("border","1px solid red");
-      $("#byName_lname").css("border","1px solid red");
+      $("#byName_fname").css("border", "1px solid red");
+      $("#byName_lname").css("border", "1px solid red");
       $("#byName_bday").css("border", "1px solid red");
     }
   });
@@ -69,12 +69,21 @@ $(document).ready(function() {
   // Verification by Cert number
   $("#mobile-byCert_submit").click(function(event) {
     event.preventDefault();
-    if ($("#byCert_certnum").val() !== "" && $("#byCert_fname").val() !== "" && $("#byCert_lname").val() !== "") {
+    if (
+      $("#byCert_certnum").val() !== "" &&
+      $("#byCert_fname").val() !== "" &&
+      $("#byCert_lname").val() !== ""
+    ) {
       $.ajax({
         url: baseURL + "index.php/nmp/search_byCertNum/",
         type: "POST",
         dataType: "json",
-        data: { certnum: $("#byCert_certnum").val() },
+        data: {
+          certnum: $("#byCert_certnum").val(),
+          fname: $("#byCert_fname").val(),
+          lname: $("#byCert_lname").val(),
+          bday: $("#byCert_bday").val()
+        },
         beforeSend: function() {
           $(".loading").show();
           $(".backdrop").show();
@@ -87,28 +96,22 @@ $(document).ready(function() {
             $(".loading").hide();
             $("#modal").show();
             $(".close").show();
-            $("#byCert_certnum").css("border","1px solid #eceff1");
+            $("#byCert_certnum").css("border", "1px solid #eceff1");
           } else {
             $("#byCert-mobile-no_data").hide();
             $("#byCert-mobile-default").hide();
             $("#byCert-mobile-empty_field").hide();
             $(".loading").hide();
             $(".alert-container").show();
-            $("#byCert_certnum").css("border","1px solid #eceff1");
+            $("#byCert_certnum").css("border", "1px solid #eceff1");
 
             var tbl = "";
             for (var i = 0; i < data["record"].length; i++) {
               tbl += "<tr>";
               tbl +=
-                "<td><label>" + data["record"][i]["name"] + "</label></td>";
+                "<td><label>" + data["record"][i]["module"] + "</label></td>";
               tbl +=
-                "<td><label>" +
-                data["record"][i]["module"] +
-                " - " +
-                data["record"][i]["duration"] +
-                "</label></td>";
-              tbl +=
-                "<td><label>" + data["record"][i]["cert_num"] + "</label></td>";
+                "<td><label>" + data["record"][i]["duration"] + "</label></td>";
               tbl += "</tr>";
             }
 
@@ -120,7 +123,7 @@ $(document).ready(function() {
         }
       });
     } else {
-      $("#byCert_certnum").css("border","1px solid red");
+      $("#byCert_certnum").css("border", "1px solid red");
       $("#byCert_fname").css("border", "1px solid red");
       $("#byCert_lname").css("border", "1px solid red");
     }

@@ -58,9 +58,8 @@
     <table id="byCerts_records_tbl" >
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Module and Duration</th>
-          <th>Certificate Number</th>
+          <th>Module</th>
+          <th>Duration</th>
         </tr>
       </thead>
       <tbody id="byCert_tbl_data">

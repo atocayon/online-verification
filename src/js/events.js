@@ -53,6 +53,7 @@ $(document).ready(function() {
       $("#webView-footer").show();
       $(".alert-container").hide();
       $("#backdrop").hide();
+      $("body").css("overflow","auto");
     }
 
   });
@@ -93,4 +94,5 @@ $(document).ready(function() {
 
   $("#byName_bday").mask("9999/99/99", {placeholder: 'YYYY/MM/DD' });
   $("#byPDC_bday").mask("9999/99/99", {placeholder: 'YYYY/MM/DD'});
+  $("#byCert_bday").mask("9999/99/99", {placeholder: 'YYYY/MM/DD'});
 });

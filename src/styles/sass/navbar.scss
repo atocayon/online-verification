@@ -3,8 +3,14 @@
   position: fixed;
   width: 100vw;
   box-shadow: 1px 2px 3px $offWhite;
-  font-family: "PT Serif", sans-serif;
   background: #fff;
+
+  #textHome{
+    font-size: 1.2vw;
+    font-weight: bold;
+    color: $darkerBlue;
+  }
+
   div {
     padding: 1vw;
   }
@@ -16,19 +22,20 @@
 
   .info {
     padding: 10px 18px;
-    border-radius: 50px;
+    border-radius: 10px;
     background-color: $lightBlue2;
     font-family: $fontFamily
   }
   .access {
     padding: 10px 12px;
-    border-radius: 50px;
+    border-radius: 10px;
     background-color: $lightBlue2;
       font-family: $fontFamily
   }
 
   img {
     width: 2vw;
+
   }
 
   .brand {
@@ -50,6 +57,9 @@
 
   @media screen and (max-width: 1050px) {
     height: 7vh;
+    #textHome{
+      display: none;
+    }
     #mobile-home {
       display: block;
     }

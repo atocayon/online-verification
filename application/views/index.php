@@ -36,6 +36,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	 <?php include 'includes/forms.php'; ?>
  </div>
 
+<div class="faq" id="faq-page" style="display: none;">
+	<?php include 'includes/faq.php'; ?>
+</div>
+
 <div id="backdrop">
 	<?php include 'includes/backdrop.php'; ?>
 </div>

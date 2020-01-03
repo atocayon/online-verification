@@ -23,6 +23,14 @@
       <input type="text" name="lname" id="byCert_lname" class="form-input-name" autocomplete="off" autofocus placeholder="Type here..." title="Type your Last Name here" required>
     </div>
 
+    <div class="">
+      <label>Birthday</label>
+    </div>
+
+    <div class="form-input-spacing">
+      <input type="text" name="bday" id="byCert_bday" class="form-input-date" autocomplete="off" title="Put your Birthday here" autofocus required>
+    </div>
+
 
     <div class="">
       <center>

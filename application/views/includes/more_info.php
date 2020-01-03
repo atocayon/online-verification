@@ -1,5 +1,7 @@
 <?php
 $date = date("Y-m-d");
+echo $year = date("Y");
+$month = date('m');
 $sql1 = $this->db->query("SELECT category,code FROM category WHERE active = '1' ORDER BY code ");
 ?>
       <div class="spacer-1">
@@ -15,7 +17,7 @@ $sql1 = $this->db->query("SELECT category,code FROM category WHERE active = '1' 
                     <thead>
                       <tr>
                         <th>Module Desciption</th>
-                        <th>Duration</th>
+                        <th>Schedule</th>
                         <th>Number of Enrollees</th>
                         <th>Available slots</th>
                       </tr>
@@ -45,11 +47,8 @@ $sql1 = $this->db->query("SELECT category,code FROM category WHERE active = '1' 
                                 <td>
                                   <?php
                                     $query = $this->db->query("SELECT
-                                      trainee.trid as id,
-                                      AES_DECRYPT(trainee.lname, 'ilovenmp1230988') as name,
-                                      module.modcode as mode,
-                                      schedule.code as code,
-                                      count(trainee.idnum)
+                                      count(trainee.idnum) as id,
+                                      DATE_FORMAT(module.lastupdate, '%Y') as updates
                                       FROM
                                       trainee
                                       INNER JOIN
@@ -58,18 +57,20 @@ $sql1 = $this->db->query("SELECT category,code FROM category WHERE active = '1' 
                                       schedule ON training.code = schedule.code
                                       INNER JOIN
                                       module ON schedule.modcode = module.modcode
-                                      WHERE schedule.modcode = '$row->moduleCode'
+                                      WHERE schedule.modcode = '$row->moduleCode' AND DATE_FORMAT(module.lastupdate, '%Y') = '$year' AND DATE_FORMAT(module.lastupdate, '%c') = '$month'
                                       ");
 
-                                      echo $query->num_rows();
-
+                                      $res = $query->row();
+                                      if (isset($res)) {
+                                        echo $res->id;
+                                      }
 
                                   ?>
                                 </td>
-                                <td><?php if ($row->maxEnrollees - $query->num_rows() === 0) {
+                                <td><?php if ($row->maxEnrollees - $res->id === 0) {
                                 echo "<span style='color: red'>none</span>";
                               }else{
-                                echo $row->maxEnrollees-$query->num_rows();
+                                echo $row->maxEnrollees-$res->id;
                               }  ?></td>
                               </tr>
                             <?php
@@ -79,7 +80,7 @@ $sql1 = $this->db->query("SELECT category,code FROM category WHERE active = '1' 
                           <tr>
                             <td colspan="4">
                               <center>
-                                No Available Schedule
+                                Not Available
                               </center>
                             </td>
                           </tr>

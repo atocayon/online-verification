@@ -9,9 +9,10 @@
     <div class="row center">
       <div class="">
         <h3>
-          This system is intended to use only for verification of Name, Certificate Number and PDC Enrollees of NMP Trainees.
-          Any misuse or manipulation of the data provided in the search result will be subjected to RA No. 10173 otherwise known
-          as the Data Privacy Act. If you have some question or clarification kindly check the FAQ page or <a href="#">Click Here</a> to contact the National Maritime Polytechnic.
+          This system is intended to be used for verification of certificate information of NMP Trainees.
+          Any misuse or manipulation of the Personal data provided in the search result will be subjected to RA No. 10173
+          otherwise known as the Data Privacy Act of 2012. If you have some questions or clarification kindly check the FAQ page or
+          <a href="#">Click Here</a> to contact the National Maritime Polytechnic.
         </h3>
       </div>
     </div>

@@ -17,6 +17,7 @@ $(document).ready(function() {
   });
 
   $(".info").click(function(){
+    $("#faq-page").show();
     $(".home-page").hide();
     $("#form-cert").hide();
     $("#form-enrollees").hide();
@@ -26,6 +27,7 @@ $(document).ready(function() {
   });
 
   $(".training_schedule").click(function(){
+    $("#faq-page").show();
     $(".home-page").hide();
     $("#form-cert").hide();
     $("#form-enrollees").hide();
@@ -100,6 +102,16 @@ $(document).ready(function() {
     $("#faq-page").show();
     $("#home").hide();
     $("#options").hide();
+      $("#dropdown-content").hide();
+      $(".more-info-page").hide();
 
+  });
+
+  $("#btnMobile-faq").click(function(){
+    $("#faq-page").show();
+    $("#home").hide();
+    $("#options").hide();
+      $("#dropdown-content").hide();
+      $(".more-info-page").hide();
   });
 });

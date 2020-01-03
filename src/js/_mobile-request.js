@@ -107,9 +107,10 @@ $(document).ready(function() {
 
             var tbl = "";
             for (var i = 0; i < data["record"].length; i++) {
+              $("#name").html(data["record"][i]["name"]);
               tbl += "<tr>";
               tbl +=
-                "<td><label>" + data["record"][i]["module"]+" "+ data["record"][i]["name"] + "</label></td>";
+                "<td><label>" + data["record"][i]["module"] + "</label></td>";
               tbl +=
                 "<td><label>" + data["record"][i]["duration"] + "</label></td>";
               tbl += "</tr>";

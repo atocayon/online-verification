@@ -36,7 +36,7 @@
         <a href="#" class="training_schedule">Courses Offer</a>
     </div>
     <div>
-        <a href="#">FAQ</a>
+        <a href="#" id="btnMobile-faq">FAQ</a>
     </div>
 
 </div>

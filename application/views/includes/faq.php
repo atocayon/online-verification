@@ -14,7 +14,6 @@
           <h4><i class="fas fa-caret-right"></i> What is the use of this system?</h4>
         </div>
         <div class="">
-
         </div>
       </div>
     </div>

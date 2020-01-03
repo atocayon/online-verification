@@ -109,13 +109,14 @@ $(document).ready(function() {
             for (var i = 0; i < data["record"].length; i++) {
               tbl += "<tr>";
               tbl +=
-                "<td><label>" + data["record"][i]["module"] + "</label></td>";
+                "<td><label>" + data["record"][i]["module"]+" "+ data["record"][i]["name"] + "</label></td>";
               tbl +=
                 "<td><label>" + data["record"][i]["duration"] + "</label></td>";
               tbl += "</tr>";
             }
-
             $("#byCert_mobile_res").prepend(tbl);
+            // console.log(data["record"][1]["name"]);
+            // $("#name").html(data["record"][1]["name"]);
           }
         },
         error: function(error) {

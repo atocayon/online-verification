@@ -17,7 +17,6 @@
 
           </div>
         </div>
-
       </div>
 
 
@@ -55,9 +54,8 @@
       <table id="byCertResult">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Module and Duration</th>
-            <th>Certificate Number</th>
+            <th>Module</th>
+            <th>Duration</th>
           </tr>
         </thead>
         <tbody id="byCert_mobile_res">

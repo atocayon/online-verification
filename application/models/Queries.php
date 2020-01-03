@@ -19,7 +19,7 @@ class Queries extends CI_Model
 
   public function search_byCertNum(){
       $param = [$this->input->post('certnum'), '%'.$this->input->post('fname').'%', '%'.$this->input->post('lname').'%', $this->input->post('bday')];
-			$sql = "SELECT concat(AES_DECRYPT(tbl_trainee.fname, 'ilovenmp1230988'),' ',LEFT(AES_DECRYPT(tbl_trainee.mname, 'ilovenmp1230988'),1),'. ',AES_DECRYPT(tbl_trainee.lname, 'ilovenmp1230988'),' ',tbl_trainee.suffix) AS name, tbl_module.module AS module, concat(DATE_FORMAT(tbl_schedule.start, '%Y %b %d'),' to ', DATE_FORMAT(tbl_schedule.end, '%Y %b %d')) AS duration, tbl_training.certnumber AS cert_num
+			$sql = "SELECT concat(AES_DECRYPT(tbl_trainee.fname, 'ilovenmp1230988'),' ',LEFT(AES_DECRYPT(tbl_trainee.mname, 'ilovenmp1230988'),1),'. ',AES_DECRYPT(tbl_trainee.lname, 'ilovenmp1230988'),' ',tbl_trainee.suffix) AS name, tbl_module.module AS module, concat(DATE_FORMAT(tbl_schedule.start, '%Y %b %d'),' to ', DATE_FORMAT(tbl_schedule.end, '%Y %b %d')) AS duration
 					FROM trainee AS tbl_trainee
           INNER JOIN training AS tbl_training on tbl_trainee.trid = tbl_training.trid
 					INNER JOIN schedule AS tbl_schedule on tbl_training.code = tbl_schedule.code

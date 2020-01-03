@@ -47,7 +47,7 @@ $(document).ready(function() {
       $("#byCertResult").show();
       $(".alert-container").hide();
       $("#mobile-table").hide();
-      $("#user-avatar").hide();
+      // $("#user-avatar").hide();
 
     }else{
       $("#webView-footer").show();

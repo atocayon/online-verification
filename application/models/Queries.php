@@ -51,5 +51,10 @@ class Queries extends CI_Model
     return $sql;
   }
 
+  public function insertReservation($fname, $mname, $lname, $email, $code){
+    $sql = $this->db->query("INSERT INTO reservations (fname, mname, lname, email, code) VALUES (AES_ENCRYPT('$fname', 'ilovenmp1230988'), AES_ENCRYPT('$mname', 'ilovenmp1230988'), AES_ENCRYPT('$lname', 'ilovenmp1230988'), AES_ENCRYPT('$email', 'ilovenmp1230988'), '$code')");
+    return $sql;
+  }
+
 
 }

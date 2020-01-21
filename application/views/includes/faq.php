@@ -67,7 +67,7 @@
 </div> --> -->
 
 <div class="row center">
-  <div class="">
+  <div class="coming_soon">
     <img src="<?= base_url() ?>src/img/coming_soon.png" alt="" id="coming_soon">
   </div>
 </div>

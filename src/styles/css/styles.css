@@ -1137,6 +1137,65 @@
   }
 }
 
+.reserve-container {
+  margin-top: 12vh;
+  border: 1px solid #E0E0E0;
+  width: 100vw;
+  height: 60vh;
+  -webkit-box-shadow: 1px 1px 1px #EEEEEE;
+  box-shadow: 1px 1px 1px #EEEEEE;
+}
+
+.reserve-container h6 {
+  text-align: center;
+  font-size: 1vw;
+  background: #E0E0E0;
+  margin-top: 0;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  color: #02457a;
+}
+
+.reserve-container .reservation-form {
+  margin-left: 1vw;
+  margin-top: 5vh;
+}
+
+.reserve-container .reservation-form input {
+  width: 47vw;
+  margin-top: 1vh;
+  height: 3.5vh;
+  border: 1px solid #E0E0E0;
+  border-radius: 30px;
+  padding-left: 1vw;
+}
+
+.reserve-container .reservation-form label {
+  margin-top: 1vh;
+}
+
+.reserve-container .btn-reservation {
+  margin-top: 3vh;
+}
+
+.reserve-container .btn-reservation button {
+  width: 7vw;
+  height: 4vh;
+  background: #d6e8ee;
+  border: 1px solid #d6e8ee;
+  color: #02457a;
+  border-radius: 30px;
+}
+
+.alert-reservation-container {
+  border: 1px solid #d6e8ee;
+  background: #d6e8ee;
+  position: fixed;
+  width: 30vw;
+  top: 0;
+  left: 35vw;
+}
+
 body {
   margin: 0px;
   padding: 0px;

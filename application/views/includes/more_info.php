@@ -42,7 +42,7 @@ $sql1 = $this->db->query("SELECT category,code FROM category WHERE active = '1' 
                           foreach ($sql->result() as $row) {
                             ?>
                               <tr>
-                                <td><?= $row->discription ?></td>
+                                <td> <a href="<?= base_url() ?>index.php/nmp/reservation?moduleName=<?= $row->moduleName ?>&description=<?= $row->discription ?>&modcode=<?= $row->moduleCode ?>&dateStart=<?= $row->dateStart ?>&dateEnd=<?= $row->dateEnd ?>"><?= $row->discription ?></a> </td>
                                 <td><?= $row->dateStart." to ".$row->dateEnd ?></td>
                                 <td>
                                   <?php

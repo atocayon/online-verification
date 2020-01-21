@@ -21,6 +21,7 @@ $(document).ready(function() {
     $(".home-page").hide();
     $("#form-cert").hide();
     $("#form-enrollees").hide();
+    $(".coming_soon").hide();
     $("#forms-page").hide();
     $("#form-name").hide();
     $(".more-info-page").show();
@@ -39,11 +40,11 @@ $(document).ready(function() {
 
   $("#btn-alert-modal").click(function(){
 
-    if ($(window).width() < 1050 && page === '1' || $(window).width() < 1050 && page === '3') {
+    if ($(window).width() < 1050 && page === '1' ) {
       $("#modal").show();
       $(".close").show();
       $(".alert-container").hide();
-    }else if ($(window).width() < 1050 && page === '2' ) {
+    }else if ($(window).width() < 1050 && page === '2' || $(window).width() < 1050 && page === '3') {
       $("#modal").show();
       $(".close").show();
       $("#byCertResult").show();
@@ -90,8 +91,15 @@ $(document).ready(function() {
     $("#options").hide();
     $("#form-name").hide();
     $("#form-cert").hide();
-    $("#byCert").hide();
+    $("#byNameAndByEnrollees").hide();
+    $("#byCerts_records_tbl").show();
     $("#forms-page").show();
+
+    if ($(window).width() < 1050) {
+      $("#byCert").hide();
+    }else{
+      $("#byCert").show();
+    }
   }
 
   $("#byName_bday").mask("9999/99/99", {placeholder: 'YYYY/MM/DD' });
@@ -113,5 +121,46 @@ $(document).ready(function() {
     $("#options").hide();
       $("#dropdown-content").hide();
       $(".more-info-page").hide();
+  });
+
+  $("#btn-submit-reservation").click(function(){
+    // $("#reservation_fname").val();
+    // $("#reservation_mname").val();
+    // $("#reservation_lname").val();
+    // $("#reservation_email").val();
+    if ($("#reservation_fname").val() === "" && $("#reservation_mname").val() === "" && $("#reservation_lname").val() === "" && $("#reservation_mname").val() === "") {
+      $("#reservation_fname").css("border","1px solid red");
+      $("#reservation_mname").css("border","1px solid red");
+      $("#reservation_lname").css("border","1px solid red");
+      $("#reservation_email").css("border","1px solid red");
+    }else{
+      $.ajax({
+        url: baseURL+"nmp/sendReservation/",
+        type: "POST",
+        dataType: "json",
+        data: {
+          code: $("#code").val(),
+          description: $("#description").val(),
+          dateStart: $("#dateStart").val(),
+          dateEnd: $("#dateEnd").val(),
+          fname: $("#reservation_fname").val(),
+          mname: $("#reservation_mname").val(),
+          lname: $("#reservation_lname").val(),
+          email: $("#reservation_email").val()
+        },
+        beforeSend: function(){
+          $(".loading").show();
+          $(".backdrop").show();
+          $("body").css("overflow","hidden");
+        },
+        success: function(data){
+          $(".loading").hide();
+          $("body").css("overflow","auto");
+        },
+        error: function(err){
+
+        }
+      });
+    }
   });
 });

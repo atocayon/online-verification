@@ -1,6 +1,6 @@
 
 <div class="row options ">
-  <a href="<?= base_url() ?>index.php/nmp/index/1" type="submit" title="Click to Verify by Name">
+  <a href="<?= base_url() ?>nmp/index/1" type="submit" title="Click to Verify by Name">
     <div id="web-name" class="row">
         <div>
             <i class="fas fa-user-alt" id="web-icon-name"></i>&nbsp;&nbsp;
@@ -11,7 +11,7 @@
     </div>
   </a>
 
-  <a href="<?= base_url() ?>index.php/nmp/index/2" type="submit" title="Click to Verify by Certificate Number">
+  <a href="<?= base_url() ?>nmp/index/2" type="submit" title="Click to Verify by Certificate Number">
     <div id="web-cert" class="row">
         <div>
             <i class="fas fa-certificate" id="web-icon-cert"></i>
@@ -23,7 +23,7 @@
     </div>
   </a>
 
-  <a href="<?= base_url() ?>index.php/nmp/index/3" type="submit" title="Click to Verify by Enrollees on PDC Courses">
+  <a href="<?= base_url() ?>nmp/index/3" type="submit" title="Click to Verify by Enrollees on PDC Courses">
     <div id="web-pdc" class="row">
       <div>
           <i class="fas fa-id-card" id="web-icon-pdc"></i>&nbsp;
@@ -37,7 +37,7 @@
   </a>
 
   <div class="column">
-    <a href="<?= base_url() ?>index.php/nmp/index/1" style="-webkit-tap-highlight-color: white;" id="options_by-name">
+    <a href="<?= base_url() ?>nmp/index/1" style="-webkit-tap-highlight-color: white;" id="options_by-name">
       <div id="mobile-name">
           <div class="row">
               <div class="mobile-options-icon-container">
@@ -49,7 +49,7 @@
           </div>
       </div>
     </a>
-    <a href="<?= base_url() ?>index.php/nmp/index/2" style="-webkit-tap-highlight-color: white;" id="options_by-cert">
+    <a href="<?= base_url() ?>nmp/index/2" style="-webkit-tap-highlight-color: white;" id="options_by-cert">
       <div id="mobile-cert">
           <div class="row">
               <div class="mobile-options-icon-container">
@@ -61,7 +61,7 @@
           </div>
       </div>
     </a>
-    <a href="<?= base_url() ?>index.php/nmp/index/3" style="-webkit-tap-highlight-color: white;" id="options_by-PDC-Enrollees">
+    <a href="<?= base_url() ?>nmp/index/3" style="-webkit-tap-highlight-color: white;" id="options_by-PDC-Enrollees">
       <div id="mobile-pdc">
           <div class="row">
               <div class="mobile-options-icon-container">

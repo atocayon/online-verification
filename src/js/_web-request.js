@@ -6,7 +6,7 @@ $(document).ready(function() {
     event.preventDefault();
     if ($("#byName_fname").val() !== "" && $("#byName_lname").val() !== "") {
       $.ajax({
-        url: baseURL + "index.php/nmp/search_byName/",
+        url: baseURL + "nmp/search_byName/",
         type: "POST",
         dataType: "json",
         data: {
@@ -84,7 +84,7 @@ $(document).ready(function() {
     event.preventDefault();
     if ($("#byCert_certnum").val() !== "" && $("#byCert_fname").val() !== "" && $("#byCert_lname").val() !== "") {
       $.ajax({
-        url: baseURL + "index.php/nmp/search_byCertNum/",
+        url: baseURL + "nmp/search_byCertNum/",
         type: "POST",
         dataType: "json",
         data: { certnum: $("#byCert_certnum").val(), fname: $("#byCert_fname").val(), lname: $("#byCert_lname").val(), bday: $("#byCert_bday").val() },
@@ -153,7 +153,7 @@ $(document).ready(function() {
       $("#byPDC_lname").val() !== ""
     ) {
       $.ajax({
-        url: baseURL + "index.php/nmp/search_byPDC/",
+        url: baseURL + "nmp/search_byPDC/",
         type: "POST",
         dataType: "json",
         data: {
@@ -169,9 +169,9 @@ $(document).ready(function() {
         },
         success: function(data) {
           if (data.record["response"] == "null") {
-            $("#no_data").show();
-            $("#default").hide();
-            $("#empty_field").hide();
+            $("#byCert_no_data").show();
+            $("#byCert_default").hide();
+            $("#byCert_empty_field").hide();
             $(".loading").hide();
             $(".backdrop").hide();
             $("#byPDC_module").css("border", "1px solid #eceff1");
@@ -180,9 +180,9 @@ $(document).ready(function() {
             $("#byPDC_bday").css("border", "1px solid #eceff1");
             $("body").css("overflow","auto");
           } else {
-            $("#no_data").hide();
-            $("#default").hide();
-            $("#empty_field").hide();
+            $("#byCert_no_data").hide();
+            $("#byCert_default").hide();
+            $("#byCert_empty_field").hide();
             $("#byPDC_submit").hide();
             $(".loading").hide();
             $(".alert-container").show();
@@ -193,19 +193,17 @@ $(document).ready(function() {
             $("body").css("overflow","hidden");
               $("#searhAgain_byPDC").show();
 
-            var tbl = "";
-            for (var i = 0; i < data["record"].length; i++) {
-              tbl += "<tr>";
-              tbl +=
-                "<td><label>" + data["record"][i]["module"] + "</label></td>";
-              tbl +=
-                "<td><label>" + data["record"][i]["duration"] + "</label></td>";
-              tbl +=
-                "<td><label>" + data["record"][i]["cert_num"] + "</label></td>";
-              tbl += "</tr>";
-            }
+              var tbl = "";
+              for (var i = 0; i < data["record"].length; i++) {
+                tbl += "<tr>";
+                tbl +=
+                  "<td><label>" +data["record"][i]["module"]+ "</label></td>";
+                tbl +=
+                  "<td><label>" + data["record"][i]["duration"] + "</label></td>";
+                tbl += "</tr>";
+              }
 
-            $("#tbl_data").prepend(tbl);
+              $("#byCert_tbl_data").prepend(tbl);
           }
         },
         error: function(error) {
@@ -213,9 +211,9 @@ $(document).ready(function() {
         }
       });
     } else {
-      $("#empty_field").show();
-      $("#default").hide();
-      $("#no_data").hide();
+      $("#byCert_default").hide();
+        $("#byCert_no_data").hide();
+      $("#byCert_empty_field").show();
       $("#byPDC_module").css("border", "1px solid red");
       $("#byPDC_fname").css("border", "1px solid red");
       $("#byPDC_lname").css("border", "1px solid red");

@@ -4,7 +4,7 @@ $(document).ready(function() {
     event.preventDefault();
     if ($("#byName_fname").val() !== "" && $("#byName_lname").val() !== "") {
       $.ajax({
-        url: baseURL + "index.php/nmp/search_byName/",
+        url: baseURL + "nmp/search_byName/",
         type: "POST",
         dataType: "json",
         data: {
@@ -75,7 +75,7 @@ $(document).ready(function() {
       $("#byCert_lname").val() !== ""
     ) {
       $.ajax({
-        url: baseURL + "index.php/nmp/search_byCertNum/",
+        url: baseURL + "nmp/search_byCertNum/",
         type: "POST",
         dataType: "json",
         data: {
@@ -140,7 +140,7 @@ $(document).ready(function() {
       $("#byPDC_lname").val() !== ""
     ) {
       $.ajax({
-        url: baseURL + "index.php/nmp/search_byPDC/",
+        url: baseURL + "nmp/search_byPDC/",
         type: "POST",
         dataType: "json",
         data: {
@@ -155,9 +155,9 @@ $(document).ready(function() {
         },
         success: function(data) {
           if (data.record["response"] == "null") {
-            $("#mobile-no_data").show();
-            $("#mobile-default").hide();
-            $("#mobile-empty_field").hide();
+            $("#byCert-mobile-no_data").show();
+            $("#byCert-mobile-default").hide();
+            $("#byCert-mobile-empty_field").hide();
             $(".loading").hide();
             $("#modal").show();
             $(".close").show();
@@ -166,9 +166,9 @@ $(document).ready(function() {
             $("#byPDC_lname").css("border", "1px solid #eceff1");
             $("#byPDC_bday").css("border", "1px solid #eceff1");
           } else {
-            $("#mobile-no_data").hide();
-            $("#mobile-default").hide();
-            $("#mobile-empty_field").hide();
+            $("#byCert-mobile-no_data").hide();
+            $("#byCert-mobile-default").hide();
+            $("#byCert-mobile-empty_field").hide();
             $(".loading").hide();
             $(".alert-container").show();
             $("#byPDC_module").css("border", "1px solid #eceff1");
@@ -178,18 +178,15 @@ $(document).ready(function() {
 
             var tbl = "";
             for (var i = 0; i < data["record"].length; i++) {
+              $("#name").html(data["record"][i]["name"]);
               tbl += "<tr>";
               tbl +=
                 "<td><label>" + data["record"][i]["module"] + "</label></td>";
               tbl +=
                 "<td><label>" + data["record"][i]["duration"] + "</label></td>";
-              tbl +=
-                "<td><label>" + data["record"][i]["cert_num"] + "</label></td>";
               tbl += "</tr>";
             }
-
-            $("#mobile_res").prepend(tbl);
-            $("#name").html(data["record"][1]["name"]);
+            $("#byCert_mobile_res").prepend(tbl);
           }
         },
         error: function(error) {

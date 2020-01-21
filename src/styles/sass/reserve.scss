@@ -1,0 +1,54 @@
+.reserve-container{
+  margin-top: 12vh;
+  border: 1px solid #E0E0E0;
+  width: 100vw;
+  height: 60vh;
+  box-shadow: 1px 1px 1px #EEEEEE;
+
+  h6{
+    text-align: center;
+    font-size: 1vw;
+    background: #E0E0E0;
+    margin-top: 0;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    color: $darkBlue;
+  }
+
+  .reservation-form{
+    margin-left: 1vw;
+    margin-top: 5vh;
+    input{
+      width: 47vw;
+      margin-top: 1vh;
+      height: 3.5vh;
+      border: 1px solid #E0E0E0;
+      border-radius: 30px;
+      padding-left: 1vw;
+    }
+    label{
+      margin-top: 1vh;
+    }
+  }
+
+  .btn-reservation{
+    margin-top: 3vh;
+    button{
+      width: 7vw;
+      height: 4vh;
+      background: $lightBlue2;
+      border: 1px solid $lightBlue2;
+      color: $darkBlue;
+      border-radius: 30px;
+    }
+  }
+}
+
+.alert-reservation-container{
+  border: 1px solid $lightBlue2;
+  background: $lightBlue2;
+  position: fixed;
+  width: 30vw;
+  top: 0;
+  left: 35vw;
+}

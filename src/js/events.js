@@ -155,7 +155,7 @@ $(document).ready(function() {
         },
         success: function(data){
           $(".loading").hide();
-          $("body").css("overflow","auto");
+          $(".alert-reservation-container").show();
         },
         error: function(err){
 
@@ -163,4 +163,6 @@ $(document).ready(function() {
       });
     }
   });
+
+
 });

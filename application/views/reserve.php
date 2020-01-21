@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </head>
   <body>
     <div id="navbar-web">
-     <?php include 'includes/navbar.php'; ?>
+     <?php include 'includes/navbar-reservation.php'; ?>
     </div>
 
 

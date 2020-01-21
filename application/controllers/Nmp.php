@@ -75,9 +75,9 @@ class Nmp extends CI_Controller {
 			$this->load->library('email');
 			$mail_config['smtp_host'] = 'smtp.gmail.com';
 			$mail_config['smtp_port'] = '587';
-			$mail_config['smtp_user'] = 'atocayon27@gmail.com';
+			$mail_config['smtp_user'] = 'nationalmaritimepolytechnic@gmail.com';
 			$mail_config['_smtp_auth'] = TRUE;
-			$mail_config['smtp_pass'] = 'ruozrswkmmpdfcsj';
+			$mail_config['smtp_pass'] = 'ovoyrmijinclidty';
 			$mail_config['smtp_crypto'] = 'tls';
 			$mail_config['protocol'] = 'smtp';
 			$mail_config['mailtype'] = 'html';
@@ -89,12 +89,14 @@ class Nmp extends CI_Controller {
 			$this->email->set_newline("\r\n");
 
 			$this->load->library('email');
-			$this->email->from($email, $fname);
-			$this->email->to('atocayon27@gmail.com');
-			$this->email->subject("National Maritime Polytechnic");
-			$this->email->message("You've successfully
-			reserve a slot for ".$description." with a schedule (From: ".$dateStart." To: ".$dateEnd."),
-			please visit the National Maritime Polytechnic at Brgy. Cabalawan Tacloban City and proceed to registrar to enroll the course you've reserved 2-3 days before the start of the course schedule.");
+			$this->email->from('info@nmp.gov.ph', 'National Maritime Polytechnic');
+			$this->email->to($email);
+			$this->email->subject("National Maritime Polytechnic Online Reservation");
+			$this->email->message("Course reservation for <b>".$description."</b><br><b>From: ".$dateStart."</b><br><b>To: ".$dateEnd."</b><br>
+			Kindly visit the <b>National Maritime Polytechnic</b> at <b>Brgy. Cabalawan Tacloban City</b> and proceed to registrar to enroll the course you've reserved 2-3 days before the start of the course schedule.<br><br>
+			Best regards,<br><br>
+			National Maritime Polytechnic
+			");
 			if ($this->email->send()) {
 				echo json_encode(array("insert" => "success"));
 			}else{

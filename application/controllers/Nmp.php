@@ -113,4 +113,21 @@ class Nmp extends CI_Controller {
 		$this->load->view("traineeReservations");
 	}
 
+	public function confirmReservation(){
+		$id = $_GET["id"];
+		$confirm = $this->queries->confirmReservation($id);
+		if ($confirm) {
+			$this->admin();
+		}
+	}
+
+
+	public function deleteReservation(){
+		$id = $_GET["id"];
+		$delete = $this->queries->deleteReservation($id);
+		if ($delete) {
+			$this->admin();
+		}
+	}
+
 }

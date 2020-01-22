@@ -1763,15 +1763,70 @@ body {
   }
 }
 
+.trainee-reservation-container {
+  margin-bottom: 20vh;
+}
+
 .trainee-reservation-container table {
   width: 100vw;
-  padding-left: 2vw;
-  padding-right: 2vw;
+  border-collapse: collapse;
 }
 
 .trainee-reservation-container table th {
   text-align: left;
-  border-bottom: 1px solid #CFD8DC;
+  color: #fff;
+  background: #0B457A;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 5vh;
+  padding-bottom: 1vh;
+  font-weight: bold;
+  font-size: 1vw;
+}
+
+.trainee-reservation-container table td {
+  color: #607D8B;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+.trainee-reservation-container table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.trainee-reservation-container #btn-confirmReservation {
+  background: #4CAF50;
+  border: 1px solid #4CAF50;
+  color: #fff;
+  padding: 5px;
+}
+
+.trainee-reservation-container #btn-deleteReservation {
+  background: #d50000;
+  border: 1px solid #d50000;
+  color: #fff;
+  padding: 5px;
+}
+
+.nmp-logo-container {
+  position: fixed;
+  bottom: 0;
+  color: #02457a;
+  background: #fff;
+  width: 100vw;
+  padding-top: 1vh;
+}
+
+.nmp-logo-container #nmp-logo {
+  width: 3vw;
+  margin-left: 39vw;
+}
+
+.nmp-logo-container h2 {
+  margin-top: 6px;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=styles.css.map */

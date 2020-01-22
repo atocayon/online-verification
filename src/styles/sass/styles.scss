@@ -246,14 +246,62 @@ body {
 }
 
 .trainee-reservation-container{
-
+  margin-bottom: 20vh;
   table{
     width: 100vw;
-    padding-left: 2vw;
-    padding-right: 2vw;
+    border-collapse: collapse;
     th{
       text-align: left;
-      border-bottom: 1px solid #CFD8DC;
+      color: #fff;
+      background: #0B457A;
+      padding-left: 2vw;
+      padding-right: 2vw;
+      padding-top: 5vh;
+      padding-bottom: 1vh;
+      font-weight: bold;
+      font-size: 1vw;
     }
+    td{
+      color: #607D8B;
+      padding-left: 2vw;
+      padding-right: 2vw;
+      padding-top: 1vh;
+      padding-bottom: 1vh;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  }
+
+  #btn-confirmReservation{
+    background: #4CAF50;
+    border: 1px solid #4CAF50;
+    color: #fff;
+    padding: 5px;
+  }
+  #btn-deleteReservation{
+    background: #d50000;
+    border: 1px solid #d50000;
+    color: #fff;
+    padding: 5px;
+  }
+}
+
+.nmp-logo-container{
+  position: fixed;
+  bottom: 0;
+  color: $darkBlue;
+  background: #fff;
+  width: 100vw;
+  padding-top: 1vh;
+  #nmp-logo{
+    width: 3vw;
+    margin-left: 39vw;
+  }
+
+  h2{
+    margin-top: 6px;
+    font-weight: bold;
   }
 }

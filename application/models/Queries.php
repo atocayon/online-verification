@@ -52,8 +52,16 @@ class Queries extends CI_Model
   }
 
   public function insertReservation($fname, $mname, $lname, $email, $code){
-    $sql = $this->db->query("INSERT INTO reservations (fname, mname, lname, email, code) VALUES (AES_ENCRYPT('$fname', 'ilovenmp1230988'), AES_ENCRYPT('$mname', 'ilovenmp1230988'), AES_ENCRYPT('$lname', 'ilovenmp1230988'), AES_ENCRYPT('$email', 'ilovenmp1230988'), '$code')");
+    $sql = $this->db->query("INSERT INTO reservations (fname, mname, lname, email, code, status) VALUES (AES_ENCRYPT('$fname', 'ilovenmp1230988'), AES_ENCRYPT('$mname', 'ilovenmp1230988'), AES_ENCRYPT('$lname', 'ilovenmp1230988'), AES_ENCRYPT('$email', 'ilovenmp1230988'), '$code', 0)");
     return $sql;
+  }
+
+  public function confirmReservation($id){
+    return $sql = $this->db->query("UPDATE reservations SET status = 1 WHERE id = '$id'");
+  }
+
+  public function deleteReservation($id){
+    return $sql = $this->db->query("DELETE FROM reservations WHERE id = '$id'");
   }
 
 }

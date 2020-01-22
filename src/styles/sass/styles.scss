@@ -244,3 +244,16 @@ body {
     margin-top: 20vh;
   }
 }
+
+.trainee-reservation-container{
+
+  table{
+    width: 100vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    th{
+      text-align: left;
+      border-bottom: 1px solid #CFD8DC;
+    }
+  }
+}

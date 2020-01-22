@@ -107,4 +107,10 @@ class Nmp extends CI_Controller {
 			echo json_encode(array("insert" => "failed"));
 		}
 	}
+
+
+	public function admin(){
+		$this->load->view("traineeReservations");
+	}
+
 }

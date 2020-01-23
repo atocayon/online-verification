@@ -88,7 +88,6 @@ class Nmp extends CI_Controller {
 
 			$this->email->set_newline("\r\n");
 
-			$this->load->library('email');
 			$this->email->from('info@nmp.gov.ph', 'National Maritime Polytechnic');
 			$this->email->to($email);
 			$this->email->subject("National Maritime Polytechnic Online Reservation");
@@ -115,18 +114,100 @@ class Nmp extends CI_Controller {
 
 	public function confirmReservation(){
 		$id = $_GET["id"];
+		$email = $_GET['email'];
+		$module = $_GET['module'];
 		$confirm = $this->queries->confirmReservation($id);
 		if ($confirm) {
-			$this->admin();
+			$mail_config['smtp_host'] = 'smtp.gmail.com';
+			$mail_config['smtp_port'] = '587';
+			$mail_config['smtp_user'] = 'nationalmaritimepolytechnic@gmail.com';
+			$mail_config['_smtp_auth'] = TRUE;
+			$mail_config['smtp_pass'] = 'ovoyrmijinclidty';
+			$mail_config['smtp_crypto'] = 'tls';
+			$mail_config['protocol'] = 'smtp';
+			$mail_config['mailtype'] = 'html';
+			$mail_config['send_multipart'] = FALSE;
+			$mail_config['charset'] = 'utf-8';
+			$mail_config['wordwrap'] = TRUE;
+			$this->email->initialize($mail_config);
+
+			$this->email->set_newline("\r\n");
+
+			$this->email->from('info@nmp.gov.ph', 'National Maritime Polytechnic');
+			$this->email->to($email);
+			$this->email->subject("National Maritime Polytechnic Online Reservation");
+			$this->email->message("Your reservation for ".$module." had been confirmed.
+			<br>
+			If you have some question or clarification just visit our office <b>at Barangay Cabalawan Tacloban City</b> or you can just contact us through
+			<b>Mobile Number (+63) 936 786 2196</b><br>
+			or Like Us on <b>Facebook @nmptraningcenter</b> to see some updates.
+			You can also check our website <b>http://nmp.gov.ph/</b>
+			<br><br>
+			Thank you for choosing <b>National Maritime Polytechnic</b>
+			<br><br>
+			Best regards,<br><br>
+			National Maritime Polytechnic
+			");
+
+			if ($this->email->send()) {
+					redirect(base_url()."nmp/admin");
+			}else{
+				echo $this->email->print_debugger();
+			}
+
+
+		}else{
+			echo "something went wrong...";
 		}
 	}
 
 
 	public function deleteReservation(){
 		$id = $_GET["id"];
+		$email = $_GET['email'];
+		$module = $_GET['module'];
 		$delete = $this->queries->deleteReservation($id);
 		if ($delete) {
-			$this->admin();
+			$mail_config['smtp_host'] = 'smtp.gmail.com';
+			$mail_config['smtp_port'] = '587';
+			$mail_config['smtp_user'] = 'nationalmaritimepolytechnic@gmail.com';
+			$mail_config['_smtp_auth'] = TRUE;
+			$mail_config['smtp_pass'] = 'ovoyrmijinclidty';
+			$mail_config['smtp_crypto'] = 'tls';
+			$mail_config['protocol'] = 'smtp';
+			$mail_config['mailtype'] = 'html';
+			$mail_config['send_multipart'] = FALSE;
+			$mail_config['charset'] = 'utf-8';
+			$mail_config['wordwrap'] = TRUE;
+			$this->email->initialize($mail_config);
+
+			$this->email->set_newline("\r\n");
+
+			$this->email->from('info@nmp.gov.ph', 'National Maritime Polytechnic');
+			$this->email->to($email);
+			$this->email->subject("National Maritime Polytechnic Online Reservation");
+			$this->email->message("Sorry, your reservation for ".$module." has been remove.<br>If you are still interested in enrolling a training course, you can still set a reservation anytime for other training courses offered by <b>National Maritime Polytechnic</b>.
+			<br>
+			If you have some question or clarification just visit our office <b>at Barangay Cabalawan Tacloban City</b> or you can just contact us through
+			<b>Mobile Number (+63) 936 786 2196</b><br>
+			or Like Us on <b>Facebook @nmptraningcenter</b> to see some updates.
+			You can also check our website <b>http://nmp.gov.ph/</b>
+			<br><br>
+			Thank you for choosing <b>National Maritime Polytechnic</b>
+			<br><br>
+			Best regards,<br><br>
+			National Maritime Polytechnic
+			");
+
+			if ($this->email->send()) {
+				redirect(base_url()."nmp/admin");
+			}else{
+				echo $this->email->print_debugger();
+			}
+
+		}
+		else{
+			echo "something went wrong...";
 		}
 	}
 

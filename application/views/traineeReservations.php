@@ -28,17 +28,18 @@
                   <td>
                     <?php
                       $module = $this->db->query("SELECT module FROM module WHERE modcode = '$row->code'");
+                      $resModule = "";
                       foreach ($module->result() as $value) {
-                        echo $value->module;
+                        echo $resModule = $value->module;
                       }
                     ?>
                   </td>
                   <td>
                     <?= $row->dateReserve ?></td>
                   <td>
-                    <a title="Confirm <?= $row->name ?>?" type="button" href="<?= base_url() ?>nmp/confirmReservation?id=<?= $row->id ?>" id="btn-confirmReservation" onclick="return confirm('Are you sure do you want to confirm <?= $row->name ?>?')"><i class="fas fa-check"></i></a>
+                    <a title="Confirm <?= $row->name ?>?" type="button" href="<?= base_url() ?>nmp/confirmReservation?id=<?= $row->id ?>&email=<?= $row->email ?>&module=<?= $resModule ?>" id="btn-confirmReservation" onclick="return confirm('Are you sure do you want to confirm <?= $row->name ?>?')"><i class="fas fa-check"></i></a>
                     &nbsp;&nbsp;&nbsp;
-                    <a title="Delete <?= $row->name ?>?" type="button"  href="<?= base_url() ?>nmp/deleteReservation?id=<?= $row->id ?>" id="btn-deleteReservation" onclick="return confirm('Are you sure do you want to delete <?= $row->name ?>?')"><i class="fas fa-trash"></i></a>
+                    <a title="Delete <?= $row->name ?>?" type="button"  href="<?= base_url() ?>nmp/deleteReservation?id=<?= $row->id ?>&email=<?= $row->email ?>&module=<?= $resModule ?>" id="btn-deleteReservation" onclick="return confirm('Are you sure do you want to delete <?= $row->name ?>?')"><i class="fas fa-trash"></i></a>
                   </td>
                 </tr>
               <?php

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Abel|Archivo+Black|PT+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Abel|Archivo+Black|PT+Serif|Kaushan+Script|PT+Mono|Permanent+Marker|Poiret+One&display=swap");
 .col-1 {
   width: 8.33%;
 }
@@ -1765,6 +1765,7 @@ body {
 
 .trainee-reservation-container {
   margin-bottom: 20vh;
+  font-family: 'PT Mono', monospace;
 }
 
 .trainee-reservation-container table {
@@ -1821,12 +1822,58 @@ body {
 
 .nmp-logo-container #nmp-logo {
   width: 3vw;
-  margin-left: 39vw;
+  margin-left: 38vw;
 }
 
 .nmp-logo-container h2 {
-  margin-top: 6px;
+  font-family: 'Kaushan Script', cursive;
+  margin-top: 10px;
   font-weight: bold;
+  margin-left: 1vw;
+}
+
+.nmp-admin-login-container {
+  margin-top: 13vh;
+}
+
+.nmp-admin-login-container h1 {
+  font-family: 'Permanent Marker', cursive;
+  color: #02457a;
+  text-align: center;
+}
+
+.nmp-admin-login-container p {
+  font-family: 'Poiret One', cursive;
+}
+
+.nmp-admin-login-container input {
+  margin-top: 5vh;
+  width: 25vw;
+  height: 5vh;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  padding-left: 1vw;
+}
+
+.nmp-admin-login-container button {
+  margin-top: 5vh;
+  width: 25vw;
+  height: 5vh;
+  border-radius: 8px;
+  background: -webkit-gradient(linear, left top, right top, from(#0575E6), to(#021B79));
+  background: -webkit-linear-gradient(left, #0575E6, #021B79);
+  background: -o-linear-gradient(left, #0575E6, #021B79);
+  background: linear-gradient(to right, #0575E6, #021B79);
+  border: 1px solid #021B79;
+  color: #fff;
+  font-family: 'Poiret One', cursive;
+  font-size: 1vw;
+}
+
+.nmp-admin-login-container img {
+  width: 2vw;
+  margin-bottom: 2vh;
 }
 
 /*# sourceMappingURL=styles.css.map */

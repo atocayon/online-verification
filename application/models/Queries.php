@@ -64,4 +64,11 @@ class Queries extends CI_Model
     return $sql = $this->db->query("DELETE FROM reservations WHERE id = '$id'");
   }
 
+  public function login(){
+    $param = [$this->input->post('uname'), $this->input->post('pword')];
+    $sql = "SELECT * FROM admin_accounts WHERE uname = ? AND pword = ?";
+    $query = $this->db->query($sql, $param);
+    return $query;
+  }
+
 }

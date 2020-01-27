@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Abel|Archivo+Black|PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Abel|Archivo+Black|PT+Serif|Kaushan+Script|PT+Mono|Permanent+Marker|Poiret+One&display=swap');
 @import "grid";
 @import "variable";
 @import "navbar";
@@ -247,6 +247,7 @@ body {
 
 .trainee-reservation-container{
   margin-bottom: 20vh;
+  font-family: 'PT Mono', monospace;
   table{
     width: 100vw;
     border-collapse: collapse;
@@ -295,13 +296,56 @@ body {
   background: #fff;
   width: 100vw;
   padding-top: 1vh;
+
   #nmp-logo{
     width: 3vw;
-    margin-left: 39vw;
+    margin-left: 38vw;
   }
 
   h2{
-    margin-top: 6px;
+    font-family: 'Kaushan Script', cursive;
+    margin-top: 10px;
     font-weight: bold;
+    margin-left: 1vw;
+  }
+}
+
+.nmp-admin-login-container{
+  margin-top: 13vh;
+
+
+  h1{
+    font-family: 'Permanent Marker', cursive;
+    color: $darkBlue;
+    text-align: center;
+  }
+  p{
+    font-family: 'Poiret One', cursive;
+  }
+
+  input{
+    margin-top: 5vh;
+    width: 25vw;
+    height: 5vh;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    padding-left: 1vw;
+  }
+  button{
+    margin-top: 5vh;
+    width: 25vw;
+    height: 5vh;
+    border-radius: 8px;
+    background: linear-gradient(to right, #0575E6 , #021B79);
+    border: 1px solid #021B79;
+    color: #fff;
+    font-family: 'Poiret One', cursive;
+    font-size: 1vw;
+  }
+
+  img{
+    width: 2vw;
+    margin-bottom: 2vh;
   }
 }

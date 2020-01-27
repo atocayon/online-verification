@@ -97,8 +97,15 @@ class Nmp extends CI_Controller {
 
 			$this->email->from('info@nmp.gov.ph', 'National Maritime Polytechnic');
 			$this->email->to($email);
+			$this->email->cc('info@nmp.gov.ph');
 			$this->email->subject("National Maritime Polytechnic Online Reservation");
-			$this->email->message("Course reservation for <b>".$description."</b><br><b>From: ".$dateStart."</b><br><b>To: ".$dateEnd."</b><br>
+			$this->email->message("Course reservation for <b>".$description."</b><br>
+			<b>Name: ".$fname." ".$mname." ".$lname."</b>
+			<br>
+			<b>From: ".$dateStart."</b>
+			<br>
+			<b>To: ".$dateEnd."</b>
+			<br>
 			Kindly visit the <b>National Maritime Polytechnic</b> at <b>Brgy. Cabalawan Tacloban City</b> and proceed to registrar to enroll the course you've reserved 2-3 days before the start of the course schedule.<br><br>
 			Best regards,<br><br>
 			National Maritime Polytechnic
@@ -116,7 +123,7 @@ class Nmp extends CI_Controller {
 
 
 	public function admin(){
-		$this->load->view("traineeReservations");
+		$this->load->view("adminLogin");
 	}
 
 	public function confirmReservation(){
@@ -150,6 +157,7 @@ class Nmp extends CI_Controller {
 
 			$this->email->from('info@nmp.gov.ph', 'National Maritime Polytechnic');
 			$this->email->to($email);
+			$this->email->cc('info@nmp.gov.ph');
 			$this->email->subject("National Maritime Polytechnic Online Reservation");
 			$this->email->message("Your reservation for ".$module." had been confirmed.
 			<br>
@@ -208,6 +216,7 @@ class Nmp extends CI_Controller {
 
 			$this->email->from('info@nmp.gov.ph', 'National Maritime Polytechnic');
 			$this->email->to($email);
+			$this->email->cc('info@nmp.gov.ph');
 			$this->email->subject("National Maritime Polytechnic Online Reservation");
 			$this->email->message("Sorry, your reservation for ".$module." has been remove.<br>If you are still interested in enrolling a training course, you can still set a reservation anytime for other training courses offered by <b>National Maritime Polytechnic</b>.
 			<br>
@@ -232,6 +241,20 @@ class Nmp extends CI_Controller {
 		else{
 			echo "something went wrong...";
 		}
+	}
+
+	public function login(){
+		$data['record'] = $this->queries->login()->result_array();
+		if ($data['record'] == NULL) {
+			$data['record'] = ['response' => 'null'];
+			echo json_encode($data);
+		}else{
+			echo json_encode($data);
+		}
+	}
+
+	public function home(){
+		$this->load->view("traineeReservations");
 	}
 
 }

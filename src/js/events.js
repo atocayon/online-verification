@@ -164,5 +164,31 @@ $(document).ready(function() {
     }
   });
 
+  $("#btn-admin-btnLogin").click(function(){
+
+    if ($("#admin-uname").val() !== "" && $("#admin-password").val()) {
+      $.ajax({
+        url: baseURL+"nmp/login",
+        type: "POST",
+        dataType: "json",
+        data: {
+          uname: $("#admin-uname").val(),
+          pword: $("#admin-password").val()
+        },
+        success: function(data){
+          window.location.replace(baseURL+"nmp/home");
+        },
+        error: function(err){
+          alert(err)
+        }
+      });
+    }else{
+      $("#admin-uname").css("border", "1px solid red");
+      $("#admin-password").css("border", "1px solid red");
+    }
+  });
+
+
+
 
 });

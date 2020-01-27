@@ -84,6 +84,13 @@ class Nmp extends CI_Controller {
 			$mail_config['send_multipart'] = FALSE;
 			$mail_config['charset'] = 'utf-8';
 			$mail_config['wordwrap'] = TRUE;
+			$mail_config['smtp_conn_options'] = array(
+            'ssl' => array(
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true
+            )
+        );
 			$this->email->initialize($mail_config);
 
 			$this->email->set_newline("\r\n");
@@ -118,6 +125,7 @@ class Nmp extends CI_Controller {
 		$module = $_GET['module'];
 		$confirm = $this->queries->confirmReservation($id);
 		if ($confirm) {
+			$this->load->library('email');
 			$mail_config['smtp_host'] = 'smtp.gmail.com';
 			$mail_config['smtp_port'] = '587';
 			$mail_config['smtp_user'] = 'nationalmaritimepolytechnic@gmail.com';
@@ -129,6 +137,13 @@ class Nmp extends CI_Controller {
 			$mail_config['send_multipart'] = FALSE;
 			$mail_config['charset'] = 'utf-8';
 			$mail_config['wordwrap'] = TRUE;
+			$mail_config['smtp_conn_options'] = array(
+            'ssl' => array(
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true
+            )
+        );
 			$this->email->initialize($mail_config);
 
 			$this->email->set_newline("\r\n");
@@ -168,6 +183,7 @@ class Nmp extends CI_Controller {
 		$module = $_GET['module'];
 		$delete = $this->queries->deleteReservation($id);
 		if ($delete) {
+			$this->load->library('email');
 			$mail_config['smtp_host'] = 'smtp.gmail.com';
 			$mail_config['smtp_port'] = '587';
 			$mail_config['smtp_user'] = 'nationalmaritimepolytechnic@gmail.com';
@@ -179,6 +195,13 @@ class Nmp extends CI_Controller {
 			$mail_config['send_multipart'] = FALSE;
 			$mail_config['charset'] = 'utf-8';
 			$mail_config['wordwrap'] = TRUE;
+			$mail_config['smtp_conn_options'] = array(
+            'ssl' => array(
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true
+            )
+        );
 			$this->email->initialize($mail_config);
 
 			$this->email->set_newline("\r\n");

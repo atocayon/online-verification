@@ -1811,6 +1811,10 @@ body {
   padding: 5px;
 }
 
+.trainee-reservation-container #approved, .trainee-reservation-container #rejected {
+  display: none;
+}
+
 .nmp-logo-container {
   position: fixed;
   bottom: 0;
@@ -1830,6 +1834,91 @@ body {
   margin-top: 10px;
   font-weight: bold;
   margin-left: 1vw;
+}
+
+.admin-control {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: -3vh;
+  -webkit-transition: margin-bottom 2s;
+  -o-transition: margin-bottom 2s;
+  transition: margin-bottom 2s;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  width: 100vw;
+  height: 12vh;
+  background: #d6e8ee;
+}
+
+.admin-control #up {
+  margin-top: -2vh;
+  margin-left: 48vw;
+  background: #d6e8ee;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  border-radius: 100px;
+  -webkit-transition: display 2s;
+  -o-transition: display 2s;
+  transition: display 2s;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+.admin-control #down {
+  display: none;
+  margin-top: -2vh;
+  margin-left: 48vw;
+  background: #d6e8ee;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  border-radius: 100px;
+  -webkit-transition: display 2s;
+  -o-transition: display 2s;
+  transition: display 2s;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+.admin-control:hover {
+  margin-bottom: 5vh;
+}
+
+.admin-control:hover #up {
+  display: none;
+}
+
+.admin-control:hover #down {
+  display: block;
+}
+
+.admin-control .admin-control-options {
+  margin-left: 29vw;
+}
+
+.admin-control .admin-control-options div {
+  text-align: center;
+  width: 6vw;
+  border-left: 1px solid #02457a;
+  border-right: 1px solid #02457a;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 0.2vh;
+  padding-bottom: 0.2vh;
+  border-radius: 5px;
+}
+
+.admin-control .admin-control-options a {
+  text-decoration: none;
+  color: #02457a;
+}
+
+.admin-control .admin-control-options a:hover {
+  text-decoration: underline;
 }
 
 .nmp-admin-login-container {

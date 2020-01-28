@@ -176,7 +176,7 @@ $(document).ready(function() {
           pword: $("#admin-password").val()
         },
         success: function(data){
-          window.location.replace(baseURL+"nmp/home");
+          window.location.replace(baseURL+"nmp/admin");
         },
         error: function(err){
           alert(err)
@@ -186,6 +186,29 @@ $(document).ready(function() {
       $("#admin-uname").css("border", "1px solid red");
       $("#admin-password").css("border", "1px solid red");
     }
+  });
+
+
+  $("#btn-adminHome").click(function(){
+    console.log("admin home");
+    $("#approved").hide();
+    $("#applicants").show();
+    $("#rejected").hide();
+  });
+
+  $("#btn-approvedApplicants").click(function(){
+    console.log("approve applicants");
+    $("#approved").show();
+    $("#applicants").hide();
+    $("#rejected").hide();
+  });
+
+  $("#btn-rejectedApplicants").click(function(){
+
+    console.log("rejected applicants");
+    $("#approved").hide();
+    $("#applicants").hide();
+    $("#rejected").show();
   });
 
 

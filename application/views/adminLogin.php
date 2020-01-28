@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <head>
     <?php include 'includes/head.php'; ?>
   </head>
-  <body>  
+  <body>
 
     <div class="nmp-admin-login-container row center">
       <div class="column">

@@ -123,7 +123,12 @@ class Nmp extends CI_Controller {
 
 
 	public function admin(){
-		$this->load->view("adminLogin");
+		if ($this->session->userdata('user')) {
+			$this->load->view("traineeReservations");
+		}else{
+			$this->load->view("adminLogin");
+		}
+
 	}
 
 	public function confirmReservation(){
@@ -249,12 +254,16 @@ class Nmp extends CI_Controller {
 			$data['record'] = ['response' => 'null'];
 			echo json_encode($data);
 		}else{
+			$this->load->library('session');
+			$this->session->set_userdata('user', $data['record'][0]['uname']);
 			echo json_encode($data);
 		}
 	}
 
-	public function home(){
-		$this->load->view("traineeReservations");
+	public function logout(){
+		$this->session->unset_userdata('user');
+		$this->admin();
 	}
+
 
 }

@@ -287,6 +287,10 @@ body {
     color: #fff;
     padding: 5px;
   }
+
+  #approved, #rejected{
+    display: none;
+  }
 }
 
 .nmp-logo-container{
@@ -308,12 +312,83 @@ body {
     font-weight: bold;
     margin-left: 1vw;
   }
+
+
 }
+
+.admin-control{
+  position: fixed;
+  bottom: 0;
+  margin-bottom: -3vh;
+  transition: margin-bottom 2s;
+  transition-timing-function: ease;
+  width: 100vw;
+  height: 12vh;
+  background: $lightBlue2;
+  #up{
+    margin-top: -2vh;
+    margin-left: 48vw;
+    background: $lightBlue2;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    border-radius: 100px;
+    transition: display 2s;
+    transition-timing-function: ease-in-out;
+  }
+
+  #down{
+    display: none;
+    margin-top: -2vh;
+    margin-left: 48vw;
+    background: $lightBlue2;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    border-radius: 100px;
+    transition: display 2s;
+    transition-timing-function: ease-in-out;
+  }
+
+  &:hover{
+    margin-bottom: 5vh;
+    #up{
+      display: none;
+    }
+
+    #down{
+      display: block;
+    }
+  }
+
+  .admin-control-options{
+    margin-left: 29vw;
+
+    div{
+      text-align: center;
+      width: 6vw;
+      border-left: 1px solid $darkBlue;
+      border-right: 1px solid $darkBlue;
+      margin-left: 1vw;
+      margin-right: 1vw;
+      padding-left: 1vw;
+      padding-right: 1vw;
+      padding-top: 0.2vh;
+      padding-bottom: 0.2vh;
+      border-radius: 5px;
+    }
+
+    a{
+      text-decoration: none;
+      color: $darkBlue;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
 
 .nmp-admin-login-container{
   margin-top: 13vh;
-
-
   h1{
     font-family: 'Permanent Marker', cursive;
     color: $darkBlue;

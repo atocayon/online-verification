@@ -1821,6 +1821,7 @@ body {
   color: #02457a;
   background: #fff;
   width: 100vw;
+  height: 6vh;
   padding-top: 1vh;
 }
 
@@ -1839,7 +1840,7 @@ body {
 .admin-control {
   position: fixed;
   bottom: 0;
-  margin-bottom: -3vh;
+  margin-bottom: 0.5vh;
   -webkit-transition: margin-bottom 2s;
   -o-transition: margin-bottom 2s;
   transition: margin-bottom 2s;
@@ -1847,7 +1848,7 @@ body {
   -o-transition-timing-function: ease;
   transition-timing-function: ease;
   width: 100vw;
-  height: 12vh;
+  height: 8vh;
   background: #d6e8ee;
 }
 
@@ -1883,7 +1884,7 @@ body {
 }
 
 .admin-control:hover {
-  margin-bottom: 5vh;
+  margin-bottom: 8vh;
 }
 
 .admin-control:hover #up {

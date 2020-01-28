@@ -70,7 +70,7 @@ class Nmp extends CI_Controller {
 		$lname = $this->input->post("lname");
 		$email = $this->input->post("email");
 
-		$query = $this->queries->insertReservation($fname, $mname, $lname, $email, $code);
+		$query = $this->queries->insertReservation($fname, $mname, $lname, $email, $code, $dateStart, $dateEnd);
 		if ($query) {
 			$this->load->library('email');
 			$mail_config['smtp_host'] = 'smtp.gmail.com';

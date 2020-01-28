@@ -299,6 +299,7 @@ body {
   color: $darkBlue;
   background: #fff;
   width: 100vw;
+  height: 6vh;
   padding-top: 1vh;
 
   #nmp-logo{
@@ -319,11 +320,11 @@ body {
 .admin-control{
   position: fixed;
   bottom: 0;
-  margin-bottom: -3vh;
+  margin-bottom: 0.5vh;
   transition: margin-bottom 2s;
   transition-timing-function: ease;
   width: 100vw;
-  height: 12vh;
+  height: 8vh;
   background: $lightBlue2;
   #up{
     margin-top: -2vh;
@@ -349,7 +350,7 @@ body {
   }
 
   &:hover{
-    margin-bottom: 5vh;
+    margin-bottom: 8vh;
     #up{
       display: none;
     }

@@ -16,13 +16,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <th>Name</th>
             <th>Email</th>
             <th>Module</th>
-            <th>Date/Time of Reservation</th>
+            <th>Schedule</th>
+            <th>Date of Reservation</th>
             <th>Action</th>
           </tr>
         </thead>
         <tbody>
           <?php
-            $query = $this->db->query("SELECT id, concat(AES_DECRYPT(fname,'ilovenmp1230988'), ' ', LEFT(AES_DECRYPT(mname, 'ilovenmp1230988'),1), ' ', AES_DECRYPT(lname, 'ilovenmp1230988')) as name, AES_DECRYPT(email, 'ilovenmp1230988') as email, code, dateReserve FROM reservations WHERE status = 1");
+            $query = $this->db->query("SELECT id, concat(AES_DECRYPT(fname,'ilovenmp1230988'), ' ', LEFT(AES_DECRYPT(mname, 'ilovenmp1230988'),1), ' ', AES_DECRYPT(lname, 'ilovenmp1230988')) as name, AES_DECRYPT(email, 'ilovenmp1230988') as email, code, dateStart, dateEnd, DATE_FORMAT(dateReserve, '%M %d %Y') as reserve FROM reservations WHERE status = 1 ORDER BY dateReserve DESC");
             foreach ($query->result() as $row) {
               ?>
                 <tr>
@@ -33,12 +34,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       $module = $this->db->query("SELECT module FROM module WHERE modcode = '$row->code'");
                       $resModule = "";
                       foreach ($module->result() as $value) {
-                        echo $resModule = $value->module;
+                         $resModule = $value->module;
                       }
                     ?>
+
+                    <?= $resModule ?>
                   </td>
+                  <td><?= $row->dateStart ?> - to - <?= $row->dateEnd ?></td>
                   <td>
-                    <?= $row->dateReserve ?></td>
+                    <?= $row->reserve ?></td>
                   <td>
                     <a title="Confirm <?= $row->name ?>?" type="button" href="<?= base_url() ?>nmp/confirmReservation?id=<?= $row->id ?>&email=<?= $row->email ?>&module=<?= $resModule ?>" id="btn-confirmReservation" onclick="return confirm('Are you sure do you want to confirm <?= $row->name ?>?')"><i class="fas fa-check"></i></a>
                     &nbsp;&nbsp;&nbsp;
@@ -58,13 +62,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <th>Name</th>
             <th>Email</th>
             <th>Module</th>
+            <th>Schedule</th>
             <th>Date/Time of Reservation</th>
 
           </tr>
         </thead>
         <tbody>
           <?php
-            $query = $this->db->query("SELECT id, concat(AES_DECRYPT(fname,'ilovenmp1230988'), ' ', LEFT(AES_DECRYPT(mname, 'ilovenmp1230988'),1), ' ', AES_DECRYPT(lname, 'ilovenmp1230988')) as name, AES_DECRYPT(email, 'ilovenmp1230988') as email, code, dateReserve FROM reservations WHERE status = 2");
+            $query = $this->db->query("SELECT id, concat(AES_DECRYPT(fname,'ilovenmp1230988'), ' ', LEFT(AES_DECRYPT(mname, 'ilovenmp1230988'),1), ' ', AES_DECRYPT(lname, 'ilovenmp1230988')) as name, AES_DECRYPT(email, 'ilovenmp1230988') as email, code, dateStart, dateEnd, dateReserve FROM reservations WHERE status = 2");
             foreach ($query->result() as $row) {
               ?>
                 <tr>
@@ -79,6 +84,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       }
                     ?>
                   </td>
+                  <td><?= $row->dateStart ?> - to - <?= $row->dateEnd ?></td>
                   <td>
                     <?= $row->dateReserve ?></td>
 
@@ -96,13 +102,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <th>Name</th>
             <th>Email</th>
             <th>Module</th>
+            <th>Schedule</th>
             <th>Date/Time of Reservation</th>
 
           </tr>
         </thead>
         <tbody>
           <?php
-            $query = $this->db->query("SELECT id, concat(AES_DECRYPT(fname,'ilovenmp1230988'), ' ', LEFT(AES_DECRYPT(mname, 'ilovenmp1230988'),1), ' ', AES_DECRYPT(lname, 'ilovenmp1230988')) as name, AES_DECRYPT(email, 'ilovenmp1230988') as email, code, dateReserve FROM reservations WHERE status = 0");
+            $query = $this->db->query("SELECT id, concat(AES_DECRYPT(fname,'ilovenmp1230988'), ' ', LEFT(AES_DECRYPT(mname, 'ilovenmp1230988'),1), ' ', AES_DECRYPT(lname, 'ilovenmp1230988')) as name, AES_DECRYPT(email, 'ilovenmp1230988') as email, code, dateStart, dateEnd, dateReserve FROM reservations WHERE status = 0");
             foreach ($query->result() as $row) {
               ?>
                 <tr>
@@ -117,6 +124,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       }
                     ?>
                   </td>
+
+                  <td><?= $row->dateStart ?> - to - <?= $row->dateEnd ?></td>
                   <td>
                     <?= $row->dateReserve ?></td>
 

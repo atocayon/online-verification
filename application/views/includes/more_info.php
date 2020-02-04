@@ -28,6 +28,7 @@ $sql1 = $this->db->query("SELECT category,code FROM category WHERE active = '1' 
                         module.module as moduleName,
                         module.descriptn as discription,
                         schedule.modcode as moduleCode,
+                        schedule.venid as venue,
                         DATE_FORMAT(schedule.start, '%Y %b %d') as dateStart,
                         DATE_FORMAT(schedule.end, '%Y %b %d') as dateEnd,
                         schedule.max as maxEnrollees
@@ -42,7 +43,11 @@ $sql1 = $this->db->query("SELECT category,code FROM category WHERE active = '1' 
                           foreach ($sql->result() as $row) {
                             ?>
                               <tr>
-                                <td> <a href="<?= base_url() ?>index.php/nmp/reservation?moduleName=<?= $row->moduleName ?>&description=<?= $row->discription ?>&modcode=<?= $row->moduleCode ?>&dateStart=<?= $row->dateStart ?>&dateEnd=<?= $row->dateEnd ?>"><?= $row->discription ?></a> </td>
+                                <td>
+                                  <a href="<?= base_url() ?>index.php/nmp/reservation?moduleName=<?= $row->moduleName ?>&description=<?= $row->discription ?>&modcode=<?= $row->moduleCode ?>&dateStart=<?= $row->dateStart ?>&dateEnd=<?= $row->dateEnd ?>">
+                                    <?= $row->discription ?> - [<?php echo $row->venue == '1' ? 'NMP Tacloban' : 'NMP Manila' ?>]
+                                  </a>
+                                </td>
                                 <td><?= $row->dateStart." to ".$row->dateEnd ?></td>
                                 <td>
                                   <?php

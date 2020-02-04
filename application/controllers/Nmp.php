@@ -106,7 +106,7 @@ class Nmp extends CI_Controller {
 			<br>
 			<b>To: ".$dateEnd."</b>
 			<br>
-			Kindly visit the <b>National Maritime Polytechnic</b> at <b>Brgy. Cabalawan Tacloban City</b> and proceed to registrar to enroll the course you've reserved 2-3 days before the start of the course schedule.<br><br>
+			The <b>National Maritime Polytechnic</b> would like to thank you for reserving a slot. Kindly visit our office to confirm your reservation before the start of the course schedule.<br><br>
 			Best regards,<br><br>
 			National Maritime Polytechnic
 			");

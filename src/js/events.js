@@ -39,7 +39,6 @@ $(document).ready(function() {
   });
 
   $("#btn-alert-modal").click(function(){
-
     if ($(window).width() < 1050 && page === '1' ) {
       $("#modal").show();
       $(".close").show();
@@ -51,7 +50,6 @@ $(document).ready(function() {
       $(".alert-container").hide();
       $("#mobile-table").hide();
       // $("#user-avatar").hide();
-
     }else{
       $("#webView-footer").show();
       $(".alert-container").hide();
@@ -123,46 +121,29 @@ $(document).ready(function() {
       $(".more-info-page").hide();
   });
 
-  $("#btn-submit-reservation").click(function(){
-    // $("#reservation_fname").val();
-    // $("#reservation_mname").val();
-    // $("#reservation_lname").val();
-    // $("#reservation_email").val();
-    if ($("#reservation_fname").val() === "" && $("#reservation_mname").val() === "" && $("#reservation_lname").val() === "" && $("#reservation_mname").val() === "") {
-      $("#reservation_fname").css("border","1px solid red");
-      $("#reservation_mname").css("border","1px solid red");
-      $("#reservation_lname").css("border","1px solid red");
-      $("#reservation_email").css("border","1px solid red");
-    }else{
-      $.ajax({
-        url: baseURL+"nmp/sendReservation/",
-        type: "POST",
-        dataType: "json",
-        data: {
-          code: $("#code").val(),
-          description: $("#description").val(),
-          dateStart: $("#dateStart").val(),
-          dateEnd: $("#dateEnd").val(),
-          fname: $("#reservation_fname").val(),
-          mname: $("#reservation_mname").val(),
-          lname: $("#reservation_lname").val(),
-          email: $("#reservation_email").val()
-        },
-        beforeSend: function(){
-          $(".loading").show();
-          $(".backdrop").show();
-          $("body").css("overflow","hidden");
-        },
-        success: function(data){
-          $(".loading").hide();
-          $(".alert-reservation-container").show();
-        },
-        error: function(err){
 
-        }
-      });
-    }
-  });
+    $("#byName_fname").keyup(function(){
+      $("#byName_fname").css("border", "1px solid #E0E0E0");
+      $("#byName_lname").css("border", "1px solid #E0E0E0");
+      $("#byName_bday").css("border", "1px solid #E0E0E0");
+    });
+
+    $("#byCert_certnum").keyup(function(){
+      $("#byCert_certnum").css("border", "1px solid #E0E0E0");
+      $("#byCert_fname").css("border", "1px solid #E0E0E0");
+      $("#byCert_lname").css("border", "1px solid #E0E0E0");
+    });
+
+    $("#byPDC_fname").keyup(function(){
+      $("#byPDC_module").css("border", "1px solid #E0E0E0");
+      $("#byPDC_fname").css("border", "1px solid #E0E0E0");
+      $("#byPDC_lname").css("border", "1px solid #E0E0E0");
+      $("#byPDC_bday").css("border", "1px solid #E0E0E0");
+    });
+
+
+
+
 
   $("#btn-admin-btnLogin").click(function(){
 
@@ -204,7 +185,6 @@ $(document).ready(function() {
   });
 
   $("#btn-rejectedApplicants").click(function(){
-
     console.log("rejected applicants");
     $("#approved").hide();
     $("#applicants").hide();

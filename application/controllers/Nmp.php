@@ -61,64 +61,73 @@ class Nmp extends CI_Controller {
 	}
 
 	public function sendReservation(){
-		$code = $this->input->post("code");
-		$description = $this->input->post("description");
-		$dateStart = $this->input->post("dateStart");
-		$dateEnd = $this->input->post("dateEnd");
-		$fname = $this->input->post("fname");
-		$mname = $this->input->post("mname");
-		$lname = $this->input->post("lname");
-		$email = $this->input->post("email");
+		$data['record'] = $this->queries->checkReservation()->result_array();
+		if ($data['record'] == NULL) {
+			$description = $this->input->post("description");
+			$fname = $this->input->post("fname");
+			$mname = $this->input->post("mname");
+			$lname = $this->input->post("lname");
+			$email = $this->input->post("email");
+			$code = $this->input->post("code");
+			$dateStart = $this->input->post("dateStart");
+			$dateEnd = $this->input->post("dateEnd");
+			$query = $this->queries->insertReservation($fname, $mname, $lname, $email, $code, $dateStart, $dateEnd);
 
-		$query = $this->queries->insertReservation($fname, $mname, $lname, $email, $code, $dateStart, $dateEnd);
-		if ($query) {
-			$this->load->library('email');
-			$mail_config['smtp_host'] = 'smtp.gmail.com';
-			$mail_config['smtp_port'] = '587';
-			$mail_config['smtp_user'] = 'nationalmaritimepolytechnic@gmail.com';
-			$mail_config['_smtp_auth'] = TRUE;
-			$mail_config['smtp_pass'] = 'ovoyrmijinclidty';
-			$mail_config['smtp_crypto'] = 'tls';
-			$mail_config['protocol'] = 'smtp';
-			$mail_config['mailtype'] = 'html';
-			$mail_config['send_multipart'] = FALSE;
-			$mail_config['charset'] = 'utf-8';
-			$mail_config['wordwrap'] = TRUE;
-			$mail_config['smtp_conn_options'] = array(
-            'ssl' => array(
-                'verify_peer' => false,
-                'verify_peer_name' => false,
-                'allow_self_signed' => true
-            )
-        );
-			$this->email->initialize($mail_config);
+			if ($query) {
+				$this->load->library('email');
+				$mail_config['smtp_host'] = 'smtp.gmail.com';
+				$mail_config['smtp_port'] = '587';
+				$mail_config['smtp_user'] = 'nationalmaritimepolytechnic@gmail.com';
+				$mail_config['_smtp_auth'] = TRUE;
+				$mail_config['smtp_pass'] = 'ovoyrmijinclidty';
+				$mail_config['smtp_crypto'] = 'tls';
+				$mail_config['protocol'] = 'smtp';
+				$mail_config['mailtype'] = 'html';
+				$mail_config['send_multipart'] = FALSE;
+				$mail_config['charset'] = 'utf-8';
+				$mail_config['wordwrap'] = TRUE;
+				$mail_config['smtp_conn_options'] = array(
+							'ssl' => array(
+									'verify_peer' => false,
+									'verify_peer_name' => false,
+									'allow_self_signed' => true
+							)
+					);
+				$this->email->initialize($mail_config);
 
-			$this->email->set_newline("\r\n");
+				$this->email->set_newline("\r\n");
 
-			$this->email->from('info@nmp.gov.ph', 'National Maritime Polytechnic');
-			$this->email->to($email);
-			$this->email->cc('info@nmp.gov.ph');
-			$this->email->subject("National Maritime Polytechnic Online Reservation");
-			$this->email->message("Course reservation for <b>".$description."</b><br>
-			<b>Name: ".$fname." ".$mname." ".$lname."</b>
-			<br>
-			<b>From: ".$dateStart."</b>
-			<br>
-			<b>To: ".$dateEnd."</b>
-			<br>
-			The <b>National Maritime Polytechnic</b> would like to thank you for reserving a slot. Kindly visit our office to confirm your reservation before the start of the course schedule.<br><br>
-			Best regards,<br><br>
-			National Maritime Polytechnic
-			");
-			if ($this->email->send()) {
-				echo json_encode(array("insert" => "success"));
+				$this->email->from('info@nmp.gov.ph', 'National Maritime Polytechnic');
+				$this->email->to($email);
+				$this->email->cc('info@nmp.gov.ph');
+				$this->email->subject("National Maritime Polytechnic Online Reservation");
+				$this->email->message("Course reservation for <b>".$description."</b><br>
+				<b>Name: ".$fname." ".$mname." ".$lname."</b>
+				<br>
+				<b>From: ".$dateStart."</b>
+				<br>
+				<b>To: ".$dateEnd."</b>
+				<br>
+				The <b>National Maritime Polytechnic</b> would like to thank you for reserving a slot. Kindly visit our office to confirm your reservation before the start of the course schedule.<br><br>
+				Best regards,<br><br>
+				National Maritime Polytechnic
+				");
+				if ($this->email->send()) {
+					$data['record'] = ['response' => 'success'];
+					echo json_encode($data);
+				}else{
+					echo $this->email->print_debugger();
+				}
+
 			}else{
-				echo $this->email->print_debugger();
+				$data['record'] = ['response' => 'failed'];
+				echo json_encode($data);
 			}
-
 		}else{
-			echo json_encode(array("insert" => "failed"));
+			$data['record'] = ['response' => 'null'];
+			echo json_encode($data);
 		}
+
 	}
 
 

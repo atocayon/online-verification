@@ -18,13 +18,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <h6><?= $_GET["description"] ?> RESERVATION
               <br>
               <?= $_GET["dateStart"] ?> - <?= $_GET["dateEnd"] ?>
+              <br>
+                <span style="color: red;display:none" id="error-message">Ops! It seems you've already reserved a slot for this course schedule</span>
+                <span style="color: green;display:none" id="success-message">Course Reservation Submitted Successfully!!!<br>
+                  <small>Kidly check your email</small>
+                </span>
             </h6>
-
         </div>
         <div class="reservation-form">
           <div class="row center">
             <div class="">
-              <label>Firstname:</label>
+
+              <label>Firstname:</label>  <span style="color: red;display:none;" id="reserve-fname">*</span>
               <br>
               <input type="text" name="" value="" placeholder="Type your firstname here..." id="reservation_fname">
               <br>
@@ -34,7 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="row center">
             <div class="">
               <br>
-              <label>Middle Name:</label>
+              <label>Middle Name:</label> <span style="color: red;display:none;" id="reserve-mname">*</span>
               <br>
               <input type="text" name="" value="" placeholder="Type your middle name here..." id="reservation_mname">
               <br>
@@ -44,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="row center">
             <div class="">
               <br>
-              <label>Lastname:</label>
+              <label>Lastname:</label> <span style="color: red;display:none;" id="reserve-lname">*</span>
               <br>
               <input type="text" name="" value="" placeholder="Type your lastname here..." id="reservation_lname">
               <br>
@@ -54,7 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="row center">
             <div class="">
               <br>
-              <label>Email:</label>
+              <label>Email:</label> <span style="color: red;display:none;" id="reserve-email">*</span>
               <br>
               <input type="email" name="" value="" placeholder="Type your email address here..." id="reservation_email">
               <br>
@@ -98,6 +103,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script type="text/javascript" src="<?= base_url() ?>src/js/jquery.maskedinput-1.2.2-co.js">
     </script>
     <script src="<?= base_url() ?>src/js/events.js"></script>
+    <script src="<?= base_url() ?>src/js/reservationFormValidation.js"></script>
     <script type="text/javascript">
     	var baseURL= "<?= base_url() ?>";
     	var page = "<?= $this->uri->segment(3) ?>";

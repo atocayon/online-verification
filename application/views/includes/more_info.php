@@ -44,7 +44,7 @@ $sql1 = $this->db->query("SELECT category,code FROM category WHERE active = '1' 
                             ?>
                               <tr>
                                 <td>
-                                  <a href="<?= base_url() ?>index.php/nmp/reservation?moduleName=<?= $row->moduleName ?>&description=<?= $row->discription ?>&modcode=<?= $row->moduleCode ?>&dateStart=<?= $row->dateStart ?>&dateEnd=<?= $row->dateEnd ?>">
+                                  <a href="<?= base_url() ?>nmp/reservation?moduleName=<?= $row->moduleName ?>&description=<?= $row->discription ?>&modcode=<?= $row->moduleCode ?>&dateStart=<?= $row->dateStart ?>&dateEnd=<?= $row->dateEnd ?>">
                                     <?= $row->discription ?> - [<?php echo $row->venue == '1' ? 'NMP Tacloban' : 'NMP Manila' ?>]
                                   </a>
                                 </td>

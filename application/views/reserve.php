@@ -65,6 +65,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <br>
             </div>
           </div>
+
+          <div class="row center">
+            <div class="">
+              <br>
+              <label>Certificate Number:</label> <span style="color: red;display:none;" id="reserve-certNum">*</span>
+              <br>
+              <input type="text" name="" value="" placeholder="Type your certificate number here..." id="reservation_certNum">
+              <br>
+            </div>
+
+          </div>
+
+          <div class="row center">
+            <div class="">
+              <br>
+              <label>Date of Expiry:</label> <span style="color: red;display:none;" id="reserve-expiryCertNum">*</span>
+              <br>
+              <input type="text" name="" value="" placeholder="Type your date of expiry here..." id="reservation_expiryCertNum">
+               <br><span style="color: red;display:none;" id="reserve-expirationWarning">Expired</span>
+              <br>
+            </div>
+          </div>
           <input type="text" name="" value="<?= $_GET["modcode"] ?>" hidden id="code">
           <input type="text" name="" value="<?= $_GET["description"] ?>" hidden id="description">
           <input type="text" name="" value="<?= $_GET['dateStart'] ?>" hidden id="dateStart">

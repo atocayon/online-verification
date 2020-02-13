@@ -11,6 +11,8 @@ $(document).ready(function(){
     $("#reservation_mname").css("border","1px solid #E0E0E0");
     $("#reservation_lname").css("border","1px solid #E0E0E0");
     $("#reservation_email").css("border","1px solid #E0E0E0");
+    $("#reservation_certNum").css("border","1px solid #E0E0E0");
+    $("#reservation_expiryCertNum").css("border","1px solid #E0E0E0");
   });
 
   $("#btn-submit-reservation").click(function(event){
@@ -19,10 +21,14 @@ $(document).ready(function(){
     // $("#reservation_mname").val();
     // $("#reservation_lname").val();
     // $("#reservation_email").val();
+
+    console.log("click");
     if ($("#reservation_fname").val() === "") {
       $("#reservation_fname").css("border","1px solid red");
       $("#reserve-fname").show();
-    }else{
+    }
+
+    if ($("#reservation_fname").val() !== ""){
       $("#reservation_fname").css("border","1px solid #E0E0E0");
       $("#reserve-fname").hide();
     }
@@ -30,7 +36,9 @@ $(document).ready(function(){
     if ($("#reservation_mname").val() === "") {
       $("#reservation_mname").css("border","1px solid red");
       $("#reserve-mname").show();
-    }else{
+    }
+
+    if ($("#reservation_mname").val() !== ""){
       $("#reservation_mname").css("border","1px solid #E0E0E0");
       $("#reserve-mname").hide();
     }
@@ -38,7 +46,9 @@ $(document).ready(function(){
     if ($("#reservation_lname").val() === "") {
       $("#reservation_lname").css("border","1px solid red");
       $("#reserve-lname").show();
-    }else{
+    }
+
+    if ($("#reservation_lname").val() !== ""){
       $("#reservation_lname").css("border","1px solid #E0E0E0");
       $("#reserve-lname").hide();
     }
@@ -46,25 +56,65 @@ $(document).ready(function(){
     if ($("#reservation_email").val() === "") {
       $("#reservation_email").css("border","1px solid red");
       $("#reserve-email").show();
-    }else{
+    }
+
+    if ($("#reservation_email").val() !== ""){
       $("#reservation_email").css("border","1px solid #E0E0E0");
       $("#reserve-email").hide();
     }
 
+    if ($("#reservation_certNum").val() === "") {
+      $("#reservation_certNum").css("border","1px solid red");
+      $("#reserve-certNum").show();
+    }
 
-    if ($("#reservation_fname").val() === "" && $("#reservation_mname").val() === "" && $("#reservation_lname").val() === "" && $("#reservation_email").val() === "") {
+    if ($("#reservation_certNum").val() !== "") {
+      $("#reservation_certNum").css("border","1px solid #E0E0E0");
+      $("#reserve-certNum").hide();
+    }
+
+    if ($("#reservation_expiryCertNum").val() === "") {
+      $("#reservation_expiryCertNum").css("border","1px solid red");
+      $("#reserve-expiryCertNum").show();
+    }
+
+    if ($("#reservation_expiryCertNum").val() !== "") {
+      $("#reservation_expiryCertNum").css("border","1px solid #E0E0E0");
+      $("#reserve-expiryCertNum").hide();
+    }
+
+    var GivenDate = $("#reservation_expiryCertNum").val();
+    var CurrentDate = new Date();
+    GivenDate = new Date(GivenDate);
+
+    if (GivenDate < CurrentDate) {
+      $("#reservation_expiryCertNum").css("border","1px solid red");
+      $("#reserve-expirationWarning").show();
+    }
+
+    if (GivenDate > CurrentDate){
+      $("#reservation_expiryCertNum").css("border","1px solid #E0E0E0");
+      $("#reserve-expirationWarning").hide();
+    }
+
+
+    if ($("#reservation_fname").val() === "" && $("#reservation_mname").val() === "" && $("#reservation_lname").val() === "" && $("#reservation_email").val() === "" && $("#reservation_certNum").val() === "" && $("#reservation_expiryCertNum").val() === "") {
       $("#reservation_fname").css("border","1px solid red");
       $("#reservation_mname").css("border","1px solid red");
       $("#reservation_lname").css("border","1px solid red");
       $("#reservation_email").css("border","1px solid red");
+      $("#reservation_certNum").css("border","1px solid red");
+      $("#reservation_expiryCertNum").css("border","1px solid red");
 
       $("#reserve-fname").show();
       $("#reserve-mname").show();
       $("#reserve-lname").show();
       $("#reserve-email").show();
+      $("#reserve-certNum").show();
+      $("#reserve-expiryCertNum").show();
     }
 
-    if ($("#reservation_fname").val() !== "" && $("#reservation_mname").val() !== "" && $("#reservation_lname").val() !== "" && $("#reservation_email").val() !== "") {
+    if ($("#reservation_fname").val() !== "" && $("#reservation_mname").val() !== "" && $("#reservation_lname").val() !== "" && $("#reservation_email").val() !== "" && $("#reservation_certNum").val() !== "" && $("#reservation_expiryCertNum").val() !== "" && GivenDate > CurrentDate) {
       $.ajax({
         url: baseURL+"nmp/sendReservation/",
         type: "POST",
@@ -77,7 +127,9 @@ $(document).ready(function(){
           fname: $("#reservation_fname").val(),
           mname: $("#reservation_mname").val(),
           lname: $("#reservation_lname").val(),
-          email: $("#reservation_email").val()
+          email: $("#reservation_email").val(),
+          certNum: $("#reservation_certNum").val(),
+          dateOfExpiry: $("#reservation_expiryCertNum").val()
         },
         beforeSend: function(){
           $(".loading").show();
@@ -97,6 +149,8 @@ $(document).ready(function(){
             $("#reservation_mname").css("border","1px solid red");
             $("#reservation_lname").css("border","1px solid red");
             $("#reservation_email").css("border","1px solid red");
+            $("#reservation_certNum").css("border","1px solid red");
+            $("#reservation_expiryCertNum").css("border","1px solid red");
           }
 
           if (data.record['response'] === "success") {
@@ -108,6 +162,8 @@ $(document).ready(function(){
             $("#reservation_mname").css("border","1px solid green");
             $("#reservation_lname").css("border","1px solid green");
             $("#reservation_email").css("border","1px solid green");
+            $("#reservation_certNum").css("border","1px solid green");
+            $("#reservation_expiryCertNum").css("border","1px solid green");
           }
 
           if (data.record["response"] === "failed") {

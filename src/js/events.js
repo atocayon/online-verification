@@ -103,6 +103,7 @@ $(document).ready(function() {
   $("#byName_bday").mask("9999/99/99", {placeholder: 'YYYY/MM/DD' });
   $("#byPDC_bday").mask("9999/99/99", {placeholder: 'YYYY/MM/DD'});
   $("#byCert_bday").mask("9999/99/99", {placeholder: 'YYYY/MM/DD'});
+  $("#reservation_expiryCertNum").mask("9999/99/99", {placeholder: 'YYYY/MM/DD'});
 
   $("#btn-faq").click(function(){
     $("#faq-page").show();

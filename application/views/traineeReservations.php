@@ -14,7 +14,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <thead>
           <tr>
             <th>Name</th>
-            <th>Email</th>
+            <!-- <th>Email</th> -->
+            <th>Certificate Number</th>
             <th>Module</th>
             <th>Schedule</th>
             <th>Date of Reservation</th>
@@ -23,12 +24,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </thead>
         <tbody>
           <?php
-            $query = $this->db->query("SELECT id, concat(AES_DECRYPT(fname,'ilovenmp1230988'), ' ', LEFT(AES_DECRYPT(mname, 'ilovenmp1230988'),1), ' ', AES_DECRYPT(lname, 'ilovenmp1230988')) as name, AES_DECRYPT(email, 'ilovenmp1230988') as email, code, dateStart, dateEnd, DATE_FORMAT(dateReserve, '%M %d %Y') as reserve FROM reservations WHERE status = 1 ORDER BY dateReserve DESC");
+            $query = $this->db->query("SELECT id, concat(AES_DECRYPT(fname,'ilovenmp1230988'), ' ', LEFT(AES_DECRYPT(mname, 'ilovenmp1230988'),1), ' ', AES_DECRYPT(lname, 'ilovenmp1230988')) as name, AES_DECRYPT(email, 'ilovenmp1230988') as email, certNum, DATE_FORMAT(dateExpiry, '%b %d %Y') as expiry, code, dateStart, dateEnd, DATE_FORMAT(dateReserve, '%b %d %Y') as reserve FROM reservations WHERE status = 1 ORDER BY dateReserve DESC");
             foreach ($query->result() as $row) {
               ?>
                 <tr>
                   <td><?= $row->name ?></td>
-                  <td><?= $row->email ?></td>
+                  <!-- <td><?= $row->email ?></td> -->
+                  <td><?= $row->certNum ?>  (exp.:<?= $row->expiry ?>)</td>
                   <td>
                     <?php
                       $module = $this->db->query("SELECT module FROM module WHERE modcode = '$row->code'");
@@ -60,7 +62,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <thead>
           <tr>
             <th>Name</th>
-            <th>Email</th>
+            <!-- <th>Email</th> -->
+              <th>Certificate Number</th>
             <th>Module</th>
             <th>Schedule</th>
             <th>Date/Time of Reservation</th>
@@ -69,12 +72,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </thead>
         <tbody>
           <?php
-            $query = $this->db->query("SELECT id, concat(AES_DECRYPT(fname,'ilovenmp1230988'), ' ', LEFT(AES_DECRYPT(mname, 'ilovenmp1230988'),1), ' ', AES_DECRYPT(lname, 'ilovenmp1230988')) as name, AES_DECRYPT(email, 'ilovenmp1230988') as email, code, dateStart, dateEnd, dateReserve FROM reservations WHERE status = 2");
+            $query = $this->db->query("SELECT id, concat(AES_DECRYPT(fname,'ilovenmp1230988'), ' ', LEFT(AES_DECRYPT(mname, 'ilovenmp1230988'),1), ' ', AES_DECRYPT(lname, 'ilovenmp1230988')) as name, AES_DECRYPT(email, 'ilovenmp1230988') as email, certNum, DATE_FORMAT(dateExpiry, '%b %d %Y') as expiry, code, dateStart, dateEnd, dateReserve FROM reservations WHERE status = 2");
             foreach ($query->result() as $row) {
               ?>
                 <tr>
                   <td><?= $row->name ?></td>
-                  <td><?= $row->email ?></td>
+                  <!-- <td><?= $row->email ?></td> -->
+                  <td><?= $row->certNum ?>  (exp.:<?= $row->expiry ?>)</td>
                   <td>
                     <?php
                       $module = $this->db->query("SELECT module FROM module WHERE modcode = '$row->code'");
@@ -100,7 +104,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <thead>
           <tr>
             <th>Name</th>
-            <th>Email</th>
+            <!-- <th>Email</th> -->
+            <th>Certificate Number</th>
             <th>Module</th>
             <th>Schedule</th>
             <th>Date/Time of Reservation</th>
@@ -109,12 +114,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </thead>
         <tbody>
           <?php
-            $query = $this->db->query("SELECT id, concat(AES_DECRYPT(fname,'ilovenmp1230988'), ' ', LEFT(AES_DECRYPT(mname, 'ilovenmp1230988'),1), ' ', AES_DECRYPT(lname, 'ilovenmp1230988')) as name, AES_DECRYPT(email, 'ilovenmp1230988') as email, code, dateStart, dateEnd, dateReserve FROM reservations WHERE status = 0");
+            $query = $this->db->query("SELECT id, concat(AES_DECRYPT(fname,'ilovenmp1230988'), ' ', LEFT(AES_DECRYPT(mname, 'ilovenmp1230988'),1), ' ', AES_DECRYPT(lname, 'ilovenmp1230988')) as name, AES_DECRYPT(email, 'ilovenmp1230988') as email,  certNum, DATE_FORMAT(dateExpiry, '%b %d %Y') as expiry, code, dateStart, dateEnd, dateReserve FROM reservations WHERE status = 0");
             foreach ($query->result() as $row) {
               ?>
                 <tr>
                   <td><?= $row->name ?></td>
-                  <td><?= $row->email ?></td>
+                  <!-- <td><?= $row->email ?></td> -->
+                  <td><?= $row->certNum ?>  (exp.:<?= $row->expiry ?>)</td>
                   <td>
                     <?php
                       $module = $this->db->query("SELECT module FROM module WHERE modcode = '$row->code'");

@@ -1798,17 +1798,36 @@ body {
 }
 
 .trainee-reservation-container #btn-confirmReservation {
-  background: #4CAF50;
   border: 1px solid #4CAF50;
-  color: #fff;
+  color: #4CAF50;
   padding: 5px;
 }
 
-.trainee-reservation-container #btn-deleteReservation {
-  background: #d50000;
-  border: 1px solid #d50000;
+.trainee-reservation-container #btn-confirmReservation:hover {
+  background: #4CAF50;
   color: #fff;
+}
+
+.trainee-reservation-container #btn-deleteReservation {
+  border: 1px solid #d50000;
+  color: #d50000;
   padding: 5px;
+}
+
+.trainee-reservation-container #btn-deleteReservation:hover {
+  background: #d50000;
+  color: #fff;
+}
+
+.trainee-reservation-container #btn-viewInfoReservation {
+  border: 1px solid #2196F3;
+  color: #2196F3;
+  padding: 5px;
+}
+
+.trainee-reservation-container #btn-viewInfoReservation:hover {
+  background: #2196F3;
+  color: #fff;
 }
 
 .trainee-reservation-container #approved, .trainee-reservation-container #rejected {
@@ -1835,6 +1854,7 @@ body {
   margin-top: 10px;
   font-weight: bold;
   margin-left: 1vw;
+  font-size: 1.5vw;
 }
 
 .admin-control {
@@ -1850,6 +1870,7 @@ body {
   width: 100vw;
   height: 8vh;
   background: #d6e8ee;
+  padding-bottom: 1vh;
 }
 
 .admin-control #up {
@@ -1896,12 +1917,12 @@ body {
 }
 
 .admin-control .admin-control-options {
-  margin-left: 29vw;
+  margin-left: 27vw;
 }
 
 .admin-control .admin-control-options div {
   text-align: center;
-  width: 6vw;
+  width: 8vw;
   border-left: 1px solid #02457a;
   border-right: 1px solid #02457a;
   margin-left: 1vw;

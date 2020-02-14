@@ -133,14 +133,14 @@ class Queries extends CI_Model
     return $query;
   }
 
-  public function insertReservation($fname, $mname, $lname, $email, $code, $dateStart, $dateEnd, $certNum, $dateOfExpiry){
+  public function insertReservation($fname, $mname, $lname, $email, $code, $dateStart, $dateEnd, $address, $mobileNum){
     $sql = $this->db->query("INSERT INTO reservations
       (fname,
         mname,
         lname,
         email,
-        certNum,
-        dateExpiry,
+        address,
+        mobileNo,
         code,
         dateStart,
         dateEnd,
@@ -150,8 +150,8 @@ class Queries extends CI_Model
         AES_ENCRYPT('$mname', 'ilovenmp1230988'),
         AES_ENCRYPT('$lname', 'ilovenmp1230988'),
         AES_ENCRYPT('$email', 'ilovenmp1230988'),
-        '$certNum',
-        '$dateOfExpiry',
+        '$address',
+        '$mobileNum',
         '$code',
         '$dateStart',
         '$dateEnd',

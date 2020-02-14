@@ -68,12 +68,12 @@ class Nmp extends CI_Controller {
 			$mname = $this->input->post("mname");
 			$lname = $this->input->post("lname");
 			$email = $this->input->post("email");
-			$certNum = $this->input->post("certNum");
-			$dateOfExpiry = $this->input->post("dateOfExpiry");
+			$address = $this->input->post("address");
+			$mobileNum = $this->input->post("mobileNum");
 			$code = $this->input->post("code");
 			$dateStart = $this->input->post("dateStart");
 			$dateEnd = $this->input->post("dateEnd");
-			$query = $this->queries->insertReservation($fname, $mname, $lname, $email, $code, $dateStart, $dateEnd, $certNum, $dateOfExpiry);
+			$query = $this->queries->insertReservation($fname, $mname, $lname, $email, $code, $dateStart, $dateEnd, $address, $mobileNum);
 
 			if ($query) {
 				$this->load->library('email');

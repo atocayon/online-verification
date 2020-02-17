@@ -1141,7 +1141,7 @@
   margin-top: 8vh;
   border: 1px solid #E0E0E0;
   width: 100vw;
-  height: 80vh;
+  height: 90vh;
   -webkit-box-shadow: 1px 1px 1px #EEEEEE;
   box-shadow: 1px 1px 1px #EEEEEE;
 }
@@ -1985,6 +1985,39 @@ body {
 .nmp-admin-login-container img {
   width: 2vw;
   margin-bottom: 2vh;
+}
+
+.modalViewApplicant-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  margin-top: 5vh;
+  margin-left: 30vw;
+  background: #fff;
+  width: 40vw;
+  height: 40vh;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  color: #37474F;
+}
+
+.modalViewApplicant-container .modal-header {
+  border-bottom: 1px solid #BDBDBD;
+}
+
+.modalViewApplicant-container .modal-header button {
+  text-decoration: none;
+  color: #37474F;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  border: 1px solid #fff;
+  background: #fff;
+}
+
+.modalViewApplicant-container .modal-header button:hover {
+  color: red;
 }
 
 /*# sourceMappingURL=styles.css.map */

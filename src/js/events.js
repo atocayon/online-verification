@@ -104,6 +104,7 @@ $(document).ready(function() {
   $("#byPDC_bday").mask("9999/99/99", {placeholder: 'YYYY/MM/DD'});
   $("#byCert_bday").mask("9999/99/99", {placeholder: 'YYYY/MM/DD'});
   $("#reservation_mobileNum").mask("+639-9999-999-99", {placeholder: '+639-xxxx-xxx-xx'});
+  $("#reservation_srnNum").mask("9999999999", {placeholder: 'XXXXXXXXXX'});
 
   $("#btn-faq").click(function(){
     $("#faq-page").show();
@@ -190,6 +191,40 @@ $(document).ready(function() {
     $("#approved").hide();
     $("#applicants").hide();
     $("#rejected").show();
+  });
+
+
+  $("#btn-viewInfoReservation").click(function(){
+    $(".backdrop").show();
+    $(".modalViewApplicant-container").show();
+
+    $.ajax({
+      url: baseURL+"nmp/applicantReservation",
+      type: "POST",
+      dataType: "json",
+      data: {
+        applicantID: $(".applicant-id").val()
+      },
+      success: function(data){
+        console.log(data.record[0]);
+        $("#applicant-name").text(data.record[0]["name"]);
+        $("#applicant-address").text(data.record[0]["address"]);
+        $("#applicant-email").text(data.record[0]["email"]);
+        $("#applicant-mobileNo").text(data.record[0]["mobileNo"]);
+        $("#applicant-module").text(data.record[0]["module"]);
+        $("#applicant-schedule").text(data.record[0]["dateStart"]+" - to - "+data.record[0]["dateEnd"]);
+
+      },
+      error: function(err){
+        alert(err);
+      }
+    });
+  });
+
+  $("#modal-close").click(function(){
+    // console.log("shshhss");
+    $(".backdrop").hide();
+    $(".modalViewApplicant-container").hide();
   });
 
 

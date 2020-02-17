@@ -70,6 +70,7 @@ class Nmp extends CI_Controller {
 			$email = $this->input->post("email");
 			$address = $this->input->post("address");
 			$mobileNum = $this->input->post("mobileNum");
+			$srnNum = $this->input->post("srnNum");
 			$code = $this->input->post("code");
 			$dateStart = $this->input->post("dateStart");
 			$dateEnd = $this->input->post("dateEnd");
@@ -274,6 +275,16 @@ class Nmp extends CI_Controller {
 	public function logout(){
 		$this->session->unset_userdata('user');
 		$this->admin();
+	}
+
+	public function applicantReservation(){
+		$data['record'] = $this->queries->applicantReservation()->result_array();
+		if ($data['record'] == NULL) {
+			$data['record'] = ['response' => 'null'];
+			echo json_encode($data);
+		}else{
+			echo json_encode($data);
+		}
 	}
 
 

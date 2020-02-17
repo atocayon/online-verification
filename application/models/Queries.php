@@ -178,4 +178,11 @@ class Queries extends CI_Model
     return $query;
   }
 
+  public function applicantReservation(){
+    $param = [$this->input->post("applicantID")];
+    $sql = "SELECT concat(AES_DECRYPT(reservations.fname, 'ilovenmp1230988'), ' ', LEFT(AES_DECRYPT(reservations.mname, 'ilovenmp1230988'),1),'. ', AES_DECRYPT(reservations.lname, 'ilovenmp1230988')) as name, AES_DECRYPT(reservations.email, 'ilovenmp1230988') as email, reservations.address, reservations.mobileNo, reservations.code, reservations.dateStart, reservations.dateEnd, reservations.dateReserve, module.module FROM reservations INNER JOIN module ON reservations.code = module.modcode WHERE reservations.id = ?";
+    $query = $this->db->query($sql, $param);
+    return $query;
+  }
+
 }

@@ -444,3 +444,34 @@ body {
     margin-bottom: 2vh;
   }
 }
+
+.modalViewApplicant-container{
+  display: none;
+  position: fixed;
+  top: 0;
+  margin-top: 5vh;
+  margin-left: 30vw;
+  background: #fff;
+  width: 40vw;
+  height: 40vh;
+  // box-shadow: 1px 3px 3px #BDBDBD;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  color: #37474F;
+  .modal-header{
+    border-bottom: 1px solid #BDBDBD;
+    button{
+      text-decoration: none;
+      color: #37474F;
+      margin-top: 2vh;
+      margin-bottom: 2vh;
+      border: 1px solid #fff;
+      background: #fff;
+      &:hover{
+        color: red;
+      }
+    }
+  }
+}

@@ -82,7 +82,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <br>
               <label>Mobile Number:</label> <span style="color: red;display:none;" id="reserve-mobileNum">*</span>
               <br>
-              <input type="text" name="" value="" placeholder="Type your date of expiry here..." id="reservation_mobileNum">
+              <input type="text" name="" value="" placeholder="Type your mobile number here..." id="reservation_mobileNum">
+              <br>
+            </div>
+          </div>
+
+          <div class="row center">
+            <div class="">
+              <br>
+              <label>Seaferer Registration Number (if any):</label> <span style="color: red;display:none;" id="reserve-srnNum">*</span>
+              <br>
+              <input type="text" name="" value="" placeholder="Type your SRN Number here..." id="reservation_srnNum">
               <br>
             </div>
           </div>

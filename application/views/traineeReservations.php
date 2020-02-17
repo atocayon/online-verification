@@ -8,8 +8,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </head>
   <body>
 
+    <div class="">
+      <?php include "includes/backdrop.php" ?>
+    </div>
+
+    <div class="">
+      <?php include "includes/modalViewApplicantInfo.php" ?>
+    </div>
+
+
+
 
     <div class="trainee-reservation-container">
+
       <table id="applicants">
         <thead>
           <tr>
@@ -53,6 +64,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <a title="View <?= $row->name ?>?" type="button" href="#" id="btn-viewInfoReservation" ><i class="fas fa-eye"></i></a>
                     &nbsp;
                     <a title="Delete <?= $row->name ?>?" type="button"  href="<?= base_url() ?>nmp/deleteReservation?id=<?= $row->id ?>&email=<?= $row->email ?>&module=<?= $resModule ?>" id="btn-deleteReservation" onclick="return confirm('Are you sure do you want to delete <?= $row->name ?>?')"><i class="fas fa-trash"></i></a>
+
+                    <input type="text" value="<?= $row->id ?>" class="applicant-id" hidden>
                   </td>
                 </tr>
               <?php

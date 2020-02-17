@@ -13,6 +13,7 @@ $(document).ready(function(){
     $("#reservation_email").css("border","1px solid #E0E0E0");
     $("#reservation_add").css("border","1px solid #E0E0E0");
     $("#reservation_mobileNum").css("border","1px solid #E0E0E0");
+    $("#reservation_srnNum").css("border","1px solid #E0E0E0");
   });
 
   $("#btn-submit-reservation").click(function(event){
@@ -83,6 +84,18 @@ $(document).ready(function(){
       $("#reserve-mobileNum").hide();
     }
 
+    // if ($("#reservation_srnNum").val() === "") {
+    //   $("#reservation_srnNum").css("border","1px solid red");
+    //   $("#reserve-srnNum").show();
+    // }
+    //
+    // if ($("#reservation_srnNum").val() !== "") {
+    //   $("#reservation_srnNum").css("border","1px solid #E0E0E0");
+    //   $("#reserve-srnNum").hide();
+    // }
+
+    console.log("SRN: "+$("#reservation_srnNum").val());
+
 
 
     if ($("#reservation_fname").val() === "" && $("#reservation_mname").val() === "" && $("#reservation_lname").val() === "" && $("#reservation_email").val() === "" && $("#reservation_add").val() === "" && $("#reservation_mobileNum").val() === "") {
@@ -92,6 +105,7 @@ $(document).ready(function(){
       $("#reservation_email").css("border","1px solid red");
       $("#reservation_add").css("border","1px solid red");
       $("#reservation_mobileNum").css("border","1px solid red");
+      // $("#reservation_srnNum").css("border","1px solid red");
 
       $("#reserve-fname").show();
       $("#reserve-mname").show();
@@ -99,9 +113,10 @@ $(document).ready(function(){
       $("#reserve-email").show();
       $("#reserve-add").show();
       $("#reserve-mobileNum").show();
+      // $("#reserve-srnNum").show();
     }
 
-    if ($("#reservation_fname").val() !== "" && $("#reservation_mname").val() !== "" && $("#reservation_lname").val() !== "" && $("#reservation_email").val() !== "" && $("#reservation_add").val() !== "" && $("#reservation_mobileNum").val() !== "") {
+    if ($("#reservation_fname").val() !== "" && $("#reservation_mname").val() !== "" && $("#reservation_lname").val() !== "" && $("#reservation_email").val() !== "" && $("#reservation_add").val() !== "" && $("#reservation_mobileNum").val() !== "" ) {
       $.ajax({
         url: baseURL+"nmp/sendReservation/",
         type: "POST",
@@ -116,7 +131,8 @@ $(document).ready(function(){
           lname: $("#reservation_lname").val(),
           email: $("#reservation_email").val(),
           address: $("#reservation_add").val(),
-          mobileNum: $("#reservation_mobileNum").val()
+          mobileNum: $("#reservation_mobileNum").val(),
+          srnNum: $("#reservation_srnNum").val()
         },
         beforeSend: function(){
           $(".loading").show();
@@ -138,6 +154,7 @@ $(document).ready(function(){
             $("#reservation_email").css("border","1px solid red");
             $("#reservation_add").css("border","1px solid red");
             $("#reservation_mobileNum").css("border","1px solid red");
+            $("#reservation_srnNum").css("border","1px solid red");
           }
 
           if (data.record['response'] === "success") {
@@ -151,6 +168,7 @@ $(document).ready(function(){
             $("#reservation_email").css("border","1px solid green");
             $("#reservation_add").css("border","1px solid green");
             $("#reservation_mobileNum").css("border","1px solid green");
+            $("#reservation_srnNum").css("border","1px solid green");
           }
 
           if (data.record["response"] === "failed") {

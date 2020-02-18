@@ -4,7 +4,27 @@ $(document).ready(function() {
   $("#byName_submit").click(function(event) {
     // console.log("By Name Button Click");
     event.preventDefault();
-    if ($("#byName_fname").val() !== "" && $("#byName_lname").val() !== "") {
+    if ($("#byName_fname").val() === "") {
+      $("#byName_fname").css("border", "1px solid red");
+      $(".error-fname").show();
+    }
+
+    if ($("#byName_fname").val() !== "") {
+      $("#byName_fname").css("border", "1px solid #E0E0E0");
+      $(".error-fname").hide();
+    }
+
+    if ($("#byName_lname").val() === "") {
+      $("#byName_lname").css("border", "1px solid red");
+      $(".error-lname").show();
+    }
+
+    if ($("#byName_lname").val() !== "") {
+      $("#byName_lname").css("border", "1px solid #E0E0E0");
+      $(".error-lname").hide();
+    }
+
+    if ($("#byName_fname").val() !== "" && $("#byName_lname").val() !== "" && $("#byName_bday").val() !== "") {
       $.ajax({
         url: baseURL + "nmp/search_byName/",
         type: "POST",
@@ -68,9 +88,12 @@ $(document).ready(function() {
       $("#byName_fname").css("border", "1px solid red");
       $("#byName_lname").css("border", "1px solid red");
       $("#byName_bday").css("border", "1px solid red");
-      $("#empty_field").show();
-      $("#default").hide();
-      $("#no_data").hide();
+      $(".error-fname").show();
+      $(".error-lname").show();
+      $(".error-bday").show();
+      // $("#empty_field").show();
+      // $("#default").hide();
+      // $("#no_data").hide();
 
       console.log("Web interface - By Name");
     }
@@ -82,7 +105,7 @@ $(document).ready(function() {
   $("#byCert_submit").click(function(event) {
     // console.log("By cert num click");
     event.preventDefault();
-    if ($("#byCert_certnum").val() !== "" && $("#byCert_fname").val() !== "" && $("#byCert_lname").val() !== "") {
+    if ($("#byCert_certnum").val() !== "" && $("#byCert_fname").val() !== "" && $("#byCert_lname").val() !== "" && $("#byCert_bday").val() !== "") {
       $.ajax({
         url: baseURL + "nmp/search_byCertNum/",
         type: "POST",
@@ -131,13 +154,18 @@ $(document).ready(function() {
         }
       });
     } else {
-      $("#byCert_default").hide();
-      $("#byCert_no_data").hide();
+      // $("#byCert_default").hide();
+      // $("#byCert_no_data").hide();
       $("#byCert_certnum").css("border", "1px solid red");
       $("#byCert_fname").css("border", "1px solid red");
       $("#byCert_lname").css("border", "1px solid red");
-      $("#byCert_empty_field").show();
-      console.log("Web interface - By Cert num");
+      $("#byCert_bday").css("border", "1px solid red");
+      $(".error-fname").show();
+      $(".error-lname").show();
+      $(".error-bday").show();
+      $(".error-certnum").show();
+      // $("#byCert_empty_field").show();
+      // console.log("Web interface - By Cert num");
     }
   });
   // End Verification by Certificate number
@@ -211,14 +239,18 @@ $(document).ready(function() {
         }
       });
     } else {
-      $("#byCert_default").hide();
-        $("#byCert_no_data").hide();
-      $("#byCert_empty_field").show();
+      // $("#byCert_default").hide();
+      //   $("#byCert_no_data").hide();
+      // $("#byCert_empty_field").show();
       $("#byPDC_module").css("border", "1px solid red");
       $("#byPDC_fname").css("border", "1px solid red");
       $("#byPDC_lname").css("border", "1px solid red");
       $("#byPDC_bday").css("border", "1px solid red");
-      console.log("Web interface - By PDC enrollment");
+      $(".error-fname").show();
+      $(".error-lname").show();
+      $(".error-bday").show();
+      $(".error-PDCmodule").show();
+      //console.log("Web interface - By PDC enrollment");
     }
   });
   // End Verification by PDC

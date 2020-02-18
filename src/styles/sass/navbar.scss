@@ -2,82 +2,93 @@
 .nav-container {
   position: fixed;
   width: 100vw;
-  box-shadow: 1px 2px 3px $offWhite;
+  //box-shadow: 1px 2px 3px $offWhite;
   background: #fff;
+  background: rgba(255,255,255, 0.8);
+  font-family: 'Poiret One', cursive;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
 
-  #textHome{
-    font-size: 1.2vw;
-    font-weight: bold;
-    color: $darkerBlue;
+  h1{
+    text-align: center;
+    font-weight: lighter;
   }
 
-  div {
-    padding: 1vw;
-  }
 
-  a {
-    text-decoration: none;
-    color: $darkerBlue;
-  }
 
-  .info {
-    padding: 10px 18px;
-    border-radius: 10px;
-    background-color: $lightBlue2;
-    font-family: $fontFamily
-  }
-  .access {
-    padding: 10px 12px;
-    border-radius: 10px;
-    background-color: $lightBlue2;
-      font-family: $fontFamily
-  }
-
-  img {
-    width: 2vw;
-
-  }
-
-  .brand {
-    font-weight: bold;
-    color: $darkerBlue;
-    padding-top: 1vh;
-    font-size: 1.5vw;
-  }
-
-  .filler {
-    flex-grow: 1;
-  }
-
-  #mobile-home {
-    display: none;
-    font-size: 7vw;
-    margin-right: 1vw;
-  }
-
-  @media screen and (max-width: 1050px) {
-    height: 7vh;
-    #textHome{
-      display: none;
-    }
-    #mobile-home {
-      display: block;
-    }
-    #web {
-      display: none;
-    }
-
-    img {
-      padding-left: 1.5vw;
-      padding-top: 0.5vw;
-      width: 8vw;
-    }
-
-    .brand {
-      padding-top: 1vh;
-      font-size: 5vw;
-    }
-
-  }
+  // #textHome{
+  //   font-size: 1.2vw;
+  //   font-weight: bold;
+  //   color: $darkerBlue;
+  // }
+  //
+  // div {
+  //   padding: 1vw;
+  // }
+  //
+  // a {
+  //   text-decoration: none;
+  //   color: $darkerBlue;
+  // }
+  //
+  // .info {
+  //   padding: 10px 18px;
+  //   border-radius: 10px;
+  //   background-color: $lightBlue2;
+  //   font-family: $fontFamily
+  // }
+  // .access {
+  //   padding: 10px 12px;
+  //   border-radius: 10px;
+  //   background-color: $lightBlue2;
+  //     font-family: $fontFamily
+  // }
+  //
+  // img {
+  //   width: 2vw;
+  //
+  // }
+  //
+  // .brand {
+  //   font-weight: bold;
+  //   color: $darkerBlue;
+  //   padding-top: 1vh;
+  //   font-size: 1.5vw;
+  // }
+  //
+  // .filler {
+  //   flex-grow: 1;
+  // }
+  //
+  // #mobile-home {
+  //   display: none;
+  //   font-size: 7vw;
+  //   margin-right: 1vw;
+  // }
+  //
+  // @media screen and (max-width: 1050px) {
+  //   height: 7vh;
+  //   #textHome{
+  //     display: none;
+  //   }
+  //   #mobile-home {
+  //     display: block;
+  //   }
+  //   #web {
+  //     display: none;
+  //   }
+  //
+  //   img {
+  //     padding-left: 1.5vw;
+  //     padding-top: 0.5vw;
+  //     width: 8vw;
+  //   }
+  //
+  //   .brand {
+  //     padding-top: 1vh;
+  //     font-size: 5vw;
+  //   }
+  //
+  // }
 }
 // End Navbar

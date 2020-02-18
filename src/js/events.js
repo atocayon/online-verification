@@ -124,24 +124,24 @@ $(document).ready(function() {
   });
 
 
-    $("#byName_fname").keyup(function(){
-      $("#byName_fname").css("border", "1px solid #E0E0E0");
-      $("#byName_lname").css("border", "1px solid #E0E0E0");
-      $("#byName_bday").css("border", "1px solid #E0E0E0");
-    });
-
-    $("#byCert_certnum").keyup(function(){
-      $("#byCert_certnum").css("border", "1px solid #E0E0E0");
-      $("#byCert_fname").css("border", "1px solid #E0E0E0");
-      $("#byCert_lname").css("border", "1px solid #E0E0E0");
-    });
-
-    $("#byPDC_fname").keyup(function(){
-      $("#byPDC_module").css("border", "1px solid #E0E0E0");
-      $("#byPDC_fname").css("border", "1px solid #E0E0E0");
-      $("#byPDC_lname").css("border", "1px solid #E0E0E0");
-      $("#byPDC_bday").css("border", "1px solid #E0E0E0");
-    });
+    // $("#byName_fname").keyup(function(){
+    //   $("#byName_fname").css("border", "1px solid #E0E0E0");
+    //   $("#byName_lname").css("border", "1px solid #E0E0E0");
+    //   $("#byName_bday").css("border", "1px solid #E0E0E0");
+    // });
+    //
+    // $("#byCert_certnum").keyup(function(){
+    //   $("#byCert_certnum").css("border", "1px solid #E0E0E0");
+    //   $("#byCert_fname").css("border", "1px solid #E0E0E0");
+    //   $("#byCert_lname").css("border", "1px solid #E0E0E0");
+    // });
+    //
+    // $("#byPDC_fname").keyup(function(){
+    //   $("#byPDC_module").css("border", "1px solid #E0E0E0");
+    //   $("#byPDC_fname").css("border", "1px solid #E0E0E0");
+    //   $("#byPDC_lname").css("border", "1px solid #E0E0E0");
+    //   $("#byPDC_bday").css("border", "1px solid #E0E0E0");
+    // });
 
 
 
@@ -221,12 +221,118 @@ $(document).ready(function() {
     });
   });
 
-  $("#modal-close").click(function(){
-    // console.log("shshhss");
-    $(".backdrop").hide();
-    $(".modalViewApplicant-container").hide();
+  // $("#modal-close").click(function(){
+  //   // console.log("shshhss");
+  //   $(".backdrop").hide();
+  //   $(".modalViewApplicant-container").hide();
+  // });
+
+
+  $('[data-toggle="tooltip"]').tooltip();
+
+  $("#btn-verifyByName").click(function(){
+    $("#btn-verifyByName").hide();
+    $("#btn-verifyByCerticateNumber").hide();
+    $("#btn-verifyEnrolleesOnPDC").hide();
+    $("#btn-courseReservation").hide();
+    $("#verifyByCerticateNumber").hide();
+    $("#verifyByPDCenrollees").hide();
+    $("#verifyByName").show();
+    $("#home-page").css("background", "rgba(255,255,255, 1)");
+
   });
 
+  $("#btn-verifyByCerticateNumber").click(function(){
+    $("#btn-verifyByName").hide();
+    $("#btn-verifyByCerticateNumber").hide();
+    $("#btn-verifyEnrolleesOnPDC").hide();
+    $("#btn-courseReservation").hide();
+    $("#verifyByName").hide();
+    $("#verifyByPDCenrollees").hide();
+    $("#verifyByCerticateNumber").show();
+      $("#home-page").css("background", "rgba(255,255,255, 1)");
+  });
+
+  $("#btn-verifyEnrolleesOnPDC").click(function(){
+    $("#btn-verifyByName").hide();
+    $("#btn-verifyByCerticateNumber").hide();
+    $("#btn-verifyEnrolleesOnPDC").hide();
+    $("#btn-courseReservation").hide();
+    $("#verifyByName").hide();
+    $("#verifyByCerticateNumber").hide();
+    $("#verifyByPDCenrollees").show();
+      $("#home-page").css("background", "rgba(255,255,255, 1)");
+  });
+
+  $(".btn-goBack").click(function(){
+    $("#btn-verifyByName").show();
+    $("#btn-verifyByCerticateNumber").show();
+    $("#btn-verifyEnrolleesOnPDC").show();
+    $("#btn-courseReservation").show();
+    $("#verifyByCerticateNumber").hide();
+    $("#verifyByName").hide();
+    $("#verifyByPDCenrollees").hide();
+      $("#home-page").css("background", "rgba(255,255,255, 0.9)");
+
+    $(".error-fname").hide();
+    $(".error-lname").hide();
+    $(".error-bday").hide();
+    $(".error-certnum").hide();
+    $(".error-PDCmodule").hide();
+
+    $("#byName_fname").css("border-bottom", "1px solid #E0E0E0");
+    $("#byName_fname").css("border-left", "1px solid #fff");
+    $("#byName_fname").css("border-right", "1px solid #fff");
+    $("#byName_fname").css("border-top", "1px solid #fff");
+
+    $("#byName_lname").css("border-bottom", "1px solid #E0E0E0");
+    $("#byName_lname").css("border-left", "1px solid #fff");
+    $("#byName_lname").css("border-right", "1px solid #fff");
+    $("#byName_lname").css("border-top", "1px solid #fff");
+
+    $("#byName_bday").css("border-bottom", "1px solid #E0E0E0");
+    $("#byName_bday").css("border-left", "1px solid #fff");
+    $("#byName_bday").css("border-right", "1px solid #fff");
+    $("#byName_bday").css("border-top", "1px solid #fff");
+
+    $("#byCert_certnum").css("border-bottom", "1px solid #E0E0E0");
+    $("#byCert_certnum").css("border-left", "1px solid #fff");
+    $("#byCert_certnum").css("border-right", "1px solid #fff");
+    $("#byCert_certnum").css("border-top", "1px solid #fff");
+
+    $("#byCert_fname").css("border-bottom", "1px solid #E0E0E0");
+    $("#byCert_fname").css("border-left", "1px solid #fff");
+    $("#byCert_fname").css("border-right", "1px solid #fff");
+    $("#byCert_fname").css("border-top", "1px solid #fff");
+
+    $("#byCert_lname").css("border-bottom", "1px solid #E0E0E0");
+    $("#byCert_lname").css("border-left", "1px solid #fff");
+    $("#byCert_lname").css("border-right", "1px solid #fff");
+    $("#byCert_lname").css("border-top", "1px solid #fff");
+
+    $("#byCert_bday").css("border-bottom", "1px solid #E0E0E0");
+    $("#byCert_bday").css("border-left", "1px solid #fff");
+    $("#byCert_bday").css("border-right", "1px solid #fff");
+    $("#byCert_bday").css("border-top", "1px solid #fff");
+
+    $("#byPDC_module").css("border", "1px solid #E0E0E0");
+
+    $("#byPDC_fname").css("border-bottom", "1px solid #E0E0E0");
+    $("#byPDC_fname").css("border-left", "1px solid #fff");
+    $("#byPDC_fname").css("border-right", "1px solid #fff");
+    $("#byPDC_fname").css("border-top", "1px solid #fff");
+
+    $("#byPDC_lname").css("border-bottom", "1px solid #E0E0E0");
+    $("#byPDC_lname").css("border-left", "1px solid #fff");
+    $("#byPDC_lname").css("border-right", "1px solid #fff");
+    $("#byPDC_lname").css("border-top", "1px solid #fff");
+
+    $("#byPDC_bday").css("border-bottom", "1px solid #E0E0E0");
+    $("#byPDC_bday").css("border-left", "1px solid #fff");
+    $("#byPDC_bday").css("border-right", "1px solid #fff");
+    $("#byPDC_bday").css("border-top", "1px solid #fff");
+
+  });
 
 
 

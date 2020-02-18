@@ -1,5 +1,32 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="">
+      <input type="text" class="form-control" id="byName_fname" autocomplete="off" autofocus placeholder="Type your Firstname here...">
+      <span class="text-danger error-fname">Required</span>
+    </div>
+    <br>
+    <div class="">
+      <input type="text" class="form-control" id="byName_lname" autocomplete="off" autofocus placeholder="Type your Lastname here...">
+      <span class="text-danger error-lname">Required</span>
+    </div>
+    <br>
+    <div class="">
+      <input type="text" class="form-control" id="byName_bday" autocomplete="off" autofocus placeholder="Type your Birthday here...">
+      <span class="text-danger error-bday">Required</span>
+    </div>
+    <br>
+    <div class="">
+      <button type="submit" id="byName_submit" class="btn btn-primary" data-toggle="tooltip" title="Click to Verify"> <i class="fas fa-assistive-listening-systems"></i> Verify</button>
+    </div>
+    <br>
+    <div class="">
+      <button type="button" name="button" class="btn btn-outline-primary btn-goBack"> <i class="fas fa-home"></i> Go Back</button>
+    </div>
+  </div>
+</div>
 
-<form id="form-byName">
+
+<!-- <form id="form-byName">
   <div class="column form-byName">
     <br>
     <div class="">
@@ -46,4 +73,4 @@
   </div>
 
 
-</form>
+</form> -->

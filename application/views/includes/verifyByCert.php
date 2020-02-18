@@ -1,4 +1,36 @@
-<form>
+<div class="row">
+  <div class="col-md-12">
+    <div class="">
+      <input type="text" id="byCert_certnum" class="form-control" autocomplete="off" autofocus placeholder="Type your certificate number here...">
+      <span class="text-danger error-certnum">Required</span>
+    </div>
+    <br>
+    <div class="">
+      <input type="text" id="byCert_fname" class="form-control" autocomplete="off" autofocus placeholder="Type your Firstname here...">
+      <span class="text-danger error-fname">Required</span>
+    </div>
+    <br>
+    <div class="">
+      <input type="text" id="byCert_lname" class="form-control" autocomplete="off" autofocus placeholder="Type your Lastname here...">
+      <span class="text-danger error-lname">Required</span>
+    </div>
+    <br>
+    <div class="">
+      <input type="text" id="byCert_bday" class="form-control" autocomplete="off" autofocus placeholder="Type your Birthday here...">
+      <span class="text-danger error-bday">Required</span>
+    </div>
+    <br>
+    <div class="">
+      <button type="submit" class="btn btn-primary" id="byCert_submit" data-toggle="tooltip" title="Click to Verify"> <i class="fas fa-assistive-listening-systems"></i> Verify</button>
+    </div>
+    <br>
+    <div class="">
+      <button type="button" name="button" class="btn btn-outline-primary btn-goBack"> <i class="fas fa-home"></i> Go Back</button>
+    </div>
+  </div>
+</div>
+
+<!-- <form>
   <br>
   <div class="column">
     <div class="">
@@ -51,4 +83,4 @@
     </div>
   </div>
 
-</form>
+</form> -->

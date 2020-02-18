@@ -1,47 +1,137 @@
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 .header-container {
-  #webBanner {
-    font-size: 9vw;
-    margin-top: 10vw;
-    margin-bottom: 6vw;
-    font-family: "Archivo Black", sans-serif;
-    .title-1 {
-      color: $offWhite;
-      background-color: $darkBlue;
-      padding: 10px;
-      border-radius: 5px;
-    }
-    .title-2 {
-      color: $darkBlue;
-    }
+  text-align: center;
+  display: block;
 
-    @media screen and (max-width: 1440px){
-        margin-top: 12vw;
-        margin-bottom: 10vw;
-    }
 
-    @media screen and (max-width: 1280px){
-      margin-top: 15vw;
-    }
+  h2{
+    color: $darkBlue;
+    padding-top: 5vh;
+    font-family: 'Kaushan Script', cursive;
+    text-shadow: 1px 1px #9E9E9E;
+  }
 
-    @media screen and (max-width: 1024px){
-      font-size: 8.8vw;
-      margin-top: 23vw;
-      margin-bottom: 5vw;
-    }
-
-    @media screen and (max-width: 800px){
-
-        margin-bottom: 5vw;
-    }
-
-    @media screen and (max-width: 600px){
-      font-size: 8.5vw;
-      margin-top: 16vh;
-      margin-bottom: 10vw;
-    }
-
+  img{
+    margin-top: 3vh;
+    width: 10vw;
 
   }
+
+  .buttons{
+    margin-top: 3vh;
+  }
+
+  input{
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+  }
+
+  #btn-verifyByName,
+  #btn-verifyByCerticateNumber,
+  #btn-verifyEnrolleesOnPDC,
+  #btn-courseReservation{
+    margin-top: 3vh;
+    width: 25vw;
+    height: 7vh;
+    background: $darkBlue;
+    border: 1px solid $darkBlue;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1vw;
+    border-radius: 30px;
+    -webkit-animation: fadein 1.2s;
+    animation: fadein 1.2s;
+  }
+
+  #byName_submit, #byCert_submit, #byPDC_submit{
+    width: 20vw;
+    background: $darkBlue;
+    border: 1px solid $darkBlue;
+  }
+
+  .btn-goBack{
+    width: 20vw;
+    color: $darkBlue;
+    border: 1px solid $darkBlue;
+    &:hover{
+      color: #fff;
+      background: $darkBlue;
+    }
+  }
+
+  #verifyByName{
+    display: none;
+    -webkit-animation: fadein 1.2s;
+    animation: fadein 1.2s;
+  }
+
+  #verifyByCerticateNumber{
+    display: none;
+    -webkit-animation: fadein 1.2s;
+  animation: fadein 1.2s;
+  }
+
+  #verifyByPDCenrollees{
+    display: none;
+    -webkit-animation: fadein 1.2s;
+    animation: fadein 1.2s;
+  }
+
+  .error-fname, .error-lname, .error-bday, .error-certnum, .error-PDCmodule{
+    display: none;
+    float: left;
+  }
+
+
+  // #webBanner {
+  //   font-size: 9vw;
+  //   margin-top: 10vw;
+  //   margin-bottom: 6vw;
+  //   font-family: "Archivo Black", sans-serif;
+  //   .title-1 {
+  //     color: $offWhite;
+  //     background-color: $darkBlue;
+  //     padding: 10px;
+  //     border-radius: 5px;
+  //   }
+  //   .title-2 {
+  //     color: $darkBlue;
+  //   }
+  //
+  //   @media screen and (max-width: 1440px){
+  //       margin-top: 12vw;
+  //       margin-bottom: 10vw;
+  //   }
+  //
+  //   @media screen and (max-width: 1280px){
+  //     margin-top: 15vw;
+  //   }
+  //
+  //   @media screen and (max-width: 1024px){
+  //     font-size: 8.8vw;
+  //     margin-top: 23vw;
+  //     margin-bottom: 5vw;
+  //   }
+  //
+  //   @media screen and (max-width: 800px){
+  //
+  //       margin-bottom: 5vw;
+  //   }
+  //
+  //   @media screen and (max-width: 600px){
+  //     font-size: 8.5vw;
+  //     margin-top: 16vh;
+  //     margin-bottom: 10vw;
+  //   }
+  //
+  //
+  // }
 
 
 }

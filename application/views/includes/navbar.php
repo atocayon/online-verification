@@ -1,22 +1,13 @@
-<div class="row nav-container" id="navbar-web">
+<div class="row">
+	<div class="col-md-12">
+		<div class="nav-container">
+			<h1>National <span class="text-primary">Maritime</span> Polytechnic </h1>
+		</div>
+	</div>
+</div>
 
-		<?php
-		 $page = $this->uri->segment(3);
-			if ($page > 0) {
-				?>
-				<div class="back-home">
-					<a href="<?= base_url() ?>" class=""> <i class="fas fa-home"></i> Home </a>
-				</div>
+<!-- <div class="row nav-container" id="navbar-web">
 
-				<?php
-			}else{
-				?>
-				<div class="web-logo">
-						<a href="<?= base_url() ?>"><img src="<?= base_url() ?>src/img/logo.png" ></a>
-				</div>
-				<?php
-			}
-		 ?>
 
 
 		<div class="filler"></div>
@@ -53,4 +44,4 @@
         }
     }
 
-</script>
+</script> -->

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Abel|Archivo+Black|PT+Serif|Kaushan+Script|PT+Mono|Permanent+Marker|Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Abel|Archivo+Black|PT+Serif|Kaushan+Script|PT+Mono|Permanent+Marker|Poiret+One|Montserrat|Ropa+Sans|Kalam|Poiret+One&display=swap");
 .col-1 {
   width: 8.33%;
 }
@@ -50,85 +50,16 @@
 .nav-container {
   position: fixed;
   width: 100vw;
-  -webkit-box-shadow: 1px 2px 3px #f8f9fb;
-  box-shadow: 1px 2px 3px #f8f9fb;
   background: #fff;
-}
-
-.nav-container #textHome {
-  font-size: 1.2vw;
-  font-weight: bold;
-  color: #001b4b;
-}
-
-.nav-container div {
-  padding: 1vw;
-}
-
-.nav-container a {
-  text-decoration: none;
-  color: #001b4b;
-}
-
-.nav-container .info {
-  padding: 10px 18px;
-  border-radius: 10px;
-  background-color: #d6e8ee;
-  font-family: "Abel", sans-serif;
-}
-
-.nav-container .access {
-  padding: 10px 12px;
-  border-radius: 10px;
-  background-color: #d6e8ee;
-  font-family: "Abel", sans-serif;
-}
-
-.nav-container img {
-  width: 2vw;
-}
-
-.nav-container .brand {
-  font-weight: bold;
-  color: #001b4b;
+  background: rgba(255, 255, 255, 0.8);
+  font-family: 'Poiret One', cursive;
   padding-top: 1vh;
-  font-size: 1.5vw;
+  padding-bottom: 1vh;
 }
 
-.nav-container .filler {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.nav-container #mobile-home {
-  display: none;
-  font-size: 7vw;
-  margin-right: 1vw;
-}
-
-@media screen and (max-width: 1050px) {
-  .nav-container {
-    height: 7vh;
-  }
-  .nav-container #textHome {
-    display: none;
-  }
-  .nav-container #mobile-home {
-    display: block;
-  }
-  .nav-container #web {
-    display: none;
-  }
-  .nav-container img {
-    padding-left: 1.5vw;
-    padding-top: 0.5vw;
-    width: 8vw;
-  }
-  .nav-container .brand {
-    padding-top: 1vh;
-    font-size: 5vw;
-  }
+.nav-container h1 {
+  text-align: center;
+  font-weight: lighter;
 }
 
 .nav-mobile-container {
@@ -179,57 +110,107 @@
   padding: 20px;
 }
 
-.header-container #webBanner {
-  font-size: 9vw;
-  margin-top: 10vw;
-  margin-bottom: 6vw;
-  font-family: "Archivo Black", sans-serif;
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.header-container #webBanner .title-1 {
-  color: #f8f9fb;
-  background-color: #02457a;
-  padding: 10px;
-  border-radius: 5px;
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.header-container #webBanner .title-2 {
+.header-container {
+  text-align: center;
+  display: block;
+}
+
+.header-container h2 {
   color: #02457a;
+  padding-top: 5vh;
+  font-family: 'Kaushan Script', cursive;
+  text-shadow: 1px 1px #9E9E9E;
 }
 
-@media screen and (max-width: 1440px) {
-  .header-container #webBanner {
-    margin-top: 12vw;
-    margin-bottom: 10vw;
-  }
+.header-container img {
+  margin-top: 3vh;
+  width: 10vw;
 }
 
-@media screen and (max-width: 1280px) {
-  .header-container #webBanner {
-    margin-top: 15vw;
-  }
+.header-container .buttons {
+  margin-top: 3vh;
 }
 
-@media screen and (max-width: 1024px) {
-  .header-container #webBanner {
-    font-size: 8.8vw;
-    margin-top: 23vw;
-    margin-bottom: 5vw;
-  }
+.header-container input {
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
 }
 
-@media screen and (max-width: 800px) {
-  .header-container #webBanner {
-    margin-bottom: 5vw;
-  }
+.header-container #btn-verifyByName,
+.header-container #btn-verifyByCerticateNumber,
+.header-container #btn-verifyEnrolleesOnPDC,
+.header-container #btn-courseReservation {
+  margin-top: 3vh;
+  width: 25vw;
+  height: 7vh;
+  background: #02457a;
+  border: 1px solid #02457a;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1vw;
+  border-radius: 30px;
+  -webkit-animation: fadein 1.2s;
+  animation: fadein 1.2s;
 }
 
-@media screen and (max-width: 600px) {
-  .header-container #webBanner {
-    font-size: 8.5vw;
-    margin-top: 16vh;
-    margin-bottom: 10vw;
-  }
+.header-container #byName_submit, .header-container #byCert_submit, .header-container #byPDC_submit {
+  width: 20vw;
+  background: #02457a;
+  border: 1px solid #02457a;
+}
+
+.header-container .btn-goBack {
+  width: 20vw;
+  color: #02457a;
+  border: 1px solid #02457a;
+}
+
+.header-container .btn-goBack:hover {
+  color: #fff;
+  background: #02457a;
+}
+
+.header-container #verifyByName {
+  display: none;
+  -webkit-animation: fadein 1.2s;
+  animation: fadein 1.2s;
+}
+
+.header-container #verifyByCerticateNumber {
+  display: none;
+  -webkit-animation: fadein 1.2s;
+  animation: fadein 1.2s;
+}
+
+.header-container #verifyByPDCenrollees {
+  display: none;
+  -webkit-animation: fadein 1.2s;
+  animation: fadein 1.2s;
+}
+
+.header-container .error-fname, .header-container .error-lname, .header-container .error-bday, .header-container .error-certnum, .header-container .error-PDCmodule {
+  display: none;
+  float: left;
 }
 
 .options {
@@ -1495,38 +1476,22 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: "Abel", sans-serif;
+  background-image: url("../../img/adminBuilding.jpg");
+  width: 100vw;
+  height: 90vh;
+  /* You must set a specified height */
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.column {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.center {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.flex-end {
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+#home-page {
+  background: #fff;
+  margin-top: 12vh;
+  height: 80vh;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .verify {

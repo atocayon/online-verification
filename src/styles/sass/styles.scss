@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Abel|Archivo+Black|PT+Serif|Kaushan+Script|PT+Mono|Permanent+Marker|Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Abel|Archivo+Black|PT+Serif|Kaushan+Script|PT+Mono|Permanent+Marker|Poiret+One|Montserrat|Ropa+Sans|Kalam|Poiret+One&display=swap');
 @import "grid";
 @import "variable";
 @import "navbar";
@@ -19,26 +19,40 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: $fontFamily;
+  background-image: url("../../img/adminBuilding.jpg");
+  width: 100vw;
+  height: 90vh; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
+#home-page{
+  background: #fff;
+  margin-top: 12vh;
+  height: 80vh;
+  border-radius: 5px;
+  background: rgba(255,255,255, 0.9);
 }
 
-.column {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-
-.center{
-  justify-content: center;
-}
-
-.flex-end {
-  justify-content: flex-end;
-}
+// .row {
+//   display: flex;
+//   flex-wrap: wrap;
+// }
+//
+// .column {
+//   display: flex;
+//   flex-wrap: wrap;
+//   flex-direction: column;
+// }
+//
+// .center{
+//   justify-content: center;
+// }
+//
+// .flex-end {
+//   justify-content: flex-end;
+// }
 
 .verify {
   font-weight: bold;

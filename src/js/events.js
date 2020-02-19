@@ -1,12 +1,12 @@
 $(document).ready(function() {
-  if ($(window).width() < 1050 && page === '1' || $(window).width() < 1050 && page === '2' || $(window).width() < 1050 && page === '3') {
-    $("#navbar-mobile").show();
-    $("#navbar-web").hide();
-  }else{
-    $("#navbar-web").show();
-    $("#navbar-mobile").hide();
-  }
-
+  // if ($(window).width() < 1050 && page === '1' || $(window).width() < 1050 && page === '2' || $(window).width() < 1050 && page === '3') {
+  //   $("#navbar-mobile").show();
+  //   $("#navbar-web").hide();
+  // }else{
+  //   $("#navbar-web").show();
+  //   $("#navbar-mobile").hide();
+  // }
+  var base_url = window.location.origin;
   $("#searhAgain").click(function() {
     window.location.reload(true);
   });
@@ -38,67 +38,67 @@ $(document).ready(function() {
     $(".more-info-page").show();
   });
 
-  $("#btn-alert-modal").click(function(){
-    if ($(window).width() < 1050 && page === '1' ) {
-      $("#modal").show();
-      $(".close").show();
-      $(".alert-container").hide();
-    }else if ($(window).width() < 1050 && page === '2' || $(window).width() < 1050 && page === '3') {
-      $("#modal").show();
-      $(".close").show();
-      $("#byCertResult").show();
-      $(".alert-container").hide();
-      $("#mobile-table").hide();
-      // $("#user-avatar").hide();
-    }else{
-      $("#webView-footer").show();
-      $(".alert-container").hide();
-      $("#backdrop").hide();
-      $("body").css("overflow","auto");
-    }
+  // $("#btn-alert-modal").click(function(){
+  //   if ($(window).width() < 1050 && page === '1' ) {
+  //     $("#modal").show();
+  //     $(".close").show();
+  //     $(".alert-container").hide();
+  //   }else if ($(window).width() < 1050 && page === '2' || $(window).width() < 1050 && page === '3') {
+  //     $("#modal").show();
+  //     $(".close").show();
+  //     $("#byCertResult").show();
+  //     $(".alert-container").hide();
+  //     $("#mobile-table").hide();
+  //     // $("#user-avatar").hide();
+  //   }else{
+  //     $("#webView-footer").show();
+  //     $(".alert-container").hide();
+  //     $("#backdrop").hide();
+  //     $("body").css("overflow","auto");
+  //   }
+  //
+  // });
 
-  });
-
-  if (page === '1') {
-    $("#home").hide();
-    $("#options").hide();
-    $("#form-cert").hide();
-    $("#form-enrollees").hide();
-    $("#byCert").hide();
-    $("#forms-page").show();
-  }
-
-  if (page === '2') {
-    $("#home").hide();
-    $("#options").hide();
-    $("#form-name").hide();
-    $("#form-enrollees").hide();
-    $("#byNameAndByEnrollees").hide();
-    $("#byCerts_records_tbl").show();
-    $("#forms-page").show();
-
-    if ($(window).width() < 1050) {
-      $("#byCert").hide();
-    }else{
-      $("#byCert").show();
-    }
-  }
-
-  if (page === '3') {
-    $("#home").hide();
-    $("#options").hide();
-    $("#form-name").hide();
-    $("#form-cert").hide();
-    $("#byNameAndByEnrollees").hide();
-    $("#byCerts_records_tbl").show();
-    $("#forms-page").show();
-
-    if ($(window).width() < 1050) {
-      $("#byCert").hide();
-    }else{
-      $("#byCert").show();
-    }
-  }
+  // if (page === '1') {
+  //   $("#home").hide();
+  //   $("#options").hide();
+  //   $("#form-cert").hide();
+  //   $("#form-enrollees").hide();
+  //   $("#byCert").hide();
+  //   $("#forms-page").show();
+  // }
+  //
+  // if (page === '2') {
+  //   $("#home").hide();
+  //   $("#options").hide();
+  //   $("#form-name").hide();
+  //   $("#form-enrollees").hide();
+  //   $("#byNameAndByEnrollees").hide();
+  //   $("#byCerts_records_tbl").show();
+  //   $("#forms-page").show();
+  //
+  //   if ($(window).width() < 1050) {
+  //     $("#byCert").hide();
+  //   }else{
+  //     $("#byCert").show();
+  //   }
+  // }
+  //
+  // if (page === '3') {
+  //   $("#home").hide();
+  //   $("#options").hide();
+  //   $("#form-name").hide();
+  //   $("#form-cert").hide();
+  //   $("#byNameAndByEnrollees").hide();
+  //   $("#byCerts_records_tbl").show();
+  //   $("#forms-page").show();
+  //
+  //   if ($(window).width() < 1050) {
+  //     $("#byCert").hide();
+  //   }else{
+  //     $("#byCert").show();
+  //   }
+  // }
 
   $("#byName_bday").mask("9999/99/99", {placeholder: 'YYYY/MM/DD' });
   $("#byPDC_bday").mask("9999/99/99", {placeholder: 'YYYY/MM/DD'});
@@ -151,7 +151,7 @@ $(document).ready(function() {
 
     if ($("#admin-uname").val() !== "" && $("#admin-password").val()) {
       $.ajax({
-        url: baseURL+"nmp/login",
+        url: base_url+"/online-verification/nmp/login",
         type: "POST",
         dataType: "json",
         data: {
@@ -159,7 +159,7 @@ $(document).ready(function() {
           pword: $("#admin-password").val()
         },
         success: function(data){
-          window.location.replace(baseURL+"nmp/admin");
+          window.location.replace(base_url+"/online-verification/nmp/admin");
         },
         error: function(err){
           alert(err)
@@ -265,73 +265,90 @@ $(document).ready(function() {
   });
 
   $(".btn-goBack").click(function(){
-    $("#btn-verifyByName").show();
-    $("#btn-verifyByCerticateNumber").show();
-    $("#btn-verifyEnrolleesOnPDC").show();
-    $("#btn-courseReservation").show();
-    $("#verifyByCerticateNumber").hide();
-    $("#verifyByName").hide();
-    $("#verifyByPDCenrollees").hide();
-      $("#home-page").css("background", "rgba(255,255,255, 0.9)");
-
-    $(".error-fname").hide();
-    $(".error-lname").hide();
-    $(".error-bday").hide();
-    $(".error-certnum").hide();
-    $(".error-PDCmodule").hide();
-
-    $("#byName_fname").css("border-bottom", "1px solid #E0E0E0");
-    $("#byName_fname").css("border-left", "1px solid #fff");
-    $("#byName_fname").css("border-right", "1px solid #fff");
-    $("#byName_fname").css("border-top", "1px solid #fff");
-
-    $("#byName_lname").css("border-bottom", "1px solid #E0E0E0");
-    $("#byName_lname").css("border-left", "1px solid #fff");
-    $("#byName_lname").css("border-right", "1px solid #fff");
-    $("#byName_lname").css("border-top", "1px solid #fff");
-
-    $("#byName_bday").css("border-bottom", "1px solid #E0E0E0");
-    $("#byName_bday").css("border-left", "1px solid #fff");
-    $("#byName_bday").css("border-right", "1px solid #fff");
-    $("#byName_bday").css("border-top", "1px solid #fff");
-
-    $("#byCert_certnum").css("border-bottom", "1px solid #E0E0E0");
-    $("#byCert_certnum").css("border-left", "1px solid #fff");
-    $("#byCert_certnum").css("border-right", "1px solid #fff");
-    $("#byCert_certnum").css("border-top", "1px solid #fff");
-
-    $("#byCert_fname").css("border-bottom", "1px solid #E0E0E0");
-    $("#byCert_fname").css("border-left", "1px solid #fff");
-    $("#byCert_fname").css("border-right", "1px solid #fff");
-    $("#byCert_fname").css("border-top", "1px solid #fff");
-
-    $("#byCert_lname").css("border-bottom", "1px solid #E0E0E0");
-    $("#byCert_lname").css("border-left", "1px solid #fff");
-    $("#byCert_lname").css("border-right", "1px solid #fff");
-    $("#byCert_lname").css("border-top", "1px solid #fff");
-
-    $("#byCert_bday").css("border-bottom", "1px solid #E0E0E0");
-    $("#byCert_bday").css("border-left", "1px solid #fff");
-    $("#byCert_bday").css("border-right", "1px solid #fff");
-    $("#byCert_bday").css("border-top", "1px solid #fff");
-
-    $("#byPDC_module").css("border", "1px solid #E0E0E0");
-
-    $("#byPDC_fname").css("border-bottom", "1px solid #E0E0E0");
-    $("#byPDC_fname").css("border-left", "1px solid #fff");
-    $("#byPDC_fname").css("border-right", "1px solid #fff");
-    $("#byPDC_fname").css("border-top", "1px solid #fff");
-
-    $("#byPDC_lname").css("border-bottom", "1px solid #E0E0E0");
-    $("#byPDC_lname").css("border-left", "1px solid #fff");
-    $("#byPDC_lname").css("border-right", "1px solid #fff");
-    $("#byPDC_lname").css("border-top", "1px solid #fff");
-
-    $("#byPDC_bday").css("border-bottom", "1px solid #E0E0E0");
-    $("#byPDC_bday").css("border-left", "1px solid #fff");
-    $("#byPDC_bday").css("border-right", "1px solid #fff");
-    $("#byPDC_bday").css("border-top", "1px solid #fff");
-
+    // $("#btn-verifyByName").show();
+    // $("#btn-verifyByCerticateNumber").show();
+    // $("#btn-verifyEnrolleesOnPDC").show();
+    // $("#btn-courseReservation").show();
+    // $("#verifyByCerticateNumber").hide();
+    // $("#verifyByName").hide();
+    // $("#verifyByPDCenrollees").hide();
+    //   $("#home-page").css("background", "rgba(255,255,255, 0.9)");
+    //
+    // $(".error-fname").hide();
+    // $(".error-lname").hide();
+    // $(".error-bday").hide();
+    // $(".error-certnum").hide();
+    // $(".error-PDCmodule").hide();
+    //
+    // $(".error-fname").text('Required');
+    // $(".error-lname").text('Required');
+    // $(".error-bday").text('Required');
+    // $(".error-certnum").text('Required');
+    // $(".error-PDCmodule").text('Required');
+    //
+    // $("#byName_fname").css("border-bottom", "1px solid #E0E0E0");
+    // $("#byName_fname").css("border-left", "1px solid #fff");
+    // $("#byName_fname").css("border-right", "1px solid #fff");
+    // $("#byName_fname").css("border-top", "1px solid #fff");
+    // $("#byName_fname").val('');
+    //
+    // $("#byName_lname").css("border-bottom", "1px solid #E0E0E0");
+    // $("#byName_lname").css("border-left", "1px solid #fff");
+    // $("#byName_lname").css("border-right", "1px solid #fff");
+    // $("#byName_lname").css("border-top", "1px solid #fff");
+    // $("#byName_lname").val('');
+    //
+    // $("#byName_bday").css("border-bottom", "1px solid #E0E0E0");
+    // $("#byName_bday").css("border-left", "1px solid #fff");
+    // $("#byName_bday").css("border-right", "1px solid #fff");
+    // $("#byName_bday").css("border-top", "1px solid #fff");
+    // $("#byName_bday").val('');
+    //
+    // $("#byCert_certnum").css("border-bottom", "1px solid #E0E0E0");
+    // $("#byCert_certnum").css("border-left", "1px solid #fff");
+    // $("#byCert_certnum").css("border-right", "1px solid #fff");
+    // $("#byCert_certnum").css("border-top", "1px solid #fff");
+    // $("#byCert_certnum").val('');
+    //
+    // $("#byCert_fname").css("border-bottom", "1px solid #E0E0E0");
+    // $("#byCert_fname").css("border-left", "1px solid #fff");
+    // $("#byCert_fname").css("border-right", "1px solid #fff");
+    // $("#byCert_fname").css("border-top", "1px solid #fff");
+    // $("#byCert_fname").val('');
+    //
+    // $("#byCert_lname").css("border-bottom", "1px solid #E0E0E0");
+    // $("#byCert_lname").css("border-left", "1px solid #fff");
+    // $("#byCert_lname").css("border-right", "1px solid #fff");
+    // $("#byCert_lname").css("border-top", "1px solid #fff");
+    // $("#byCert_lname").val('');
+    //
+    // $("#byCert_bday").css("border-bottom", "1px solid #E0E0E0");
+    // $("#byCert_bday").css("border-left", "1px solid #fff");
+    // $("#byCert_bday").css("border-right", "1px solid #fff");
+    // $("#byCert_bday").css("border-top", "1px solid #fff");
+    // $("#byCert_bday").val('');
+    //
+    // $("#byPDC_module").css("border", "1px solid #E0E0E0");
+    // $("#byPDC_module").val('');
+    //
+    // $("#byPDC_fname").css("border-bottom", "1px solid #E0E0E0");
+    // $("#byPDC_fname").css("border-left", "1px solid #fff");
+    // $("#byPDC_fname").css("border-right", "1px solid #fff");
+    // $("#byPDC_fname").css("border-top", "1px solid #fff");
+    // $("#byPDC_fname").val('');
+    //
+    // $("#byPDC_lname").css("border-bottom", "1px solid #E0E0E0");
+    // $("#byPDC_lname").css("border-left", "1px solid #fff");
+    // $("#byPDC_lname").css("border-right", "1px solid #fff");
+    // $("#byPDC_lname").css("border-top", "1px solid #fff");
+    // $("#byPDC_lname").val('');
+    //
+    // $("#byPDC_bday").css("border-bottom", "1px solid #E0E0E0");
+    // $("#byPDC_bday").css("border-left", "1px solid #fff");
+    // $("#byPDC_bday").css("border-right", "1px solid #fff");
+    // $("#byPDC_bday").css("border-top", "1px solid #fff");
+    // $("#byPDC_bday").val('');
+    window.location.replace(base_url+"/online-verification")
   });
 
 

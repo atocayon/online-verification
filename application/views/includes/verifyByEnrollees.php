@@ -26,7 +26,7 @@
     </div>
     <br>
     <div class="">
-      <button id="byPDC_submit" type="submit" class="btn btn-primary" title="Click to Verify"><i class="fas fa-assistive-listening-systems"></i> Verify</button>
+      <button id="byPDC_submit" type="submit" class="btn btn-primary" title="Click to Verify"><i class="fas fa-assistive-listening-systems verify-icon"></i> <span class="spinner-border spinner-border-sm spinner-icon" style="display:none"></span> Verify</button>
     </div>
     <br>
     <div class="">

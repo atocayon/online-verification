@@ -7,6 +7,16 @@
   text-align: center;
   display: block;
 
+  input, #byPDC_module{
+    margin-left: 18vw;
+    width: 22vw;
+    margin-top: 1vh;
+    height: 5vh;
+    font-size: 1vw;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+  }
 
   h2{
     color: $darkBlue;
@@ -25,11 +35,6 @@
     margin-top: 3vh;
   }
 
-  input{
-    border-top: 1px solid #fff;
-    border-left: 1px solid #fff;
-    border-right: 1px solid #fff;
-  }
 
   #btn-verifyByName,
   #btn-verifyByCerticateNumber,
@@ -41,7 +46,6 @@
     background: $darkBlue;
     border: 1px solid $darkBlue;
     color: #fff;
-    border-radius: 8px;
     font-weight: bold;
     font-size: 1vw;
     border-radius: 30px;
@@ -59,6 +63,7 @@
     width: 20vw;
     color: $darkBlue;
     border: 1px solid $darkBlue;
+    margin-top: -2vh;
     &:hover{
       color: #fff;
       background: $darkBlue;
@@ -86,6 +91,178 @@
   .error-fname, .error-lname, .error-bday, .error-certnum, .error-PDCmodule{
     display: none;
     float: left;
+    margin-left: 22vw;
+  }
+
+  @media screen and (max-width: 1600px){
+
+    input, #byPDC_module{
+      margin-left: 22vw;
+      width: 23vw;
+      margin-top: 1vh;
+      height: 5vh;
+    }
+
+    img{
+      margin-top: 2vh;
+      width: 8vw;
+
+    }
+
+  }
+
+
+  @media screen and (max-width: 1024px){
+    h2{
+      font-size: 5vw;
+    }
+
+    img{
+      margin-top: 2vh;
+      width: 20vw;
+    }
+
+    input, #byPDC_module{
+      margin-left: 20vw;
+      width: 50vw;
+      margin-top: 2vh;
+      height: 5vh;
+      font-size: 2.5vw;
+    }
+
+
+
+    .buttons{
+      margin-top: 2vh;
+    }
+
+
+    #btn-verifyByName,
+    #btn-verifyByCerticateNumber,
+    #btn-verifyEnrolleesOnPDC,
+    #btn-courseReservation{
+      margin-top: 3vh;
+      width: 55vw;
+      height: 8vh;
+      font-size: 2.5vw;
+      border-radius: 50px;
+
+    }
+
+    #byName_submit, #byCert_submit, #byPDC_submit{
+      width: 45vw;
+      height: 5vh;
+      font-size: 2.5vw;
+      margin-top: 1vh;
+    }
+
+    .btn-goBack{
+      width: 45vw;
+      height: 5vh;
+      font-size: 2.5vw;
+
+    }
+
+
+  }
+
+
+
+  @media screen and (max-width: 800px){
+    input, #byPDC_module{
+      margin-left: 10vw;
+      width: 65vw;
+      margin-top: 1vh;
+      height: 6vh;
+      font-size: 3vw;
+    }
+
+    .error-fname, .error-lname, .error-bday, .error-certnum, .error-PDCmodule{
+
+      margin-left: 10vw;
+    }
+
+    #btn-verifyByName,
+    #btn-verifyByCerticateNumber,
+    #btn-verifyEnrolleesOnPDC,
+    #btn-courseReservation{
+      margin-top: 3vh;
+      width: 65vw;
+      height: 9vh;
+      font-size: 3vw;
+      border-radius: 60px;
+
+    }
+
+    #byName_submit, #byCert_submit, #byPDC_submit{
+      width: 60vw;
+      height: 7vh;
+      font-size: 3vw;
+      margin-top: 1vh;
+    }
+
+    .btn-goBack{
+      width: 60vw;
+      height: 7vh;
+      font-size: 3vw;
+
+    }
+  }
+
+  @media screen and (max-width: 480px){
+
+    input, #byPDC_module{
+
+      margin-top: 0vh;
+
+    }
+
+    h2{
+      font-size: 6vw;
+    }
+
+    .buttons{
+      margin-top: 1vh;
+    }
+
+
+    #btn-verifyByName,
+    #btn-verifyByCerticateNumber,
+    #btn-verifyEnrolleesOnPDC,
+    #btn-courseReservation{
+
+      width: 75vw;
+      height: 9vh;
+      font-size: 3.2vw;
+      border-radius: 60px;
+
+    }
+
+    #byName_submit, #byCert_submit, #byPDC_submit{
+      width: 60vw;
+      height: 5vh;
+      font-size: 3vw;
+      margin-top: 1vh;
+    }
+
+    .btn-goBack{
+      width: 60vw;
+      height: 5vh;
+      font-size: 3vw;
+      margin-top: -2vh;
+    }
+  }
+
+  @media screen and (max-width: 320px){
+    #byName_submit, #byCert_submit, #byPDC_submit{
+
+      margin-top: -3vh;
+    }
+
+    .btn-goBack{
+
+      margin-top: -8vh;
+    }
   }
 
 

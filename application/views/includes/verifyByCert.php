@@ -21,7 +21,7 @@
     </div>
     <br>
     <div class="">
-      <button type="submit" class="btn btn-primary" id="byCert_submit" data-toggle="tooltip" title="Click to Verify"> <i class="fas fa-assistive-listening-systems"></i> Verify</button>
+      <button type="submit" class="btn btn-primary" id="byCert_submit" data-toggle="tooltip" title="Click to Verify"> <i class="fas fa-assistive-listening-systems verify-icon"></i> <span class="spinner-border spinner-border-sm spinner-icon" style="display:none"></span> Verify</button>
     </div>
     <br>
     <div class="">

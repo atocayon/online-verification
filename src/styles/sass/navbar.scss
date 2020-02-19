@@ -14,6 +14,18 @@
     font-weight: lighter;
   }
 
+  @media screen and (max-width: 480px){
+    h1{
+      font-size: 6vw;
+    }
+  }
+
+
+  // @media screen and (max-width: 414px){
+  //   h1{
+  //     font-size: 6vw;
+  //   }
+  // }
 
 
   // #textHome{

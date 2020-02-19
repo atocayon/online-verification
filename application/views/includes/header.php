@@ -11,9 +11,9 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 col-sm-12">
       <div class="header-container">
-        <h2>Trainee Online Verification</h2>
+        <h2>Online Verification</h2>
 
         <img src="<?= base_url() ?>src/img/logo.png" alt="">
 
@@ -36,56 +36,47 @@
 
 
         <div class="verifyByName" id="verifyByName">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4">
 
-              </div>
-              <div class="col-md-4">
+            <div class="row">
+
+              <div class="col-md-12">
                 <?php include 'verifyByName.php'; ?>
               </div>
-              <div class="col-md-4">
 
-              </div>
+
+
             </div>
-          </div>
+
         </div>
 
 
         <div class="verifyByCerticateNumber" id="verifyByCerticateNumber">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4">
 
-              </div>
-              <div class="col-md-4">
+            <div class="row">
+
+              <div class="col-md-12 ">
                 <?php include 'verifyByCert.php'; ?>
               </div>
-              <div class="col-md-4">
 
-              </div>
             </div>
-          </div>
+
         </div>
 
 
         <div class="verifyByPDCenrollees" id="verifyByPDCenrollees">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4">
 
-              </div>
-              <div class="col-md-4">
+            <div class="row">
+
+              <div class="col-md-12">
                 <?php include 'verifyByEnrollees.php'; ?>
               </div>
-              <div class="col-md-4">
 
-              </div>
             </div>
-          </div>
+
         </div>
 
       </div>
+
     </div>
   </div>
 </div>

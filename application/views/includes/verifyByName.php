@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-12 col-sm-12">
     <div class="">
       <input type="text" class="form-control" id="byName_fname" autocomplete="off" autofocus placeholder="Type your Firstname here...">
       <span class="text-danger error-fname">Required</span>
@@ -16,14 +16,25 @@
     </div>
     <br>
     <div class="">
-      <button type="submit" id="byName_submit" class="btn btn-primary" data-toggle="tooltip" title="Click to Verify"> <i class="fas fa-assistive-listening-systems"></i> Verify</button>
+      <button type="submit" id="byName_submit" class="btn btn-primary" > <i class="fas fa-assistive-listening-systems verify-icon"></i> <span class="spinner-border spinner-border-sm spinner-icon" style="display:none"></span> Verify</button>
     </div>
     <br>
     <div class="">
       <button type="button" name="button" class="btn btn-outline-primary btn-goBack"> <i class="fas fa-home"></i> Go Back</button>
     </div>
+    <br>
+    <div class="toast mt-3">
+    <div class="toast-header">
+      Notice
+    </div>
+    <div class="toast-body">
+      No Data Found in the database
+    </div>
+  </div>
   </div>
 </div>
+
+
 
 
 <!-- <form id="form-byName">

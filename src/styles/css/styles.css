@@ -54,15 +54,42 @@
   border-right: 1px solid #fff;
 }
 
+.header-container #reservation_fname,
+.header-container #reservation_mname,
+.header-container #reservation_lname,
+.header-container #reservation_email,
+.header-container #reservation_add,
+.header-container #reservation_mobileNum,
+.header-container #reservation_srnNum {
+  width: 22vw;
+  margin-left: 17vw;
+  margin-top: 1vh;
+  height: 5vh;
+  font-size: 1vw;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+.header-container #btn-submit-reservation {
+  margin-top: -1vh;
+}
+
 .header-container h2 {
   color: #02457a;
-  padding-top: 5vh;
+  padding-top: 3vh;
   font-family: 'Kaushan Script', cursive;
   text-shadow: 1px 1px #9E9E9E;
 }
 
+.header-container h4 {
+  padding-top: 3vh;
+  color: #02457a;
+  font-weight: bold;
+}
+
 .header-container img {
-  margin-top: 3vh;
+  margin-top: 1vh;
   width: 10vw;
 }
 
@@ -129,6 +156,19 @@
   margin-left: 22vw;
 }
 
+.header-container #coursesOffered {
+  display: none;
+  margin-top: 5vh;
+}
+
+.header-container #coursesOffered .btn-category {
+  width: 30vw;
+  height: 10vh;
+  margin-top: 2vh;
+  background: #02457a;
+  border-radius: 50px;
+}
+
 @media screen and (max-width: 1600px) {
   .header-container input, .header-container #byPDC_module {
     margin-left: 22vw;
@@ -137,8 +177,28 @@
     height: 5vh;
   }
   .header-container img {
-    margin-top: 2vh;
+    margin-top: 1vh;
     width: 8vw;
+  }
+  .header-container #reservation_fname,
+  .header-container #reservation_mname,
+  .header-container #reservation_lname,
+  .header-container #reservation_email,
+  .header-container #reservation_add,
+  .header-container #reservation_mobileNum,
+  .header-container #reservation_srnNum {
+    margin-left: 20vw;
+    width: 23vw;
+    margin-top: 1vh;
+    height: 5vh;
+  }
+  .header-container #coursesOffered {
+    margin-top: 5vh;
+  }
+  .header-container #coursesOffered .btn-category {
+    width: 25vw;
+    height: 10vh;
+    margin-top: 2vh;
   }
 }
 
@@ -146,9 +206,12 @@
   .header-container h2 {
     font-size: 5vw;
   }
+  .header-container h4 {
+    font-size: 3vw;
+  }
   .header-container img {
-    margin-top: 2vh;
-    width: 20vw;
+    margin-top: 1vh;
+    width: 18vw;
   }
   .header-container input, .header-container #byPDC_module {
     margin-left: 20vw;
@@ -156,6 +219,25 @@
     margin-top: 2vh;
     height: 5vh;
     font-size: 2.5vw;
+  }
+  .header-container #reservation_fname,
+  .header-container #reservation_mname,
+  .header-container #reservation_lname,
+  .header-container #reservation_email,
+  .header-container #reservation_add,
+  .header-container #reservation_mobileNum,
+  .header-container #reservation_srnNum {
+    margin-left: 15vw;
+    width: 50vw;
+    margin-top: 2vh;
+    height: 5vh;
+    font-size: 2.5vw;
+    border-radius: 30px;
+  }
+  .header-container #btn-submit-reservation {
+    width: 30vw;
+    height: 5vh;
+    font-size: 2vw;
   }
   .header-container .buttons {
     margin-top: 2vh;
@@ -180,6 +262,21 @@
     width: 45vw;
     height: 5vh;
     font-size: 2.5vw;
+    margin-top: 1vh;
+  }
+  .header-container #coursesOffered {
+    margin-top: 5vh;
+  }
+  .header-container #coursesOffered .btn-category {
+    width: 40vw;
+    height: 10vh;
+    margin-top: 3vh;
+    font-size: 2.5vw;
+    border-radius: 60px;
+  }
+  .header-container #coursesOffered-container {
+    height: 45vh;
+    overflow: auto;
   }
 }
 
@@ -189,6 +286,24 @@
     width: 65vw;
     margin-top: 1vh;
     height: 6vh;
+    font-size: 3vw;
+  }
+  .header-container #reservation_fname,
+  .header-container #reservation_mname,
+  .header-container #reservation_lname,
+  .header-container #reservation_email,
+  .header-container #reservation_add,
+  .header-container #reservation_mobileNum,
+  .header-container #reservation_srnNum {
+    margin-left: 5vw;
+    width: 65vw;
+    margin-top: 1vh;
+    height: 6vh;
+    font-size: 3vw;
+    padding-left: 3vw;
+  }
+  .header-container #btn-submit-reservation {
+    margin-top: 1vh;
     font-size: 3vw;
   }
   .header-container .error-fname, .header-container .error-lname, .header-container .error-bday, .header-container .error-certnum, .header-container .error-PDCmodule {
@@ -214,6 +329,48 @@
     width: 60vw;
     height: 7vh;
     font-size: 3vw;
+    margin-top: 1vh;
+  }
+  .header-container #coursesOffered-container {
+    height: 40vh;
+    overflow: auto;
+  }
+  .header-container #coursesOffered .btn-category {
+    width: 35vw;
+    height: 8vh;
+    margin-top: 3vh;
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header-container #reservation_fname,
+  .header-container #reservation_mname,
+  .header-container #reservation_lname,
+  .header-container #reservation_email,
+  .header-container #reservation_add,
+  .header-container #reservation_mobileNum,
+  .header-container #reservation_srnNum {
+    margin-left: 5vw;
+    width: 60vw;
+    margin-top: 1.5vh;
+    height: 5vh;
+    font-size: 3vw;
+    padding-left: 3vw;
+  }
+  .header-container #coursesOffered .btn-category {
+    width: 60vw;
+    height: 8vh;
+    margin-top: 3vh;
+    font-size: 3vw;
+    border-radius: 50px;
+  }
+  .header-container #coursesOffered-container {
+    height: 50vh;
+    overflow: auto;
+  }
+  .header-container .btn-goBack {
+    margin-top: -1vh;
   }
 }
 
@@ -750,498 +907,39 @@ body {
   margin-top: 12vh;
   height: 80vh;
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.9);
-}
-
-.verify {
-  font-weight: bold;
-  color: #455a64;
-  margin-top: 30px;
-}
-
-#forms-page {
-  display: none;
-}
-
-.web-footer {
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  background-color: #02457a;
-  margin-top: 15vh;
-  width: 100%;
-}
-
-.web-footer h3 {
-  color: #f8f9fb;
-  font-size: 1vw;
-}
-
-.web-footer p {
-  color: #f8f9fb;
-  font-size: 0.7vw;
-}
-
-.web-footer #web-nmp {
-  margin-top: 3vw;
-}
-
-.web-footer #web-nmp img {
-  width: 3.5vw;
-  height: 6vh;
-}
-
-.web-footer #web-nmp h3 {
-  font-size: 1vw;
-}
-
-@media screen and (max-width: 1440px) {
-  .web-footer {
-    margin-top: 20vh;
-  }
-}
-
-@media screen and (max-width: 1280px) {
-  .web-footer {
-    margin-top: 26vh;
-  }
-}
-
-.mobile-footer {
-  display: none;
-  width: 100%;
-  background-color: #02457a;
-  bottom: 0;
-  text-align: center;
-  position: fixed;
-}
-
-.mobile-footer h6 {
-  color: #f8f9fb;
-}
-
-@media screen and (max-width: 1050px) {
-  .mobile-footer {
-    display: block;
-  }
-  .web-footer {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 768px) and (max-height: 1280px) {
-  .table-container {
-    display: none;
-  }
+  background: rgba(255, 255, 255, 0.8);
 }
 
 @media screen and (max-width: 1024px) {
-  .table-container {
-    display: none;
+  #modal, #alert-modal, #modalCourses,
+  #successModal {
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    font-size: 2.3vw;
   }
-  .submit-button {
-    display: none;
+  #modal button, #alert-modal button, #modalCourses button,
+  #successModal button {
+    font-size: 2.3vw;
   }
-  .mobile-button {
-    display: block;
+  #modal h4, #alert-modal h4, #modalCourses h4,
+  #successModal h4 {
+    font-size: 2.3vw;
   }
-}
-
-#dropdown-content {
-  border: 1px solid #f8f9fb;
-  left: 65%;
-  position: fixed;
-  width: 30vw;
-  margin-top: 8vh;
-  background: #fff;
-}
-
-#dropdown-content div {
-  margin-top: 1vh;
-  margin-bottom: 2vh;
-}
-
-#dropdown-content a {
-  padding: 5px;
-  font-size: 4vw;
 }
 
 @media screen and (max-width: 800px) {
-  #dropdown-content {
-    margin-top: 6vh;
-  }
-}
-
-#byPDC_module {
-  border: 1px solid #eceff1;
-  -webkit-box-shadow: 1px 1px 1px #eceff1;
-  box-shadow: 1px 1px 1px #eceff1;
-  color: #455a64;
-  height: 2.5vw;
-  width: 21vw;
-}
-
-@media screen and (max-width: 1024px) {
-  #byPDC_module {
-    height: 6.5vw;
-    width: 90vw;
-    font-size: 2vw;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  #byPDC_module {
-    height: 10vw;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  #byPDC_module {
-    height: 10vw;
+  #modal, #alert-modal, #modalCourses,
+  #successModal {
     font-size: 3vw;
   }
-}
-
-.form-input-spacing {
-  margin-bottom: 1vw;
-}
-
-@media screen and (max-width: 1024px) {
-  .form-input-spacing {
-    margin-bottom: 4vw;
+  #modal button, #alert-modal button, #modalCourses button,
+  #successModal button {
+    font-size: 3vw;
   }
-}
-
-@media screen and (max-width: 414px) {
-  .form-input-spacing {
-    margin-bottom: 7vw;
+  #modal h4, #alert-modal h4, #modalCourses h4,
+  #successModal h4 {
+    font-size: 3vw;
   }
-}
-
-.loading {
-  display: none;
-  position: absolute;
-  bottom: 50%;
-  left: 40%;
-  text-align: center;
-}
-
-.loading h1 {
-  color: white;
-}
-
-@media screen and (max-width: 1024px) {
-  .loading {
-    left: 35%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .loading {
-    left: 30%;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  .loading {
-    left: 28%;
-  }
-  .loading h1 {
-    font-size: 6vw;
-  }
-}
-
-@media screen and (max-width: 384px) {
-  .loading {
-    left: 25%;
-  }
-}
-
-.backdrop {
-  display: none;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.7);
-}
-
-.back-home {
-  background: #d6e8ee;
-}
-
-@media screen and (max-width: 1024px) {
-  .back-home {
-    display: none;
-  }
-}
-
-#coming_soon {
-  width: 40vw;
-}
-
-@media screen and (max-width: 1024px) {
-  #coming_soon {
-    width: 80vw;
-    margin-top: 20vh;
-  }
-}
-
-.trainee-reservation-container {
-  margin-bottom: 20vh;
-  font-family: 'PT Mono', monospace;
-}
-
-.trainee-reservation-container table {
-  width: 100vw;
-  border-collapse: collapse;
-}
-
-.trainee-reservation-container table th {
-  text-align: left;
-  color: #fff;
-  background: #0B457A;
-  padding-left: 2vw;
-  padding-right: 2vw;
-  padding-top: 5vh;
-  padding-bottom: 1vh;
-  font-weight: bold;
-  font-size: 1vw;
-}
-
-.trainee-reservation-container table td {
-  color: #607D8B;
-  padding-left: 2vw;
-  padding-right: 2vw;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-}
-
-.trainee-reservation-container table tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-.trainee-reservation-container #btn-confirmReservation {
-  border: 1px solid #4CAF50;
-  color: #4CAF50;
-  padding: 5px;
-}
-
-.trainee-reservation-container #btn-confirmReservation:hover {
-  background: #4CAF50;
-  color: #fff;
-}
-
-.trainee-reservation-container #btn-deleteReservation {
-  border: 1px solid #d50000;
-  color: #d50000;
-  padding: 5px;
-}
-
-.trainee-reservation-container #btn-deleteReservation:hover {
-  background: #d50000;
-  color: #fff;
-}
-
-.trainee-reservation-container #btn-viewInfoReservation {
-  border: 1px solid #2196F3;
-  color: #2196F3;
-  padding: 5px;
-}
-
-.trainee-reservation-container #btn-viewInfoReservation:hover {
-  background: #2196F3;
-  color: #fff;
-}
-
-.trainee-reservation-container #approved, .trainee-reservation-container #rejected {
-  display: none;
-}
-
-.nmp-logo-container {
-  position: fixed;
-  bottom: 0;
-  color: #02457a;
-  background: #fff;
-  width: 100vw;
-  height: 6vh;
-  padding-top: 1vh;
-}
-
-.nmp-logo-container #nmp-logo {
-  width: 3vw;
-  margin-left: 38vw;
-}
-
-.nmp-logo-container h2 {
-  font-family: 'Kaushan Script', cursive;
-  margin-top: 10px;
-  font-weight: bold;
-  margin-left: 1vw;
-  font-size: 1.5vw;
-}
-
-.admin-control {
-  position: fixed;
-  bottom: 0;
-  margin-bottom: 0.5vh;
-  -webkit-transition: margin-bottom 2s;
-  -o-transition: margin-bottom 2s;
-  transition: margin-bottom 2s;
-  -webkit-transition-timing-function: ease;
-  -o-transition-timing-function: ease;
-  transition-timing-function: ease;
-  width: 100vw;
-  height: 8vh;
-  background: #d6e8ee;
-  padding-bottom: 1vh;
-}
-
-.admin-control #up {
-  margin-top: -2vh;
-  margin-left: 48vw;
-  background: #d6e8ee;
-  padding-left: 0.5vw;
-  padding-right: 0.5vw;
-  border-radius: 100px;
-  -webkit-transition: display 2s;
-  -o-transition: display 2s;
-  transition: display 2s;
-  -webkit-transition-timing-function: ease-in-out;
-  -o-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-}
-
-.admin-control #down {
-  display: none;
-  margin-top: -2vh;
-  margin-left: 48vw;
-  background: #d6e8ee;
-  padding-left: 0.5vw;
-  padding-right: 0.5vw;
-  border-radius: 100px;
-  -webkit-transition: display 2s;
-  -o-transition: display 2s;
-  transition: display 2s;
-  -webkit-transition-timing-function: ease-in-out;
-  -o-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-}
-
-.admin-control:hover {
-  margin-bottom: 8vh;
-}
-
-.admin-control:hover #up {
-  display: none;
-}
-
-.admin-control:hover #down {
-  display: block;
-}
-
-.admin-control .admin-control-options {
-  margin-left: 27vw;
-}
-
-.admin-control .admin-control-options div {
-  text-align: center;
-  width: 8vw;
-  border-left: 1px solid #02457a;
-  border-right: 1px solid #02457a;
-  margin-left: 1vw;
-  margin-right: 1vw;
-  padding-left: 1vw;
-  padding-right: 1vw;
-  padding-top: 0.2vh;
-  padding-bottom: 0.2vh;
-  border-radius: 5px;
-}
-
-.admin-control .admin-control-options a {
-  text-decoration: none;
-  color: #02457a;
-}
-
-.admin-control .admin-control-options a:hover {
-  text-decoration: underline;
-}
-
-.nmp-admin-login-container {
-  margin-top: 13vh;
-}
-
-.nmp-admin-login-container h1 {
-  font-family: 'Permanent Marker', cursive;
-  color: #02457a;
-  text-align: center;
-}
-
-.nmp-admin-login-container p {
-  font-family: 'Poiret One', cursive;
-}
-
-.nmp-admin-login-container input {
-  margin-top: 5vh;
-  width: 25vw;
-  height: 5vh;
-  border-top: 1px solid #fff;
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
-  padding-left: 1vw;
-}
-
-.nmp-admin-login-container button {
-  margin-top: 5vh;
-  width: 25vw;
-  height: 5vh;
-  border-radius: 8px;
-  background: -webkit-gradient(linear, left top, right top, from(#0575E6), to(#021B79));
-  background: -webkit-linear-gradient(left, #0575E6, #021B79);
-  background: -o-linear-gradient(left, #0575E6, #021B79);
-  background: linear-gradient(to right, #0575E6, #021B79);
-  border: 1px solid #021B79;
-  color: #fff;
-  font-family: 'Poiret One', cursive;
-  font-size: 1vw;
-}
-
-.nmp-admin-login-container img {
-  width: 2vw;
-  margin-bottom: 2vh;
-}
-
-.modalViewApplicant-container {
-  display: none;
-  position: fixed;
-  top: 0;
-  margin-top: 5vh;
-  margin-left: 30vw;
-  background: #fff;
-  width: 40vw;
-  height: 40vh;
-  border: 1px solid #fff;
-  border-radius: 10px;
-  padding-left: 1vw;
-  padding-right: 1vw;
-  color: #37474F;
-}
-
-.modalViewApplicant-container .modal-header {
-  border-bottom: 1px solid #BDBDBD;
-}
-
-.modalViewApplicant-container .modal-header button {
-  text-decoration: none;
-  color: #37474F;
-  margin-top: 2vh;
-  margin-bottom: 2vh;
-  border: 1px solid #fff;
-  background: #fff;
-}
-
-.modalViewApplicant-container .modal-header button:hover {
-  color: red;
 }
 
 /*# sourceMappingURL=styles.css.map */

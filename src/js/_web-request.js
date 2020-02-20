@@ -42,6 +42,7 @@ $(document).ready(function() {
           // $("body").css("overflow","hidden");
           $(".verify-icon").hide();
           $(".spinner-icon").show();
+          $("#alert-modal").modal('show');
         },
         success: function(data) {
           if (data.record["response"] == "null") {
@@ -91,7 +92,7 @@ $(document).ready(function() {
             $("#byName_bday").css("border-left", "1px solid #fff");
             $("#byName_bday").css("border-right", "1px solid #fff");
             $("#byName_bday").css("border-top", "1px solid #fff");
-            $('#modal').modal('show');
+
             $("#records_tbl").show();
             $("#byCerts_records_tbl").hide();
             $(".verify-icon").show();
@@ -113,7 +114,7 @@ $(document).ready(function() {
             }
 
             $("#tbl_data").prepend(tbl);
-            $(".modal-title").html("<i class='fas fa-user'></i> &nbsp;"+data["record"][0]["name"]);
+            $("#name").html("<i class='fas fa-user'></i> &nbsp;"+data["record"][0]["name"]);
           }
         },
         error: function(error) {
@@ -153,6 +154,7 @@ $(document).ready(function() {
           // $("body").css("overflow","hidden");
           $(".verify-icon").hide();
           $(".spinner-icon").show();
+          $("#alert-modal").modal('show');
         },
         success: function(data) {
           if (data.record["response"] == "null") {
@@ -207,7 +209,7 @@ $(document).ready(function() {
           $("#byCert_bday").css("border-right", "1px solid #fff");
           $("#byCert_bday").css("border-top", "1px solid #fff");
           $("#records_tbl").hide();
-            $('#modal').modal('show');
+            // $('#modal').modal('show');
           $("#byCerts_records_tbl").show();
           $(".verify-icon").show();
           $(".spinner-icon").hide();
@@ -222,7 +224,7 @@ $(document).ready(function() {
             }
 
             $("#byCert_tbl_data").prepend(tbl);
-            $(".modal-title").html("<i class='fas fa-user'></i> &nbsp;"+data["record"][0]["name"]);
+            $("#name").html("<i class='fas fa-user'></i> &nbsp;"+data["record"][0]["name"]);
           }
         },
         error: function(error) {
@@ -272,6 +274,7 @@ $(document).ready(function() {
           // $("body").css("overflow","hidden");
           $(".verify-icon").hide();
           $(".spinner-icon").show();
+          $("#alert-modal").modal('show');
         },
         success: function(data) {
           if (data.record["response"] == "null") {
@@ -339,7 +342,7 @@ $(document).ready(function() {
               }
 
               $("#byCert_tbl_data").prepend(tbl);
-              $(".modal-title").html("<i class='fas fa-user'></i> &nbsp;"+ data["record"][0]["name"]);
+              $("#name").html("<i class='fas fa-user'></i> &nbsp;"+ data["record"][0]["name"]);
           }
         },
         error: function(error) {

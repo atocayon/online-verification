@@ -20,21 +20,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			<div class="home-page" id="home-page">
 
-				<div id="home">
-			 	 <?php include 'includes/header.php'; ?>
-			  </div>
+						<div id="home">
+						 <?php include 'includes/main.php'; ?>
+						</div>
 
 			</div>
 
 			<!-- The Modal -->
       <div class="modal fade" id="modal">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
           <div class="modal-content">
 
             <!-- Modal Header -->
             <div class="modal-header">
-              <h4 class="modal-title"> Modal Heading</h4>
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title" id="name"> Modal Heading</h4>
+              <button type="button" class="close close-modal">&times;</button>
             </div>
 
             <!-- Modal body -->
@@ -76,6 +76,100 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </div>
         </div>
       </div>
+
+
+			<!-- The Modal -->
+			<div class="modal fade" id="alert-modal">
+			  <div class="modal-dialog ">
+			    <div class="modal-content">
+
+			      <!-- Modal Header -->
+			      <div class="modal-header">
+			        <h4 class="modal-title">Notice</h4>
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+			      </div>
+
+			      <!-- Modal body -->
+			      <div class="modal-body">
+							<p style="text-align:center;">
+								This system is intended to be used for verification of certificate information of NMP Trainees.
+			          Any misuse or manipulation of the Personal data provided in the search result will be subjected to RA No. 10173
+			          otherwise known as the Data Privacy Act of 2012. If you have some questions or clarification kindly check the FAQ page or
+			          <a href="#">Click Here</a> to contact the National Maritime Polytechnic.
+							</p>
+
+			      </div>
+
+			      <!-- Modal footer -->
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-danger" id="btn-confirm">Confirm</button>
+			      </div>
+
+			    </div>
+			  </div>
+			</div>
+
+
+			<!-- The Modal -->
+			<div class="modal fade" id="modalCourses">
+			  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+			    <div class="modal-content">
+
+			      <!-- Modal Header -->
+			      <div class="modal-header">
+			        <h4 class="modal-title" id="category">Offered Courses</h4>
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+			      </div>
+
+			      <!-- Modal body -->
+			      <div class="modal-body">
+			        <div class="row">
+								<div class="col-md-12">
+									<table class="table table-striped table-hover" id="tbl-coursesOffered">
+										<thead class="thead-dark">
+											<tr>
+                        <th>Module Desciption</th>
+                        <th>Schedule</th>
+                        <th>No. Wait List</th>
+                      </tr>
+										</thead>
+									</table>
+								</div>
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+
+			<!-- The Modal -->
+			<div class="modal" id="successModal">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+
+			      <!-- Modal Header -->
+			      <div class="modal-header">
+			        <h4 class="modal-title">Success</h4>
+			        <button type="button" class="close close-modal" >&times;</button>
+			      </div>
+
+			      <!-- Modal body -->
+			      <div class="modal-body">
+			        <div class="row">
+								<div class="col-md-12">
+									<p style="text-align:center">The National Maritime Polytechnic would like to thank you for reserving a training course slot through this system. Please check our message in your email.</p>
+								</div>
+			        </div>
+			      </div>
+
+			      <!-- Modal footer -->
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-primary" id="btn-confirm-reservationModal">Ok, Got it</button>
+			      </div>
+
+			    </div>
+			  </div>
+			</div>
+
 		</div>
 	</div>
 </div>
@@ -92,13 +186,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </script>
 <script src="<?= base_url() ?>src/js/_web-request.js"></script>
 <script src="<?= base_url() ?>src/js/events.js"></script>
-<!-- <script src="<?= base_url() ?>src/js/_mobile-request.js"></script> -->
-
-<script type="text/javascript">
-	// var baseURL= "<?= base_url() ?>";
-	// console.log(baseURL);
-	// var page = "<?= $this->uri->segment(3) ?>";
-
+<script src="<?= base_url() ?>src/js/reservationFormValidation.js">
 
 </script>
 </body>

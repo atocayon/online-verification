@@ -18,15 +18,42 @@
     border-right: 1px solid #fff;
   }
 
+  #reservation_fname,
+  #reservation_mname,
+  #reservation_lname,
+  #reservation_email,
+  #reservation_add,
+  #reservation_mobileNum,
+  #reservation_srnNum{
+    width: 22vw;
+    margin-left: 17vw;
+    margin-top: 1vh;
+    height: 5vh;
+    font-size: 1vw;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+  }
+
+  #btn-submit-reservation{
+    margin-top: -1vh;
+  }
+
   h2{
     color: $darkBlue;
-    padding-top: 5vh;
+    padding-top: 3vh;
     font-family: 'Kaushan Script', cursive;
     text-shadow: 1px 1px #9E9E9E;
   }
 
+  h4{
+    padding-top: 3vh;
+    color: $darkBlue;
+    font-weight: bold;
+  }
+
   img{
-    margin-top: 3vh;
+    margin-top: 1vh;
     width: 10vw;
 
   }
@@ -94,6 +121,18 @@
     margin-left: 22vw;
   }
 
+  #coursesOffered{
+    display: none;
+    margin-top: 5vh;
+    .btn-category{
+      width: 30vw;
+      height: 10vh;
+      margin-top: 2vh;
+      background: $darkBlue;
+      border-radius: 50px;
+    }
+  }
+
   @media screen and (max-width: 1600px){
 
     input, #byPDC_module{
@@ -104,9 +143,31 @@
     }
 
     img{
-      margin-top: 2vh;
+      margin-top: 1vh;
       width: 8vw;
+    }
 
+    #reservation_fname,
+    #reservation_mname,
+    #reservation_lname,
+    #reservation_email,
+    #reservation_add,
+    #reservation_mobileNum,
+    #reservation_srnNum{
+      margin-left: 20vw;
+      width: 23vw;
+      margin-top: 1vh;
+      height: 5vh;
+    }
+
+    #coursesOffered{
+
+      margin-top: 5vh;
+      .btn-category{
+        width: 25vw;
+        height: 10vh;
+        margin-top: 2vh;
+      }
     }
 
   }
@@ -117,9 +178,13 @@
       font-size: 5vw;
     }
 
+    h4{
+      font-size: 3vw;
+    }
+
     img{
-      margin-top: 2vh;
-      width: 20vw;
+      margin-top: 1vh;
+      width: 18vw;
     }
 
     input, #byPDC_module{
@@ -130,6 +195,27 @@
       font-size: 2.5vw;
     }
 
+    #reservation_fname,
+    #reservation_mname,
+    #reservation_lname,
+    #reservation_email,
+    #reservation_add,
+    #reservation_mobileNum,
+    #reservation_srnNum{
+      margin-left: 15vw;
+      width: 50vw;
+      margin-top: 2vh;
+      height: 5vh;
+      font-size: 2.5vw;
+      border-radius: 30px;
+    }
+
+    #btn-submit-reservation{
+      width: 30vw;
+      height: 5vh;
+      font-size: 2vw;
+
+    }
 
 
     .buttons{
@@ -160,7 +246,24 @@
       width: 45vw;
       height: 5vh;
       font-size: 2.5vw;
+      margin-top: 1vh;
+    }
 
+    #coursesOffered{
+
+      margin-top: 5vh;
+      .btn-category{
+        width: 40vw;
+        height: 10vh;
+        margin-top: 3vh;
+        font-size: 2.5vw;
+        border-radius: 60px;
+      }
+    }
+
+    #coursesOffered-container{
+      height: 45vh;
+      overflow: auto;
     }
 
 
@@ -169,11 +272,32 @@
 
 
   @media screen and (max-width: 800px){
+
     input, #byPDC_module{
       margin-left: 10vw;
       width: 65vw;
       margin-top: 1vh;
       height: 6vh;
+      font-size: 3vw;
+    }
+
+    #reservation_fname,
+    #reservation_mname,
+    #reservation_lname,
+    #reservation_email,
+    #reservation_add,
+    #reservation_mobileNum,
+    #reservation_srnNum{
+      margin-left: 5vw;
+      width: 65vw;
+      margin-top: 1vh;
+      height: 6vh;
+      font-size: 3vw;
+      padding-left: 3vw;
+    }
+
+    #btn-submit-reservation{
+      margin-top: 1vh;
       font-size: 3vw;
     }
 
@@ -205,7 +329,62 @@
       width: 60vw;
       height: 7vh;
       font-size: 3vw;
+      margin-top: 1vh;
+    }
 
+    #coursesOffered-container{
+      height: 40vh;
+      overflow: auto;
+    }
+
+    #coursesOffered{
+
+      .btn-category{
+        width: 35vw;
+        height: 8vh;
+        margin-top: 3vh;
+        font-size: 2.5vw;
+
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px){
+
+    #reservation_fname,
+    #reservation_mname,
+    #reservation_lname,
+    #reservation_email,
+    #reservation_add,
+    #reservation_mobileNum,
+    #reservation_srnNum{
+      margin-left: 5vw;
+      width: 60vw;
+      margin-top: 1.5vh;
+      height: 5vh;
+      font-size: 3vw;
+      padding-left: 3vw;
+    }
+
+    #coursesOffered{
+
+      .btn-category{
+        width: 60vw;
+        height: 8vh;
+        margin-top: 3vh;
+        font-size: 3vw;
+        border-radius: 50px;
+      }
+    }
+
+    #coursesOffered-container{
+      height: 50vh;
+      overflow: auto;
+    }
+
+    .btn-goBack{
+
+      margin-top: -1vh;
     }
   }
 
@@ -216,6 +395,8 @@
       margin-top: 0vh;
 
     }
+
+
 
     h2{
       font-size: 6vw;

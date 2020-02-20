@@ -36,8 +36,42 @@ body {
   margin-top: 12vh;
   height: 80vh;
   border-radius: 5px;
-  background: rgba(255,255,255, 0.9);
+  // box-shadow: 0px 0px 5px 5px #fafafa;
+  background: rgba(255,255,255, 0.8);
 }
+
+#modal, #alert-modal, #modalCourses,
+#successModal{
+
+
+  @media screen and (max-width: 1024px){
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    font-size: 2.3vw;
+    button{
+        font-size: 2.3vw;
+    }
+    h4{
+      font-size: 2.3vw;
+    }
+  }
+
+  @media screen and (max-width: 800px){
+
+    font-size: 3vw;
+    button{
+        font-size: 3vw;
+    }
+    h4{
+      font-size: 3vw;
+    }
+  }
+}
+
+// #modal{
+//   overflow: auto;
+//   height: 90vh;
+// }
 
 // .row {
 //   display: flex;
@@ -58,438 +92,438 @@ body {
 //   justify-content: flex-end;
 // }
 
-.verify {
-  font-weight: bold;
-  color: $semiDarkGrey;
-  margin-top: 30px;
-}
+// .verify {
+//   font-weight: bold;
+//   color: $semiDarkGrey;
+//   margin-top: 30px;
+// }
 
-#forms-page {
-  display: none;
-}
+// #forms-page {
+//   display: none;
+// }
 
-.web-footer {
-  justify-content: space-around;
-  background-color: $darkBlue;
-  margin-top: 15vh;
-  width: 100%;
+// .web-footer {
+//   justify-content: space-around;
+//   background-color: $darkBlue;
+//   margin-top: 15vh;
+//   width: 100%;
+//
+//
+//   h3 {
+//     color: $offWhite;
+//     font-size: 1vw;
+//   }
+//   p {
+//     color: $offWhite;
+//     font-size: 0.7vw;
+//   }
+//   #web-nmp {
+//     margin-top: 3vw;
+//     img {
+//       width: 3.5vw;
+//       height: 6vh;
+//     }
+//     h3 {
+//       font-size: 1vw;
+//     }
+//   }
+//
+//   @media screen and (max-width: 1440px){
+//     margin-top: 20vh;
+//   }
+//
+//   @media screen and (max-width: 1280px){
+//     margin-top: 26vh;
+//   }
+//
+// }
 
+ // .mobile-footer {
+ //   display: none;
+ //   width: 100%;
+ //   background-color: $darkBlue;
+ //   bottom: 0;
+ //   text-align: center;
+ //   position: fixed;
+ //   h6 {
+ //     color: $offWhite;
+ //   }
+ // }
 
-  h3 {
-    color: $offWhite;
-    font-size: 1vw;
-  }
-  p {
-    color: $offWhite;
-    font-size: 0.7vw;
-  }
-  #web-nmp {
-    margin-top: 3vw;
-    img {
-      width: 3.5vw;
-      height: 6vh;
-    }
-    h3 {
-      font-size: 1vw;
-    }
-  }
+// @media screen and (max-width: 1050px) {
+//   .mobile-footer {
+//     display: block;
+//   }
+//   .web-footer {
+//     display: none;
+//   }
+//
+// }
 
-  @media screen and (max-width: 1440px){
-    margin-top: 20vh;
-  }
+// @media screen and (max-width: 768px) and (max-height: 1280px) {
+//   .table-container {
+//     display: none;
+//   }
+// }
+//
+// @media screen and (max-width: 1024px) {
+//   .table-container {
+//     display: none;
+//   }
+//
+//   .submit-button {
+//     display: none;
+//   }
+//
+//   .mobile-button {
+//     display: block;
+//   }
+// }
+//
+// #dropdown-content{
+//   border: 1px solid $offWhite;
+//   left: 65%;
+//   position: fixed;
+//   width: 30vw;
+//   margin-top: 8vh;
+//   background: #fff;
+//
+//   div{
+//     margin-top: 1vh;
+//     margin-bottom: 2vh;
+//
+//   }
+//   a{
+//     padding: 5px;
+//     font-size: 4vw;
+//
+//   }
+//
+//   @media screen and (max-width: 800px){
+//       margin-top: 6vh;
+//   }
+// }
 
-  @media screen and (max-width: 1280px){
-    margin-top: 26vh;
-  }
+// #byPDC_module{
+//   border: 1px solid $lightGrey;
+//   box-shadow: 1px 1px 1px $lightGrey;
+//   color: $semiDarkGrey;
+//   height: 2.5vw;
+//   width: 21vw;
+//
+//
+//   @media screen and (max-width: 1024px) {
+//       height: 6.5vw;
+//       width: 90vw;
+//       font-size: 2vw;
+//   }
+//
+//   @media screen and (max-width: 360px) {
+//       height: 10vw;
+//   }
+//
+//   @media screen and (max-width: 320px){
+//     height: 10vw;
+//     font-size: 3vw;
+//   }
+// }
 
-}
-
- .mobile-footer {
-   display: none;
-   width: 100%;
-   background-color: $darkBlue;
-   bottom: 0;
-   text-align: center;
-   position: fixed;
-   h6 {
-     color: $offWhite;
-   }
- }
-
-@media screen and (max-width: 1050px) {
-  .mobile-footer {
-    display: block;
-  }
-  .web-footer {
-    display: none;
-  }
-
-}
-
-@media screen and (max-width: 768px) and (max-height: 1280px) {
-  .table-container {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .table-container {
-    display: none;
-  }
-
-  .submit-button {
-    display: none;
-  }
-
-  .mobile-button {
-    display: block;
-  }
-}
-
-#dropdown-content{
-  border: 1px solid $offWhite;
-  left: 65%;
-  position: fixed;
-  width: 30vw;
-  margin-top: 8vh;
-  background: #fff;
-
-  div{
-    margin-top: 1vh;
-    margin-bottom: 2vh;
-
-  }
-  a{
-    padding: 5px;
-    font-size: 4vw;
-
-  }
-
-  @media screen and (max-width: 800px){
-      margin-top: 6vh;
-  }
-}
-
-#byPDC_module{
-  border: 1px solid $lightGrey;
-  box-shadow: 1px 1px 1px $lightGrey;
-  color: $semiDarkGrey;
-  height: 2.5vw;
-  width: 21vw;
-
-
-  @media screen and (max-width: 1024px) {
-      height: 6.5vw;
-      width: 90vw;
-      font-size: 2vw;
-  }
-
-  @media screen and (max-width: 360px) {
-      height: 10vw;
-  }
-
-  @media screen and (max-width: 320px){
-    height: 10vw;
-    font-size: 3vw;
-  }
-}
-
-.form-input-spacing{
-  margin-bottom: 1vw;
-
-  @media screen and (max-width: 1024px){
-    margin-bottom: 4vw;
-  }
-  @media screen and (max-width: 414px){
-    margin-bottom: 7vw;
-  }
-}
-
-
-.loading{
-  display: none;
-  position: absolute;
-  bottom: 50%;
-  left: 40%;
-  text-align: center;
-  h1{
-    color: white;
-  }
-
-  @media screen and (max-width: 1024px){
-    left: 35%;
-  }
-
-  @media screen and (max-width: 600px){
-    left: 30%;
-  }
-
-  @media screen and (max-width: 414px){
-    left: 28%;
-    h1{
-      font-size: 6vw;
-    }
-  }
-
-  @media screen and (max-width: 384px){
-    left: 25%;
-  }
-}
-
-.backdrop{
-  display: none;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0,0,0,0.7);
-}
+// .form-input-spacing{
+//   margin-bottom: 1vw;
+//
+//   @media screen and (max-width: 1024px){
+//     margin-bottom: 4vw;
+//   }
+//   @media screen and (max-width: 414px){
+//     margin-bottom: 7vw;
+//   }
+// }
 
 
-.back-home{
-  background: $lightBlue2;
-  @media screen and (max-width: 1024px){
-    display: none;
-  }
-}
+// .loading{
+//   display: none;
+//   position: absolute;
+//   bottom: 50%;
+//   left: 40%;
+//   text-align: center;
+//   h1{
+//     color: white;
+//   }
+//
+//   @media screen and (max-width: 1024px){
+//     left: 35%;
+//   }
+//
+//   @media screen and (max-width: 600px){
+//     left: 30%;
+//   }
+//
+//   @media screen and (max-width: 414px){
+//     left: 28%;
+//     h1{
+//       font-size: 6vw;
+//     }
+//   }
+//
+//   @media screen and (max-width: 384px){
+//     left: 25%;
+//   }
+// }
 
-#coming_soon{
-  width: 40vw;
-
-  @media screen and (max-width: 1024px){
-    width: 80vw;
-    margin-top: 20vh;
-  }
-}
-
-.trainee-reservation-container{
-  margin-bottom: 20vh;
-  font-family: 'PT Mono', monospace;
-  table{
-    width: 100vw;
-    border-collapse: collapse;
-    th{
-      text-align: left;
-      color: #fff;
-      background: #0B457A;
-      padding-left: 2vw;
-      padding-right: 2vw;
-      padding-top: 5vh;
-      padding-bottom: 1vh;
-      font-weight: bold;
-      font-size: 1vw;
-    }
-    td{
-      color: #607D8B;
-      padding-left: 2vw;
-      padding-right: 2vw;
-      padding-top: 1vh;
-      padding-bottom: 1vh;
-    }
-
-    tr:nth-child(even) {
-      background-color: #f2f2f2;
-    }
-  }
-
-  #btn-confirmReservation{
-    border: 1px solid #4CAF50;
-    color: #4CAF50;
-    padding: 5px;
-    &:hover{
-      background: #4CAF50;
-      color: #fff;
-    }
-  }
-  #btn-deleteReservation{
-
-    border: 1px solid #d50000;
-    color: #d50000;
-    padding: 5px;
-    &:hover{
-      background: #d50000;
-      color: #fff;
-    }
-  }
-  #btn-viewInfoReservation{
-
-    border: 1px solid #2196F3;
-    color: #2196F3;
-    padding: 5px;
-    &:hover{
-      background: #2196F3;
-      color: #fff;
-    }
-  }
-
-  #approved, #rejected{
-    display: none;
-  }
-}
-
-.nmp-logo-container{
-  position: fixed;
-  bottom: 0;
-  color: $darkBlue;
-  background: #fff;
-  width: 100vw;
-  height: 6vh;
-  padding-top: 1vh;
-
-  #nmp-logo{
-    width: 3vw;
-    margin-left: 38vw;
-  }
-
-  h2{
-    font-family: 'Kaushan Script', cursive;
-    margin-top: 10px;
-    font-weight: bold;
-    margin-left: 1vw;
-    font-size: 1.5vw;
-  }
+// .backdrop{
+//   display: none;
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   background: rgba(0,0,0,0.7);
+// }
 
 
-}
+// .back-home{
+//   background: $lightBlue2;
+//   @media screen and (max-width: 1024px){
+//     display: none;
+//   }
+// }
 
-.admin-control{
-  position: fixed;
-  bottom: 0;
-  margin-bottom: 0.5vh;
-  transition: margin-bottom 2s;
-  transition-timing-function: ease;
-  width: 100vw;
-  height: 8vh;
-  background: $lightBlue2;
-  padding-bottom: 1vh;
-  #up{
-    margin-top: -2vh;
-    margin-left: 48vw;
-    background: $lightBlue2;
-    padding-left: 0.5vw;
-    padding-right: 0.5vw;
-    border-radius: 100px;
-    transition: display 2s;
-    transition-timing-function: ease-in-out;
-  }
+// #coming_soon{
+//   width: 40vw;
+//
+//   @media screen and (max-width: 1024px){
+//     width: 80vw;
+//     margin-top: 20vh;
+//   }
+// }
 
-  #down{
-    display: none;
-    margin-top: -2vh;
-    margin-left: 48vw;
-    background: $lightBlue2;
-    padding-left: 0.5vw;
-    padding-right: 0.5vw;
-    border-radius: 100px;
-    transition: display 2s;
-    transition-timing-function: ease-in-out;
-  }
+// .trainee-reservation-container{
+//   margin-bottom: 20vh;
+//   font-family: 'PT Mono', monospace;
+//   table{
+//     width: 100vw;
+//     border-collapse: collapse;
+//     th{
+//       text-align: left;
+//       color: #fff;
+//       background: #0B457A;
+//       padding-left: 2vw;
+//       padding-right: 2vw;
+//       padding-top: 5vh;
+//       padding-bottom: 1vh;
+//       font-weight: bold;
+//       font-size: 1vw;
+//     }
+//     td{
+//       color: #607D8B;
+//       padding-left: 2vw;
+//       padding-right: 2vw;
+//       padding-top: 1vh;
+//       padding-bottom: 1vh;
+//     }
+//
+//     tr:nth-child(even) {
+//       background-color: #f2f2f2;
+//     }
+//   }
+//
+//   #btn-confirmReservation{
+//     border: 1px solid #4CAF50;
+//     color: #4CAF50;
+//     padding: 5px;
+//     &:hover{
+//       background: #4CAF50;
+//       color: #fff;
+//     }
+//   }
+//   #btn-deleteReservation{
+//
+//     border: 1px solid #d50000;
+//     color: #d50000;
+//     padding: 5px;
+//     &:hover{
+//       background: #d50000;
+//       color: #fff;
+//     }
+//   }
+//   #btn-viewInfoReservation{
+//
+//     border: 1px solid #2196F3;
+//     color: #2196F3;
+//     padding: 5px;
+//     &:hover{
+//       background: #2196F3;
+//       color: #fff;
+//     }
+//   }
+//
+//   #approved, #rejected{
+//     display: none;
+//   }
+// }
 
-  &:hover{
-    margin-bottom: 8vh;
-    #up{
-      display: none;
-    }
+// .nmp-logo-container{
+//   position: fixed;
+//   bottom: 0;
+//   color: $darkBlue;
+//   background: #fff;
+//   width: 100vw;
+//   height: 6vh;
+//   padding-top: 1vh;
+//
+//   #nmp-logo{
+//     width: 3vw;
+//     margin-left: 38vw;
+//   }
+//
+//   h2{
+//     font-family: 'Kaushan Script', cursive;
+//     margin-top: 10px;
+//     font-weight: bold;
+//     margin-left: 1vw;
+//     font-size: 1.5vw;
+//   }
+//
+//
+// }
 
-    #down{
-      display: block;
-    }
-  }
+// .admin-control{
+//   position: fixed;
+//   bottom: 0;
+//   margin-bottom: 0.5vh;
+//   transition: margin-bottom 2s;
+//   transition-timing-function: ease;
+//   width: 100vw;
+//   height: 8vh;
+//   background: $lightBlue2;
+//   padding-bottom: 1vh;
+//   #up{
+//     margin-top: -2vh;
+//     margin-left: 48vw;
+//     background: $lightBlue2;
+//     padding-left: 0.5vw;
+//     padding-right: 0.5vw;
+//     border-radius: 100px;
+//     transition: display 2s;
+//     transition-timing-function: ease-in-out;
+//   }
+//
+//   #down{
+//     display: none;
+//     margin-top: -2vh;
+//     margin-left: 48vw;
+//     background: $lightBlue2;
+//     padding-left: 0.5vw;
+//     padding-right: 0.5vw;
+//     border-radius: 100px;
+//     transition: display 2s;
+//     transition-timing-function: ease-in-out;
+//   }
+//
+//   &:hover{
+//     margin-bottom: 8vh;
+//     #up{
+//       display: none;
+//     }
+//
+//     #down{
+//       display: block;
+//     }
+//   }
+//
+//   .admin-control-options{
+//     margin-left: 27vw;
+//
+//     div{
+//       text-align: center;
+//       width: 8vw;
+//       border-left: 1px solid $darkBlue;
+//       border-right: 1px solid $darkBlue;
+//       margin-left: 1vw;
+//       margin-right: 1vw;
+//       padding-left: 1vw;
+//       padding-right: 1vw;
+//       padding-top: 0.2vh;
+//       padding-bottom: 0.2vh;
+//       border-radius: 5px;
+//     }
+//
+//     a{
+//       text-decoration: none;
+//       color: $darkBlue;
+//       &:hover{
+//         text-decoration: underline;
+//       }
+//     }
+//   }
+// }
 
-  .admin-control-options{
-    margin-left: 27vw;
 
-    div{
-      text-align: center;
-      width: 8vw;
-      border-left: 1px solid $darkBlue;
-      border-right: 1px solid $darkBlue;
-      margin-left: 1vw;
-      margin-right: 1vw;
-      padding-left: 1vw;
-      padding-right: 1vw;
-      padding-top: 0.2vh;
-      padding-bottom: 0.2vh;
-      border-radius: 5px;
-    }
-
-    a{
-      text-decoration: none;
-      color: $darkBlue;
-      &:hover{
-        text-decoration: underline;
-      }
-    }
-  }
-}
-
-
-.nmp-admin-login-container{
-  margin-top: 13vh;
-  h1{
-    font-family: 'Permanent Marker', cursive;
-    color: $darkBlue;
-    text-align: center;
-  }
-  p{
-    font-family: 'Poiret One', cursive;
-  }
-
-  input{
-    margin-top: 5vh;
-    width: 25vw;
-    height: 5vh;
-    border-top: 1px solid #fff;
-    border-left: 1px solid #fff;
-    border-right: 1px solid #fff;
-    padding-left: 1vw;
-  }
-  button{
-    margin-top: 5vh;
-    width: 25vw;
-    height: 5vh;
-    border-radius: 8px;
-    background: linear-gradient(to right, #0575E6 , #021B79);
-    border: 1px solid #021B79;
-    color: #fff;
-    font-family: 'Poiret One', cursive;
-    font-size: 1vw;
-  }
-
-  img{
-    width: 2vw;
-    margin-bottom: 2vh;
-  }
-}
-
-.modalViewApplicant-container{
-  display: none;
-  position: fixed;
-  top: 0;
-  margin-top: 5vh;
-  margin-left: 30vw;
-  background: #fff;
-  width: 40vw;
-  height: 40vh;
-  // box-shadow: 1px 3px 3px #BDBDBD;
-  border: 1px solid #fff;
-  border-radius: 10px;
-  padding-left: 1vw;
-  padding-right: 1vw;
-  color: #37474F;
-  .modal-header{
-    border-bottom: 1px solid #BDBDBD;
-    button{
-      text-decoration: none;
-      color: #37474F;
-      margin-top: 2vh;
-      margin-bottom: 2vh;
-      border: 1px solid #fff;
-      background: #fff;
-      &:hover{
-        color: red;
-      }
-    }
-  }
-}
+// .nmp-admin-login-container{
+//   margin-top: 13vh;
+//   h1{
+//     font-family: 'Permanent Marker', cursive;
+//     color: $darkBlue;
+//     text-align: center;
+//   }
+//   p{
+//     font-family: 'Poiret One', cursive;
+//   }
+//
+//   input{
+//     margin-top: 5vh;
+//     width: 25vw;
+//     height: 5vh;
+//     border-top: 1px solid #fff;
+//     border-left: 1px solid #fff;
+//     border-right: 1px solid #fff;
+//     padding-left: 1vw;
+//   }
+//   button{
+//     margin-top: 5vh;
+//     width: 25vw;
+//     height: 5vh;
+//     border-radius: 8px;
+//     background: linear-gradient(to right, #0575E6 , #021B79);
+//     border: 1px solid #021B79;
+//     color: #fff;
+//     font-family: 'Poiret One', cursive;
+//     font-size: 1vw;
+//   }
+//
+//   img{
+//     width: 2vw;
+//     margin-bottom: 2vh;
+//   }
+// }
+//
+// .modalViewApplicant-container{
+//   display: none;
+//   position: fixed;
+//   top: 0;
+//   margin-top: 5vh;
+//   margin-left: 30vw;
+//   background: #fff;
+//   width: 40vw;
+//   height: 40vh;
+//   // box-shadow: 1px 3px 3px #BDBDBD;
+//   border: 1px solid #fff;
+//   border-radius: 10px;
+//   padding-left: 1vw;
+//   padding-right: 1vw;
+//   color: #37474F;
+//   .modal-header{
+//     border-bottom: 1px solid #BDBDBD;
+//     button{
+//       text-decoration: none;
+//       color: #37474F;
+//       margin-top: 2vh;
+//       margin-bottom: 2vh;
+//       border: 1px solid #fff;
+//       background: #fff;
+//       &:hover{
+//         color: red;
+//       }
+//     }
+//   }
+// }

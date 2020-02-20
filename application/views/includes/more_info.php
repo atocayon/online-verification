@@ -1,6 +1,6 @@
 <?php
 $date = date("Y-m-d");
-echo $year = date("Y");
+$year = date("Y");
 $month = date('m');
 $sql1 = $this->db->query("SELECT category,code FROM category WHERE active = '1' ORDER BY code ");
 ?>

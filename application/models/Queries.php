@@ -78,6 +78,34 @@ class Queries extends CI_Model
 
   }
 
+  public function getOfferedCourses(){
+    $date = date("Y-m-d");
+    $param = [ $date, $this->input->post('categoryID'),];
+    $sql = "SELECT
+      module.module as moduleName,
+      module.descriptn as discription,
+      schedule.modcode as moduleCode,
+      schedule.venid as venue,
+      DATE_FORMAT(schedule.start, '%Y %b %d') as dateStart,
+      DATE_FORMAT(schedule.end, '%Y %b %d') as dateEnd,
+      schedule.max as maxEnrollees
+      FROM
+      schedule
+      INNER JOIN module on schedule.modcode = module.modcode
+      WHERE
+      DATE(schedule.start) > ? AND module.catid = ?";
+      $query = $this->db->query($sql, $param);
+
+      return $query;
+  }
+
+  public function category(){
+    $param = [$this->input->post('categoryID')];
+    $sql = "SELECT * FROM category WHERE code = ?";
+    $query = $this->db->query($sql, $param);
+    return $query;
+  }
+
   public function userActivity($remote_ip,$mac_address, $action, $data){
     $sql = $this->db->query("
     INSERT INTO everification_activity_logs

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+  var base_url = window.location.origin;
   $("#reservation_fname").keyup(function(event){
     event.preventDefault();
     $("#error-message").hide();
@@ -26,62 +26,62 @@ $(document).ready(function(){
     console.log("click");
     if ($("#reservation_fname").val() === "") {
       $("#reservation_fname").css("border","1px solid red");
-      $("#reserve-fname").show();
+      // $("#reserve-fname").show();
     }
 
     if ($("#reservation_fname").val() !== ""){
       $("#reservation_fname").css("border","1px solid #E0E0E0");
-      $("#reserve-fname").hide();
+      // $("#reserve-fname").hide();
     }
 
     if ($("#reservation_mname").val() === "") {
       $("#reservation_mname").css("border","1px solid red");
-      $("#reserve-mname").show();
+      // $("#reserve-mname").show();
     }
 
     if ($("#reservation_mname").val() !== ""){
       $("#reservation_mname").css("border","1px solid #E0E0E0");
-      $("#reserve-mname").hide();
+      // $("#reserve-mname").hide();
     }
 
     if ($("#reservation_lname").val() === "") {
       $("#reservation_lname").css("border","1px solid red");
-      $("#reserve-lname").show();
+      // $("#reserve-lname").show();
     }
 
     if ($("#reservation_lname").val() !== ""){
       $("#reservation_lname").css("border","1px solid #E0E0E0");
-      $("#reserve-lname").hide();
+      // $("#reserve-lname").hide();
     }
 
     if ($("#reservation_email").val() === "") {
       $("#reservation_email").css("border","1px solid red");
-      $("#reserve-email").show();
+      // $("#reserve-email").show();
     }
 
     if ($("#reservation_email").val() !== ""){
       $("#reservation_email").css("border","1px solid #E0E0E0");
-      $("#reserve-email").hide();
+      // $("#reserve-email").hide();
     }
 
     if ($("#reservation_add").val() === "") {
       $("#reservation_add").css("border","1px solid red");
-      $("#reserve-add").show();
+      // $("#reserve-add").show();
     }
 
     if ($("#reservation_add").val() !== "") {
       $("#reservation_add").css("border","1px solid #E0E0E0");
-      $("#reserve-add").hide();
+      // $("#reserve-add").hide();
     }
 
     if ($("#reservation_mobileNum").val() === "") {
       $("#reservation_mobileNum").css("border","1px solid red");
-      $("#reserve-mobileNum").show();
+      // $("#reserve-mobileNum").show();
     }
 
     if ($("#reservation_mobileNum").val() !== "") {
       $("#reservation_mobileNum").css("border","1px solid #E0E0E0");
-      $("#reserve-mobileNum").hide();
+      // $("#reserve-mobileNum").hide();
     }
 
     // if ($("#reservation_srnNum").val() === "") {
@@ -107,18 +107,18 @@ $(document).ready(function(){
       $("#reservation_mobileNum").css("border","1px solid red");
       // $("#reservation_srnNum").css("border","1px solid red");
 
-      $("#reserve-fname").show();
-      $("#reserve-mname").show();
-      $("#reserve-lname").show();
-      $("#reserve-email").show();
-      $("#reserve-add").show();
-      $("#reserve-mobileNum").show();
+      // $("#reserve-fname").show();
+      // $("#reserve-mname").show();
+      // $("#reserve-lname").show();
+      // $("#reserve-email").show();
+      // $("#reserve-add").show();
+      // $("#reserve-mobileNum").show();
       // $("#reserve-srnNum").show();
     }
 
     if ($("#reservation_fname").val() !== "" && $("#reservation_mname").val() !== "" && $("#reservation_lname").val() !== "" && $("#reservation_email").val() !== "" && $("#reservation_add").val() !== "" && $("#reservation_mobileNum").val() !== "" ) {
       $.ajax({
-        url: baseURL+"nmp/sendReservation/",
+        url: base_url+"/online-verification/nmp/sendReservation/",
         type: "POST",
         dataType: "json",
         data: {
@@ -135,19 +135,20 @@ $(document).ready(function(){
           srnNum: $("#reservation_srnNum").val()
         },
         beforeSend: function(){
-          $(".loading").show();
-          $(".backdrop").show();
-          $("body").css("overflow","hidden");
-          $("#error-message").hide();
+          // $(".loading").show();
+          // $(".backdrop").show();
+          // $("body").css("overflow","hidden");
+          // $("#error-message").hide();
+          $(".spinner-icon").show();
         },
         success: function(data){
           console.log(data.record);
           if (data.record["response"] === "null") {
-            $("#error-message").show();
-            $(".backdrop").hide();
-            $("body").css("overflow","auto");
-            $(".loading").hide();
-            $(".alert-reservation-container").hide();
+            // $("#error-message").show();
+            // $(".backdrop").hide();
+            // $("body").css("overflow","auto");
+            // $(".loading").hide();
+            // $(".alert-reservation-container").hide();
             $("#reservation_fname").css("border","1px solid red");
             $("#reservation_mname").css("border","1px solid red");
             $("#reservation_lname").css("border","1px solid red");
@@ -155,23 +156,31 @@ $(document).ready(function(){
             $("#reservation_add").css("border","1px solid red");
             $("#reservation_mobileNum").css("border","1px solid red");
             $("#reservation_srnNum").css("border","1px solid red");
+            $(".spinner-icon").hide();
+            $(".error-message").show();
+            $(".error-message").text('Ops! It seems you already done submitting this course schedule...');
           }
 
           if (data.record['response'] === "success") {
-            $("#error-message").hide();
-            $(".loading").hide();
-            $(".backdrop").hide();
-            $("#success-message").show();
-            $("#reservation_fname").css("border","1px solid green");
-            $("#reservation_mname").css("border","1px solid green");
-            $("#reservation_lname").css("border","1px solid green");
-            $("#reservation_email").css("border","1px solid green");
-            $("#reservation_add").css("border","1px solid green");
-            $("#reservation_mobileNum").css("border","1px solid green");
-            $("#reservation_srnNum").css("border","1px solid green");
+            // $("#error-message").hide();
+            // $(".loading").hide();
+            // $(".backdrop").hide();
+            // $("#success-message").show();
+            // $("#reservation_fname").css("border","1px solid green");
+            // $("#reservation_mname").css("border","1px solid green");
+            // $("#reservation_lname").css("border","1px solid green");
+            // $("#reservation_email").css("border","1px solid green");
+            // $("#reservation_add").css("border","1px solid green");
+            // $("#reservation_mobileNum").css("border","1px solid green");
+            // $("#reservation_srnNum").css("border","1px solid green");
+            $(".spinner-icon").hide();
+            $("#successModal").modal('show');
+            $(".error-message").hide();
           }
 
           if (data.record["response"] === "failed") {
+            $(".spinner-icon").hide();
+            $(".error-message").show();
             console.log("Error");
             alert("error");
           }

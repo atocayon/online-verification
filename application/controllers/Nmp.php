@@ -56,6 +56,27 @@ class Nmp extends CI_Controller {
 		}
 	}
 
+	public function getOfferedCourses(){
+		$data['record'] = $this->queries->getOfferedCourses()->result_array();
+		// print_r($data);
+		if ($data['record'] == NULL) {
+			$data['record'] = ['response' => 'null'];
+			echo json_encode($data);
+		}else{
+			echo json_encode($data);
+		}
+	}
+
+	public function category(){
+		$data['record'] = $this->queries->category()->result_array();
+		if ($data['record'] == NULL) {
+			$data['record'] = ['response' => 'null'];
+			echo json_encode($data);
+		}else{
+			echo json_encode($data);
+		}
+	}
+
 	public function reservation(){
 		$this->load->view('reserve');
 	}

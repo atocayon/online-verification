@@ -106,22 +106,22 @@ $(document).ready(function() {
   $("#reservation_mobileNum").mask("+639-9999-999-99", {placeholder: '+639-xxxx-xxx-xx'});
   $("#reservation_srnNum").mask("9999999999", {placeholder: 'XXXXXXXXXX'});
 
-  $("#btn-faq").click(function(){
-    $("#faq-page").show();
-    $("#home").hide();
-    $("#options").hide();
-      $("#dropdown-content").hide();
-      $(".more-info-page").hide();
-
-  });
-
-  $("#btnMobile-faq").click(function(){
-    $("#faq-page").show();
-    $("#home").hide();
-    $("#options").hide();
-      $("#dropdown-content").hide();
-      $(".more-info-page").hide();
-  });
+  // $("#btn-faq").click(function(){
+  //   $("#faq-page").show();
+  //   $("#home").hide();
+  //   $("#options").hide();
+  //     $("#dropdown-content").hide();
+  //     $(".more-info-page").hide();
+  //
+  // });
+  //
+  // $("#btnMobile-faq").click(function(){
+  //   $("#faq-page").show();
+  //   $("#home").hide();
+  //   $("#options").hide();
+  //     $("#dropdown-content").hide();
+  //     $(".more-info-page").hide();
+  // });
 
 
     // $("#byName_fname").keyup(function(){
@@ -264,92 +264,98 @@ $(document).ready(function() {
       $("#home-page").css("background", "rgba(255,255,255, 1)");
   });
 
-  $(".btn-goBack").click(function(){
-    // $("#btn-verifyByName").show();
-    // $("#btn-verifyByCerticateNumber").show();
-    // $("#btn-verifyEnrolleesOnPDC").show();
-    // $("#btn-courseReservation").show();
-    // $("#verifyByCerticateNumber").hide();
-    // $("#verifyByName").hide();
-    // $("#verifyByPDCenrollees").hide();
-    //   $("#home-page").css("background", "rgba(255,255,255, 0.9)");
-    //
-    // $(".error-fname").hide();
-    // $(".error-lname").hide();
-    // $(".error-bday").hide();
-    // $(".error-certnum").hide();
-    // $(".error-PDCmodule").hide();
-    //
-    // $(".error-fname").text('Required');
-    // $(".error-lname").text('Required');
-    // $(".error-bday").text('Required');
-    // $(".error-certnum").text('Required');
-    // $(".error-PDCmodule").text('Required');
-    //
-    // $("#byName_fname").css("border-bottom", "1px solid #E0E0E0");
-    // $("#byName_fname").css("border-left", "1px solid #fff");
-    // $("#byName_fname").css("border-right", "1px solid #fff");
-    // $("#byName_fname").css("border-top", "1px solid #fff");
-    // $("#byName_fname").val('');
-    //
-    // $("#byName_lname").css("border-bottom", "1px solid #E0E0E0");
-    // $("#byName_lname").css("border-left", "1px solid #fff");
-    // $("#byName_lname").css("border-right", "1px solid #fff");
-    // $("#byName_lname").css("border-top", "1px solid #fff");
-    // $("#byName_lname").val('');
-    //
-    // $("#byName_bday").css("border-bottom", "1px solid #E0E0E0");
-    // $("#byName_bday").css("border-left", "1px solid #fff");
-    // $("#byName_bday").css("border-right", "1px solid #fff");
-    // $("#byName_bday").css("border-top", "1px solid #fff");
-    // $("#byName_bday").val('');
-    //
-    // $("#byCert_certnum").css("border-bottom", "1px solid #E0E0E0");
-    // $("#byCert_certnum").css("border-left", "1px solid #fff");
-    // $("#byCert_certnum").css("border-right", "1px solid #fff");
-    // $("#byCert_certnum").css("border-top", "1px solid #fff");
-    // $("#byCert_certnum").val('');
-    //
-    // $("#byCert_fname").css("border-bottom", "1px solid #E0E0E0");
-    // $("#byCert_fname").css("border-left", "1px solid #fff");
-    // $("#byCert_fname").css("border-right", "1px solid #fff");
-    // $("#byCert_fname").css("border-top", "1px solid #fff");
-    // $("#byCert_fname").val('');
-    //
-    // $("#byCert_lname").css("border-bottom", "1px solid #E0E0E0");
-    // $("#byCert_lname").css("border-left", "1px solid #fff");
-    // $("#byCert_lname").css("border-right", "1px solid #fff");
-    // $("#byCert_lname").css("border-top", "1px solid #fff");
-    // $("#byCert_lname").val('');
-    //
-    // $("#byCert_bday").css("border-bottom", "1px solid #E0E0E0");
-    // $("#byCert_bday").css("border-left", "1px solid #fff");
-    // $("#byCert_bday").css("border-right", "1px solid #fff");
-    // $("#byCert_bday").css("border-top", "1px solid #fff");
-    // $("#byCert_bday").val('');
-    //
-    // $("#byPDC_module").css("border", "1px solid #E0E0E0");
-    // $("#byPDC_module").val('');
-    //
-    // $("#byPDC_fname").css("border-bottom", "1px solid #E0E0E0");
-    // $("#byPDC_fname").css("border-left", "1px solid #fff");
-    // $("#byPDC_fname").css("border-right", "1px solid #fff");
-    // $("#byPDC_fname").css("border-top", "1px solid #fff");
-    // $("#byPDC_fname").val('');
-    //
-    // $("#byPDC_lname").css("border-bottom", "1px solid #E0E0E0");
-    // $("#byPDC_lname").css("border-left", "1px solid #fff");
-    // $("#byPDC_lname").css("border-right", "1px solid #fff");
-    // $("#byPDC_lname").css("border-top", "1px solid #fff");
-    // $("#byPDC_lname").val('');
-    //
-    // $("#byPDC_bday").css("border-bottom", "1px solid #E0E0E0");
-    // $("#byPDC_bday").css("border-left", "1px solid #fff");
-    // $("#byPDC_bday").css("border-right", "1px solid #fff");
-    // $("#byPDC_bday").css("border-top", "1px solid #fff");
-    // $("#byPDC_bday").val('');
-    window.location.replace(base_url+"/online-verification")
+  $("#btn-courseReservation").click(function(){
+    $("#btn-verifyByName").hide();
+    $("#btn-verifyByCerticateNumber").hide();
+    $("#btn-verifyEnrolleesOnPDC").hide();
+    $("#btn-courseReservation").hide();
+    $("#verifyByName").hide();
+    $("#verifyByCerticateNumber").hide();
+    $("#verifyByPDCenrollees").hide();
+    $("#coursesOffered").show();
+      $("#home-page").css("background", "rgba(255,255,255, 1)");
   });
+
+  $("#close").click(function(){
+    window.location.replace(base_url+"/online-verification");
+  });
+
+  $(".close-modal").click(function(){
+    window.location.replace(base_url+"/online-verification");
+  });
+
+  $(".btn-goBack").click(function(){
+
+    window.location.replace(base_url+"/online-verification");
+  });
+
+  $("#btn-confirm").click(function(){
+    $("#alert-modal").modal('hide');
+    $('#modal').modal('show');
+  });
+
+  $(".btn-category").click(function(){
+    var value = $(this).attr("value");
+    console.log(value);
+
+    $("#modalCourses").modal('show');
+
+    $.ajax({
+      url: base_url+"/online-verification/nmp/getOfferedCourses",
+      type: "POST",
+      dataType: "json",
+      data: {
+        categoryID: value
+      },
+      success: function(data){
+        console.log(data);
+        var tbl = "";
+        for(var i = 0; i < data["record"].length; i++){
+          tbl += "<tr>";
+          tbl +=
+            "<td><label><a href='"+base_url+"/online-verification/?code="+data["record"][i]["moduleCode"]+"&dateStart="+data["record"][i]["dateStart"]+"&dateEnd="+data["record"][i]["dateEnd"]+"&description="+data["record"][i]["discription"]+"'>"+data["record"][i]["discription"]+ "</a></label></td>";
+          tbl +=
+            "<td><label>" +data["record"][i]["dateStart"] + " to " + data["record"][i]["dateEnd"] + "</label></td>";
+          tbl +=
+            "<td><label>None</label></td>";
+          tbl += "</tr>";
+        }
+        $("#tbl-coursesOffered").prepend(tbl);
+
+        category(value);
+
+      },
+      error: function(err){
+        alert(err);
+      }
+    });
+
+  });
+
+  function category(value){
+    $.ajax({
+      url: base_url+"/online-verification/nmp/category",
+      type: "POST",
+      dataType: "json",
+      data: {
+        categoryID: value
+      },
+      success: function(data){
+        $("#category").text(data["record"][0]["category"]);
+        console.log(JSON.stringify(data["record"][0]["category"]));
+      },
+      error: function(err){
+        alert(err);
+      }
+
+    });
+  }
+
+  $('#btn-confirm-reservationModal').click(function(){
+      window.location.replace(base_url+"/online-verification");
+  });
+
+
 
 
 

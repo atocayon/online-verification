@@ -105,6 +105,8 @@ $(document).ready(function(){
       $("#reservation_email").css("border","1px solid red");
       $("#reservation_add").css("border","1px solid red");
       $("#reservation_mobileNum").css("border","1px solid red");
+      $(".error-message").show();
+      $(".error-message").text("Please don't leave input fields empty");
       // $("#reservation_srnNum").css("border","1px solid red");
 
       // $("#reserve-fname").show();

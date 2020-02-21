@@ -29,7 +29,7 @@
         }
         ?>
         <img src="<?= base_url() ?>src/img/logo.png" alt=""><br>
-        <span id="error-message" style="color: red;display:none"><small>Error Message</small> </span>
+        <p id="error-message" style="color: red;display:none">Error Message </p>
         <?php
         if (!isset($_GET['code']) && !isset($_GET['dateStart']) && !isset($_GET['dateEnd'])) {
           ?>

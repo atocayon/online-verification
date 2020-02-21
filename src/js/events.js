@@ -166,6 +166,8 @@ $(document).ready(function() {
         }
       });
     }else{
+      $(".error").show();
+      $(".error").text("Required");
       $("#admin-uname").css("border", "1px solid red");
       $("#admin-password").css("border", "1px solid red");
     }

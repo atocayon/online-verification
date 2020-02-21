@@ -416,118 +416,6 @@
   }
 }
 
-.more-info-page {
-  display: none;
-}
-
-.more-info-content {
-  margin-left: 7vw;
-  border-left: 3px solid #CFD8DC;
-  -webkit-box-shadow: 2px 2px 2px #FAFAFA;
-  box-shadow: 2px 2px 2px #FAFAFA;
-  padding: 0.5vw;
-  width: 80vw;
-}
-
-.more-info-content h2 {
-  background: #d6e8ee;
-  padding: 0.5vw;
-  width: 20vw;
-  border: 1px solid #d6e8ee;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
-  -webkit-box-shadow: 2px 2px 2px #d6e8ee;
-  box-shadow: 2px 2px 2px #d6e8ee;
-}
-
-@media screen and (max-width: 1024px) {
-  .more-info-content h2 {
-    font-size: 2vw;
-    width: 30vw;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .more-info-content h2 {
-    font-size: 3vw;
-    width: 45vw;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  .more-info-content h2 {
-    font-size: 4vw;
-    width: 55vw;
-  }
-}
-
-.more-info-content table {
-  width: 80vw;
-}
-
-.more-info-content table th {
-  text-align: left;
-  padding: 0.3vw;
-  background: #eceff1;
-}
-
-.more-info-content table td {
-  padding: 0.3vw;
-  border-left: 1px solid #f8f9fb;
-  border-right: 1px solid #f8f9fb;
-}
-
-@media screen and (max-width: 1024px) {
-  .more-info-content {
-    margin-left: 1.5vw;
-    width: 95vw;
-  }
-  .more-info-content table {
-    width: 95vw;
-  }
-  .more-info-content table th {
-    padding: 1vw;
-  }
-  .more-info-content table td {
-    padding: 1vw;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  .more-info-content table th {
-    font-size: 3vw;
-  }
-  .more-info-content table td {
-    font-size: 2.5vw;
-  }
-}
-
-.spacer {
-  height: 10vh;
-}
-
-@media screen and (max-width: 1024px) {
-  .spacer {
-    height: 7vh;
-  }
-}
-
-.spacer-1 {
-  height: 12vh;
-}
-
-@media screen and (max-width: 1024px) {
-  .spacer-1 {
-    height: 10vh;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .spacer-1 {
-    height: 8vh;
-  }
-}
-
 .reserve-container {
   margin-top: 8vh;
   border: 1px solid #E0E0E0;
@@ -940,6 +828,181 @@ body {
   #successModal h4 {
     font-size: 3vw;
   }
+}
+
+.nmp-admin-login-container {
+  background: #fff;
+  width: 100vw;
+  height: 100vh;
+  /* You must set a specified height */
+}
+
+.nmp-admin-login-container h1 {
+  margin-top: 13vh;
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+  color: #02457a;
+}
+
+.nmp-admin-login-container p {
+  text-align: center;
+  font-family: 'Poiret One', cursive;
+  color: #02457a;
+}
+
+.nmp-admin-login-container input {
+  margin-top: 5vh;
+  width: 25vw;
+  height: 5vh;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  padding-left: 1vw;
+}
+
+.nmp-admin-login-container button {
+  margin-top: 5vh;
+  width: 25vw;
+  height: 5vh;
+  border-radius: 8px;
+  background: -webkit-gradient(linear, left top, right top, from(#0575E6), to(#021B79));
+  background: -webkit-linear-gradient(left, #0575E6, #021B79);
+  background: -o-linear-gradient(left, #0575E6, #021B79);
+  background: linear-gradient(to right, #0575E6, #021B79);
+  border: 1px solid #021B79;
+  color: #fff;
+  font-family: 'Poiret One', cursive;
+  font-size: 1vw;
+}
+
+.nmp-logo-container {
+  position: fixed;
+  bottom: 0;
+  color: #02457a;
+  background: #fff;
+  width: 100vw;
+  height: 6vh;
+  padding-top: 1vh;
+}
+
+.nmp-logo-container #nmp-logo {
+  width: 3vw;
+  margin-left: 42vw;
+}
+
+.nmp-logo-container h2 {
+  font-family: 'Kaushan Script', cursive;
+  margin-top: 10px;
+  font-weight: bold;
+  margin-left: 1vw;
+  font-size: 1.5vw;
+}
+
+.trainee-reservation-container {
+  padding-bottom: 20vh;
+  background: #fff;
+  width: 100vw;
+  height: 100vh;
+}
+
+.trainee-reservation-container table th {
+  text-align: left;
+  color: #fff;
+  background: #0B457A;
+  font-size: 1vw;
+}
+
+.trainee-reservation-container table td {
+  color: #607D8B;
+}
+
+.trainee-reservation-container #approved, .trainee-reservation-container #rejected {
+  display: none;
+}
+
+.trainee-reservation-container #approved table th, .trainee-reservation-container #rejected table th {
+  text-align: left;
+  color: #fff;
+  background: #0B457A;
+  font-size: 1vw;
+}
+
+.trainee-reservation-container #approved table td, .trainee-reservation-container #rejected table td {
+  color: #607D8B;
+}
+
+.admin-control {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 0.5vh;
+  -webkit-transition: margin-bottom 2s;
+  -o-transition: margin-bottom 2s;
+  transition: margin-bottom 2s;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  width: 100vw;
+  height: 8vh;
+  background: #d6e8ee;
+  padding-bottom: 1vh;
+}
+
+.admin-control #up {
+  margin-top: -2vh;
+  margin-left: 48vw;
+  background: #d6e8ee;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  border-radius: 100px;
+  -webkit-transition: display 2s;
+  -o-transition: display 2s;
+  transition: display 2s;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+.admin-control #down {
+  display: none;
+  margin-top: -2vh;
+  margin-left: 48vw;
+  background: #d6e8ee;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  border-radius: 100px;
+  -webkit-transition: display 2s;
+  -o-transition: display 2s;
+  transition: display 2s;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+.admin-control:hover {
+  margin-bottom: 8vh;
+}
+
+.admin-control:hover #up {
+  display: none;
+}
+
+.admin-control:hover #down {
+  display: block;
+}
+
+.admin-control .admin-control-options div {
+  text-align: center;
+  border-radius: 5px;
+}
+
+.admin-control .admin-control-options a {
+  margin-top: -3vh;
+  text-decoration: none;
+  color: #02457a;
+}
+
+.admin-control .admin-control-options a:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=styles.css.map */

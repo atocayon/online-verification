@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  </div>
 
 
-<div class="container">
+<div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12 col-sm-12">
 
@@ -175,11 +175,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 
 
-<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+<script src="https://code.jquery.com/jquery-1.9.0.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?= base_url() ?>src/js/jquery.maskedinput-1.2.2-co.min.js">
 </script>
 <script type="text/javascript" src="<?= base_url() ?>src/js/jquery.maskedinput-1.2.2-co.js">
@@ -189,5 +189,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script src="<?= base_url() ?>src/js/reservationFormValidation.js">
 
 </script>
+
 </body>
 </html>

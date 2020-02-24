@@ -1,4 +1,4 @@
-<div class="alert alert-dark" id="coursesOffered-container">
+<div class="alert alert-dark coursesOffered-container">
   <button type="button" class="close" id="close">&times;</button>
   <div class="row">
   <?php

@@ -188,12 +188,17 @@
     }
 
     input, #byPDC_module{
-      margin-left: 20vw;
-      width: 50vw;
+      margin-left: 10vw;
+      width: 60vw;
       margin-top: 2vh;
-      height: 5vh;
+      height: 7vh;
       font-size: 2.5vw;
     }
+
+    .error-fname, .error-lname, .error-bday, .error-certnum, .error-PDCmodule{
+      margin-left: 10vw;
+    }
+
 
     #reservation_fname,
     #reservation_mname,
@@ -202,18 +207,20 @@
     #reservation_add,
     #reservation_mobileNum,
     #reservation_srnNum{
-      margin-left: 15vw;
-      width: 50vw;
+      margin-left: 10vw;
+      width: 53vw;
       margin-top: 2vh;
       height: 5vh;
       font-size: 2.5vw;
       border-radius: 30px;
+      padding-left: 3vw;
     }
 
     #btn-submit-reservation{
-      width: 30vw;
+      width: 35vw;
       height: 5vh;
-      font-size: 2vw;
+      font-size: 3vw;
+      margin-top: 1vh;
 
     }
 
@@ -228,10 +235,10 @@
     #btn-verifyEnrolleesOnPDC,
     #btn-courseReservation{
       margin-top: 3vh;
-      width: 55vw;
-      height: 8vh;
-      font-size: 2.5vw;
-      border-radius: 50px;
+      width: 65vw;
+      height: 10vh;
+      font-size: 3vw;
+      border-radius: 65px;
 
     }
 
@@ -251,18 +258,18 @@
 
     #coursesOffered{
 
-      margin-top: 5vh;
+      margin-top: 3vh;
       .btn-category{
-        width: 40vw;
+        width: 35vw;
         height: 10vh;
-        margin-top: 3vh;
+        margin-top: 3.3vh;
         font-size: 2.5vw;
-        border-radius: 60px;
+        border-radius: 70px;
       }
     }
 
-    #coursesOffered-container{
-      height: 45vh;
+    .coursesOffered-container{
+      height: 50vh;
       overflow: auto;
     }
 
@@ -332,8 +339,8 @@
       margin-top: 1vh;
     }
 
-    #coursesOffered-container{
-      height: 40vh;
+    .coursesOffered-container{
+      height: 55vh;
       overflow: auto;
     }
 
@@ -351,6 +358,19 @@
 
   @media screen and (max-width: 600px){
 
+    input, #byPDC_module{
+      margin-left: 5vw;
+      width: 70vw;
+      margin-top: 1.5vh;
+      height: 6vh;
+      font-size: 3vw;
+    }
+
+    .error-fname, .error-lname, .error-bday, .error-certnum, .error-PDCmodule{
+
+      margin-left: 8vw;
+    }
+
     #reservation_fname,
     #reservation_mname,
     #reservation_lname,
@@ -366,6 +386,16 @@
       padding-left: 3vw;
     }
 
+    #btn-verifyByName,
+    #btn-verifyByCerticateNumber,
+    #btn-verifyEnrolleesOnPDC,
+    #btn-courseReservation{
+      margin-top: 3vh;
+      height: 11vh;
+      width: 70vw;
+
+    }
+
     #coursesOffered{
 
       .btn-category{
@@ -377,8 +407,8 @@
       }
     }
 
-    #coursesOffered-container{
-      height: 50vh;
+    .coursesOffered-container{
+      height: 55vh;
       overflow: auto;
     }
 
@@ -390,20 +420,23 @@
 
   @media screen and (max-width: 480px){
 
-    input, #byPDC_module{
-
-      margin-top: 0vh;
-
+    .error-fname, .error-lname, .error-bday, .error-certnum, .error-PDCmodule{
+      margin-left: 5vw;
     }
 
 
+    input, #byPDC_module{
+      height: 7vh;
+      margin-top: 2vh;
+      font-size: 3.5vw;
+    }
 
     h2{
       font-size: 6vw;
     }
 
     .buttons{
-      margin-top: 1vh;
+      margin-top: 2vh;
     }
 
 
@@ -411,85 +444,78 @@
     #btn-verifyByCerticateNumber,
     #btn-verifyEnrolleesOnPDC,
     #btn-courseReservation{
-
       width: 75vw;
-      height: 9vh;
+      height: 11vh;
       font-size: 3.2vw;
       border-radius: 60px;
+    }
+
+    #byName_submit, #byCert_submit, #byPDC_submit{
+      width: 65vw;
+      height: 7vh;
+      font-size: 3.5vw;
+      margin-top: 2vh;
+    }
+
+    .btn-goBack{
+      width: 65vw;
+      height: 7vh;
+      font-size: 3.5vw;
+      margin-top: -1vh;
+    }
+
+    .coursesOffered-container{
+      height: 60vh;
+      overflow: auto;
+    }
+  }
+
+
+  @media screen and (max-width: 412px){
+    #btn-verifyByName,
+    #btn-verifyByCerticateNumber,
+    #btn-verifyEnrolleesOnPDC,
+    #btn-courseReservation{
+      height: 11vh;
+      font-size: 3.5vw;
+      margin-top: 3.5vh;
+    }
+
+    .btn-goBack{
+
+      margin-bottom: 2vh;
+    }
+  }
+
+  @media screen and (max-width: 384px){
+
+    input, #byPDC_module{
+      height: 7vh;
+      margin-top: 2vh;
+      font-size: 4vw;
+    }
+
+    #btn-verifyByName,
+    #btn-verifyByCerticateNumber,
+    #btn-verifyEnrolleesOnPDC,
+    #btn-courseReservation{
+
+      height: 11vh;
+      font-size: 3.5vw;
 
     }
 
     #byName_submit, #byCert_submit, #byPDC_submit{
-      width: 60vw;
-      height: 5vh;
-      font-size: 3vw;
+
       margin-top: 1vh;
     }
 
     .btn-goBack{
-      width: 60vw;
-      height: 5vh;
-      font-size: 3vw;
-      margin-top: -2vh;
+
+      margin-top: -1vh;
     }
   }
 
-  @media screen and (max-width: 320px){
-    #byName_submit, #byCert_submit, #byPDC_submit{
-
-      margin-top: -3vh;
-    }
-
-    .btn-goBack{
-
-      margin-top: -8vh;
-    }
-  }
-
-
-  // #webBanner {
-  //   font-size: 9vw;
-  //   margin-top: 10vw;
-  //   margin-bottom: 6vw;
-  //   font-family: "Archivo Black", sans-serif;
-  //   .title-1 {
-  //     color: $offWhite;
-  //     background-color: $darkBlue;
-  //     padding: 10px;
-  //     border-radius: 5px;
-  //   }
-  //   .title-2 {
-  //     color: $darkBlue;
-  //   }
-  //
-  //   @media screen and (max-width: 1440px){
-  //       margin-top: 12vw;
-  //       margin-bottom: 10vw;
-  //   }
-  //
-  //   @media screen and (max-width: 1280px){
-  //     margin-top: 15vw;
-  //   }
-  //
-  //   @media screen and (max-width: 1024px){
-  //     font-size: 8.8vw;
-  //     margin-top: 23vw;
-  //     margin-bottom: 5vw;
-  //   }
-  //
-  //   @media screen and (max-width: 800px){
-  //
-  //       margin-bottom: 5vw;
-  //   }
-  //
-  //   @media screen and (max-width: 600px){
-  //     font-size: 8.5vw;
-  //     margin-top: 16vh;
-  //     margin-bottom: 10vw;
-  //   }
-  //
-  //
-  // }
 
 
 }

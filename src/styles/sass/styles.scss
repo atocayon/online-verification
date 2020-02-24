@@ -24,9 +24,35 @@ body {
   background: #fff;
   margin-top: 12vh;
   height: 80vh;
+  margin-left: 15vw;
+  margin-right: 15vw;
   border-radius: 5px;
   // box-shadow: 0px 0px 5px 5px #fafafa;
   background: rgba(255,255,255, 0.8);
+  overflow: auto;
+
+  @media screen and (max-width: 1024px){
+    margin-top: 10vh;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    height: 85vh;
+  }
+
+  @media screen and (max-width: 800px){
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  @media screen and (max-width: 480px){
+    margin-left: 3vw;
+    margin-right: 3vw;
+    height: 85vh;
+  }
+
+  @media screen and (max-width: 412px){
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
 }
 
 #modal, #alert-modal, #modalCourses,

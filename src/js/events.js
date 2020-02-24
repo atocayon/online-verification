@@ -1,11 +1,8 @@
 $(document).ready(function() {
-  // if ($(window).width() < 1050 && page === '1' || $(window).width() < 1050 && page === '2' || $(window).width() < 1050 && page === '3') {
-  //   $("#navbar-mobile").show();
-  //   $("#navbar-web").hide();
-  // }else{
-  //   $("#navbar-web").show();
-  //   $("#navbar-mobile").hide();
-  // }
+  var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+   var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+   $("html, body").css({"width":w,"height":h});
+
   var base_url = window.location.origin;
   $("#searhAgain").click(function() {
     window.location.reload(true);
@@ -38,114 +35,13 @@ $(document).ready(function() {
     $(".more-info-page").show();
   });
 
-  // $("#btn-alert-modal").click(function(){
-  //   if ($(window).width() < 1050 && page === '1' ) {
-  //     $("#modal").show();
-  //     $(".close").show();
-  //     $(".alert-container").hide();
-  //   }else if ($(window).width() < 1050 && page === '2' || $(window).width() < 1050 && page === '3') {
-  //     $("#modal").show();
-  //     $(".close").show();
-  //     $("#byCertResult").show();
-  //     $(".alert-container").hide();
-  //     $("#mobile-table").hide();
-  //     // $("#user-avatar").hide();
-  //   }else{
-  //     $("#webView-footer").show();
-  //     $(".alert-container").hide();
-  //     $("#backdrop").hide();
-  //     $("body").css("overflow","auto");
-  //   }
-  //
-  // });
 
-  // if (page === '1') {
-  //   $("#home").hide();
-  //   $("#options").hide();
-  //   $("#form-cert").hide();
-  //   $("#form-enrollees").hide();
-  //   $("#byCert").hide();
-  //   $("#forms-page").show();
-  // }
-  //
-  // if (page === '2') {
-  //   $("#home").hide();
-  //   $("#options").hide();
-  //   $("#form-name").hide();
-  //   $("#form-enrollees").hide();
-  //   $("#byNameAndByEnrollees").hide();
-  //   $("#byCerts_records_tbl").show();
-  //   $("#forms-page").show();
-  //
-  //   if ($(window).width() < 1050) {
-  //     $("#byCert").hide();
-  //   }else{
-  //     $("#byCert").show();
-  //   }
-  // }
-  //
-  // if (page === '3') {
-  //   $("#home").hide();
-  //   $("#options").hide();
-  //   $("#form-name").hide();
-  //   $("#form-cert").hide();
-  //   $("#byNameAndByEnrollees").hide();
-  //   $("#byCerts_records_tbl").show();
-  //   $("#forms-page").show();
-  //
-  //   if ($(window).width() < 1050) {
-  //     $("#byCert").hide();
-  //   }else{
-  //     $("#byCert").show();
-  //   }
-  // }
 
   $("#byName_bday").mask("9999/99/99", {placeholder: 'YYYY/MM/DD' });
   $("#byPDC_bday").mask("9999/99/99", {placeholder: 'YYYY/MM/DD'});
   $("#byCert_bday").mask("9999/99/99", {placeholder: 'YYYY/MM/DD'});
   $("#reservation_mobileNum").mask("+639-9999-999-99", {placeholder: '+639-xxxx-xxx-xx'});
   $("#reservation_srnNum").mask("9999999999", {placeholder: 'XXXXXXXXXX'});
-
-  // $("#btn-faq").click(function(){
-  //   $("#faq-page").show();
-  //   $("#home").hide();
-  //   $("#options").hide();
-  //     $("#dropdown-content").hide();
-  //     $(".more-info-page").hide();
-  //
-  // });
-  //
-  // $("#btnMobile-faq").click(function(){
-  //   $("#faq-page").show();
-  //   $("#home").hide();
-  //   $("#options").hide();
-  //     $("#dropdown-content").hide();
-  //     $(".more-info-page").hide();
-  // });
-
-
-    // $("#byName_fname").keyup(function(){
-    //   $("#byName_fname").css("border", "1px solid #E0E0E0");
-    //   $("#byName_lname").css("border", "1px solid #E0E0E0");
-    //   $("#byName_bday").css("border", "1px solid #E0E0E0");
-    // });
-    //
-    // $("#byCert_certnum").keyup(function(){
-    //   $("#byCert_certnum").css("border", "1px solid #E0E0E0");
-    //   $("#byCert_fname").css("border", "1px solid #E0E0E0");
-    //   $("#byCert_lname").css("border", "1px solid #E0E0E0");
-    // });
-    //
-    // $("#byPDC_fname").keyup(function(){
-    //   $("#byPDC_module").css("border", "1px solid #E0E0E0");
-    //   $("#byPDC_fname").css("border", "1px solid #E0E0E0");
-    //   $("#byPDC_lname").css("border", "1px solid #E0E0E0");
-    //   $("#byPDC_bday").css("border", "1px solid #E0E0E0");
-    // });
-
-
-
-
 
   $("#btn-admin-btnLogin").click(function(){
 
@@ -222,12 +118,6 @@ $(document).ready(function() {
       }
     });
   });
-
-  // $("#modal-close").click(function(){
-  //   // console.log("shshhss");
-  //   $(".backdrop").hide();
-  //   $(".modalViewApplicant-container").hide();
-  // });
 
 
   $('[data-toggle="tooltip"]').tooltip();

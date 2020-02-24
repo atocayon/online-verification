@@ -201,51 +201,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-
-    <!-- <div class="admin-control">
-      <div class="row">
-        <div class="">
-          <h1 id="up"><i class="fas fa-caret-up"></i></h1>
-          <h1 id="down"><i class="fas fa-caret-down"></i></h1>
-        </div>
-      </div>
-
-      <div class="row admin-control-options">
-        <div class="">
-          <a href="#" id="btn-adminHome"><i class="fas fa-home	"></i>&nbsp;Home</a>
-        </div>
-        <div class="">
-          <a href="#" id="btn-approvedApplicants"><i class="fas fa-check"></i>&nbsp;Approved</a>
-        </div>
-        <div class="">
-          <a href="#" id="btn-rejectedApplicants"><i class="fas fa-trash"></i>&nbsp;Rejected</a>
-        </div>
-        <div class="">
-          <a href="<?= base_url() ?>nmp/logout"><i class="fas fa-power-off"></i>&nbsp;Logout, <?= $this->session->userdata('user') ?></a>
-        </div>
-
-      </div>
-    </div> -->
-
-    <!-- <div class="nmp-logo-container">
-
-      <div class="row">
-        <div class="">
-          <img src="<?= base_url() ?>src/img/logo.png" id="nmp-logo">
-        </div>
-
-        <div class="">
-          <h2>NMP Training Online Reservation</h2>
-        </div>
-      </div>
-    </div> -->
-
-
-    <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
-    <script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+    <script src="https://code.jquery.com/jquery-1.9.0.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="<?= base_url() ?>src/js/jquery.maskedinput-1.2.2-co.min.js">
     </script>
     <script type="text/javascript" src="<?= base_url() ?>src/js/jquery.maskedinput-1.2.2-co.js">

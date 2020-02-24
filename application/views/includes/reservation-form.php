@@ -11,7 +11,7 @@
       <input type="text" class="form-control" placeholder="Type your Mobile number here..." id="reservation_mobileNum">
       <input type="text" class="form-control" placeholder="Type your SRN Number here (if any)..." id="reservation_srnNum">
 
-      <input type="text" name="" value="<?= $_GET["modcode"] ?>" hidden id="code">
+      <input type="text" name="" value="<?= $_GET["code"] ?>" hidden id="code">
       <input type="text" name="" value="<?= $_GET["description"] ?>" hidden id="description">
       <input type="text" name="" value="<?= $_GET['dateStart'] ?>" hidden id="dateStart">
       <input type="text" name="" value="<?= $_GET['dateEnd'] ?>" hidden id="dateEnd">

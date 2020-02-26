@@ -160,6 +160,76 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               ?>
             </tbody>
           </table>
+
+
+
+          <!-- The Modal -->
+          <div class="modal fade" id="modal-generateReports">
+            <div class="modal-dialog modal-dm">
+              <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title"><i class="fas fa-clipboard-list"></i> Generate Reports</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-md-2">
+
+                    </div>
+                    <div class="col-md-8">
+                      <div class="row">
+                        <div class="col-md-12">
+
+                            <select class="form-control" name="module" id="module">
+                              <option value="">-- Select Module --</option>
+                              <?php
+                                $query = $this->db->query("SELECT DISTINCT code  FROM reservations WHERE status > 1  ORDER BY dateReserve ASC");
+
+                                  foreach ($query->result() as $result) {
+                                    ?>
+                                      <option value="<?= $result->code ?>"><?php
+                                        $code = $result->code;
+                                        $select_module = $this->db->query("SELECT module FROM module WHERE modcode = '$code'");
+                                        $row = $select_module->row();
+                                        if (isset($row)) {
+                                          echo $row->module;
+                                        }
+                                      ?></option>
+                                    <?php
+                                  }
+
+
+                              ?>
+                            </select>
+
+
+
+
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-2">
+
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+                <!-- Modal footer -->
+                <div class="modal-footer" id="footer-generateReports" style="display:none;">
+                  <button type="button" class="btn btn-success" id="print-report">Generate</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -172,17 +242,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 
         <div class="row admin-control-options">
-          <div class="col-md-3">
+          <div class="col-md-1">
+
+          </div>
+          <div class="col-md-2">
             <a href="#"  id="btn-adminHome"><i class="fas fa-home	"></i>&nbsp;Home</a>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-2">
             <a href="#" id="btn-approvedApplicants"><i class="fas fa-check"></i>&nbsp;Approved</a>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-2">
             <a href="#" id="btn-rejectedApplicants"><i class="fas fa-trash"></i>&nbsp;Rejected</a>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-2">
+            <a href="#" id="btn-generateReports" data-toggle="modal" data-target="#modal-generateReports" ><i class="fas fa-clipboard-list"></i>&nbsp;Generate Reports</a>
+          </div>
+          <div class="col-md-2">
             <a href="<?= base_url() ?>nmp/logout"><i class="fas fa-power-off"></i>&nbsp;Logout, <?= $this->session->userdata('user') ?></a>
+          </div>
+          <div class="col-md-1">
+
           </div>
 
         </div>
@@ -199,6 +278,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </div>
     </div>
 
+    <div class="printable_reports" id="printable_reports">
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table table-striped " id="tbl-generateReports">
+            <thead class="thead-dark">
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>SRN</th>
+                <th>Scheduled Date</th>
+                <th>Date Reserve</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
 
 
     <script src="https://code.jquery.com/jquery-1.9.0.js"></script>
@@ -206,6 +311,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="<?= base_url() ?>src/js/jQuery.print.js"></script>
     <script type="text/javascript" src="<?= base_url() ?>src/js/jquery.maskedinput-1.2.2-co.min.js">
     </script>
     <script type="text/javascript" src="<?= base_url() ?>src/js/jquery.maskedinput-1.2.2-co.js">

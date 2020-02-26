@@ -249,6 +249,76 @@ $(document).ready(function() {
 
 
 
+  $("#module").on('change', function(){
+
+    $.ajax({
+      url: base_url+"/online-verification/nmp/generateReports",
+      type: "POST",
+      dataType: "json",
+      data:{
+        modcode: this.value
+      },
+      success: function(data){
+        console.log(data["record"]);
+        $("#footer-generateReports").show();
+        var tbl = "";
+        for(var i = 0; i < data["record"].length; i++){
+          tbl += "<tr>";
+          tbl +=
+            "<td>" + data["record"][i]["name"] + "</td>";
+          tbl +=
+            "<td>" + data["record"][i]["email"] + "</td>";
+          tbl +=
+            "<td>" + data["record"][i]["srn"] + "</td>";
+          tbl +=
+            "<td>" + data["record"][i]["dateStart"]+"- to -"+ data["record"][i]["dateEnd"] + "</td>";
+
+          tbl +=
+            "<td>" + data["record"][i]["dateReserve"] + "</td>";
+          tbl +=
+            "<td>" + data["record"][i]["status"]+ "</td>";
+          tbl += "</tr>";
+        }
+        $("#tbl-generateReports").prepend(tbl);
+      },
+      error: function(err){
+        alert(err);
+      }
+    });
+  });
+
+  $("#print-report").click(function(){
+    $("#printable_reports").print({
+      // Use Global styles
+      globalStyles : false,
+      // Add link with attrbute media=print
+      mediaPrint : false,
+      //Custom stylesheet
+      stylesheet : "https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css",
+      //Print in a hidden iframe
+      iframe : false,
+      // Don't print this
+      noPrintSelector : ".avoid-this",
+      // Add this on top
+      append : "Free jQuery Plugins<br/>",
+      // Add this at bottom
+      prepend : "<br/>jQueryScript.net",
+      // Manually add form values
+      manuallyCopyFormValues: true,
+      // resolves after print and restructure the code for better maintainability
+      deferred: $.Deferred(),
+      // timeout
+      timeout: 250,
+      // Custom title
+      title: $("#module").val(),
+      // Custom document type
+      doctype: '<!doctype html>'
+
+    });
+  });
+
+
+
 
 
 });

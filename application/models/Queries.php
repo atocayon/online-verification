@@ -172,6 +172,7 @@ class Queries extends CI_Model
         code,
         dateStart,
         dateEnd,
+        dateApprove,
         status)
         VALUES
         (AES_ENCRYPT('$fname', 'ilovenmp1230988'),
@@ -183,13 +184,15 @@ class Queries extends CI_Model
         '$code',
         '$dateStart',
         '$dateEnd',
+        '0000-00-00',
         1)");
     return $sql;
   }
 
   public function confirmReservation($id){
+    $date = date("Y-m-d");
     return $sql = $this->db->query("UPDATE reservations
-      SET status = 2
+      SET status = 2, dateApprove = '$date'
       WHERE id = '$id'");
   }
 
@@ -213,4 +216,10 @@ class Queries extends CI_Model
     return $query;
   }
 
+  public function generateReports(){
+    $param = [$this->input->post("modcode")];
+    $sql = "SELECT concat(AES_DECRYPT(reservations.fname, 'ilovenmp1230988'), ' ', LEFT(AES_DECRYPT(reservations.mname, 'ilovenmp1230988'),1),'. ', AES_DECRYPT(reservations.lname, 'ilovenmp1230988')) as name, AES_DECRYPT(reservations.email, 'ilovenmp1230988') as email, reservations.address, reservations.mobileNo, reservations.code, reservations.dateStart, reservations.dateEnd, reservations.dateReserve, reservations.srn, reservations.dateApprove, (CASE WHEN (reservations.status = 2) THEN 'Approved' ELSE 'Disapprove' END) as status , module.module FROM reservations INNER JOIN module ON reservations.code = module.modcode WHERE reservations.code = ? AND status > 1";
+    $query = $this->db->query($sql, $param);
+    return $query;
+  }
 }

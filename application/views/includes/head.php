@@ -5,3 +5,4 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css" type="text/css" media="all" />
 <link rel="stylesheet" type="text/css" href="<?= base_url() ?>src/styles/css/styles.css">
+<link rel="stylesheet" href="https://printjs-4de6.kxcdn.com/print.min.css">

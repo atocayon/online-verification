@@ -94,8 +94,9 @@ class Nmp extends CI_Controller {
 			$srnNum = $this->input->post("srnNum");
 			$code = $this->input->post("code");
 			$dateStart = $this->input->post("dateStart");
-			$dateEnd = $this->input->post("dateEnd");
-			$query = $this->queries->insertReservation($fname, $mname, $lname, $email, $code, $dateStart, $dateEnd, $address, $mobileNum);
+      $dateEnd = $this->input->post("dateEnd");
+
+			$query = $this->queries->insertReservation($fname, $mname, $lname, $email, $code, $address, $mobileNum, $srnNum);
 
 			if ($query) {
 				$this->load->library('email');
@@ -127,6 +128,8 @@ class Nmp extends CI_Controller {
 				$this->email->subject("National Maritime Polytechnic Online Reservation");
 				$this->email->message("Course reservation for <b>".$description."</b><br>
 				<b>Name: ".$fname." ".$mname." ".$lname."</b>
+				<br>
+				<b>SRN: ".$srnNum."</b>
 				<br>
 				<b>From: ".$dateStart."</b>
 				<br>
@@ -315,6 +318,39 @@ class Nmp extends CI_Controller {
 			echo json_encode($data);
 		}else{
 			echo json_encode($data);
+		}
+	}
+
+
+	public function selectSchedule(){
+		$data['record'] = $this->queries->selectSchedule()->result_array();
+		if ($data['record'] == NULL) {
+			$data['record'] = ['response' => 'null'];
+			echo json_encode($data);
+		}else{
+			echo json_encode($data);
+		}
+	}
+
+	public function getModuleName(){
+		$data['record'] = $this->queries->getModuleName()->result_array();
+		if ($data['record'] == NULL) {
+			$data['record'] = ['response' => 'null'];
+			echo json_encode($data);
+		}else{
+			echo json_encode($data);
+		}
+	}
+
+	public function countReserve(){
+		$code = $this->input->post("code");
+		$dateStart = $this->input->post("dateStart");
+		$dateEnd = $this->input->post("dateEnd");
+		$count["record"] = $this->queries->countReserve($code);
+		if ($count > 0) {
+			echo json_encode($count);
+		}else{
+			echo json_encode(0);
 		}
 	}
 

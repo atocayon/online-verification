@@ -130,7 +130,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 											<tr>
                         <th>Module Desciption</th>
                         <th>Schedule</th>
-                        <th>No. Wait List</th>
+                        <th>Wait List</th>
                       </tr>
 										</thead>
 									</table>

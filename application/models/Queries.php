@@ -82,16 +82,20 @@ class Queries extends CI_Model
     $date = date("Y-m-d");
     $param = [ $date, $this->input->post('categoryID'),];
     $sql = "SELECT
-      module.module as moduleName,
-      module.descriptn as discription,
-      schedule.modcode as moduleCode,
+      module.module as module,
+      module.descriptn as description,
+      schedule.modcode as modcode,
       schedule.venid as venue,
+      schedule.code as code,
       DATE_FORMAT(schedule.start, '%Y %b %d') as dateStart,
       DATE_FORMAT(schedule.end, '%Y %b %d') as dateEnd,
-      schedule.max as maxEnrollees
+      schedule.max as maxEnrollees,
+      temp.count
       FROM
       schedule
-      INNER JOIN module on schedule.modcode = module.modcode
+      LEFT JOIN module on schedule.modcode = module.modcode
+      LEFT JOIN (SELECT schedule.code, count(reservations.id) as count
+          FROM reservations LEFT JOIN schedule ON reservations.code = schedule.code WHERE schedule.start > NOW() AND reservations.status > 1) as temp ON temp.code = schedule.code
       WHERE
       DATE(schedule.start) > ? AND module.catid = ?";
       $query = $this->db->query($sql, $param);
@@ -138,30 +142,29 @@ class Queries extends CI_Model
       $this->input->post("dateEnd")
     ];
 
-    $sql = "SELECT AES_DECRYPT(fname, 'ilovenmp1230988'),
-    AES_DECRYPT(mname, 'ilovenmp1230988'),
-    AES_DECRYPT(lname, 'ilovenmp1230988'),
-    AES_DECRYPT(email, 'ilovenmp1230988'),
-    code,
-    dateStart,
-    dateEnd
+    $sql = "SELECT AES_DECRYPT(reservations.fname, 'ilovenmp1230988'),
+    AES_DECRYPT(reservations.mname, 'ilovenmp1230988'),
+    AES_DECRYPT(reservations.lname, 'ilovenmp1230988'),
+    AES_DECRYPT(reservations.email, 'ilovenmp1230988'),
+    reservations.code
     FROM reservations
+    INNER JOIN schedule ON reservations.code = schedule.code
     WHERE
-    CONVERT(AES_DECRYPT(fname, 'ilovenmp1230988') USING latin1) = ?
-    AND CONVERT(AES_DECRYPT(mname, 'ilovenmp1230988') USING latin1)  = ?
-    AND CONVERT(AES_DECRYPT(lname, 'ilovenmp1230988') USING latin1)  = ?
-    AND CONVERT(AES_DECRYPT(email, 'ilovenmp1230988') USING latin1)  = ?
-    AND code = ?
-    AND dateStart = ?
-    AND dateEnd = ?
+    CONVERT(AES_DECRYPT(reservations.fname, 'ilovenmp1230988') USING latin1) = ?
+    AND CONVERT(AES_DECRYPT(reservations.mname, 'ilovenmp1230988') USING latin1)  = ?
+    AND CONVERT(AES_DECRYPT(reservations.lname, 'ilovenmp1230988') USING latin1)  = ?
+    AND CONVERT(AES_DECRYPT(reservations.email, 'ilovenmp1230988') USING latin1)  = ?
+    AND reservations.code = ?
+    AND DATE_FORMAT(schedule.start, '%Y %b %d') = ?
+    AND DATE_FORMAT(schedule.end, '%Y %b %d') = ?
     ";
 
     $query = $this->db->query($sql,$param);
-    //var_dump($this->db->last_query());die();
+    // var_dump($this->db->last_query());die();
     return $query;
   }
 
-  public function insertReservation($fname, $mname, $lname, $email, $code, $dateStart, $dateEnd, $address, $mobileNum){
+  public function insertReservation($fname, $mname, $lname, $email, $code, $address, $mobileNum, $srnNum){
     $sql = $this->db->query("INSERT INTO reservations
       (fname,
         mname,
@@ -169,9 +172,8 @@ class Queries extends CI_Model
         email,
         address,
         mobileNo,
+        srn,
         code,
-        dateStart,
-        dateEnd,
         dateApprove,
         status)
         VALUES
@@ -181,9 +183,8 @@ class Queries extends CI_Model
         AES_ENCRYPT('$email', 'ilovenmp1230988'),
         '$address',
         '$mobileNum',
+        '$srnNum',
         '$code',
-        '$dateStart',
-        '$dateEnd',
         '0000-00-00',
         1)");
     return $sql;
@@ -217,9 +218,51 @@ class Queries extends CI_Model
   }
 
   public function generateReports(){
-    $param = [$this->input->post("modcode")];
-    $sql = "SELECT concat(AES_DECRYPT(reservations.fname, 'ilovenmp1230988'), ' ', LEFT(AES_DECRYPT(reservations.mname, 'ilovenmp1230988'),1),'. ', AES_DECRYPT(reservations.lname, 'ilovenmp1230988')) as name, AES_DECRYPT(reservations.email, 'ilovenmp1230988') as email, reservations.address, reservations.mobileNo, reservations.code, reservations.dateStart, reservations.dateEnd, reservations.dateReserve, reservations.srn, reservations.dateApprove, (CASE WHEN (reservations.status = 2) THEN 'Approved' ELSE 'Disapprove' END) as status , module.module FROM reservations INNER JOIN module ON reservations.code = module.modcode WHERE reservations.code = ? AND status > 1";
+    $param = [$this->input->post("code")];
+    $sql = "SELECT concat(AES_DECRYPT(reservations.fname, 'ilovenmp1230988'), ' ', LEFT(AES_DECRYPT(reservations.mname, 'ilovenmp1230988'),1),'. ', AES_DECRYPT(reservations.lname, 'ilovenmp1230988')) as name,
+    AES_DECRYPT(reservations.email, 'ilovenmp1230988') as email,
+    reservations.address,
+    reservations.mobileNo,
+    module.module,
+    module.descriptn,
+    DATE_FORMAT(schedule.start, '%Y %b %d') as dateStart,
+    DATE_FORMAT(schedule.end, '%Y %b %d') as dateEnd,
+    reservations.dateReserve,
+    reservations.srn,
+    reservations.dateApprove,
+    (CASE WHEN (reservations.status = 2) THEN 'Approved' ELSE 'Disapprove' END) as status ,
+    module.module
+    FROM reservations
+    INNER JOIN schedule ON reservations.code = schedule.code
+    INNER JOIN module ON schedule.modcode = module.modcode
+    WHERE reservations.code = ?
+    AND reservations.status != 1";
     $query = $this->db->query($sql, $param);
     return $query;
+  }
+
+
+  public function selectSchedule(){
+    $param = [$this->input->post("code")];
+    $sql = "SELECT DATE_FORMAT(schedule.start, '%Y %b %d') as dateStart,
+            DATE_FORMAT(schedule.end, '%Y %b %d') as dateEnd, code FROM schedule WHERE modcode = ? ORDER BY start DESC";
+    $query = $this->db->query($sql, $param);
+    return $query;
+  }
+
+  public function getModuleName(){
+    $param = [$this->input->post("modcode")];
+    $sql = "SELECT descriptn FROM module WHERE modcode = ?";
+    $query = $this->db->query($sql, $param);
+    return $query;
+  }
+
+  public function countReserve($code){
+    $sql = "SELECT count(id) as count FROM reservations INNER JOIN schedule ON reservations.code = schedule.code WHERE  reservations.code = '$code' ";
+    $query = $this->db->query($sql);
+    $row = $query->row();
+    if (isset($row)) {
+      return $row->count;
+    }
   }
 }

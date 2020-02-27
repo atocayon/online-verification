@@ -35,7 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </thead>
             <tbody>
               <?php
-                $query = $this->db->query("SELECT id, concat(AES_DECRYPT(fname,'ilovenmp1230988'), ' ', LEFT(AES_DECRYPT(mname, 'ilovenmp1230988'),1), ' ', AES_DECRYPT(lname, 'ilovenmp1230988')) as name, AES_DECRYPT(email, 'ilovenmp1230988') as email, address, mobileNo, code, dateStart, dateEnd, DATE_FORMAT(dateReserve, '%b %d %Y') as reserve FROM reservations WHERE status = 1 ORDER BY dateReserve DESC");
+                $query = $this->db->query("SELECT reservations.id, concat(AES_DECRYPT(reservations.fname,'ilovenmp1230988'), ' ', LEFT(AES_DECRYPT(reservations.mname, 'ilovenmp1230988'),1), ' ', AES_DECRYPT(reservations.lname, 'ilovenmp1230988')) as name, AES_DECRYPT(reservations.email, 'ilovenmp1230988') as email, reservations.address as address, reservations.mobileNo as mobileNo, reservations.code as code, DATE_FORMAT(schedule.start, '%Y %b %d') as dateStart, DATE_FORMAT(schedule.end, '%Y %b %d') as dateEnd, DATE_FORMAT(dateReserve, '%b %d %Y') as reserve FROM reservations INNER JOIN schedule ON reservations.code = schedule.code WHERE reservations.status = 1 ORDER BY reservations.dateReserve DESC");
                 foreach ($query->result() as $row) {
                   ?>
                     <tr>
@@ -45,7 +45,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       <td><?= $row->mobileNo ?></td> -->
                       <td>
                         <?php
-                          $module = $this->db->query("SELECT module FROM module WHERE modcode = '$row->code'");
+                          $module = $this->db->query("SELECT module.module FROM module INNER JOIN schedule ON module.modcode = schedule.modcode WHERE schedule.code = '$row->code'");
                           $resModule = "";
                           foreach ($module->result() as $value) {
                              $resModule = $value->module;
@@ -89,7 +89,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </thead>
             <tbody>
               <?php
-                $query = $this->db->query("SELECT id, concat(AES_DECRYPT(fname,'ilovenmp1230988'), ' ', LEFT(AES_DECRYPT(mname, 'ilovenmp1230988'),1), ' ', AES_DECRYPT(lname, 'ilovenmp1230988')) as name, AES_DECRYPT(email, 'ilovenmp1230988') as email, address, mobileNo, code, dateStart, dateEnd, dateReserve FROM reservations WHERE status = 2");
+                $query = $this->db->query("SELECT reservations.id, concat(AES_DECRYPT(reservations.fname,'ilovenmp1230988'), ' ', LEFT(AES_DECRYPT(reservations.mname, 'ilovenmp1230988'),1), ' ', AES_DECRYPT(reservations.lname, 'ilovenmp1230988')) as name, AES_DECRYPT(reservations.email, 'ilovenmp1230988') as email, reservations.address as address, reservations.mobileNo as mobileNo, reservations.code as code, DATE_FORMAT(schedule.start, '%Y %b %d') as dateStart, DATE_FORMAT(schedule.end, '%Y %b %d') as dateEnd, reservations.dateReserve FROM reservations INNER JOIN schedule ON reservations.code = schedule.code WHERE status = 2");
                 foreach ($query->result() as $row) {
                   ?>
                     <tr>
@@ -132,7 +132,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </thead>
             <tbody>
               <?php
-                $query = $this->db->query("SELECT id, concat(AES_DECRYPT(fname,'ilovenmp1230988'), ' ', LEFT(AES_DECRYPT(mname, 'ilovenmp1230988'),1), ' ', AES_DECRYPT(lname, 'ilovenmp1230988')) as name, AES_DECRYPT(email, 'ilovenmp1230988') as email,  address, mobileNo, code, dateStart, dateEnd, dateReserve FROM reservations WHERE status = 0");
+                $query = $this->db->query("SELECT reservations.id, concat(AES_DECRYPT(reservations.fname,'ilovenmp1230988'), ' ', LEFT(AES_DECRYPT(reservations.mname, 'ilovenmp1230988'),1), ' ', AES_DECRYPT(reservations.lname, 'ilovenmp1230988')) as name, AES_DECRYPT(reservations.email, 'ilovenmp1230988') as email,  reservations.address as address, reservations.mobileNo as mobileNo, reservations.code as code, DATE_FORMAT(schedule.start, '%Y %b %d') as dateStart, DATE_FORMAT(schedule.end, '%Y %b %d') as dateEnd, reservations.dateReserve FROM reservations INNER JOIN schedule ON reservations.code = schedule.code WHERE status = 0");
                 foreach ($query->result() as $row) {
                   ?>
                     <tr>
@@ -183,33 +183,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="col-md-8">
                       <div class="row">
                         <div class="col-md-12">
-
+                            <?php $query = $this->db->query("SELECT module.module as module, module.descriptn as description, module.modcode as modcode FROM module ORDER BY module.modcode DESC");  ?>
                             <select class="form-control" name="module" id="module">
                               <option value="">-- Select Module --</option>
                               <?php
-                                $query = $this->db->query("SELECT DISTINCT code  FROM reservations WHERE status > 1  ORDER BY dateReserve ASC");
 
                                   foreach ($query->result() as $result) {
                                     ?>
-                                      <option value="<?= $result->code ?>"><?php
-                                        $code = $result->code;
-                                        $select_module = $this->db->query("SELECT module FROM module WHERE modcode = '$code'");
-                                        $row = $select_module->row();
-                                        if (isset($row)) {
-                                          echo $row->module;
-                                        }
-                                      ?></option>
+                                      <option value="<?= $result->modcode ?>"><?= $result->description ?></option>
                                     <?php
+
                                   }
-
-
                               ?>
                             </select>
+                            <br>
+                            <select class="form-control" name="schedule" id="schedule" style="display:none">
+                              <option value="">-- SELECT SCHEDULE --</option>
 
-
-
-
-
+                            </select>
                         </div>
                       </div>
                     </div>
@@ -223,7 +214,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
                 <!-- Modal footer -->
-                <div class="modal-footer" id="footer-generateReports" style="display:none;">
+                <div class="modal-footer" id="btn-generateReports" style="display:none;">
                   <button type="button" class="btn btn-success" id="print-report">Generate</button>
                 </div>
 
@@ -281,6 +272,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="printable_reports" id="printable_reports">
       <div class="row">
         <div class="col-md-12">
+          <h3 id="report-title"></h3>
           <table class="table table-striped " id="tbl-generateReports">
             <thead class="thead-dark">
               <tr>
@@ -293,17 +285,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </tr>
             </thead>
             <tbody>
-
+              <tr id="noData" style="display: none">
+                <td colspan="6" style="text-align: center">No Data</td>
+              </tr>
             </tbody>
           </table>
         </div>
       </div>
     </div>
-
-
-
-
-
 
 
     <script src="https://code.jquery.com/jquery-1.9.0.js"></script>

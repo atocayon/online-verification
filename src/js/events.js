@@ -203,13 +203,21 @@ $(document).ready(function() {
         console.log(data);
         var tbl = "";
         for(var i = 0; i < data["record"].length; i++){
+            var count = data["record"][i]["count"];
+          if (count === "null" || count === null) {
+            count = 0;
+          }else{
+            count = data["record"][i]["count"];
+          }
+
           tbl += "<tr>";
           tbl +=
-            "<td><label><a href='"+base_url+"/online-verification/?code="+data["record"][i]["moduleCode"]+"&dateStart="+data["record"][i]["dateStart"]+"&dateEnd="+data["record"][i]["dateEnd"]+"&description="+data["record"][i]["discription"]+"'>"+data["record"][i]["discription"]+ "</a></label></td>";
+            "<td><label><a href='"+base_url+"/online-verification/?code="+data["record"][i]["code"]+"&dateStart="+data["record"][i]["dateStart"]+"&dateEnd="+data["record"][i]["dateEnd"]+"&description="+data["record"][i]["description"]+"'>"+data["record"][i]["description"]+ "</a></label></td>";
           tbl +=
             "<td><label>" +data["record"][i]["dateStart"] + " to " + data["record"][i]["dateEnd"] + "</label></td>";
-          tbl +=
-            "<td><label>None</label></td>";
+
+          tbl += "<td><label>"+count+"</label></td>";
+
           tbl += "</tr>";
         }
         $("#tbl-coursesOffered").prepend(tbl);
@@ -250,42 +258,92 @@ $(document).ready(function() {
 
 
   $("#module").on('change', function(){
+    $.ajax({
+      url: base_url+"/online-verification/nmp/selectSchedule",
+      type: "POST",
+      dataType: "json",
+      data:{
+        code: this.value
+      },
+      success: function(data){
+        console.log(data["record"]);
+        $("#schedule").show();
+        $("#schedule").empty();
+        for (var i = 0; i < data["record"].length; i++) {
+          var code = data["record"][i]["code"];
+          var start = data["record"][i]["dateStart"];
+          var end = data["record"][i]["dateEnd"];
 
+          $("#schedule").append("<option value='"+code+"'>"+start+" to "+end+"</option>");
+        }
+      },
+      error: function(err){
+        alert(JSON.parse(err));
+      }
+    });
+  });
+
+  $("#schedule").on('change', function(){
+    console.log(this.value);
     $.ajax({
       url: base_url+"/online-verification/nmp/generateReports",
       type: "POST",
       dataType: "json",
       data:{
-        modcode: this.value
+        code: this.value
       },
       success: function(data){
-        console.log(data["record"]);
-        $("#footer-generateReports").show();
-        var tbl = "";
-        for(var i = 0; i < data["record"].length; i++){
-          tbl += "<tr>";
-          tbl +=
-            "<td>" + data["record"][i]["name"] + "</td>";
-          tbl +=
-            "<td>" + data["record"][i]["email"] + "</td>";
-          tbl +=
-            "<td>" + data["record"][i]["srn"] + "</td>";
-          tbl +=
-            "<td>" + data["record"][i]["dateStart"]+"- to -"+ data["record"][i]["dateEnd"] + "</td>";
+        console.log(data["record"]["response"]);
+        $("#btn-generateReports").show();
+        if (data["record"]["response"] === "null" || data["record"]["response"] === null) {
+            moduleName($("#module").val());
+            $("#noData").show();
+        }else{
+          var tbl = "";
+          for(var i = 0; i < data["record"].length; i++){
+            tbl += "<tr>";
+            tbl +=
+              "<td>" + data["record"][i]["name"] + "</td>";
+            tbl +=
+              "<td>" + data["record"][i]["email"] + "</td>";
+            tbl +=
+              "<td>" + data["record"][i]["srn"] + "</td>";
+            tbl +=
+              "<td>" + data["record"][i]["dateStart"]+"- to -"+ data["record"][i]["dateEnd"] + "</td>";
 
-          tbl +=
-            "<td>" + data["record"][i]["dateReserve"] + "</td>";
-          tbl +=
-            "<td>" + data["record"][i]["status"]+ "</td>";
-          tbl += "</tr>";
+            tbl +=
+              "<td>" + data["record"][i]["dateReserve"] + "</td>";
+            tbl +=
+              "<td>" + data["record"][i]["status"]+ "</td>";
+            tbl += "</tr>";
+          }
+          $("#report-title").text(data["record"][0]["descriptn"]);
+          $("#tbl-generateReports").prepend(tbl);
         }
-        $("#tbl-generateReports").prepend(tbl);
       },
       error: function(err){
         alert(err);
       }
     });
   });
+
+  function moduleName(value){
+    $.ajax({
+      url: base_url+"/online-verification/nmp/getModuleName",
+      type: "POST",
+      dataType: "json",
+      data:{
+        modcode: value
+      },
+      success: function(data){
+        console.log(data["record"][0]["descriptn"]);
+        $("#report-title").text(data["record"][0]["descriptn"]);
+      },
+      error: function(err){
+        alert(err);
+      }
+    });
+  }
 
   $("#print-report").click(function(){
     $("#printable_reports").print({

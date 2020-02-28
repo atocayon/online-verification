@@ -112,7 +112,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			<!-- The Modal -->
 			<div class="modal fade" id="modalCourses">
-			  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+			  <div class="modal-dialog modal-lg modal-dialog-scrollable modalCourses">
 			    <div class="modal-content">
 
 			      <!-- Modal Header -->

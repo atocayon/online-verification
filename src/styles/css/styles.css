@@ -922,6 +922,10 @@ body {
   }
 }
 
+.modal-lg {
+  max-width: 80% !important;
+}
+
 .nmp-admin-login-container {
   background: #fff;
   width: 100vw;

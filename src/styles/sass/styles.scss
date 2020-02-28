@@ -58,7 +58,6 @@ body {
 #modal, #alert-modal, #modalCourses,
 #successModal{
 
-
   @media screen and (max-width: 1024px){
     padding-left: 1.5vw;
     padding-right: 1.5vw;
@@ -81,6 +80,10 @@ body {
       font-size: 3vw;
     }
   }
+}
+
+.modal-lg {
+    max-width: 80% !important;
 }
 
 .nmp-admin-login-container{

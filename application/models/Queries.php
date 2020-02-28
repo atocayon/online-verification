@@ -245,7 +245,7 @@ class Queries extends CI_Model
   public function selectSchedule(){
     $param = [$this->input->post("code")];
     $sql = "SELECT DATE_FORMAT(schedule.start, '%Y %b %d') as dateStart,
-            DATE_FORMAT(schedule.end, '%Y %b %d') as dateEnd, code FROM schedule WHERE modcode = ? ORDER BY start DESC";
+            DATE_FORMAT(schedule.end, '%Y %b %d') as dateEnd, schedule.code FROM schedule INNER JOIN reservations ON schedule.code = reservations.code WHERE schedule.modcode = ? AND reservations.status != 1 ORDER BY schedule.start DESC";
     $query = $this->db->query($sql, $param);
     return $query;
   }

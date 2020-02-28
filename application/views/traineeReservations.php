@@ -183,7 +183,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="col-md-8">
                       <div class="row">
                         <div class="col-md-12">
-                            <?php $query = $this->db->query("SELECT module.module as module, module.descriptn as description, module.modcode as modcode FROM module ORDER BY module.modcode DESC");  ?>
+                            <?php $query = $this->db->query("SELECT DISTINCT module.module as module,
+                              module.descriptn as description,
+                              module.modcode as modcode
+                              FROM module
+                              INNER JOIN schedule ON module.modcode = schedule.modcode
+                              INNER JOIN reservations ON schedule.code = reservations.code
+                              WHERE reservations.status != 1
+                              ORDER BY module.module DESC");  ?>
                             <select class="form-control" name="module" id="module">
                               <option value="">-- Select Module --</option>
                               <?php
@@ -198,7 +205,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </select>
                             <br>
                             <select class="form-control" name="schedule" id="schedule" style="display:none">
-                              <option value="">-- SELECT SCHEDULE --</option>
 
                             </select>
                         </div>

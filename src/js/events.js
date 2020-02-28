@@ -200,29 +200,41 @@ $(document).ready(function() {
         categoryID: value
       },
       success: function(data){
-        console.log(data);
-        var tbl = "";
-        for(var i = 0; i < data["record"].length; i++){
-            var count = data["record"][i]["count"];
-          if (count === "null" || count === null) {
-            count = 0;
-          }else{
-            count = data["record"][i]["count"];
-          }
-
+        console.log(data["record"]["response"]);
+        if (data["record"]["response"] === null || data["record"]["response"] === "null") {
+          var tbl = "";
           tbl += "<tr>";
-          tbl +=
-            "<td><label><a href='"+base_url+"/online-verification/?code="+data["record"][i]["code"]+"&dateStart="+data["record"][i]["dateStart"]+"&dateEnd="+data["record"][i]["dateEnd"]+"&description="+data["record"][i]["description"]+"'>"+data["record"][i]["description"]+ "</a></label></td>";
-          tbl +=
-            "<td><label>" +data["record"][i]["dateStart"] + " to " + data["record"][i]["dateEnd"] + "</label></td>";
-
-          tbl += "<td><label>"+count+"</label></td>";
-
+          tbl += "<td colspan='3' style='text-align:center'><label>No Data Found</label></td>";
           tbl += "</tr>";
+          $("#tbl-coursesOffered").prepend(tbl);
+          category(value);
         }
-        $("#tbl-coursesOffered").prepend(tbl);
 
-        category(value);
+        if(data["record"]["response"] === undefined || data["record"]["response"] === "undefined"){
+          var tbl = "";
+          for(var i = 0; i < data["record"].length; i++){
+              var count = data["record"][i]["count"];
+            if (count === "null" || count === null) {
+              count = 0;
+            }else{
+              count = data["record"][i]["count"];
+            }
+
+            tbl += "<tr>";
+            tbl +=
+              "<td><label><a href='"+base_url+"/online-verification/?code="+data["record"][i]["code"]+"&dateStart="+data["record"][i]["dateStart"]+"&dateEnd="+data["record"][i]["dateEnd"]+"&description="+data["record"][i]["description"]+"'>"+data["record"][i]["description"]+ "</a></label></td>";
+            tbl +=
+              "<td><label>" +data["record"][i]["dateStart"] + " to " + data["record"][i]["dateEnd"] + "</label></td>";
+
+            tbl += "<td><label>"+count+"</label></td>";
+
+            tbl += "</tr>";
+          }
+          $("#tbl-coursesOffered").prepend(tbl);
+
+          category(value);
+        }
+
 
       },
       error: function(err){
@@ -325,6 +337,13 @@ $(document).ready(function() {
         alert(err);
       }
     });
+  });
+
+  $("#close-modalCourses").click(function(){
+
+    $("#tbl-coursesOffered tbody tr ").remove();
+    $("#modalCourses").modal("hide");
+    
   });
 
   function moduleName(value){

@@ -102,9 +102,9 @@ class Nmp extends CI_Controller {
 				$this->load->library('email');
 				$mail_config['smtp_host'] = 'smtp.gmail.com';
 				$mail_config['smtp_port'] = '587';
-				$mail_config['smtp_user'] = 'nationalmaritimepolytechnic@gmail.com';
+				$mail_config['smtp_user'] = 'registration@nmp.gov.ph';
 				$mail_config['_smtp_auth'] = TRUE;
-				$mail_config['smtp_pass'] = 'ovoyrmijinclidty';
+				$mail_config['smtp_pass'] = 'xruorclbbkbsnykc';
 				$mail_config['smtp_crypto'] = 'tls';
 				$mail_config['protocol'] = 'smtp';
 				$mail_config['mailtype'] = 'html';
@@ -122,9 +122,9 @@ class Nmp extends CI_Controller {
 
 				$this->email->set_newline("\r\n");
 
-				$this->email->from('info@nmp.gov.ph', 'National Maritime Polytechnic');
+				$this->email->from('registration@nmp.gov.ph', 'National Maritime Polytechnic');
 				$this->email->to($email);
-				$this->email->cc('info@nmp.gov.ph');
+				$this->email->cc('registration@nmp.gov.ph');
 				$this->email->subject("National Maritime Polytechnic Online Reservation");
 				$this->email->message("Course reservation for <b>".$description."</b><br>
 				<b>Name: ".$fname." ".$mname." ".$lname."</b>
@@ -176,9 +176,9 @@ class Nmp extends CI_Controller {
 			$this->load->library('email');
 			$mail_config['smtp_host'] = 'smtp.gmail.com';
 			$mail_config['smtp_port'] = '587';
-			$mail_config['smtp_user'] = 'nationalmaritimepolytechnic@gmail.com';
+			$mail_config['smtp_user'] = 'registration@nmp.gov.ph';
 			$mail_config['_smtp_auth'] = TRUE;
-			$mail_config['smtp_pass'] = 'ovoyrmijinclidty';
+			$mail_config['smtp_pass'] = 'xruorclbbkbsnykc';
 			$mail_config['smtp_crypto'] = 'tls';
 			$mail_config['protocol'] = 'smtp';
 			$mail_config['mailtype'] = 'html';
@@ -196,9 +196,9 @@ class Nmp extends CI_Controller {
 
 			$this->email->set_newline("\r\n");
 
-			$this->email->from('info@nmp.gov.ph', 'National Maritime Polytechnic');
+			$this->email->from('registration@nmp.gov.ph', 'National Maritime Polytechnic');
 			$this->email->to($email);
-			$this->email->cc('info@nmp.gov.ph');
+			$this->email->cc('registration@nmp.gov.ph');
 			$this->email->subject("National Maritime Polytechnic Online Reservation");
 			$this->email->message("Your reservation for ".$module." had been confirmed.
 			<br>
@@ -235,9 +235,9 @@ class Nmp extends CI_Controller {
 			$this->load->library('email');
 			$mail_config['smtp_host'] = 'smtp.gmail.com';
 			$mail_config['smtp_port'] = '587';
-			$mail_config['smtp_user'] = 'nationalmaritimepolytechnic@gmail.com';
+			$mail_config['smtp_user'] = 'registration@nmp.gov.ph';
 			$mail_config['_smtp_auth'] = TRUE;
-			$mail_config['smtp_pass'] = 'ovoyrmijinclidty';
+			$mail_config['smtp_pass'] = 'xruorclbbkbsnykc';
 			$mail_config['smtp_crypto'] = 'tls';
 			$mail_config['protocol'] = 'smtp';
 			$mail_config['mailtype'] = 'html';
@@ -255,9 +255,9 @@ class Nmp extends CI_Controller {
 
 			$this->email->set_newline("\r\n");
 
-			$this->email->from('info@nmp.gov.ph', 'National Maritime Polytechnic');
+			$this->email->from('registration@nmp.gov.ph', 'National Maritime Polytechnic');
 			$this->email->to($email);
-			$this->email->cc('info@nmp.gov.ph');
+			$this->email->cc('registration@nmp.gov.ph');
 			$this->email->subject("National Maritime Polytechnic Online Reservation");
 			$this->email->message("Sorry, your reservation for ".$module." has been remove.<br>If you are still interested in enrolling a training course, you can still set a reservation anytime for other training courses offered by <b>National Maritime Polytechnic</b>.
 			<br>

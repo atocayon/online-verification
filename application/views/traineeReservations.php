@@ -60,7 +60,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       <td>
                         <a title="Confirm <?= $row->name ?>?" type="button" class="btn btn-sm btn-outline-success" href="<?= base_url() ?>nmp/confirmReservation?id=<?= $row->id ?>&email=<?= $row->email ?>&module=<?= $resModule ?>" id="btn-confirmReservation" onclick="return confirm('Are you sure do you want to confirm <?= $row->name ?>?')"><i class="fas fa-check"></i></a>
                         &nbsp;
-                        <a title="View <?= $row->name ?>?" type="button" class="btn btn-sm btn-outline-primary" href="#" id="btn-viewInfoReservation" ><i class="fas fa-eye"></i></a>
+                        <button title="View <?= $row->name ?>?" type="button" class="btn btn-sm btn-outline-primary btn-viewInfoReservation"  id="<?= $row->id ?>_btn-viewInfoReservation" value="<?= $row->id ?>" ><i class="fas fa-eye"></i></button>
                         &nbsp;
                         <a title="Delete <?= $row->name ?>?" type="button" class="btn btn-sm btn-outline-danger"  href="<?= base_url() ?>nmp/deleteReservation?id=<?= $row->id ?>&email=<?= $row->email ?>&module=<?= $resModule ?>" id="btn-deleteReservation" onclick="return confirm('Are you sure do you want to delete <?= $row->name ?>?')"><i class="fas fa-trash"></i></a>
 
@@ -299,6 +299,63 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
       </div>
     </div>
+
+
+    <!-- The Modal -->
+<div class="modal fade" id="viewApplicantReservationModal">
+<div class="modal-dialog">
+  <div class="modal-content">
+
+    <!-- Modal Header -->
+    <div class="modal-header">
+      <h4 class="modal-title" ><i class="fas fa-info-circle"></i> Info </h4>
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+    </div>
+
+    <!-- Modal body -->
+    <div class="modal-body">
+    <div class="row">
+      <div class="col-md-1">
+
+      </div>
+      <div class="col-md-10">
+        <div class="applicant-info-container">
+          <table class="table table-stripped table-hover">
+            <tr>
+              <th><i class="fas fa-user"></i> Name:</th>
+              <th><b><span id="applicant_fullname"></span></b></th>
+            </tr>
+            <tr>
+              <th><i class="fas fa-envelope"></i> Email:</th>
+              <th><b><span id="applicant_email"></span></b></th>
+            </tr>
+            <tr>
+              <th><i class="fas fa-location-arrow"></i> Address:</th>
+              <th><b><span id="applicant_address"></span></b></th>
+            </tr>
+            <tr>
+              <th><i class="fas fa-mobile-alt"></i> Mobile No:</th>
+              <th><b><span id="applicant_mobile"></span></b></th>
+            </tr>
+            <tr>
+              <th><i class="fas fa-hashtag"></i> SRN:</th>
+              <th><b><span id="applicant_srn"></span></b></th>
+            </tr>
+          </table>
+
+        </div>
+      </div>
+      <div class="col-md-1">
+
+      </div>
+    </div>
+    </div>
+
+
+
+  </div>
+</div>
+</div>
 
 
     <script src="https://code.jquery.com/jquery-1.9.0.js"></script>

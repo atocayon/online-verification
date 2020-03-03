@@ -265,4 +265,16 @@ class Queries extends CI_Model
       return $row->count;
     }
   }
+
+  public function getApplicantInfo(){
+    $param = [$this->input->post('id')];
+    $sql = "SELECT concat(AES_DECRYPT(reservations.fname, 'ilovenmp1230988'), ' ', LEFT(AES_DECRYPT(reservations.mname, 'ilovenmp1230988'),1),'. ', AES_DECRYPT(reservations.lname, 'ilovenmp1230988')) as name,
+    AES_DECRYPT(reservations.email, 'ilovenmp1230988') as email,
+    address,
+    mobileNo,
+    srn
+     FROM reservations WHERE id = ?";
+    $query = $this->db->query($sql, $param);
+    return $query;
+  }
 }

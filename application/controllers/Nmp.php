@@ -354,5 +354,15 @@ class Nmp extends CI_Controller {
 		}
 	}
 
+	public function getApplicantInfo(){
+		$data['record'] = $this->queries->getApplicantInfo()->result_array();
+		if ($data['record'] == NULL) {
+			$data['record'] = ['response' => 'null'];
+			echo json_encode($data);
+		}else{
+			echo json_encode($data);
+		}
+	}
+
 
 }

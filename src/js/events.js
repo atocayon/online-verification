@@ -343,7 +343,7 @@ $(document).ready(function() {
 
     $("#tbl-coursesOffered tbody tr ").remove();
     $("#modalCourses").modal("hide");
-    
+
   });
 
   function moduleName(value){
@@ -392,6 +392,43 @@ $(document).ready(function() {
       doctype: '<!doctype html>'
 
     });
+  });
+
+
+  $(".btn-viewInfoReservation").click(function(){
+      console.log(this.value);
+
+      $.ajax({
+        url: base_url+"/online-verification/nmp/getApplicantInfo",
+        type: "POST",
+        dataType: "json",
+        data:{
+          id: this.value
+        },
+        success: function(data){
+          console.log(data);
+          $("#viewApplicantReservationModal").modal("show");
+
+
+
+
+          $("#applicant_fullname").text(data["record"][0]["name"]);
+          $("#applicant_email").text(data["record"][0]["email"]);
+          $("#applicant_address").text(data["record"][0]["address"]);
+          $("#applicant_mobile").text(data["record"][0]["mobileNo"]);
+
+          if (data["record"][0]["srn"] !== "" || data["record"][0]["srn"] !== null) {
+            $("#applicant_srn").text(data["record"][0]["srn"]);
+          }
+
+          if (data["record"][0]["srn"] === "" || data["record"][0]["srn"] === null) {
+            $("#applicant_srn").text("N/A");
+          }
+        },
+        error: function (err){
+
+        }
+      });
   });
 
 

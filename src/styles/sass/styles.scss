@@ -228,8 +228,8 @@ body {
     padding-left: 0.5vw;
     padding-right: 0.5vw;
     border-radius: 100px;
-    transition: display 2s;
-    transition-timing-function: ease-in-out;
+    transition: display 0.5s;
+    // transition-timing-function: ease-in-out;
   }
 
   &:hover{

@@ -1066,12 +1066,9 @@ body {
   padding-left: 0.5vw;
   padding-right: 0.5vw;
   border-radius: 100px;
-  -webkit-transition: display 2s;
-  -o-transition: display 2s;
-  transition: display 2s;
-  -webkit-transition-timing-function: ease-in-out;
-  -o-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
+  -webkit-transition: display 0.5s;
+  -o-transition: display 0.5s;
+  transition: display 0.5s;
 }
 
 .admin-control:hover {

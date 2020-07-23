@@ -295,7 +295,8 @@ $(document).ready(function() {
     });
   });
 
-  $("#schedule").on('change', function(){
+  $("#schedule").on('click', function(){
+    $("#tbl-generateReports tbody tr").remove();
     console.log(this.value);
     $.ajax({
       url: base_url+"/online-verification/nmp/generateReports",
@@ -311,6 +312,7 @@ $(document).ready(function() {
             moduleName($("#module").val());
             $("#noData").show();
         }else{
+          $("#noData").hide();
           var tbl = "";
           for(var i = 0; i < data["record"].length; i++){
             tbl += "<tr>";
